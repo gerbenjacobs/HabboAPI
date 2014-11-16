@@ -11,6 +11,7 @@ See the `example.php` file on how to use this library at the moment.
 4. Create a HabboAPI instance with the namespace included `$habboAPI = new \HabboAPI\HabboAPI();` (Or have a look at the example.php page for the `use` statement)
 
 ## Usage
+```php
     <?php
     // Create new API instance
     $habboApi = new \HabboAPI\HabboAPI();
@@ -20,7 +21,7 @@ See the `example.php` file on how to use this library at the moment.
     
     // Collect all the profile info
     $profile = $habboApi->getProfile($koeientemmer);
-
+```
 
 ## Current status
 Pre-alpha/dev/what have you. At the moment this is the first development iteration.  
