@@ -28,6 +28,8 @@ foreach ($profile as $section => $data) {
     // Some markup for the Habbo part
     if ($section == 'habbo') {
         $habbo = $data;
+        echo '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figure='.$habbo->getFigureString().'&size=m&gesture=sml&head_direction=3"
+            alt="'.$habbo->getHabboName().'" title="'.$habbo->getHabboName().'" style="float: left; margin-right: 10px;" />';
         echo '<h3>'.$habbo->getHabboName().'</h3>';
         echo '<p>'.$habbo->getMotto().'<br><em>'.date('d-M-Y', strtotime($habbo->getMemberSince())).'</em></p>';
         if ($habbo->getProfileVisible()) {
