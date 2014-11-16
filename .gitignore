@@ -1,0 +1,4 @@
+/vendor/
+.idea
+HabboAPI.iml
+composer.phar
