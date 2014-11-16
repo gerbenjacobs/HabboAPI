@@ -6,9 +6,14 @@ See the `example.php` file on how to use this library at the moment.
 
 ## Installation
 1. Download/git clone the project
-2. Run `php composer.phar install`
-3. On the page you want to use it add `include 'vendor/autoload.php'`
-4. Create a HabboAPI instance with the namespace included `$habboAPI = new \HabboAPI\HabboAPI();` (Or have a look at the example.php page for the `use` statement)
+2. Download Composer if not installed globally `curl -sS https://getcomposer.org/installer | php`
+3. Run `php composer.phar install`
+4. Verify the install by running `phpunit` or opening the `example.php` page
+
+To use it:
+
+1. On the page you want to use it add `include 'vendor/autoload.php'`
+2. Create a HabboAPI instance with the namespace included `$habboAPI = new \HabboAPI\HabboAPI();` (Or have a look at the example.php page for the `use` statement)
 
 ## Usage
 ```php
