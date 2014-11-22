@@ -1,17 +1,20 @@
 <?php
-
+require_once '../vendor/autoload.php';
 class HabboAPITest extends PHPUnit_Framework_TestCase {
 
     /** @var \HabboAPI\HabboAPI $habboAPI */
     protected $habboAPI;
+    protected $mockedHabboAPI;
 
     protected function setUp()
     {
-        $this->habboAPI = new HabboAPI\HabboAPI();
+        $this->habboAPI = new \HabboAPI\HabboAPI();
+        $this->mockedHabboAPI = $this->getMock('HabboAPI');
+        $this->mockedHabboAPI->method('_callUrl')->willReturn(10);
     }
 
     public function testGetHabboReturnsHabboEntity() {
-        $actual = $this->habboAPI->getHabbo('koeientemmer');
+        $actual = $this->mockedHabboAPI->getHabbo('koeientemmer');
         $this->assertInstanceOf("HabboAPI\\Entities\\Habbo", $actual);
     }
 
