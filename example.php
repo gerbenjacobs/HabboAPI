@@ -14,7 +14,6 @@ $koeientemmer = $habboApi->getHabbo('koeientemmer')->getId();
 // Collect all the profile info
 $profile = $habboApi->getProfile($koeientemmer);
 
-
 // Print all the $profile data in a pretty format
 $lastSection = '';
 foreach ($profile as $section => $data) {
