@@ -2,3 +2,4 @@
 .idea
 HabboAPI.iml
 composer.phar
+debug.php

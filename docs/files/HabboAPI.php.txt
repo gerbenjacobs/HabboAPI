@@ -7,16 +7,19 @@ namespace HabboAPI;
 /** Class HabboAPI
  *
  * Contains all the nice methods for the HabboAPI
+ *
  * @package HabboAPI
  */
-class HabboAPI {
+class HabboAPI
+{
 
     /** Base URL for the Habbo API
      *
      * @var string
      */
     private $api_base = 'https://beta.habbo.com/api/public/';
-    /** Classvariable for HabboParser
+
+    /** Class variable for HabboParser
      *
      * @var \HabboAPI\HabboParser
      */
@@ -36,7 +39,8 @@ class HabboAPI {
      * @param $habboname
      * @return Entities\Habbo
      */
-    public function getHabbo($habboname) {
+    public function getHabbo($habboname)
+    {
         $this->parser = new HabboParser($this->api_base);
         return $this->parser->parseHabbo($habboname);
     }
@@ -46,7 +50,8 @@ class HabboAPI {
      * @param $id
      * @return array
      */
-    public function getProfile($id) {
+    public function getProfile($id)
+    {
         $this->parser = new HabboParser($this->api_base);
         return $this->parser->parseProfile($id);
     }

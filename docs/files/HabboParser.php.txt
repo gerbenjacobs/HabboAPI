@@ -41,9 +41,12 @@ class HabboParser {
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $data = curl_exec($ch) or die(curl_error($ch));
+        $json = curl_exec($ch) or die(curl_error($ch));
+        $data = json_decode($json, true);
+        $data['habboAPI_info'] = curl_getinfo($ch);
         curl_close($ch);
-        return json_decode($data, true);
+
+        return $data;
     }
 
     /**
