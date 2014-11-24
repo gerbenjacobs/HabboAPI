@@ -11,7 +11,7 @@ namespace HabboAPI\Entities;
  *
  * @package HabboAPI\Entities
  */
-class Room {
+class Room implements Entity {
     private $id;
     private $name;
     private $description;

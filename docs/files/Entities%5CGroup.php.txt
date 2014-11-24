@@ -9,7 +9,7 @@ namespace HabboAPI\Entities;
  *
  * @package HabboAPI\Entities
  */
-class Group
+class Group implements Entity
 {
 
     private $id;

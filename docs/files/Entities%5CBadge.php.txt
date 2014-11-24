@@ -9,7 +9,7 @@ namespace HabboAPI\Entities;
  *
  * @package HabboAPI\Entities
  */
-class Badge {
+class Badge implements Entity {
     private $badgeIndex;
     private $code;
     private $name;
