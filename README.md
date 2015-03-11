@@ -7,8 +7,8 @@ See the `example.php` file on how to use this library at the moment.
 ## Installation
 1. Download/git clone the project
 2. Download Composer if not installed globally `curl -sS https://getcomposer.org/installer | php`
-3. Run `php composer.phar install`
-4. Verify the install by running `phpunit` or opening the `example.php` page
+3. Run `composer install`
+4. Verify the install by running `phpunit` or opening the `example.php` page on a PHP server
 
 To use it:
 

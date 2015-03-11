@@ -1,6 +1,9 @@
 <?php
 
-
+/**
+ * Class HabboParserTest
+ * Currently does nothing!
+ */
 class HabboParserTest extends PHPUnit_Framework_TestCase {
 
     /**

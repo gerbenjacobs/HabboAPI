@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Class HabboTest
+ *  Tests for the Habbo entity object
+ */
 class HabboTest extends PHPUnit_Framework_TestCase {
 
     /**
