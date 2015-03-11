@@ -13,13 +13,22 @@ See the `example.php` file on how to use this library at the moment.
 To use it:
 
 1. On the page you want to use it add `include 'vendor/autoload.php'`
-2. Create a HabboAPI instance with the namespace included `$habboAPI = new \HabboAPI\HabboAPI();` (Or have a look at the example.php page for the `use` statement)
+2. Create a HabboParser and construct it with the IP that the server runs on (to prevent JS Cookie issues) and the base URL of the API
+2. Create a HabboAPI instance and inject the HabboParser
 
 ## Usage
 ```php
     <?php
-    // Create new API instance
-    $habboApi = new \HabboAPI\HabboAPI();
+    // Include the Composer autoloader
+    include 'vendor/autoload.php';
+    
+    // Shortcut for the FQN
+    use HabboAPI\HabboAPI;
+    use HabboAPI\HabboParser;
+    
+    // Create new Parser and API instance
+    $habboParser = new HabboParser('ip-of-server-here', 'https://www.habbo.com/api/public/');
+    $habboApi = new HabboAPI($habboParser);
     
     // Find the user 'koeientemmer' and get their ID
     $koeientemmer = $habboApi->getHabbo('koeientemmer')->getId();

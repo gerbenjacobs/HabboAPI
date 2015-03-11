@@ -20,12 +20,19 @@ class HabboParser {
     private $api_base;
 
     /**
+     * The IP for the server sending out the calls
+     * @var string $server_ip
+     */
+    private $server_ip;
+
+    /**
      * HabboParser constructor, needs to be injected with $api_base URL
      *
-     * @param $api_base
+     * @param string $api_base
      */
-    public function __construct($api_base) {
-        $this->api_base = $api_base;
+    public function __construct($server_ip, $api_base = 'https://www.habbo.com/api/public/') {
+        $this->server_ip = $server_ip;
+        $this->api_base  = $api_base;
     }
 
     /**
@@ -41,11 +48,11 @@ class HabboParser {
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $json = curl_exec($ch) or die(curl_error($ch));
+        curl_setopt($ch, CURLOPT_COOKIE, "YPF8827340282Jdskjhfiw_928937459182JAX666=" . $this->server_ip);
+        $json = curl_exec($ch);
         $data = json_decode($json, true);
         $data['habboAPI_info'] = curl_getinfo($ch);
         curl_close($ch);
-
         return $data;
     }
 
@@ -87,6 +94,7 @@ class HabboParser {
             $friends[] = $temp_friend;
             unset($temp_friend);
         }
+
         // Groups
         $groups = array();
         foreach ($data['groups'] as $group) {
