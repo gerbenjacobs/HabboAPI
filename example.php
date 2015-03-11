@@ -3,6 +3,8 @@
 include 'vendor/autoload.php';
 
 // Shortcut for the FQN
+use HabboAPI\Entities\Badge;
+use HabboAPI\Entities\Habbo;
 use HabboAPI\HabboAPI;
 
 // Create new API instance
@@ -26,6 +28,7 @@ foreach ($profile as $section => $data) {
 
     // Some markup for the Habbo part
     if ($section == 'habbo') {
+        /* @var Habbo $habbo */
         $habbo = $data;
         echo '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figure='.$habbo->getFigureString().'&size=m&gesture=sml&head_direction=3"
             alt="'.$habbo->getHabboName().'" title="'.$habbo->getHabboName().'" style="float: left; margin-right: 10px;" />';
@@ -36,6 +39,7 @@ foreach ($profile as $section => $data) {
         }
         if ($badges = $habbo->getSelectedBadges()) {
             foreach ($badges as $badge) {
+                /* @var $badge Badge */
                 echo
                     '<p>
                         <img src="http://images.habbo.com/c_images/album1584/'.$badge->getCode().'.gif" alt="'.$badge->getName().'" title="'.$badge->getName().'" /><br>
