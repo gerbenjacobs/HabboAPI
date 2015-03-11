@@ -9,7 +9,7 @@ use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
 
 // Create new Parser and API instance
-$habboParser = new HabboParser('91.195.1.33', 'https://www.habbo.com/api/public/');
+$habboParser = new HabboParser($_SERVER['SERVER_ADDR'], 'https://www.habbo.com/api/public/');
 $habboApi = new HabboAPI($habboParser);
 
 // Find the user 'koeientemmer' and get their ID
