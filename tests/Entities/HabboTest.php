@@ -16,7 +16,7 @@ class HabboTest extends PHPUnit_Framework_TestCase {
 
 
     public static function setUpBeforeClass() {
-        self::$data = json_decode(file_get_contents('tests/data/com_koeientemmer_gethabbo.json'), true);
+        self::$data = json_decode(file_get_contents(dirname(__FILE__).'/../data/com_koeientemmer_gethabbo.json'), true);
     }
 
     public function setUp () {
@@ -24,7 +24,7 @@ class HabboTest extends PHPUnit_Framework_TestCase {
         $this->habbo->parse(self::$data);
     }
 
-    public function testIsHabboEntity() {
+    public function testEntityType() {
         $this->assertInstanceOf('HabboAPI\Entities\Habbo', $this->habbo);
     }
 

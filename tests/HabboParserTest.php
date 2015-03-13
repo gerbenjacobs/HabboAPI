@@ -5,8 +5,8 @@ class HabboParserTest extends PHPUnit_Framework_TestCase {
     private static $profile;
 
     public static function setUpBeforeClass() {
-        self::$habbo = json_decode(file_get_contents('tests/data/com_koeientemmer_gethabbo.json'), true);
-        self::$profile = json_decode(file_get_contents('tests/data/com_koeientemmer_getprofile.json'), true);
+        self::$habbo = json_decode(file_get_contents(dirname(__FILE__).'/data/com_koeientemmer_gethabbo.json'), true);
+        self::$profile = json_decode(file_get_contents(dirname(__FILE__).'/data/com_koeientemmer_getprofile.json'), true);
     }
 
     /**

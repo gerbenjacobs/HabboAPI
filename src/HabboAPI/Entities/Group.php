@@ -180,6 +180,22 @@ class Group implements Entity
         return $this->type;
     }
 
+    /* Cleaner methods */
+    public function isAdmin()
+    {
+        return $this->getIsAdmin();
+    }
+
+    public function getPrimaryColor()
+    {
+        return $this->getPrimaryColour();
+    }
+
+    public function getSecondaryColor()
+    {
+        return $this->getSecondaryColour();
+    }
+
     /**
      * @param mixed $type
      */
