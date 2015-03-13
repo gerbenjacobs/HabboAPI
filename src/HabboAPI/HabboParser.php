@@ -11,7 +11,8 @@ namespace HabboAPI;
  *
  * @package HabboAPI
  */
-class HabboParser implements HabboParserInterface {
+class HabboParser implements HabboParserInterface
+{
     /**
      * Base URL for the Habbo API
      *
@@ -31,9 +32,25 @@ class HabboParser implements HabboParserInterface {
      * @param string $server_ip
      * @param string $api_base
      */
-    public function __construct($server_ip, $api_base = 'https://www.habbo.com/api/public/') {
+    public function __construct($server_ip, $api_base = 'https://www.habbo.com/api/public/')
+    {
         $this->server_ip = $server_ip;
-        $this->api_base  = $api_base;
+        $this->api_base = $api_base;
+    }
+
+    /**
+     * Parses the Habbo user endpoint
+     *
+     * @param string $habboname
+     * @return Entities\Habbo
+     */
+    public function parseHabbo($habboname)
+    {
+        $data = $this->_callUrl($this->api_base . "users?name=" . $habboname);
+
+        $habbo = new Entities\Habbo();
+        $habbo->parse($data);
+        return $habbo;
     }
 
     /**
@@ -42,7 +59,8 @@ class HabboParser implements HabboParserInterface {
      * @param string $url
      * @return array
      */
-    protected function _callUrl($url) {
+    protected function _callUrl($url)
+    {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, 'HabboAPI/HabboAPI 1.0.0');
@@ -58,20 +76,6 @@ class HabboParser implements HabboParserInterface {
     }
 
     /**
-     * Parses the Habbo user endpoint
-     *
-     * @param string $habboname
-     * @return Entities\Habbo
-     */
-    public function parseHabbo($habboname) {
-        $data = $this->_callUrl($this->api_base."users?name=".$habboname);
-
-        $habbo = new Entities\Habbo();
-        $habbo->parse($data);
-        return $habbo;
-    }
-
-    /**
      * Parses the Habbo Profile endpoints
      *
      * Return an array including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
@@ -79,9 +83,10 @@ class HabboParser implements HabboParserInterface {
      * @param string $id
      * @return array
      */
-    public function parseProfile($id) {
+    public function parseProfile($id)
+    {
         // Collect JSON
-        $data = $this->_callUrl($this->api_base."users/".$id."/profile");
+        $data = $this->_callUrl($this->api_base . "users/" . $id . "/profile");
 
         // Habbo
         $habbo = new Entities\Habbo();

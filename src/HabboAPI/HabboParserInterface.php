@@ -9,7 +9,9 @@
 namespace HabboAPI;
 
 
-interface HabboParserInterface {
+interface HabboParserInterface
+{
     public function parseHabbo($habboName);
+
     public function parseProfile($id);
 }

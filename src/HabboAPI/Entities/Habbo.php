@@ -37,7 +37,7 @@ class Habbo implements Entity
         }
 
         if (isset($data['profileVisible'])) {
-                $this->setProfileVisible($data['profileVisible']);
+            $this->setProfileVisible($data['profileVisible']);
         }
 
         if (isset($data['selectedBadges'])) {
@@ -49,24 +49,17 @@ class Habbo implements Entity
         }
     }
 
-    public function __toString() {
+    /**
+     * @param Badge $selectedBadge
+     */
+    protected function addSelectedBadge(Badge $selectedBadge)
+    {
+        array_push($this->selectedBadges, $selectedBadge);
+    }
+
+    public function __toString()
+    {
         return $this->getHabboName();
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getFigureString()
-    {
-        return $this->figureString;
-    }
-
-    /**
-     * @param mixed $figureString
-     */
-    protected function setFigureString($figureString)
-    {
-        $this->figureString = $figureString;
     }
 
     /**
@@ -83,6 +76,22 @@ class Habbo implements Entity
     protected function setHabboName($habboName)
     {
         $this->habboName = $habboName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFigureString()
+    {
+        return $this->figureString;
+    }
+
+    /**
+     * @param mixed $figureString
+     */
+    protected function setFigureString($figureString)
+    {
+        $this->figureString = $figureString;
     }
 
     /**
@@ -155,14 +164,6 @@ class Habbo implements Entity
     public function getSelectedBadges()
     {
         return $this->selectedBadges;
-    }
-
-    /**
-     * @param Badge $selectedBadge
-     */
-    protected function addSelectedBadge(Badge $selectedBadge)
-    {
-        array_push($this->selectedBadges, $selectedBadge);
     }
 
 }

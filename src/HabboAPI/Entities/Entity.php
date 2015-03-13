@@ -2,7 +2,9 @@
 namespace HabboAPI\Entities;
 
 
-interface Entity {
+interface Entity
+{
     public function parse($data);
+
     public function __toString();
 } 

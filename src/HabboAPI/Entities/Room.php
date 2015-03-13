@@ -11,7 +11,8 @@ namespace HabboAPI\Entities;
  *
  * @package HabboAPI\Entities
  */
-class Room implements Entity {
+class Room implements Entity
+{
     private $id;
     private $name;
     private $description;
@@ -21,15 +22,33 @@ class Room implements Entity {
      *
      * @param array $room
      */
-    public function parse($room) {
+    public function parse($room)
+    {
         $this->setId($room['id']);
         $this->setName($room['name']);
         $this->setDescription($room['description']);
         $this->setOwnerUniqueId($room['ownerUniqueId']);
     }
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->getName();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    protected function setName($name)
+    {
+        $this->name = $name;
     }
 
     /**
@@ -62,22 +81,6 @@ class Room implements Entity {
     protected function setId($id)
     {
         $this->id = $id;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    protected function setName($name)
-    {
-        $this->name = $name;
     }
 
     /**

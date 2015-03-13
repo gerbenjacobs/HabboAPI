@@ -9,7 +9,8 @@ namespace HabboAPI\Entities;
  *
  * @package HabboAPI\Entities
  */
-class Badge implements Entity {
+class Badge implements Entity
+{
     private $badgeIndex;
     private $code;
     private $name;
@@ -29,26 +30,10 @@ class Badge implements Entity {
         $this->setName($badge['name']);
     }
 
-    public function __toString() {
-        return '['.$this->getCode().'] '.$this->getName();
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getBadgeIndex()
+    public function __toString()
     {
-        return $this->badgeIndex;
+        return '[' . $this->getCode() . '] ' . $this->getName();
     }
-
-    /**
-     * @param mixed $badgeIndex
-     */
-    protected function setBadgeIndex($badgeIndex)
-    {
-        $this->badgeIndex = $badgeIndex;
-    }
-
 
     /**
      * @return mixed
@@ -69,22 +54,6 @@ class Badge implements Entity {
     /**
      * @return mixed
      */
-    public function getDescription()
-    {
-        return $this->description;
-    }
-
-    /**
-     * @param mixed $description
-     */
-    protected function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getName()
     {
         return $this->name;
@@ -96,5 +65,37 @@ class Badge implements Entity {
     protected function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getBadgeIndex()
+    {
+        return $this->badgeIndex;
+    }
+
+    /**
+     * @param mixed $badgeIndex
+     */
+    protected function setBadgeIndex($badgeIndex)
+    {
+        $this->badgeIndex = $badgeIndex;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    protected function setDescription($description)
+    {
+        $this->description = $description;
     }
 }

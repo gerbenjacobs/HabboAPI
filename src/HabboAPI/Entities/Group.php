@@ -39,8 +39,25 @@ class Group implements Entity
         $this->setIsAdmin($group['isAdmin']);
     }
 
-    public function __toString() {
+    public function __toString()
+    {
         return $this->getName();
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    protected function setName($name)
+    {
+        $this->name = $name;
     }
 
     /**
@@ -105,22 +122,6 @@ class Group implements Entity
     protected function setIsAdmin($isAdmin)
     {
         $this->isAdmin = $isAdmin;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    protected function setName($name)
-    {
-        $this->name = $name;
     }
 
     /**
