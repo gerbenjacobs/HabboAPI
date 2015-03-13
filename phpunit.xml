@@ -2,8 +2,8 @@
 <phpunit bootstrap="./vendor/autoload.php">
 
     <testsuites>
-        <testsuite name="Entities">
-            <directory>./tests/entities</directory>
+        <testsuite name="HabboAPI">
+            <directory>./tests</directory>
         </testsuite>
     </testsuites>
 
