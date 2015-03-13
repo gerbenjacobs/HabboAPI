@@ -1,4 +1,5 @@
 <?php
+use HabboAPI\Entities\Habbo;
 
 /**
  * Class HabboTest
@@ -7,7 +8,7 @@
 class HabboTest extends PHPUnit_Framework_TestCase {
 
     /**
-     * @var \HabboAPI\Entities\Habbo $habbo
+     * @var Habbo $habbo
      */
     private $habbo;
 
@@ -19,25 +20,25 @@ class HabboTest extends PHPUnit_Framework_TestCase {
     }
 
     public function setUp () {
-        $this->habbo = new \HabboAPI\Entities\Habbo();
+        $this->habbo = new Habbo();
         $this->habbo->parse(self::$data);
     }
 
     public function testIsHabboEntity() {
-        $this->assertInstanceOf("HabboAPI\\Entities\\Habbo", $this->habbo);
+        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $this->habbo);
     }
 
     public function testGetId(){
-        $this->assertEquals("hhus-9cd61b156972c2eb33a145d69918f965", $this->habbo->getId());
+        $this->assertEquals('hhus-9cd61b156972c2eb33a145d69918f965', $this->habbo->getId());
     }
 
     public function testGetHabboName() {
-        $this->assertEquals("koeientemmer", $this->habbo->getHabboName());
+        $this->assertEquals('koeientemmer', $this->habbo->getHabboName());
     }
 
     public function testTwoSelectedBadges() {
         $this->assertEquals(2, count($this->habbo->getSelectedBadges()));
-        $this->assertInstanceOf("HabboAPI\\Entities\\Badge", $this->habbo->getSelectedBadges()[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Badge', $this->habbo->getSelectedBadges()[0]);
     }
 }
  
