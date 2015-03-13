@@ -26,8 +26,8 @@ class Badge implements Entity
             $this->setBadgeIndex($badge['badgeIndex']);
         }
         $this->setCode($badge['code']);
-        $this->setDescription($badge['description']);
         $this->setName($badge['name']);
+        $this->setDescription($badge['description']);
     }
 
     public function __toString()
@@ -97,5 +97,10 @@ class Badge implements Entity
     protected function setDescription($description)
     {
         $this->description = $description;
+    }
+
+    public function getId()
+    {
+        return $this->getCode();
     }
 }
