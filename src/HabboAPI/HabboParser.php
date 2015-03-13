@@ -11,7 +11,7 @@ namespace HabboAPI;
  *
  * @package HabboAPI
  */
-class HabboParser {
+class HabboParser implements HabboParserInterface {
     /**
      * Base URL for the Habbo API
      *
@@ -26,8 +26,9 @@ class HabboParser {
     private $server_ip;
 
     /**
-     * HabboParser constructor, needs to be injected with $api_base URL
+     * HabboParser constructor, needs to be injected with $server_ip and $api_base URL
      *
+     * @param string $server_ip
      * @param string $api_base
      */
     public function __construct($server_ip, $api_base = 'https://www.habbo.com/api/public/') {
@@ -41,7 +42,7 @@ class HabboParser {
      * @param string $url
      * @return array
      */
-    private function _callUrl($url) {
+    protected function _callUrl($url) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_USERAGENT, 'HabboAPI/HabboAPI 1.0.0');
