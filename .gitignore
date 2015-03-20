@@ -1,6 +1,5 @@
 /vendor/
 .idea
-HabboAPI.iml
 composer.phar
 debug.php
 phpDocumentor.phar

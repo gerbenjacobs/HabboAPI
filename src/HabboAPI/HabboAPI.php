@@ -39,7 +39,7 @@ class HabboAPI
 
     /** Based on a unique ID, get a full Habbo profile object
      *
-     * @param string $id The unique ID system Habbo uses for their api. Starts with "hhus-"
+     * @param string $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
      * @return array
      */
     public function getProfile($id)

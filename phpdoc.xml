@@ -3,6 +3,9 @@
     <parser>
         <target>docs</target>
     </parser>
+    <transformer>
+        <target>docs</target>
+    </transformer>
     <files>
         <directory>src</directory>
     </files>
