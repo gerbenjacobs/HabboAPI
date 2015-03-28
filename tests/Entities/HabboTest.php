@@ -37,8 +37,9 @@ class HabboTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testTwoSelectedBadges() {
-        $this->assertEquals(2, count($this->habbo->getSelectedBadges()));
-        $this->assertInstanceOf('HabboAPI\Entities\Badge', $this->habbo->getSelectedBadges()[0]);
+        $selectedBadges = $this->habbo->getSelectedBadges();
+        $this->assertEquals(2, count($selectedBadges));
+        $this->assertInstanceOf('HabboAPI\Entities\Badge', $selectedBadges[0]);
     }
 }
  
