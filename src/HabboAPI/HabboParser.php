@@ -7,7 +7,7 @@ namespace HabboAPI;
 /**
  * Class HabboParser
  *
- * Parses all the uniqe API endpoints
+ * Parses all the unique API endpoints
  *
  * @package HabboAPI
  */
@@ -63,7 +63,7 @@ class HabboParser implements HabboParserInterface
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'HabboAPI/HabboAPI 1.0.0');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'gerbenjacobs/habbo-api 1.0.0');
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -78,7 +78,7 @@ class HabboParser implements HabboParserInterface
     /**
      * Parses the Habbo Profile endpoints
      *
-     * Return an array including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
+     * Return an associative array including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
      *
      * @param string $id
      * @return array

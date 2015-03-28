@@ -25,7 +25,7 @@ foreach ($profile as $section => $data) {
     // Print section name
     if ($section != $lastSection) {
         $lastSection = $section;
-        echo '<h2>'.ucfirst($section).'</h2>';
+        echo '<h2>'.ucfirst($section).' ('.count($data).')</h2>';
     }
 
     // Some markup for the Habbo part
@@ -41,7 +41,7 @@ foreach ($profile as $section => $data) {
         }
         if ($badges = $habbo->getSelectedBadges()) {
             foreach ($badges as $badge) {
-                /* @var $badge Badge */
+                /** @var Badge $badge */
                 echo
                     '<p>
                         <img src="http://images.habbo.com/c_images/album1584/'.$badge->getCode().'.gif" alt="'.$badge->getName().'" title="'.$badge->getName().'" /><br>
