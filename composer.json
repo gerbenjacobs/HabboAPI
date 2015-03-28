@@ -1,8 +1,20 @@
 {
-    "name": "HabboAPI/HabboAPI",
-    "description": "A PHP wrapper for the Habbo.com API",
+    "name": "gerbenjacobs/habbo-api",
+    "description": "A PHP wrapper for the (undocumented) Habbo Hotel API",
+    "keywords": ["habbo","api","wrapper"],
     "version": "1.0.0",
     "license" : "MIT",
+    "authors": [
+        {
+            "name": "Gerben Jacobs",
+            "email": "gerben@habbies.nl",
+            "homepage": "http://www.habbies.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
     "autoload": {
         "psr-4": { "HabboAPI\\": "src/HabboAPI" }
     },
