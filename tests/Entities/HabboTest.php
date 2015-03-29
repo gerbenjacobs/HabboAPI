@@ -41,5 +41,9 @@ class HabboTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(2, count($selectedBadges));
         $this->assertInstanceOf('HabboAPI\Entities\Badge', $selectedBadges[0]);
     }
+
+    public function testHasProfile() {
+        $this->assertTrue($this->habbo->hasProfile());
+    }
 }
  

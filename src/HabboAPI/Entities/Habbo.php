@@ -166,5 +166,14 @@ class Habbo implements Entity
         return $this->selectedBadges;
     }
 
+    /**
+     * Cleaner method for returning profile visibility
+     * @return boolean
+     */
+    public function hasProfile()
+    {
+        return ($this->getProfileVisible()) ? true : false;
+    }
+
 }
 

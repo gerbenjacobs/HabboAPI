@@ -13,14 +13,19 @@ $habboParser = new HabboParser($_SERVER['SERVER_ADDR'], 'https://www.habbo.com/a
 $habboApi = new HabboAPI($habboParser);
 
 // Find the user 'koeientemmer' and get their ID
-$koeientemmer = $habboApi->getHabbo('koeientemmer')->getId();
+$myHabbo = $habboApi->getHabbo('koeientemmer');
 
-// Collect all the profile info
-$profile = $habboApi->getProfile($koeientemmer);
+if ($myHabbo->hasProfile()) {
+    // Collect all the profile info
+    $myProfile = $habboApi->getProfile($myHabbo->getId());
+} else {
+    // This Habbo has a closed home, only show their Habbo object
+    $myProfile = array('habbo' => $myHabbo);
+}
 
 // Print all the $profile data in a pretty format
 $lastSection = '';
-foreach ($profile as $section => $data) {
+foreach ($myProfile as $section => $data) {
 
     // Print section name
     if ($section != $lastSection) {
