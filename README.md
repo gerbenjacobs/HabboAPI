@@ -1,4 +1,5 @@
 [![Build status] (https://api.travis-ci.org/gerbenjacobs/HabboAPI.svg)](https://travis-ci.org/gerbenjacobs/HabboAPI)
+[![Latest Stable Version](https://poser.pugx.org/gerbenjacobs/habbo-api/v/stable.svg)](https://packagist.org/packages/gerbenjacobs/habbo-api)
 # HabboAPI
 This PHP wrapper library is used to collect data from the _undcoumented_ Habbo.com Beta API.  
 The project required PHP 5 and uses the Composer autoloader and PSR-4 standard.
