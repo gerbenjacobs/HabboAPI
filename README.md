@@ -39,4 +39,5 @@ See the `example.php` file on how to use this library at the moment.
 ```
 
 ## Current status
+March 30th, 2015 - v1.0.1 - Added hasProfile and more stable example.php
 March 28th, 2015 - v1.0.0 - Created first tagged release, includes Travis CI and Packagist integration.

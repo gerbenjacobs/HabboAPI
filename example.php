@@ -42,7 +42,7 @@ foreach ($myProfile as $section => $data) {
         echo '<h3>'.$habbo->getHabboName().'</h3>';
         echo '<p>'.$habbo->getMotto().'<br><em>'.date('d-M-Y', strtotime($habbo->getMemberSince())).'</em></p>';
         if ($habbo->getProfileVisible()) {
-            echo '<p><a href="https://beta.habbo.com/profile/'.$habbo->getHabboName().'">View home &raquo;</a></p>';
+            echo '<p><a href="https://www.habbo.com/profile/'.$habbo->getHabboName().'">View home &raquo;</a></p>';
         }
         if ($badges = $habbo->getSelectedBadges()) {
             foreach ($badges as $badge) {

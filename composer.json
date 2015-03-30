@@ -2,7 +2,7 @@
     "name": "gerbenjacobs/habbo-api",
     "description": "A PHP wrapper for the (undocumented) Habbo Hotel API",
     "keywords": ["habbo","api","wrapper"],
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license" : "MIT",
     "authors": [
         {
