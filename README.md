@@ -6,16 +6,11 @@ The project required PHP 5 and uses the Composer autoloader and PSR-4 standard.
 
 See the `example.php` file on how to use this library at the moment.
 
-## Installation
-1. Clone the project
-2. Run `composer install`
-3. Verify the install by running `phpunit` or opening the `example.php` page on a PHP server
-
 ## How to use it
-
-1. On the page you want to use it add `include 'vendor/autoload.php'`
-2. Create a HabboParser and construct it with the IP that the server runs on (to prevent JS Cookie issues) and the base URL of the API
-2. Create a HabboAPI instance and inject the HabboParser
+1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your package.json file: `"gerbenjacobs/habbo-api": "v1.*"`
+2. On the page you want to use it add `include 'vendor/autoload.php'`
+3. Create a HabboParser and construct it with the IP that the server runs on (to prevent JS Cookie issues) and the base URL of the API
+4. Create a HabboAPI instance and inject the HabboParser
 
 ## Usage
 ```php
@@ -39,5 +34,10 @@ See the `example.php` file on how to use this library at the moment.
 ```
 
 ## Current status
-March 30th, 2015 - v1.0.1 - Added hasProfile and more stable example.php
-March 28th, 2015 - v1.0.0 - Created first tagged release, includes Travis CI and Packagist integration.
+March 30th, 2015 - v1.0.1 - Added hasProfile and more stable example.php  
+March 28th, 2015 - v1.0.0 - Created first tagged release, includes Travis CI and Packagist integration.  
+
+## Developer Installation
+1. Clone the project
+2. Run `composer install`
+3. Verify the install by running `phpunit` or opening the `example.php` page on a PHP server
