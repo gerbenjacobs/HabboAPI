@@ -3,3 +3,4 @@ php:
  - 5.3
 install:
  - composer install
+sudo: false
