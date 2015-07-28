@@ -7,7 +7,8 @@ use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
 
 // Create new Parser and API instance
-$habboParser = new HabboParser('91.195.1.33', 'https://www.habbo.com/api/public/');
+$server_ip = @file_get_contents('https://api.ipify.org'); // Only used for instant example, fix this in production
+$habboParser = new HabboParser($server_ip, 'https://www.habbo.com/api/public/');
 $habboApi = new HabboAPI($habboParser);
 
 // Find the user 'Powertoo'
