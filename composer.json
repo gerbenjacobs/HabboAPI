@@ -2,7 +2,6 @@
     "name": "gerbenjacobs/habbo-api",
     "description": "A PHP wrapper for the (undocumented) Habbo Hotel API",
     "keywords": ["habbo","api","wrapper"],
-    "version": "1.0.1",
     "license" : "MIT",
     "authors": [
         {
@@ -19,7 +18,7 @@
         "psr-4": { "HabboAPI\\": "src/HabboAPI" }
     },
     "require-dev": {
-        "phpunit/phpunit": "4.3.*",
+        "phpunit/phpunit": "4.*",
         "phpdocumentor/phpdocumentor": "2.*"
     }
 }

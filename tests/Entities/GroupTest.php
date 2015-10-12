@@ -2,25 +2,27 @@
 
 use HabboAPI\Entities\Group;
 
-class GroupTest extends \PHPUnit_Framework_TestCase {
+class GroupTest extends \PHPUnit_Framework_TestCase
+{
+    private static $data;
     /**
      * @var Group $entity
      */
     private $entity;
 
-    private static $data;
-
-
-    public static function setUpBeforeClass() {
-        self::$data = json_decode(file_get_contents(dirname(__FILE__).'/../data/com_koeientemmer_getprofile.json'), true);
+    public static function setUpBeforeClass()
+    {
+        self::$data = json_decode(file_get_contents(dirname(__FILE__) . '/../data/com_koeientemmer_getprofile.json'), true);
     }
 
-    public function setUp () {
+    public function setUp()
+    {
         $this->entity = new Group();
         $this->entity->parse(self::$data['groups'][0]);
     }
 
-    public function testEntityType() {
+    public function testEntityType()
+    {
         $this->assertInstanceOf('HabboAPI\Entities\Group', $this->entity);
     }
 
@@ -51,7 +53,7 @@ class GroupTest extends \PHPUnit_Framework_TestCase {
 
     public function testGetBadgeCode()
     {
-        $this->assertEquals('b12114s81133s97134s89135b5daef0623e81c6434e07abb60a12941', $this->entity->getBadgeCode());
+        $this->assertEquals('b13114s19134a55aa7427bc0a3f0c083e94232fb3475', $this->entity->getBadgeCode());
     }
 
     public function testGetPrimaryColour()

@@ -2,25 +2,27 @@
 
 use HabboAPI\Entities\Room;
 
-class RoomTest extends \PHPUnit_Framework_TestCase {
+class RoomTest extends \PHPUnit_Framework_TestCase
+{
+    private static $data;
     /**
      * @var Room $entity
      */
     private $entity;
 
-    private static $data;
-
-
-    public static function setUpBeforeClass() {
-        self::$data = json_decode(file_get_contents(dirname(__FILE__).'/../data/com_koeientemmer_getprofile.json'), true);
+    public static function setUpBeforeClass()
+    {
+        self::$data = json_decode(file_get_contents(dirname(__FILE__) . '/../data/com_koeientemmer_getprofile.json'), true);
     }
 
-    public function setUp () {
+    public function setUp()
+    {
         $this->entity = new Room();
         $this->entity->parse(self::$data['rooms'][0]);
     }
 
-    public function testEntityType() {
+    public function testEntityType()
+    {
         $this->assertInstanceOf('HabboAPI\Entities\Room', $this->entity);
     }
 
