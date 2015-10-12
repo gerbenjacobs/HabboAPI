@@ -4,7 +4,7 @@
 This PHP wrapper library is used to collect data from the _undcoumented_ Habbo.com Beta API.  
 The project required PHP 5 and uses the Composer autoloader and PSR-4 standard.
 
-See the `example.php` file on how to use this library at the moment.
+See the `example.php` file on how you could use this library.
 
 ## How to use it
 1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your package.json file: `"gerbenjacobs/habbo-api": "v1.*"`
@@ -23,7 +23,7 @@ See the `example.php` file on how to use this library at the moment.
     use HabboAPI\HabboParser;
     
     // Create new Parser and API instance
-    $habboParser = new HabboParser('ip-of-server-here', 'https://www.habbo.com/api/public/');
+    $habboParser = new HabboParser('https://www.habbo.com/api/public/');
     $habboApi = new HabboAPI($habboParser);
     
     // Find the user 'koeientemmer' and get their ID
@@ -34,6 +34,7 @@ See the `example.php` file on how to use this library at the moment.
 ```
 
 ## Current status
+October 12th, 2015 - v1.0.2 - Removed server IP, upgraded PHPUnit and tests, expanded on example.php
 March 30th, 2015 - v1.0.1 - Added hasProfile and more stable example.php  
 March 28th, 2015 - v1.0.0 - Created first tagged release, includes Travis CI and Packagist integration.  
 

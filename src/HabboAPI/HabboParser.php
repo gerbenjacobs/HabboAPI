@@ -21,20 +21,12 @@ class HabboParser implements HabboParserInterface
     private $api_base;
 
     /**
-     * The IP for the server sending out the calls
-     * @var string $server_ip
-     */
-    private $server_ip;
-
-    /**
-     * HabboParser constructor, needs to be injected with $server_ip and $api_base URL
+     * HabboParser constructor, needs to be injected with $api_base URL
      *
-     * @param string $server_ip
      * @param string $api_base
      */
-    public function __construct($server_ip, $api_base = 'https://www.habbo.com/api/public/')
+    public function __construct($api_base = 'https://www.habbo.com/api/public/')
     {
-        $this->server_ip = $server_ip;
         $this->api_base = $api_base;
     }
 
@@ -67,7 +59,6 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_COOKIE, "YPF8827340282Jdskjhfiw_928937459182JAX666=" . $this->server_ip);
         $json = curl_exec($ch);
         $data = json_decode($json, true);
         $data['habboAPI_info'] = curl_getinfo($ch);
