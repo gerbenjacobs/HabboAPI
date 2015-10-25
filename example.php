@@ -13,7 +13,18 @@ $habboParser = new HabboParser('https://www.habbo.com/api/public/');
 $habboApi = new HabboAPI($habboParser);
 
 // Find the user 'koeientemmer' and get their ID
-$myHabbo = $habboApi->getHabbo('koeientemmer');
+try {
+    $myHabbo = $habboApi->getHabbo('koeientemmer');
+} catch (Exception $e) {
+    echo '
+        <p>Oops. Can not find this Habbo!</p>
+        <p>Try to catch this exception gracefully in your application!</p>
+        <p></p>'.$e->getMessage().'</p>
+        <hr>
+        '.$e->getTraceAsString().'
+    ';
+    exit();
+}
 
 if ($myHabbo->hasProfile()) {
     // Collect all the profile info
@@ -98,6 +109,7 @@ foreach ($myProfile as $section => $data) {
         html, body {
             margin: 20px;
         }
+
         .media-left {
             min-width: 60px;
         }

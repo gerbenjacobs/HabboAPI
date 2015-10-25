@@ -34,6 +34,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Current status
+- October 25th, 2015 - v1.0.3 - Throws exception if Habbo API replies with error and removed the `HabboAPI` directory for idiomatic packagist standards.
 - October 12th, 2015 - v1.0.2 - Removed server IP, upgraded PHPUnit and tests, expanded on example.php
 - March 30th, 2015 - v1.0.1 - Added hasProfile and more stable example.php
 - March 28th, 2015 - v1.0.0 - Created first tagged release, includes Travis CI and Packagist integration.

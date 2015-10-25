@@ -4,6 +4,12 @@
  */
 namespace HabboAPI;
 
+use Exception;
+use HabboAPI\Entities\Badge;
+use HabboAPI\Entities\Group;
+use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Room;
+
 /**
  * Class HabboParser
  *
@@ -40,7 +46,7 @@ class HabboParser implements HabboParserInterface
     {
         $data = $this->_callUrl($this->api_base . "users?name=" . $habboname);
 
-        $habbo = new Entities\Habbo();
+        $habbo = new Habbo();
         $habbo->parse($data);
         return $habbo;
     }
@@ -50,6 +56,7 @@ class HabboParser implements HabboParserInterface
      *
      * @param string $url
      * @return array
+     * @throws Exception
      */
     protected function _callUrl($url)
     {
@@ -62,6 +69,9 @@ class HabboParser implements HabboParserInterface
         $json = curl_exec($ch);
         $data = json_decode($json, true);
         $data['habboAPI_info'] = curl_getinfo($ch);
+        if ($data['habboAPI_info']['http_code'] != 200) {
+            throw new Exception('Habbo API replied with an error code: ' . $data['error']);
+        }
         curl_close($ch);
         return $data;
     }
@@ -80,13 +90,13 @@ class HabboParser implements HabboParserInterface
         $data = $this->_callUrl($this->api_base . "users/" . $id . "/profile");
 
         // Habbo
-        $habbo = new Entities\Habbo();
+        $habbo = new Habbo();
         $habbo->parse($data['user']);
 
         // Friends
         $friends = array();
         foreach ($data['friends'] as $friend) {
-            $temp_friend = new Entities\Habbo();
+            $temp_friend = new Habbo();
             $temp_friend->parse($friend);
             $friends[] = $temp_friend;
             unset($temp_friend);
@@ -95,7 +105,7 @@ class HabboParser implements HabboParserInterface
         // Groups
         $groups = array();
         foreach ($data['groups'] as $group) {
-            $temp_group = new Entities\Group();
+            $temp_group = new Group();
             $temp_group->parse($group);
             $groups[] = $temp_group;
             unset($temp_group);
@@ -104,7 +114,7 @@ class HabboParser implements HabboParserInterface
         // Rooms
         $rooms = array();
         foreach ($data['rooms'] as $room) {
-            $temp_room = new Entities\Room();
+            $temp_room = new Room();
             $temp_room->parse($room);
             $rooms[] = $temp_room;
             unset($temp_room);
@@ -113,7 +123,7 @@ class HabboParser implements HabboParserInterface
         // Badges
         $badges = array();
         foreach ($data['badges'] as $badge) {
-            $temp_badge = new Entities\Badge();
+            $temp_badge = new Badge();
             $temp_badge->parse($badge);
             $badges[] = $temp_badge;
             unset($temp_badge);

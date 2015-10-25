@@ -52,4 +52,15 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('HabboAPI\Entities\Room', $profile['rooms'][0]);
         $this->assertInstanceOf('HabboAPI\Entities\Badge', $profile['badges'][0]);
     }
+
+    /**
+     * @expectedException Exception
+     */
+    public function testErrorHabbo()
+    {
+        // Replace parseHabbo with static data
+        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->throwException(new Exception('Some kind of exception')));
+
+        $this->habboParserMock->parseHabbo('someHabboNameThatDoesNotExist');
+    }
 }
