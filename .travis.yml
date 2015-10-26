@@ -5,5 +5,5 @@ php:
 before_install: 
  - composer self-update
 install:
- - composer install
+ - composer update
 sudo: false
