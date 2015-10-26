@@ -1,24 +1,30 @@
 {
-    "name": "gerbenjacobs/habbo-api",
-    "description": "A PHP wrapper for the (undocumented) Habbo Hotel API",
-    "keywords": ["habbo","api","wrapper"],
-    "license" : "MIT",
-    "authors": [
-        {
-            "name": "Gerben Jacobs",
-            "email": "gerben@habbies.nl",
-            "homepage": "http://www.habbies.nl",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "php": ">=5.3.0"
-    },
-    "autoload": {
-        "psr-4": { "HabboAPI\\": "src/" }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "4.*",
-        "phpdocumentor/phpdocumentor": "2.*"
+  "name": "gerbenjacobs/habbo-api",
+  "description": "A PHP wrapper for the (undocumented) Habbo Hotel API",
+  "keywords": [
+    "habbo",
+    "api",
+    "wrapper"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Gerben Jacobs",
+      "email": "gerben@habbies.nl",
+      "homepage": "http://www.habbies.nl",
+      "role": "Developer"
     }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "HabboAPI\\": "src/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "phpdocumentor/phpdocumentor": "2.*"
+  }
 }

@@ -1,4 +1,7 @@
 <?php
+// Timezone required since PHP 5.4
+date_default_timezone_set('UTC');
+
 // Include the Composer autoloader
 include 'vendor/autoload.php';
 
@@ -19,9 +22,9 @@ try {
     echo '
         <p>Oops. Can not find this Habbo!</p>
         <p>Try to catch this exception gracefully in your application!</p>
-        <p></p>'.$e->getMessage().'</p>
+        <p></p>' . $e->getMessage() . '</p>
         <hr>
-        '.$e->getTraceAsString().'
+        ' . $e->getTraceAsString() . '
     ';
     exit();
 }
@@ -131,7 +134,8 @@ foreach ($myProfile as $section => $data) {
 
         <p>A PHP wrapper library for the undocumented API of Habbo</p>
 
-        <p><a class="btn btn-primary btn-lg" href="https://github.com/gerbenjacobs/HabboAPI" role="button" target="_blank">Learn more</a></p>
+        <p><a class="btn btn-primary btn-lg" href="https://github.com/gerbenjacobs/HabboAPI" role="button"
+              target="_blank">Learn more</a></p>
     </div>
 
     <div class="row">
