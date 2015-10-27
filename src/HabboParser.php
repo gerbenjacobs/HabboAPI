@@ -9,6 +9,7 @@ use HabboAPI\Entities\Badge;
 use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
 use HabboAPI\Entities\Room;
+use InvalidArgumentException;
 
 /**
  * Class HabboParser
@@ -36,15 +37,29 @@ class HabboParser implements HabboParserInterface
         $this->api_base = $api_base;
     }
 
+
     /**
      * Parses the Habbo user endpoint
      *
-     * @param string $habboname
-     * @return Entities\Habbo
+     * @param $identifier
+     * @param string $type
+     * @return Habbo
+     * @throws Exception
      */
-    public function parseHabbo($habboname)
+    public function parseHabbo($identifier, $type = "name")
     {
-        $data = $this->_callUrl($this->api_base . "users?name=" . $habboname);
+        switch ($type) {
+            case "name":
+                $url = 'users?name=' . $identifier;
+                break;
+            case "hhid":
+                $url = 'users/' . $identifier;
+                break;
+            default:
+                throw new InvalidArgumentException("Invalid type defined for parseHabbo");
+        }
+
+        $data = $this->_callUrl($this->api_base . $url);
 
         $habbo = new Habbo();
         $habbo->parse($data);

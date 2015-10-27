@@ -39,6 +39,22 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('HabboAPI\Entities\Badge', $selectedBadges[0]);
     }
 
+    public function testParseHabboWithId()
+    {
+        // Should use HHID based url
+        $this->habboParserMock->expects($this->once())->method('_callUrl')->with('https://www.habbo.com/api/public/users/hhus-9cd61b156972c2eb33a145d69918f965');
+
+        $this->habboParserMock->parseHabbo('hhus-9cd61b156972c2eb33a145d69918f965', 'hhid');
+    }
+
+    /**
+     * @expectedException InvalidArgumentException
+     */
+    public function testParseHabboWithInvalidType()
+    {
+        $this->habboParserMock->parseHabbo('hhus-9cd61b156972c2eb33a145d69918f965', 'invalid');
+    }
+
     public function testParseProfile()
     {
         // Replace parseProfile with static data

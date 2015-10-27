@@ -32,11 +32,21 @@ class Group implements Entity
         $this->setName($group['name']);
         $this->setDescription($group['description']);
         $this->setType($group['type']);
-        $this->setPrimaryColour($group['primaryColour']);
-        $this->setSecondaryColour($group['secondaryColour']);
-        $this->setBadgeCode($group['badgeCode']);
-        $this->setRoomId($group['roomId']);
-        $this->setIsAdmin($group['isAdmin']);
+        if (isset($group['primaryColour'])) {
+            $this->setPrimaryColour($group['primaryColour']);
+        }
+        if (isset($group['secondaryColour'])) {
+            $this->setSecondaryColour($group['secondaryColour']);
+        }
+        if (isset($group['badgeCode'])) {
+            $this->setBadgeCode($group['badgeCode']);
+        }
+        if (isset($group['roomId'])) {
+            $this->setRoomId($group['roomId']);
+        }
+        if (isset($group['isAdmin'])) {
+            $this->setIsAdmin($group['isAdmin']);
+        }
     }
 
     public function __toString()
