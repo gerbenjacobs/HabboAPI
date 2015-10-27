@@ -63,12 +63,12 @@ class GroupTest extends \PHPUnit_Framework_TestCase
 
     public function testIncompleteGroup()
     {
-        $incomplete = [
+        $incomplete = array(
             'id' => 'g-hhtr-8fe11690ee3f3b36705dd3f6ecb3dde3',
             'name' => 'Crowleys Koffie Clan',
             'description' => 'Iedereen een kopje koffie?',
             'type' => 'NORMAL'
-        ];
+        );
         $this->entity = new Group();
         $this->entity->parse($incomplete);
 
