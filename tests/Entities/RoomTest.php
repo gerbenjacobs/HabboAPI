@@ -45,4 +45,9 @@ class RoomTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals('hhus-9cd61b156972c2eb33a145d69918f965', $this->entity->getOwnerUniqueId());
     }
+
+    public function testThumbnailUrl()
+    {
+        $this->assertEquals('http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png', $this->entity->getThumbnailUrl());
+    }
 }

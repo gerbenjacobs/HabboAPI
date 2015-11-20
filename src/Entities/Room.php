@@ -17,6 +17,7 @@ class Room implements Entity
     private $name;
     private $description;
     private $ownerUniqueId;
+    private $thumbnailUrl;
 
     /** Parses room info array to \Entities\Room object
      *
@@ -28,6 +29,7 @@ class Room implements Entity
         $this->setName($room['name']);
         $this->setDescription($room['description']);
         $this->setOwnerUniqueId($room['ownerUniqueId']);
+        $this->setThumbnailUrl($room['thumbnailUrl']);
     }
 
     public function __toString()
@@ -36,7 +38,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -44,7 +46,7 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     protected function setName($name)
     {
@@ -52,7 +54,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDescription()
     {
@@ -60,7 +62,7 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $description
+     * @param string $description
      */
     protected function setDescription($description)
     {
@@ -68,7 +70,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getId()
     {
@@ -76,7 +78,7 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $id
+     * @param string $id
      */
     protected function setId($id)
     {
@@ -84,7 +86,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getOwnerUniqueId()
     {
@@ -92,10 +94,26 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $ownerUniqueId
+     * @param string $ownerUniqueId
      */
     protected function setOwnerUniqueId($ownerUniqueId)
     {
         $this->ownerUniqueId = $ownerUniqueId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getThumbnailUrl()
+    {
+        return $this->thumbnailUrl;
+    }
+
+    /**
+     * @param string $thumbnailUrl
+     */
+    public function setThumbnailUrl($thumbnailUrl)
+    {
+        $this->thumbnailUrl = $thumbnailUrl;
     }
 }
