@@ -18,6 +18,8 @@ class Room implements Entity
     private $description;
     private $ownerUniqueId;
     private $thumbnailUrl;
+    private $tags;
+    private $categories;
 
     /** Parses room info array to \Entities\Room object
      *
@@ -28,8 +30,16 @@ class Room implements Entity
         $this->setId($room['id']);
         $this->setName($room['name']);
         $this->setDescription($room['description']);
-        $this->setOwnerUniqueId($room['ownerUniqueId']);
         $this->setThumbnailUrl($room['thumbnailUrl']);
+        $this->setTags($room['tags']);
+
+        if (isset($room['ownerUniqueId'])) {
+            $this->setOwnerUniqueId($room['ownerUniqueId']);
+        }
+
+        if (isset($room['categories'])) {
+            $this->setCategories($room['categories']);
+        }
     }
 
     public function __toString()
@@ -99,6 +109,38 @@ class Room implements Entity
     protected function setOwnerUniqueId($ownerUniqueId)
     {
         $this->ownerUniqueId = $ownerUniqueId;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param array $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param array $categories
+     */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
     }
 
     /**

@@ -50,4 +50,23 @@ class RoomTest extends \PHPUnit_Framework_TestCase
     {
         $this->assertEquals('http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png', $this->entity->getThumbnailUrl());
     }
+
+    public function testGetTags()
+    {
+        $this->assertEquals(["one", "tag", "too", "far"], $this->entity->getTags());
+    }
+
+    public function testGetCategories()
+    {
+        $this->assertEquals(["Habbo Life"], $this->entity->getCategories());
+    }
+
+    public function testBareEntity()
+    {
+        $room = new Room();
+        $room->parse(self::$data['rooms'][1]);
+
+        // Make sure it doesn't throw errors
+        $this->assertInstanceOf('HabboAPI\Entities\Room', $room);
+    }
 }

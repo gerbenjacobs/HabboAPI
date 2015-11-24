@@ -1025,14 +1025,15 @@
       "name": "Venice Beach Rollercoaster",
       "description": "Ahh well..",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png"
+      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png",
+      "tags": ["one", "tag", "too", "far"],
+      "categories": ["Habbo Life"]
     },
     {
       "id": "r-hhus-abb87256459a4f9069a8fe86f5a188ed",
       "name": "Venice Beach Seaworld",
       "description": "Come and relax.. or die face to face with the great whites..",
-      "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159823.png"
+      "tags": []
     },
     {
       "id": "r-hhus-e6f2266fe691e2aa7490351680585af8",
