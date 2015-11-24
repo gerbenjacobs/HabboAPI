@@ -1040,21 +1040,24 @@
       "name": "Hell yeah",
       "description": null,
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/46093264.png"
+      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/46093264.png",
+      "tags": []
     },
     {
       "id": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
       "name": "HabboHelpers.com",
       "description": "",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/62423647.png"
+      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/62423647.png",
+      "tags": []
     },
     {
       "id": "r-hhus-0f7319d1291373ddd1d609ac129fd82f",
       "name": "Bouwers Club",
       "description": null,
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/65285667.png"
+      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/65285667.png",
+      "tags": []
     }
   ],
   "badges": [

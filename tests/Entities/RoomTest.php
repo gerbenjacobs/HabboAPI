@@ -53,12 +53,12 @@ class RoomTest extends \PHPUnit_Framework_TestCase
 
     public function testGetTags()
     {
-        $this->assertEquals(["one", "tag", "too", "far"], $this->entity->getTags());
+        $this->assertEquals(array("one", "tag", "too", "far"), $this->entity->getTags());
     }
 
     public function testGetCategories()
     {
-        $this->assertEquals(["Habbo Life"], $this->entity->getCategories());
+        $this->assertEquals(array("Habbo Life"), $this->entity->getCategories());
     }
 
     public function testBareEntity()
