@@ -17,6 +17,8 @@ class Room implements Entity
     private $name;
     private $description;
     private $ownerUniqueId;
+    private $tags;
+    private $categories;
 
     /** Parses room info array to \Entities\Room object
      *
@@ -27,7 +29,15 @@ class Room implements Entity
         $this->setId($room['id']);
         $this->setName($room['name']);
         $this->setDescription($room['description']);
-        $this->setOwnerUniqueId($room['ownerUniqueId']);
+        $this->setTags($room['tags']);
+
+        if (isset($room['ownerUniqueId'])) {
+            $this->setOwnerUniqueId($room['ownerUniqueId']);
+        }
+
+        if (isset($room['categories'])) {
+            $this->setCategories($room['categories']);
+        }
     }
 
     public function __toString()
@@ -36,7 +46,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -44,7 +54,7 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     protected function setName($name)
     {
@@ -52,7 +62,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDescription()
     {
@@ -60,7 +70,7 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $description
+     * @param string $description
      */
     protected function setDescription($description)
     {
@@ -68,7 +78,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getId()
     {
@@ -76,7 +86,7 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $id
+     * @param string $id
      */
     protected function setId($id)
     {
@@ -84,7 +94,7 @@ class Room implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getOwnerUniqueId()
     {
@@ -92,10 +102,42 @@ class Room implements Entity
     }
 
     /**
-     * @param mixed $ownerUniqueId
+     * @param string $ownerUniqueId
      */
     protected function setOwnerUniqueId($ownerUniqueId)
     {
         $this->ownerUniqueId = $ownerUniqueId;
+    }
+
+    /**
+     * @return array
+     */
+    public function getTags()
+    {
+        return $this->tags;
+    }
+
+    /**
+     * @param array $tags
+     */
+    public function setTags($tags)
+    {
+        $this->tags = $tags;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCategories()
+    {
+        return $this->categories;
+    }
+
+    /**
+     * @param array $categories
+     */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
     }
 }
