@@ -30,8 +30,11 @@ class Room implements Entity
         $this->setId($room['id']);
         $this->setName($room['name']);
         $this->setDescription($room['description']);
-        $this->setThumbnailUrl($room['thumbnailUrl']);
         $this->setTags($room['tags']);
+
+        if (isset($room['thumbnailUrl'])) {
+            $this->setThumbnailUrl($room['thumbnailUrl']);
+        }
 
         if (isset($room['ownerUniqueId'])) {
             $this->setOwnerUniqueId($room['ownerUniqueId']);
