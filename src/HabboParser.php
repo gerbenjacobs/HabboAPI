@@ -85,7 +85,7 @@ class HabboParser implements HabboParserInterface
         $data = json_decode($json, true);
         $data['habboAPI_info'] = curl_getinfo($ch);
         if ($data['habboAPI_info']['http_code'] != 200) {
-            throw new Exception('Habbo API replied with an error code: ' . $data['error']);
+            throw new Exception($data['error'],$data['habboAPI_info']['http_code']);
         }
         curl_close($ch);
         return $data;
