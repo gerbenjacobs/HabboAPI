@@ -22,7 +22,7 @@ try {
     echo '
         <p>Oops. Can not find this Habbo!</p>
         <p>Try to catch this exception gracefully in your application!</p>
-        <p></p>' . $e->getMessage() . '</p>
+        <p>[' . $e->getCode() . '] ' . $e->getMessage() . '</p>
         <hr>
         ' . $e->getTraceAsString() . '
     ';
