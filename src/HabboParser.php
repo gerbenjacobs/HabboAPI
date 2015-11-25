@@ -85,7 +85,7 @@ class HabboParser implements HabboParserInterface
         $data = json_decode($json, true);
         $data['habboAPI_info'] = curl_getinfo($ch);
         if ($data['habboAPI_info']['http_code'] != 200) {
-            throw new Exception($data['error'], $data['habboAPI_info']['http_code']);
+            throw new Exception('Habbo API replied with an error code: ' . $data['error']);
         }
         curl_close($ch);
         return $data;
@@ -109,7 +109,7 @@ class HabboParser implements HabboParserInterface
         $habbo->parse($data['user']);
 
         // Friends
-        $friends = [];
+        $friends = array();
         foreach ($data['friends'] as $friend) {
             $temp_friend = new Habbo();
             $temp_friend->parse($friend);
@@ -118,7 +118,7 @@ class HabboParser implements HabboParserInterface
         }
 
         // Groups
-        $groups = [];
+        $groups = array();
         foreach ($data['groups'] as $group) {
             $temp_group = new Group();
             $temp_group->parse($group);
@@ -127,7 +127,7 @@ class HabboParser implements HabboParserInterface
         }
 
         // Rooms
-        $rooms = [];
+        $rooms = array();
         foreach ($data['rooms'] as $room) {
             $temp_room = new Room();
             $temp_room->parse($room);
@@ -136,7 +136,7 @@ class HabboParser implements HabboParserInterface
         }
 
         // Badges
-        $badges = [];
+        $badges = array();
         foreach ($data['badges'] as $badge) {
             $temp_badge = new Badge();
             $temp_badge->parse($badge);
@@ -145,13 +145,13 @@ class HabboParser implements HabboParserInterface
         }
 
         // Return it all..
-        return [
+        return array(
             "habbo" => $habbo,
             "friends" => $friends,
             "groups" => $groups,
             "rooms" => $rooms,
             "badges" => $badges,
-        ];
+        );
     }
 
 } 
