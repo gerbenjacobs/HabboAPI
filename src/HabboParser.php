@@ -82,43 +82,27 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $json = curl_exec($ch);
-        $data = json_decode($json, true);
-        $data['habboAPI_info'] = curl_getinfo($ch);
-        if ($data['habboAPI_info']['http_code'] != 200)
-		{
-			$error	=	$this->messageBag($data['habboAPI_info']['http_code'],$data);
-            throw new Exception($error['message'],$error['code']);
+        $response = json_decode($json, true);
+        $response['info'] = curl_getinfo($ch);
+
+        if ($response['info']['http_code'] != 200) {
+            throw new Exception($this->_extractError($response), $response['info']['http_code']);
         }
         curl_close($ch);
-        return $data;
+        return $response;
     }
-	
-    /**
-     * Parses error exception
-     *
-     * Return an array including a error code and error message
-     *
-     * @param string $http_code
-	 * @param string $error_message
-     * @return array
-     */
-	private function messageBag($http_code, $error_message = '')
-	{
-		switch($http_code)
-		{
-			case 400:
-						$message	=	array('code'=>400,'message'=>'Bad request');
-						break;
-			
-			case 404:
-						$message	=	array('code'=>404,'message'=>'Habbo not found');
-						break;
-			default:
-						$message	=	array('code'=>$http_code,'message'=>$error_message);
-		}
-		return $message;
-	}
-	
+
+    private function _extractError($response)
+    {
+        if (isset($response['errors'])) {
+            return $response['errors'][0]['msg'];
+        } else if (isset($response['error'])) {
+            return $response['error'];
+        } else {
+            return 'Unknown';
+        }
+    }
+
     /**
      * Parses the Habbo Profile endpoints
      *
