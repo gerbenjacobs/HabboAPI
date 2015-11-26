@@ -84,13 +84,41 @@ class HabboParser implements HabboParserInterface
         $json = curl_exec($ch);
         $data = json_decode($json, true);
         $data['habboAPI_info'] = curl_getinfo($ch);
-        if ($data['habboAPI_info']['http_code'] != 200) {
-            throw new Exception($data['error'],$data['habboAPI_info']['http_code']);
+        if ($data['habboAPI_info']['http_code'] != 200)
+		{
+			$error	=	$this->messageBag($data['habboAPI_info']['http_code'],$data);
+            throw new Exception($error['message'],$error['code']);
         }
         curl_close($ch);
         return $data;
     }
-
+	
+    /**
+     * Parses error exception
+     *
+     * Return an array including a error code and error message
+     *
+     * @param string $http_code
+	 * @param string $error_message
+     * @return array
+     */
+	private function messageBag($http_code, $error_message = '')
+	{
+		switch($http_code)
+		{
+			case 400:
+						$message	=	array('code'=>400,'message'=>'Bad request');
+						break;
+			
+			case 404:
+						$message	=	array('code'=>404,'message'=>'Habbo not found');
+						break;
+			default:
+						$message	=	array('code'=>$http_code,'message'=>$error_message);
+		}
+		return $message;
+	}
+	
     /**
      * Parses the Habbo Profile endpoints
      *
