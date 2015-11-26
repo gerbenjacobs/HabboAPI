@@ -82,13 +82,25 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $json = curl_exec($ch);
-        $data = json_decode($json, true);
-        $data['habboAPI_info'] = curl_getinfo($ch);
-        if ($data['habboAPI_info']['http_code'] != 200) {
-            throw new Exception($data['error'], $data['habboAPI_info']['http_code']);
+        $response = json_decode($json, true);
+        $response['info'] = curl_getinfo($ch);
+
+        if ($response['info']['http_code'] != 200) {
+            throw new Exception($this->_extractError($response), $response['info']['http_code']);
         }
         curl_close($ch);
-        return $data;
+        return $response;
+    }
+
+    private function _extractError($response)
+    {
+        if (isset($response['errors'])) {
+            return $response['errors'][0]['msg'];
+        } else if (isset($response['error'])) {
+            return $response['error'];
+        } else {
+            return 'Unknown';
+        }
     }
 
     /**
