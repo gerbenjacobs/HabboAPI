@@ -34,6 +34,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Current status
+- November 30th, 2015 - v1.0.6 - Small fixes to Room entity and better exception handling.
 - October 27th, 2015 - v1.0.5 - Allow parseHabbo() to use either Habboname or HHID. Also adds some stability to the Group entity
 - October 25th, 2015 - v1.0.3 - Throws exception if Habbo API replies with error and removed the `HabboAPI` directory for idiomatic packagist standards.
 - October 12th, 2015 - v1.0.2 - Removed server IP, upgraded PHPUnit and tests, expanded on example.php
