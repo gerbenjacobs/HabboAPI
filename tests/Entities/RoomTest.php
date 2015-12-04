@@ -56,22 +56,6 @@ class RoomTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array("navigator.flatcategory.global.CHAT"), $this->entity->getCategories());
     }
 
-    /**
-     *     "id": "r-hhus-a091e0f1d891108b49ca7af953386f0f",
-    "name": "Venice Beach Rollercoaster",
-    "description": "Ahh well..",
-    "creationTime": "2010-06-10T09:02:16.000+0000",
-    "maximumVisitors": 25,
-    "tags": ["habbies"],
-    "officialRoom": true,
-    "ownerName": "koeientemmer",
-    "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-    "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png",
-    "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/31159787.png",
-    "rating": 116,
-    "categories": ["navigator.flatcategory.global.CHAT"]
-     */
-
     public function testGetCreationTime()
     {
         $this->assertEquals('2010-06-10T09:02:16.000+0000', $this->entity->getCreationTime());
