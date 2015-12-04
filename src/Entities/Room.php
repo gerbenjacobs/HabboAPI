@@ -16,10 +16,16 @@ class Room implements Entity
     private $id;
     private $name;
     private $description;
-    private $ownerUniqueId;
-    private $thumbnailUrl;
+    private $creationTime;
+    private $maximumVisitors;
     private $tags;
+    private $officialRoom;
+    private $ownerName;
+    private $ownerUniqueId;
     private $categories;
+    private $thumbnailUrl;
+    private $imageUrl;
+    private $rating;
 
     /** Parses room info array to \Entities\Room object
      *
@@ -30,18 +36,18 @@ class Room implements Entity
         $this->setId($room['id']);
         $this->setName($room['name']);
         $this->setDescription($room['description']);
+        $this->setMaximumVisitors($room['maximumVisitors']);
         $this->setTags($room['tags']);
+        $this->setOfficialRoom($room['officialRoom']);
+        $this->setOwnerName($room['ownerName']);
+        $this->setOwnerUniqueId($room['ownerUniqueId']);
+        $this->setCategories($room['categories']);
+        $this->setThumbnailUrl($room['thumbnailUrl']);
+        $this->setImageUrl($room['imageUrl']);
+        $this->setRating($room['rating']);
 
-        if (isset($room['thumbnailUrl'])) {
-            $this->setThumbnailUrl($room['thumbnailUrl']);
-        }
-
-        if (isset($room['ownerUniqueId'])) {
-            $this->setOwnerUniqueId($room['ownerUniqueId']);
-        }
-
-        if (isset($room['categories'])) {
-            $this->setCategories($room['categories']);
+        if (isset($room['creationTime'])) {
+            $this->setCreationTime($room['creationTime']);
         }
     }
 
@@ -160,5 +166,101 @@ class Room implements Entity
     public function setThumbnailUrl($thumbnailUrl)
     {
         $this->thumbnailUrl = $thumbnailUrl;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCreationTime()
+    {
+        return $this->creationTime;
+    }
+
+    /**
+     * @param string $creationTime
+     */
+    public function setCreationTime($creationTime)
+    {
+        $this->creationTime = $creationTime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMaximumVisitors()
+    {
+        return $this->maximumVisitors;
+    }
+
+    /**
+     * @param int $maximumVisitors
+     */
+    public function setMaximumVisitors($maximumVisitors)
+    {
+        $this->maximumVisitors = $maximumVisitors;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getOfficialRoom()
+    {
+        return $this->officialRoom;
+    }
+
+    /**
+     * @param boolean $officialRoom
+     */
+    public function setOfficialRoom($officialRoom)
+    {
+        $this->officialRoom = $officialRoom;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOwnerName()
+    {
+        return $this->ownerName;
+    }
+
+    /**
+     * @param string $ownerName
+     */
+    public function setOwnerName($ownerName)
+    {
+        $this->ownerName = $ownerName;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImageUrl()
+    {
+        return $this->imageUrl;
+    }
+
+    /**
+     * @param string $imageUrl
+     */
+    public function setImageUrl($imageUrl)
+    {
+        $this->imageUrl = $imageUrl;
+    }
+
+    /**
+     * @return int
+     */
+    public function getRating()
+    {
+        return $this->rating;
+    }
+
+    /**
+     * @param int $rating
+     */
+    public function setRating($rating)
+    {
+        $this->rating = $rating;
     }
 }

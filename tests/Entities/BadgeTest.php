@@ -28,17 +28,28 @@ class BadgeTest extends \PHPUnit_Framework_TestCase
 
     public function testGetCode()
     {
-        $this->assertEquals('ACH_RoomDecoFurniTypeCount9', $this->badge->getCode());
+        $this->assertEquals('THI41', $this->badge->getCode());
     }
 
     public function testGetName()
     {
-        $this->assertEquals('RoomDecoFurniTypeCount9', $this->badge->getName());
+        $this->assertEquals('...will go on!!!', $this->badge->getName());
     }
 
     public function testGetDescription()
     {
-        $this->assertEquals('RoomDecoFurniTypeCount9', $this->badge->getDescription());
+        $this->assertEquals('Winner of broken hearts 2/2', $this->badge->getDescription());
+    }
+
+    public function testAllForExceptions()
+    {
+        foreach (self::$data['badges'] as $data) {
+            $entity = new Badge();
+            $entity->parse($data);
+
+            // Make sure it doesn't throw errors
+            $this->assertInstanceOf('HabboAPI\Entities\Badge', $entity);
+        }
     }
 
 }

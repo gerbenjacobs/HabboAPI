@@ -92,4 +92,15 @@ class GroupTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->entity->getIsAdmin());
     }
 
+    public function testAllForExceptions()
+    {
+        foreach (self::$data['groups'] as $data) {
+            $entity = new Group();
+            $entity->parse($data);
+
+            // Make sure it doesn't throw errors
+            $this->assertInstanceOf('HabboAPI\Entities\Group', $entity);
+        }
+    }
+
 }

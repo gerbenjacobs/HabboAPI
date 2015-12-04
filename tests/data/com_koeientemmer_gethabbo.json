@@ -1,39 +1,33 @@
 {
   "uniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
   "name": "koeientemmer",
-  "figureString": "hr-155-42.hd-195-1.ch-210-74.lg-285-81.sh-290-1408",
-  "selectedBadges": [
-    {
-      "badgeIndex": 1,
-      "code": "YODUK",
-      "name": "YODUK",
-      "description": "special fun badge"
-    },
-    {
-      "badgeIndex": 2,
-      "code": "UK183",
-      "name": "The Sims - Katy Perry Sweet Treats",
-      "description": "I beat the The Sims Katy Perry Sweet Treats Quiz! "
-    },
-    {
-      "badgeIndex": 3,
-      "code": "Z63_HHUK",
-      "name": "NEW BETA colour",
-      "description": "coloured beta"
-    },
-    {
-      "badgeIndex": 4,
-      "code": "Z64_HHUK",
-      "name": "NEW BETA bw",
-      "description": "black and white"
-    },
-    {
-      "badgeIndex": 5,
-      "code": "UK119",
-      "name": "Master Shifu's Badge of Honour",
-      "description": "Ad Sales, Kung Fu Panda, Dec 2010"
-    }
-  ],
+  "figureString": "hr-155-42.hd-195-1.ch-255-76.lg-285-81.sh-290-1408.ha-3430",
+  "selectedBadges": [{
+    "badgeIndex": 1,
+    "code": "YODUK",
+    "name": "Master Yoduck",
+    "description": "Use the nondescript motion imparting field!"
+  }, {
+    "badgeIndex": 2,
+    "code": "UK183",
+    "name": "The Sims - Katy Perry Sweet Treats",
+    "description": "I beat the The Sims Katy Perry Sweet Treats Quiz!"
+  }, {
+    "badgeIndex": 3,
+    "code": "Z63_HHUK",
+    "name": "Valued BETA tester",
+    "description": "Helped shape the new Habbo June 2009"
+  }, {
+    "badgeIndex": 4,
+    "code": "Z64_HHUK",
+    "name": "Official BETA tester",
+    "description": "Helped shape the new Habbo June 2009"
+  }, {
+    "badgeIndex": 5,
+    "code": "UK119",
+    "name": "Master Shifu's Badge of Honour",
+    "description": "Kung Fu Panda 2 visited Habbo December 2010"
+  }],
   "motto": "Oldskooler than Dionysus!",
   "memberSince": "2001-10-06T12:21:53.000+0000",
   "profileVisible": true,

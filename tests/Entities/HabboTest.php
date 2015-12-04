@@ -40,6 +40,21 @@ class HabboTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('koeientemmer', $this->habbo->getHabboName());
     }
 
+    public function testGetFigureString()
+    {
+        $this->assertEquals('hr-155-42.hd-195-1.ch-255-76.lg-285-81.sh-290-1408.ha-3430', $this->habbo->getFigureString());
+    }
+
+    public function testGetMotto()
+    {
+        $this->assertEquals('Oldskooler than Dionysus!', $this->habbo->getMotto());
+    }
+
+    public function testGetMemberSince()
+    {
+        $this->assertEquals('2001-10-06T12:21:53.000+0000', $this->habbo->getMemberSince());
+    }
+
     public function testFiveSelectedBadges()
     {
         $selectedBadges = $this->habbo->getSelectedBadges();

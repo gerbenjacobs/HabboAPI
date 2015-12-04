@@ -1,8 +1,8 @@
 [![Build status] (https://api.travis-ci.org/gerbenjacobs/HabboAPI.svg)](https://travis-ci.org/gerbenjacobs/HabboAPI)
 [![Latest Stable Version](https://poser.pugx.org/gerbenjacobs/habbo-api/v/stable.svg)](https://packagist.org/packages/gerbenjacobs/habbo-api)
 # HabboAPI
-This PHP wrapper library is used to collect data from the _undcoumented_ Habbo.com Beta API.  
-The project required PHP 5 and uses the Composer autoloader and PSR-4 standard.
+This PHP wrapper library is used to collect data from the _undcoumented_ Habbo API.  
+The project requires PHP 5.3 and uses the Composer autoloader and PSR-4 standard.
 
 See the `example.php` file on how you could use this library.
 
@@ -34,6 +34,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Current status
+- December 4th, 2015 - v1.0.7 - Adds new attributes to Room entity
 - November 30th, 2015 - v1.0.6 - Small fixes to Room entity and better exception handling.
 - October 27th, 2015 - v1.0.5 - Allow parseHabbo() to use either Habboname or HHID. Also adds some stability to the Group entity
 - October 25th, 2015 - v1.0.3 - Throws exception if Habbo API replies with error and removed the `HabboAPI` directory for idiomatic packagist standards.

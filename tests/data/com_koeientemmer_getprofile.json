@@ -2,2034 +2,1736 @@
   "user": {
     "uniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
     "name": "koeientemmer",
-    "figureString": "hr-155-42.hd-195-1.ch-210-74.lg-285-81.sh-290-1408",
-    "selectedBadges": [
-      {
-        "badgeIndex": 1,
-        "code": "YODUK",
-        "name": "YODUK",
-        "description": "special fun badge"
-      },
-      {
-        "badgeIndex": 2,
-        "code": "UK183",
-        "name": "The Sims - Katy Perry Sweet Treats",
-        "description": "I beat the The Sims Katy Perry Sweet Treats Quiz! "
-      },
-      {
-        "badgeIndex": 3,
-        "code": "Z63_HHUK",
-        "name": "NEW BETA colour",
-        "description": "coloured beta"
-      },
-      {
-        "badgeIndex": 4,
-        "code": "Z64_HHUK",
-        "name": "NEW BETA bw",
-        "description": "black and white"
-      },
-      {
-        "badgeIndex": 5,
-        "code": "UK119",
-        "name": "Master Shifu's Badge of Honour",
-        "description": "Ad Sales, Kung Fu Panda, Dec 2010"
-      }
-    ],
+    "figureString": "hr-155-42.hd-195-1.ch-255-76.lg-285-81.sh-290-1408.ha-3430",
+    "selectedBadges": [{
+      "badgeIndex": 1,
+      "code": "YODUK",
+      "name": "Master Yoduck",
+      "description": "Use the nondescript motion imparting field!"
+    }, {
+      "badgeIndex": 2,
+      "code": "UK183",
+      "name": "The Sims - Katy Perry Sweet Treats",
+      "description": "I beat the The Sims Katy Perry Sweet Treats Quiz!"
+    }, {
+      "badgeIndex": 3,
+      "code": "Z63_HHUK",
+      "name": "Valued BETA tester",
+      "description": "Helped shape the new Habbo June 2009"
+    }, {
+      "badgeIndex": 4,
+      "code": "Z64_HHUK",
+      "name": "Official BETA tester",
+      "description": "Helped shape the new Habbo June 2009"
+    }, {
+      "badgeIndex": 5,
+      "code": "UK119",
+      "name": "Master Shifu's Badge of Honour",
+      "description": "Kung Fu Panda 2 visited Habbo December 2010"
+    }],
     "motto": "Oldskooler than Dionysus!",
     "memberSince": "2001-10-06T12:21:53.000+0000",
     "profileVisible": true,
     "lastWebAccess": null
   },
-  "friends": [
-    {
-      "name": "!!!toon!!!",
-      "motto": "Puhekupla.com",
-      "uniqueId": "hhus-eafa7f30310f817172231ac9ba3a3baa",
-      "figureString": "hr-155-48.hd-180-1.ch-215-1408.lg-3023-64.sh-3068-1408-85.wa-2001.cp-3286"
-    },
-    {
-      "name": "!zenda!",
-      "motto": "Believe & Live for today",
-      "uniqueId": "hhus-27d71e540e314d49ffe9eabb45e747db",
-      "figureString": "hd-180-14.ch-210-1408.lg-275-1408.sh-905-1408"
-    },
-    {
-      "name": "-!!",
-      "motto": "boom yo !!1|!!1°",
-      "uniqueId": "hhus-bc8ee1d4d095c7fa4dab7a13f2422fe3",
-      "figureString": "hr-837-1347.hd-600-1387.ch-824-1415.lg-827-1415.sh-735-92"
-    },
-    {
-      "name": "-doornroosje.",
-      "motto": "Neuk gezond, neuk een appel",
-      "uniqueId": "hhus-80ff60f828511ca0090031f039b4cc84",
-      "figureString": "hr-890-37.hd-600-7.ch-691-77.lg-720-62.sh-725-78.he-1610.fa-1212"
-    },
-    {
-      "name": "-Larsboy-",
-      "motto": "Go Holland! Go Holland!",
-      "uniqueId": "hhus-b7e894971d6e62e5e72abef3c1267e31",
-      "figureString": "hr-155-37.hd-180-2.ch-3110-69-62.lg-3116-62-69.sh-305-62.he-1609-73.ea-1406.ca-1815-69"
-    },
-    {
-      "name": ".:Gijs:.",
-      "motto": "Scania R730 16 Liter V8 3500Nm.",
-      "uniqueId": "hhus-5f2f6c9ab3c57b1d9c406b2b5c218c1c",
-      "figureString": "hr-155-31.hd-185-14.ch-210-1408.lg-285-1408.sh-290-1408"
-    },
-    {
-      "name": ".barbiee",
-      "motto": "Ha.",
-      "uniqueId": "hhus-79b27430273906d65f1945853c3088de",
-      "figureString": "hr-515-34.hd-600-2.ch-665-77.lg-710-63.ha-1006"
-    },
-    {
-      "name": "123debby",
-      "motto": "That's me!",
-      "uniqueId": "hhus-63952c36a4eea4f220e0e4a92b81a288",
-      "figureString": "hr-545-45.hd-600-8.ch-660-73.lg-720-1408.sh-730-1408.he-1609-73"
-    },
-    {
-      "name": "=Atlantis=",
-      "motto": "Update your own motto...",
-      "uniqueId": "hhus-226106ab4c9559eca78b42a245dd54c9",
-      "figureString": "hr-891-45.hd-185-4.ch-3030-82.lg-285-89.sh-290-62"
-    },
-    {
-      "name": "Administratie",
-      "motto": "Ftw..",
-      "uniqueId": "hhus-4e644be4a2bdab314e969c0285dee676",
-      "figureString": "hr-831-32.hd-180-3.ch-3050-107-62.lg-3201-110-62.sh-3206-104.ca-3219-1323"
-    },
-    {
-      "name": "aleah1362",
-      "motto": "Pretty Hurts|",
-      "uniqueId": "hhus-92c6580345114a426008a365031ddcbb",
-      "figureString": "hr-836-32.hd-605-7.ch-3014-96.lg-3202-1339-1408.sh-3154-92-96.fa-1202-92.ca-3292-100.cc-3289-78"
-    },
-    {
-      "name": "Angelcostarica",
-      "motto": "Habbo.es -> WELCH",
-      "uniqueId": "hhus-34d9d3acc31cfbb7bcbfbf7496ab2ed7",
-      "figureString": "hr-155-35.hd-208-1.ch-877-88-64.lg-270-91.sh-305-90.ca-1805-64.wa-2001"
-    },
-    {
-      "name": "antonio119",
-      "motto": "[NLC] Owner",
-      "uniqueId": "hhus-f170d4a99836911bfcfd9a78c7c5bb04",
-      "figureString": "hd-209-14.ch-210-1408.lg-270-1408"
-    },
-    {
-      "name": "arcboosteur",
-      "motto": "Das Ruhenheim º",
-      "uniqueId": "hhus-bdccdb543d489eddac7c628234e89fed",
-      "figureString": "hr-802-42.hd-180-1.ch-805-1408.lg-285-68.sh-295-1408.ha-1014.he-1610.fa-1201"
-    },
-    {
-      "name": "ArmedSingapore",
-      "motto": "(USMC) SSgt/FLO/DI [B10] {&Y^HQAOJ}",
-      "uniqueId": "hhus-97e2b47b0d6b5663f94ceb5962d3f1dd",
-      "figureString": "hd-180-1.ch-220-89.lg-285-88.fa-1201.wa-2009-89"
-    },
-    {
-      "name": "Bart..",
-      "motto": "Shoot some heroin & fuck with the star",
-      "uniqueId": "hhus-fc2e0849ff9aa394a1187fbb7d5fb4af",
-      "figureString": "hr-115-1136.hd-190-1026.ch-215-1286.lg-275-1184.sh-305-1286"
-    },
-    {
-      "name": "BauenII",
-      "motto": "Habfan.nl - Owner",
-      "uniqueId": "hhus-070ead683f395ce57d80b29531f43b8d",
-      "figureString": "hr-125-45.hd-180-2.ch-3030-73.lg-285-82.sh-290-62"
-    },
-    {
-      "name": "BellaBoo374",
-      "motto": "",
-      "uniqueId": "hhus-1229d7a8a39fa5ca810279e138b37da1",
-      "figureString": "hr-891-45.hd-605-1.ch-685-76.lg-700-62.sh-730-77.ha-1005-62.wa-2001"
-    },
-    {
-      "name": "Bflorens",
-      "motto": "the way i like it.",
-      "uniqueId": "hhus-1a3b858859b9a11931c10f90e5e97a8c",
-      "figureString": "ha-1017-.lg-270-64.sh-290-62.hr-170-45.hd-180-3.ch-215-83.ea-1401-62"
-    },
-    {
-      "name": "Biermonster",
-      "motto": "Wtf.",
-      "uniqueId": "hhus-21236c92ec4bb4f4ce967a2274eb6115",
-      "figureString": "hr-170-42.hd-200-2.ch-875-62-62.lg-270-62.ea-1401-80.fa-1208-73"
-    },
-    {
-      "name": "BIGxMAC",
-      "motto": "",
-      "uniqueId": "hhus-6c74a4d60c5ecdbf64f1e4108fc22a8f",
-      "figureString": "hr-155-33.hd-195-2.ch-235-82.lg-285-63.sh-290-62.ca-1801-65"
-    },
-    {
-      "name": "brendan1357",
-      "motto": "Been there done that..",
-      "uniqueId": "hhus-be83b59c866a0fefe4b04aeddebc97cd",
-      "figureString": "hd-180-14.ch-210-1408.lg-3078-1408.sh-295-1408.fa-1201"
-    },
-    {
-      "name": "Bubblejuice.nl",
-      "motto": "Owner bubblejuice.nl :D",
-      "uniqueId": "hhus-52fb7c35897e9755f8b10fdcfd73c490",
-      "figureString": "hr-155-42.hd-185-14.ch-255-1408.lg-275-1408.sh-295-1408"
-    },
-    {
-      "name": "Bunny_Purple",
-      "motto": "",
-      "uniqueId": "hhus-87d06ddef31c26db2556cd227b9925b9",
-      "figureString": "hr-893-31.hd-185-28.ch-215-62.lg-280-75.ha-1008"
-    },
-    {
-      "name": "Cachiporros",
-      "motto": "",
-      "uniqueId": "hhus-d7876f0fa6295c7464ae2503ba9c4b36",
-      "figureString": "hr-155-37.hd-180-3.ch-3030-80.lg-275-64"
-    },
-    {
-      "name": "Cavke",
-      "motto": "",
-      "uniqueId": "hhus-17935fb20f32923a84c962b5ad168965",
-      "figureString": "hd-600-1.ch-630-89.lg-715-77.sh-730-91.hr-890-45.ca-1803-87.ea-1401-69"
-    },
-    {
-      "name": "Chaz",
-      "motto": "l33t",
-      "uniqueId": "hhus-40c1da323117b8c5b5f90953b0ea22fc",
-      "figureString": "hr-828-34.hd-180-22.ch-3167.lg-275-63.sh-290-84.he-1603-72.cc-3007-81-81"
-    },
-    {
-      "name": "choi",
-      "motto": "absolutely fine",
-      "uniqueId": "hhus-d445b031c32abe98c9856b72533d4d46",
-      "figureString": "hr-3278-49-40.hd-3091-13.ch-3077-100-1408.lg-270-92.sh-3027-1335-110.cc-3186-1336"
-    },
-    {
-      "name": "Clemster.",
-      "motto": "Pinguin?",
-      "uniqueId": "hhus-619f390e32b3e6b53d3bc31f59c0f34d",
-      "figureString": "hr-165-45.hd-180-1.ch-3030-83.lg-285-64.sh-290-1408.fa-3147-1408"
-    },
-    {
-      "name": "Codified",
-      "motto": "Teves",
-      "uniqueId": "hhus-22b7cef12be09ea22f1a095057b4b1e0",
-      "figureString": "hd-180-30.ch-3030-1408.lg-270-64.sh-305-64.ea-1406"
-    },
-    {
-      "name": "Cooldied",
-      "motto": "Don't touch the red button...",
-      "uniqueId": "hhus-4a1e16c89a4b5491c9233d74d43ad640",
-      "figureString": "hr-125-38.hd-190-8.ch-267-1408.lg-3116-72-1408.sh-295-76.fa-1201.ca-1802.wa-2001"
-    },
-    {
-      "name": "CoolShankar1",
-      "motto": "<F.B.I> Cadet",
-      "uniqueId": "hhus-d9806928ec711fc10b82cc61ba452a12",
-      "figureString": "hd-180-1.ch-220-62.lg-285-64.sh-300-64.ca-1804-64.wa-2001"
-    },
-    {
-      "name": "D0SIER",
-      "motto": "",
-      "uniqueId": "hhus-ed7606b49e51acd037b382ee05faec56",
-      "figureString": "hr-893-46.ha-1023-67.hd-180-16.lg-280-73.wa-2004-87.ea-1406-.sh-908-79.ca-1803-65.ch-240-83"
-    },
-    {
-      "name": "Dancingfish",
-      "motto": "-,_\"",
-      "uniqueId": "hhus-a004ddd8b21a9065e832669db5a22c72",
-      "figureString": "hr-893-45.hd-209-19.ch-3110-64-1408.lg-281-80.sh-305-66.he-1606-66"
-    },
-    {
-      "name": "djcesar",
-      "motto": "Be yourself.",
-      "uniqueId": "hhus-5b95ba4568cef7e67fb6b01907d16807",
-      "figureString": "hr-893-36.hd-180-1.ch-877-1408-1408.lg-285-1408.sh-906-1408.ea-1401-1408"
-    },
-    {
-      "name": "DjMaxi",
-      "motto": "Be careful with bad people!",
-      "uniqueId": "hhus-9e3fae940bd058f06d88575d747c2bf7",
-      "figureString": "hr-155-42.hd-180-1.ch-255-64.lg-275-82.ha-3404-64-82.ea-1406"
-    },
-    {
-      "name": "Djridk",
-      "motto": "From The Netherlands",
-      "uniqueId": "hhus-cc6df5f8fdbfbe0bbfe431fcb1d7c2e7",
-      "figureString": "hr-165-45.hd-209-2.ch-235-73.lg-275-62.sh-295-62"
-    },
-    {
-      "name": "DoYouLiftBro",
-      "motto": "",
-      "uniqueId": "hhus-ba0da0b6c7ce4a2ccd749fc8c0342d80",
-      "figureString": "hr-110-42.hd-180-30.ch-267-66.lg-285-64.sh-305-1408.cc-260-64"
-    },
-    {
-      "name": "Dragon-nccb",
-      "motto": "",
-      "uniqueId": "hhus-d655846432ccf14dd1efd8ddea92b48a",
-      "figureString": "hr-3012-34.hd-600-1363.ch-3442.lg-3434-1419-110.sh-3435-1419-110.ha-3441.he-1609-110.ea-3141.ca-3444-110"
-    },
-    {
-      "name": "DumbGenius1999",
-      "motto": "RICH AF",
-      "uniqueId": "hhus-43ea4c54070dcf2582f13bec5bda30b8",
-      "figureString": "hr-155-39.hd-208-8.ch-255-80.lg-275-64.ha-3117-81.he-1609-66"
-    },
-    {
-      "name": "E-B-2",
-      "motto": "from the netherlands",
-      "uniqueId": "hhus-819d9baee06217024ae3805e7f6f9a71",
-      "figureString": "hr-170-39.hd-180-8.ch-878-64-70.lg-3116-67-67.sh-295-67"
-    },
-    {
-      "name": "ED.DY",
-      "motto": "   -=- Made in Russia -=-",
-      "uniqueId": "hhus-3d1bb2951a77594af0d9da8942337929",
-      "figureString": "hr-165-61.hd-3091-8.ch-3215-110.lg-285-64.sh-3115-63-62"
-    },
-    {
-      "name": "elliewalker1",
-      "motto": "",
-      "uniqueId": "hhus-2a339135f201a46dc86d0521abae92fd",
-      "figureString": "hr-545-32.hd-600-1.ch-645-68.lg-695-68.he-3274-74"
-    },
-    {
-      "name": "Emmerrrrrrr",
-      "motto": "habborator.org",
-      "uniqueId": "hhus-391d98cd253aea3843c3d485c98c48ab",
-      "figureString": "hr-500-31.hd-600-1.ch-685-87.lg-715-62.sh-730-62.ha-1005-87"
-    },
-    {
-      "name": "EmoCaptain09",
-      "motto": "[PNP] Police Officer III [gav] [1k]",
-      "uniqueId": "hhus-6a7611d888c8cd54ca53fee354cc919d",
-      "figureString": "hr-3090-39.hd-209-8.ch-3030-1408.lg-3078-73.sh-300-1408.ha-3117-1408.ca-1807"
-    },
-    {
-      "name": "Esuoh.it",
-      "motto": "Auguri Italia! 150 anni portati bene!",
-      "uniqueId": "hhus-5382bcf41bb454592f79205386daf6af",
-      "figureString": "hr-545-45.hd-600-3.ch-665-81.lg-700-81.sh-725-62"
-    },
-    {
-      "name": "FamousSeaShell",
-      "motto": "Music Inspires Me.",
-      "uniqueId": "hhus-0a074813ffa93da2ee9cccbefd60232f",
-      "figureString": "hd-180-7.ch-210-62.lg-270-62"
-    },
-    {
-      "name": "Farnedy",
-      "motto": "Helper! farned - ESHABBO",
-      "uniqueId": "hhus-e6c110ece60f39d42ff8408abe881468",
-      "figureString": "hr-110-42.hd-207-1370.ch-220-1408.lg-275-1408.sh-305-64.fa-1201.ca-1810"
-    },
-    {
-      "name": "FernandoLOOL",
-      "motto": "Eltemplodelamusica.com - Argentina",
-      "uniqueId": "hhus-a351a371839acc6cdc37c5f1741bed99",
-      "figureString": "hr-830-40.hd-190-10.ch-3030-82.lg-3023-72.fa-3147-72.cp-3286"
-    },
-    {
-      "name": "Fibonacci",
-      "motto": "Touch too much.",
-      "uniqueId": "hhus-a2c2fb5232d8d27a1fc3ae09273be40e",
-      "figureString": "hd-3103-2.ch-3030-92.lg-280-110.ha-1012-106.he-3071-92.ea-3170-94.cp-3286"
-    },
-    {
-      "name": "fred655",
-      "motto": "Updating motto ...",
-      "uniqueId": "hhus-d57c13e210de309f72c6dba1406f8202",
-      "figureString": "hr-165-39.hd-180-8.ch-878-76-84.lg-3078-81.sh-300-64.ea-1403-75"
-    },
-    {
-      "name": "FredBeav",
-      "motto": "[Alliumphobia] silly sufferers",
-      "uniqueId": "hhus-1c451fde0e4e4fe107be25fc52e42f77",
-      "figureString": "hr-530-31.hd-605-24.ch-884-71.lg-715-71.sh-907-71.fa-1206-84.ca-1806-68"
-    },
-    {
-      "name": "GamerdmoneyV2",
-      "motto": "[EPF] TM [S]",
-      "uniqueId": "hhus-71fe48bb300301b427fcc388b93d83f2",
-      "figureString": "hr-828-31.hd-190-2.ch-255-96.lg-3058-64.sh-3089-63"
-    },
-    {
-      "name": "GerardYoBling",
-      "motto": "Habbo.nl/home/Gerard-Yo-Bling ;)",
-      "uniqueId": "hhus-e47331a6339360f2c7e574e5f63ed658",
-      "figureString": "hr-115-42.hd-180-1.ch-808-1408.lg-270-64.sh-290-1408.cc-3280-1320-1408"
-    },
-    {
-      "name": "Gerben",
-      "motto": "Habbies.nl",
-      "uniqueId": "hhus-158f03f719d36c698d853712a4910d60",
-      "figureString": "hr-155-42.hd-195-1.ch-255-79.lg-285-90.sh-290-62"
-    },
-    {
-      "name": "getsumdude",
-      "motto": "Add getsum200",
-      "uniqueId": "hhus-66c9633bd3861bd724a8c766b5efada4",
-      "figureString": "hr-155-42.hd-180-1.ch-255-64.lg-280-79.sh-3115-62-62.fa-1201"
-    },
-    {
-      "name": "Ginnegapper",
-      "motto": "Hoi",
-      "uniqueId": "hhus-66a122dd036139a5882fa692acdbfa4b",
-      "figureString": "hd-180-3.ch-215-79.lg-285-77.sh-290-62.ha-1002-62.hr-893-45"
-    },
-    {
-      "name": "Grassprietje",
-      "motto": "HabboHelpers.com",
-      "uniqueId": "hhus-656ecd6285b0486873c582d2f10e03cc",
-      "figureString": "hd-629-1.ch-675-72.lg-720-74.sh-725-1408.ha-1015.wa-2001"
-    },
-    {
-      "name": "Guarante",
-      "motto": "Journalist - Puhekupla",
-      "uniqueId": "hhus-71196d74bd192c206499cae1a097ed25",
-      "figureString": "hr-515-34.hd-628-10.ch-660-71.lg-700-1408.he-1609-73.fa-1202-88"
-    },
-    {
-      "name": "H24",
-      "motto": "      Josh.    16 Agein.",
-      "uniqueId": "hhus-b93a8c28ec7bcce552bc8491fa7c139a",
-      "figureString": "hr-115-45.hd-190-10.ch-210-63.lg-281-82.sh-290-91"
-    },
-    {
-      "name": "hassan625",
-      "motto": "Thinking",
-      "uniqueId": "hhus-3bdfb2538b52aaa977f3994ca85ce17c",
-      "figureString": "hr-831-61.hd-209-1.ch-3234-108.lg-3023-1336.sh-3016-107.ha-3209-62.ea-3107-62-62.fa-1201.ca-3085-1321.cc-3158-1336"
-    },
-    {
-      "name": "heet",
-      "motto": "",
-      "uniqueId": "hhus-0fc68249e88350536000f85ff2b16f8e",
-      "figureString": "hr-3090-31.hd-209-1.ch-3030-64.lg-280-1408.sh-290-1408"
-    },
-    {
-      "name": "Hotgerrit-jan12",
-      "motto": "",
-      "uniqueId": "hhus-f8e731503ebaae7394af6ba5277f461e",
-      "figureString": "hr-115-33.hd-180-7.ch-235-62.lg-270-64.sh-3115-63-62.ea-1404-62.wa-2009-62.cc-260-62"
-    },
-    {
-      "name": "Htech",
-      "motto": "",
-      "uniqueId": "hhus-bebf1708a6b7092b6c0cbb2c060c2d6c",
-      "figureString": "hr-893-45.hd-180-2.ch-3030-62.lg-285-82.ea-1404-62"
-    },
-    {
-      "name": "Ibex..",
-      "motto": "",
-      "uniqueId": "hhus-14aae131e4fe4292066c768c877d4efc",
-      "figureString": "hr-893-42.hd-180-4.ch-210-62.lg-285-82"
-    },
-    {
-      "name": "Jack_the-Black",
-      "motto": "[Sony] Receptionist II [TED]",
-      "uniqueId": "hhus-228405fca0afce83206abf3eafc6992a",
-      "figureString": "hr-165-42.hd-180-2.ch-220-83.lg-280-83.sh-300-62.fa-1201.ca-1819"
-    },
-    {
-      "name": "jatt.side",
-      "motto": "Unacceptable to hotel management",
-      "uniqueId": "hhus-72aef545b69add9071b0ddf392e83ad5",
-      "figureString": "hr-115-45.hd-180-3.ch-3111-73-73.lg-3116-73-73.sh-3115-73-73.ha-1003-62.fa-1201"
-    },
-    {
-      "name": "Jeaster",
-      "motto": "[NOPD] F.A.A [MtrH]",
-      "uniqueId": "hhus-6a82bc6c4910cf639abc9e7798e1980e",
-      "figureString": "hr-3163-33.hd-3091-2.ch-3077-96-64.lg-3058-110.sh-3089-110.ca-3085-1321.wa-2009-110.cc-3009-110-110"
-    },
-    {
-      "name": "jeffhardyv3",
-      "motto": "Do what ever the BOBBA you wanna do!",
-      "uniqueId": "hhus-bbaa52b2b8ee32ad9d5bf6fb1b02bfbb",
-      "figureString": "hr-155-45.hd-180-8.ch-267-85.lg-280-82.sh-290-1408.fa-3344-90"
-    },
-    {
-      "name": "JESDINERO",
-      "motto": "I'm from CATALONIA.™",
-      "uniqueId": "hhus-25013404d4c38e39051e948dfb32e11c",
-      "figureString": "hr-110-45.hd-180-1.ch-235-76.lg-3116-71-64.sh-905-1408.he-1606-1408.fa-1204.ca-1806-85.wa-3211-1408-1408"
-    },
-    {
-      "name": "JockTraper",
-      "motto": "<MI5> Field Agent ll <MMB>",
-      "uniqueId": "hhus-9fdf8e8590c50d061d5de01c94694376",
-      "figureString": "hr-155-39.hd-195-1.ch-210-62.lg-280-64.ea-1403-62.cc-260-62"
-    },
-    {
-      "name": "joe.666666",
-      "motto": "yolo",
-      "uniqueId": "hhus-0b9f3f22a70897c4dc821c901c756ddd",
-      "figureString": "hr-155-42.hd-209-1.ch-878-64-1408.lg-285-64.sh-300-64.ea-1404-64.cc-260-73"
-    },
-    {
-      "name": "jorentje1997",
-      "motto": "",
-      "uniqueId": "hhus-01f3094eeca786f4b7acea1e5a8fd47a",
-      "figureString": "hr-893-31.hd-209-3.ch-877-70-79.lg-270-82"
-    },
-    {
-      "name": "Jorg3.",
-      "motto": "Owner HabboSecurity.es - Jorge. [.ES]",
-      "uniqueId": "hhus-dcffcf12dbfb8622d94cc79dd940c925",
-      "figureString": "hr-676-31.hd-180-1.ch-804-82.lg-3088-1408-1408.sh-3068-82-82.ha-1013-82.fa-1201"
-    },
-    {
-      "name": "justin39634",
-      "motto": "",
-      "uniqueId": "hhus-7f86a374057c471527c48de4b813c06b",
-      "figureString": "hr-802-45.hd-185-1.ch-809-1408.lg-3088-73-1408.sh-3068-64-64"
-    },
-    {
-      "name": "kartrider",
-      "motto": "Habbofun",
-      "uniqueId": "hhus-7981741f86ea62cecc95d1f69cb82673",
-      "figureString": "hr-155-39.hd-180-1.ch-804-82.lg-3023-64.sh-3068-91-1408.wa-2007"
-    },
-    {
-      "name": "kielokukka$",
-      "motto": ":)",
-      "uniqueId": "hhus-7fe9aa627eab9a29ca07f094a1963ac7",
-      "figureString": "hr-9534-37.hd-3096-2.ch-3060-77.lg-3019-64.sh-3035-66.ca-1804-64.cp-3124-62"
-    },
-    {
-      "name": "killcancer",
-      "motto": "",
-      "uniqueId": "hhus-5a6c92233b274837e94e5d24203d4164",
-      "figureString": "hr-837-61.hd-3097-29.ch-3014-110.lg-3019-110.ea-1402.fa-1212.ca-3217-78-64.cc-3008-63-64"
-    },
-    {
-      "name": "kingfarishaniff",
-      "motto": "Noobs, Noobs everywhere..",
-      "uniqueId": "hhus-0d69c95253312876df9cc9016a3d5d7a",
-      "figureString": "hr-3260-43.hd-180-2.ch-3001-96-85.lg-3202-110-62.sh-3016-93.ha-3117-110.cc-3007-79-78"
-    },
-    {
-      "name": "Kingtrust",
-      "motto": "",
-      "uniqueId": "hhus-8afb3dab06fed3752b8d7d5d5d381e6e",
-      "figureString": "hr-3163-52.hd-185-10.ch-3077-1329-85.lg-3017-85-73.sh-295-64.ea-3107-110-92.ca-1817.cc-3186-85"
-    },
-    {
-      "name": "laurensh1#",
-      "motto": "Habborator.org :-)",
-      "uniqueId": "hhus-64d135cb9ff923e145308670d7de5692",
-      "figureString": "hr-125-40.hd-180-14.ch-3030-64.lg-285-64.sh-295-64.ea-1404-1408.fa-1201.ca-1815-1408.cc-260-1408"
-    },
-    {
-      "name": "LeenBakker",
-      "motto": "I FART BUBBLES |",
-      "uniqueId": "hhus-3432adde5e6047ccfd513dbbe2dea816",
-      "figureString": "hr-125-42.hd-185-10.ch-215-1315.lg-3116-64-81.sh-295-62.ea-1406.fa-1204"
-    },
-    {
-      "name": "Lix",
-      "motto": "Dead!",
-      "uniqueId": "hhus-19e90938f225978783079ec81c22d4eb",
-      "figureString": "hr-515-47.hd-626-1.ch-823-82.lg-3216-64.sh-725-66.he-3274-82.wa-2002"
-    },
-    {
-      "name": "lloyd789",
-      "motto": "",
-      "uniqueId": "hhus-7b4ee0aaf6d16a7709fecaece0e01cfc",
-      "figureString": "hr-155-31.hd-190-1.ch-240-73.lg-285-82.sh-290-1408"
-    },
-    {
-      "name": "loltje",
-      "motto": "Puma234 from the Netherlands",
-      "uniqueId": "hhus-5bd8e7b8f67cc02c91cc0397770a5427",
-      "figureString": "hr-115-42.hd-180-7.ch-255-76.lg-285-83.sh-290-62"
-    },
-    {
-      "name": "Luxuryas",
-      "motto": "(\\(\\ \r(=*.^) Habbo.com.br |\r(_\")\")",
-      "uniqueId": "hhus-62d81b2741d31dd5c6403b393ce4a866",
-      "figureString": "hr-170-34.hd-190-19.ch-255-66.lg-3290-68.sh-908-1408.ha-3298-1408-73.he-3297-1408.ea-1404-64.fa-3276-72.ca-1819.cc-3280-1320-1408"
-    },
-    {
-      "name": "manderijntje",
-      "motto": "Guaranteed to stay fresh",
-      "uniqueId": "hhus-1d5bc19e2af575990910ef205f3468c3",
-      "figureString": "hr-830-42.hd-180-1370.ch-805-66.lg-285-1408.sh-305-1408"
-    },
-    {
-      "name": "Marco.11",
-      "motto": "Habbospot dot nl",
-      "uniqueId": "hhus-a2934971e58eefc5bfa7716e0f3ef02f",
-      "figureString": "hr-681-31.hd-195-28.ch-220-62.lg-270-83.sh-908-62.fa-1212.ca-1819"
-    },
-    {
-      "name": "Mesox",
-      "motto": "HabboFun.nl",
-      "uniqueId": "hhus-adc0590348e370ae90b0a4920e165970",
-      "figureString": "hr-165-34.hd-180-14.ch-215-1408.lg-275-73.sh-295-1408.ca-1804-73"
-    },
-    {
-      "name": "miriam34",
-      "motto": "to have fun",
-      "uniqueId": "hhus-10a920d33fb7efe87152a5732ec15409",
-      "figureString": "hr-545-31.hd-600-1.ch-635-1408.lg-700-1408.sh-730-1408"
-    },
-    {
-      "name": "Mironal",
-      "motto": "",
-      "uniqueId": "hhus-fd850a7c7bbd4b966685548502148fee",
-      "figureString": "hr-125-32.hd-190-1.ch-250-82.lg-280-64.sh-305-82.ca-1801-64"
-    },
-    {
-      "name": "Moeris",
-      "motto": "old skool... keep'n it real! •",
-      "uniqueId": "hhus-ad8d9721748a910321d2e884f3677f3e",
-      "figureString": "hd-180-1369.ch-3110-83-80.lg-3116-83-75.sh-295-81.ha-1009-81.he-1610.fa-1212.wa-2001"
-    },
-    {
-      "name": "monkred",
-      "motto": "USMC: Col, IGMC/USCC.",
-      "uniqueId": "hhus-00e01b0a738c6fe9e082f5fc9e9cf9f3",
-      "figureString": "hd-3092-1.ch-225-1320.lg-285-82.sh-300-110.ha-3415-1320-1320.ea-1403-110.fa-1201.ca-3085-93.wa-3073-110"
-    },
-    {
-      "name": "Mumiiiefied",
-      "motto": "9",
-      "uniqueId": "hhus-e7b433fac67776dfec18ea951891f5c3",
-      "figureString": "hr-145-45.hd-190-24.ch-210-63.lg-275-64.sh-300-62.ea-1406"
-    },
-    {
-      "name": "mynameisgabriel",
-      "motto": "Winter is Coming",
-      "uniqueId": "hhus-5a24341300c9c9e69935a83a80e08d1f",
-      "figureString": "hr-155-31.hd-190-10.ch-215-84.lg-281-1408.sh-295-1408"
-    },
-    {
-      "name": "Nederland.x.",
-      "motto": "from .nl",
-      "uniqueId": "hhus-ac1bbd359a9e85c0230f1cc69adff77c",
-      "figureString": "hr-165-45.hd-180-1371.ch-875-64-73.lg-280-73.fa-1205-91.ca-3176-64-1408"
-    },
-    {
-      "name": "NeverSkem",
-      "motto": "Waiting for TI5",
-      "uniqueId": "hhus-813aed11132ab9943f093ed96b5bc5b8",
-      "figureString": "hd-180-10.ch-230-1408.lg-270-1408.sh-290-1408.ha-1014.ea-1406.fa-1210"
-    },
-    {
-      "name": "NLHinki46",
-      "motto": "Habbo Hotel Nederland: Hinki46",
-      "uniqueId": "hhus-374c5c9f833fa0f20b1f5a1a07a0b99f",
-      "figureString": "hr-893-45.hd-180-2.ea-1404-64.lg-281-1315.sh-295-1315.ch-250-1315"
-    },
-    {
-      "name": "Optimar",
-      "motto": "[EPF] Recruit",
-      "uniqueId": "hhus-3535209ee3fabea7ec758d1fabc36114",
-      "figureString": "hr-115-42.hd-180-3.ch-225-82.lg-285-64.sh-3115-64-64.wa-2009-64"
-    },
-    {
-      "name": "Origif",
-      "motto": "Habbo.dk & ShockNews.dk",
-      "uniqueId": "hhus-9038c066ab0d4b3a3b12648998cb0d93",
-      "figureString": "hr-125-32.hd-180-1370.ch-235-73.lg-285-91"
-    },
-    {
-      "name": "paul748",
-      "motto": "",
-      "uniqueId": "hhus-3c5ddbe725acce9645b87284119ca919",
-      "figureString": "hd-180-1.ch-210-1408.lg-3116-1408-1408"
-    },
-    {
-      "name": "pauli31",
-      "motto": "[B.O] Acting Agent [RY] [P31]",
-      "uniqueId": "hhus-3f9c1454f1fda736ca7f373582848450",
-      "figureString": "hr-165-38.hd-180-1.ch-220-1408.lg-285-64.sh-300-64.ea-1404-1408.ca-1804-82"
-    },
-    {
-      "name": "Paulwalla",
-      "motto": "ju",
-      "uniqueId": "hhus-bc4beeb2ad81ccbd1216c86fafa7ef2d",
-      "figureString": "hr-3090-33.hd-200-2.ch-210-62.lg-285-64.cc-260-89.cp-3126-62"
-    },
-    {
-      "name": "POKeEMIEL",
-      "motto": "pokemon",
-      "uniqueId": "hhus-aa6a3c6cdc13d8a1bf7497bc4e5f151d",
-      "figureString": "hr-890-45.hd-625-10.ch-660-82.lg-3216-64.sh-907-64.he-3274-64"
-    },
-    {
-      "name": "pquadro20",
-      "motto": "<< Italia. >>",
-      "uniqueId": "hhus-33c956f078bb0cf6416de5d4d6f8e1a6",
-      "figureString": "hd-195-10.ch-255-1408.lg-3023-1408.sh-3068-1408-1408.ha-1004-1408"
-    },
-    {
-      "name": "Qaito",
-      "motto": "aka EJS12 @ NL",
-      "uniqueId": "hhus-3892c2dee964173335b46fd5cf85fd4d",
-      "figureString": "hr-115-39.hd-180-3.ch-3030-91.lg-3116-81-81.sh-290-62"
-    },
-    {
-      "name": "Queenzachy",
-      "motto": "<FBI> Security II <ULD>",
-      "uniqueId": "hhus-ceaa842968caffc45f470d6f3aec0564",
-      "figureString": "hr-155-45.hd-205-1.ch-255-85.lg-285-85.sh-290-85.ha-1002-85"
-    },
-    {
-      "name": "R0l3IN",
-      "motto": "",
-      "uniqueId": "hhus-3b228546513779c352b4a0c1778e9e12",
-      "figureString": "hr-893-45.hd-180-2.ch-210-73.lg-285-78.sh-290-62"
-    },
-    {
-      "name": "radicalhabbo",
-      "motto": "love more worry less",
-      "uniqueId": "hhus-750752a65489f5bbed7e0b09933a396d",
-      "figureString": "hr-3090-34.hd-190-1.ch-266.lg-285-82.ha-1004-1408"
-    },
-    {
-      "name": "raiderflow*",
-      "motto": "Hi , from Belgium !",
-      "uniqueId": "hhus-a49c01a6137d4a33ca0afbd161e61003",
-      "figureString": "hr-155-45.hd-180-14.ch-3030-1408.lg-285-81.sh-290-1408"
-    },
-    {
-      "name": "raydevinlr",
-      "motto": "Mmm..",
-      "uniqueId": "hhus-d97ec1afe160f080a5e176c8335bc588",
-      "figureString": "hr-155-45.hd-180-1.ch-3030-1408.lg-3320-82-82.sh-290-1408.cc-3294-64-1408"
-    },
-    {
-      "name": "riagentheco",
-      "motto": "ƒHabbo Helperƒ",
-      "uniqueId": "hhus-c2738e28ffcdff0d0fbd66b7241f0b63",
-      "figureString": "hr-890-39.hd-600-10.ch-685-72.lg-715-72.sh-907-72.ca-1810.wa-2008"
-    },
-    {
-      "name": "roan100",
-      "motto": "Dutch",
-      "uniqueId": "hhus-88cd74b74d286a57d2c9414f9f97723c",
-      "figureString": "hr-893-31.hd-180-1.ch-878-83-1408.lg-280-1408.sh-295-64.ca-1805-1408.wa-2007"
-    },
-    {
-      "name": "Rored",
-      "motto": "fku o/",
-      "uniqueId": "hhus-ced3013ca3362e75f2d34432cb49ebe1",
-      "figureString": "hr-802-31.hd-209-8.ch-210-64.lg-3078-64.sh-300-64.ha-1021-64.he-1601.wa-3074-64-1408"
-    },
-    {
-      "name": "RubSt",
-      "motto": "El nombre es Ruben.",
-      "uniqueId": "hhus-f9ebce3bd17d9310479cda316cead590",
-      "figureString": "hr-893-45.hd-180-2.ch-215-73.lg-275-64.sh-290-62.ea-1401-62"
-    },
-    {
-      "name": "Russell360&",
-      "motto": "",
-      "uniqueId": "hhus-ea7a9e203b4f2987933a031233b08d9e",
-      "figureString": "hd-200-28.ch-210-62.lg-280-64.sh-908-63.ha-1002-62.wa-2004-68.cc-260-62"
-    },
-    {
-      "name": "ryan1806",
-      "motto": "Holds: soup",
-      "uniqueId": "hhus-681aa4f24ba85f8d5f6500225e89ab46",
-      "figureString": "hr-155-42.hd-180-1.ch-245-83.lg-285-91.sh-300-77"
-    },
-    {
-      "name": "samus...",
-      "motto": "Habbo Helper 2oo3! Habbo.es !",
-      "uniqueId": "hhus-d4929ac35d3c2ebc5fc60ff247c1162d",
-      "figureString": "hr-893-42.hd-190-14.ch-262-1408.lg-285-90.sh-290-1408.fa-1201"
-    },
-    {
-      "name": "Sarenta",
-      "motto": "",
-      "uniqueId": "hhus-cf89c941e3b96d64931ea3ed6ad3e6b0",
-      "figureString": "hd-600-1.sh-730-62.hr-545-45.lg-715-62.ch-660-64"
-    },
-    {
-      "name": "Shadowguus",
-      "motto": "",
-      "uniqueId": "hhus-d3ecfec5b577a6c281bbde7934bef30e",
-      "figureString": "hr-893-39.hd-180-2.ch-215-66.lg-275-82"
-    },
-    {
-      "name": "Simon,.",
-      "motto": "{CSI} Bailiff <HDL> <Sim> l H-H",
-      "uniqueId": "hhus-845016f59b2bb4e43bcf2c82f005484d",
-      "figureString": "hr-110-31.hd-185-7.ch-225-71.lg-270-64.sh-300-64.cc-260-71"
-    },
-    {
-      "name": "sirerichar90",
-      "motto": ".:.tefi/ Habbo.es",
-      "uniqueId": "hhus-cf2f9b789a762be8fd87fb323608d576",
-      "figureString": "hr-170-40.hd-180-1.ch-210-73.lg-275-64.sh-295-64.ha-1009-73.fa-1205-62.ca-1817"
-    },
-    {
-      "name": "sirjonasxx",
-      "motto": "  ººº HABBO - BUGS ººº",
-      "uniqueId": "hhus-67c261599ce29b25e9945afd5acb3273",
-      "figureString": "hr-893-42.hd-180-2.ch-3030-63.lg-275-64.sh-295-64.ca-1813"
-    },
-    {
-      "name": "Skittles",
-      "motto": "Double rainbows.",
-      "uniqueId": "hhus-4f4d6771ad51cc1c48f3480a5fbd9fca",
-      "figureString": "hr-155-42.hd-190-1.ch-3030-75.lg-285-81.sh-290-62"
-    },
-    {
-      "name": "skunkboyjr",
-      "motto": "And He lived happily ever after...",
-      "uniqueId": "hhus-33084f8a08577a6ac4a66153d0ea0853",
-      "figureString": "hd-205-1.ch-255-1408.lg-280-1408.sh-906-1408"
-    },
-    {
-      "name": "slimmeke1",
-      "motto": "Ambassador on habbo.nl",
-      "uniqueId": "hhus-b19c53799ec612548dabaa96f6729698",
-      "figureString": "hd-180-2.ch-3015-96.lg-280-110.sh-3016-1325.ha-1012-96"
-    },
-    {
-      "name": "SoylentBob",
-      "motto": "been a while :)",
-      "uniqueId": "hhus-f22918c9881525f974b548c63b8847a8",
-      "figureString": "hr-3090-49.hd-209-1.ch-210-100.lg-270-62.sh-906-91.ea-1404-62"
-    },
-    {
-      "name": "spectorTheHabbo",
-      "motto": "I |  My SIS.",
-      "uniqueId": "hhus-c58785c576a33e5d4480e36d217a3f3e",
-      "figureString": "hr-891-1316.hd-209-13.ch-255-82.lg-275-62.ha-1003-82.ea-1404-62"
-    },
-    {
-      "name": "speedy-100",
-      "motto": "Raawwrrrr, om nom nom nom.",
-      "uniqueId": "hhus-6bd051a02d646ca0761f45360c65c8e0",
-      "figureString": "hr-155-47.hd-180-1.ch-255-91.lg-280-64.sh-290-1408"
-    },
-    {
-      "name": "Steenpad",
-      "motto": "",
-      "uniqueId": "hhus-a3409f335b6a2a1209901ddedc2f7b54",
-      "figureString": "hr-540-32.hd-629-2.ch-660-65.lg-720-83.sh-730-75.he-1610"
-    },
-    {
-      "name": "Stitch-",
-      "motto": "Im Just Being Random (:   ~ Andy ~",
-      "uniqueId": "hhus-0787b3fc769c03a92ba38bc0a301770e",
-      "figureString": "hr-125-31.hd-180-1.ch-3030-62.lg-280-70.ha-1008.ea-1406.ca-1806-70"
-    },
-    {
-      "name": "Teletext-",
-      "motto": "From the Netherlands.",
-      "uniqueId": "hhus-a9b1fd882ab488a4923a8f0da7a315fd",
-      "figureString": "hr-155-45.hd-180-3.ch-245-62.lg-285-91.sh-295-62.ca-1815-91"
-    },
-    {
-      "name": "Tenenkaas",
-      "motto": "New account: SuperArnejan",
-      "uniqueId": "hhus-b6dfda84d6565175c82e4285aa85c4a2",
-      "figureString": "hd-185-2.ch-235-1315.lg-285-64.sh-290-62.hr-115-45"
-    },
-    {
-      "name": "ThaSprout",
-      "motto": "Did you smash though?",
-      "uniqueId": "hhus-751d5bb9fd0b4d0fa5ea72830fa4d7b9",
-      "figureString": "hd-205-1.ch-220-85.lg-270-89.sh-906-91.ea-1403-62.fa-1208-64"
-    },
-    {
-      "name": "TheDogGoesMoo",
-      "motto": "Where Do 5 Gays Walk, One Direction",
-      "uniqueId": "hhus-5cc75f3de94ca2316430cc2bbce6f059",
-      "figureString": "hr-3012-61.hd-605-2.ch-660-96.lg-3057-62.he-1606-96.fa-3230-110"
-    },
-    {
-      "name": "tibouleboss",
-      "motto": "Born. - french habbo",
-      "uniqueId": "hhus-7c30a6797872ba6574ee6db6fea01edd",
-      "figureString": "hd-180-28.ch-876-72-62.lg-270-80.ha-1007"
-    },
-    {
-      "name": "UglyChild",
-      "motto": "ugly",
-      "uniqueId": "hhus-f778899c88a9b71b1ceaed36e37e795c",
-      "figureString": "hd-180-1.ch-210-1408.lg-275-82.sh-290-1408.ha-1003-1408"
-    },
-    {
-      "name": "Ushgarak",
-      "motto": "",
-      "uniqueId": "hhus-04b00a733f655188810ab012a126a70b",
-      "figureString": "hr-155-32.hd-195-1.ch-878-64-1408.lg-285-81.sh-305-1408.fa-3276-73"
-    },
-    {
-      "name": "Vineen08",
-      "motto": "#habbonoise",
-      "uniqueId": "hhus-26146642b7f284492a97338c34830e44",
-      "figureString": "hr-892-37.hd-209-1.ch-875-64-64.lg-280-64.sh-300-64.ha-1014.fa-1204"
-    },
-    {
-      "name": "Vorez",
-      "motto": "ik kanker jij kankert wij kankeren",
-      "uniqueId": "hhus-967ac9d2854745de8582276e5857a65f",
-      "figureString": "hr-155-39.hd-180-2.ch-255-89.lg-275-87"
-    },
-    {
-      "name": "Wallix",
-      "motto": "Wall-e 'nd ix",
-      "uniqueId": "hhus-edda0587bc0c4862f9dae0f2a0e19d1e",
-      "figureString": "hr-115-42.hd-180-1.ch-3030-64.lg-285-82.sh-305-62"
-    },
-    {
-      "name": "Woise",
-      "motto": "o\\_/l'\"o\"\\_==__ \\»(‡)___(‡)_»",
-      "uniqueId": "hhus-d0481b51e2f31fc5d8c59e3b660f9ad4",
-      "figureString": "hr-170-45.hd-180-8.ch-804-81.lg-280-64.ha-1004-64.fa-1201"
-    },
-    {
-      "name": "zawwathelost",
-      "motto": "",
-      "uniqueId": "hhus-901216d6b6d035dac7187030315dde98",
-      "figureString": "hr-165-45.hd-190-2.ch-3030-73.lg-280-64.sh-290-62"
-    },
-    {
-      "name": "ZhishenKhoo",
-      "motto": "[3SS] Head Lt; Khoo EQ: Glock/Blade",
-      "uniqueId": "hhus-db30f5089732de90a6ab5d95e70b41b3",
-      "figureString": "hr-3163-61.hd-209-1.ch-3030-110.lg-3078-110.sh-3016-76.ca-3175-92.wa-3263-1325-92.cc-3007-76-76"
-    },
-    {
-      "name": "zout",
-      "motto": "sprakeloos",
-      "uniqueId": "hhus-bed6452d2960078b9d9c3eb3628f0e6f",
-      "figureString": "hr-892-31.hd-625-14.ch-660-72.lg-710-72.sh-725-80.ha-1020"
-    },
-    {
-      "name": "zukur",
-      "motto": "Idiots surrounded by me!",
-      "uniqueId": "hhus-7c43173b35503f7f99a3a33fb3df43b8",
-      "figureString": "hd-600-1.ch-880-82.lg-705-82.sh-730-90.he-1610.fa-1206-64"
-    }
-  ],
-  "groups": [
-    {
-      "id": "g-hhus-1332dcd15645042afc396f726351721d",
-      "name": "Ditch the Label",
-      "description": "The official Ditch the Label anti-bullying public group. Join now and support our cause! Find out more at www.DitchtheLabel.org",
-      "type": "NORMAL",
-      "badgeCode": "b13114s19134a55aa7427bc0a3f0c083e94232fb3475",
-      "roomId": "r-hhus-a08de337a9dc601102b0139194164f78",
-      "primaryColour": "242424",
-      "secondaryColour": "ffffff",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-c86db765b12d3146dde2495d19510cf4",
-      "name": "HabboHelpers.com",
-      "description": "HabbboHelpers.com is a community for all Habbos worldwide who'd like to expand their Habbo Helper experience and chat with other Habbo Helpers from all over the world.",
-      "type": "NORMAL",
-      "badgeCode": "b27114s02024s85114344b8b79da75befaac992a26ceb1ceb1",
-      "roomId": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
-      "primaryColour": "d96d00",
-      "secondaryColour": "e5e5e5",
-      "isAdmin": true
-    },
-    {
-      "id": "g-hhus-91626d8b14dc7d1d74587c5ae7fc4305",
-      "name": "HabboHelpers.com",
-      "description": "HabboHelpers.com, an official fansite for Habbo.com bringing in the new community of Habbo Helpers! Could you be the next helper? Join us now!",
-      "type": "NORMAL",
-      "badgeCode": "b19134s28091s85113s85114s801159ebea67b07ce5e25a12e79cc5a337608",
-      "roomId": "r-hhus-5d4b5af38748480c9200bc96683b6d18",
-      "primaryColour": "bd2121",
-      "secondaryColour": "c0c0c0",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-48abd5701c898ffebc98d476bf38c018",
-      "name": "HabbolifeForum",
-      "description": "HabboLifeForum.com is one of most famous fansites in Habbo Italy",
-      "type": "NORMAL",
-      "badgeCode": "b22054s12067t16057s54111230b63226bfdc4a0d4173e87ddf0f2e5",
-      "roomId": "r-hhus-8472834d25a5a96ce67b255f3203a440",
-      "primaryColour": "43a0d1",
-      "secondaryColour": "00539b",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-aaaf0afa1d5f5f7ddd5fcddb071fe092",
-      "name": "Habbox.com",
-      "description": "Habbox is an official fansite of Habbo which has been around since 2003! Which makes us the oldest running Fansite. We provide you with the latest Habbo news, guides and rare values. We also have a forum, radio and Wiki! We host events and competitions!",
-      "type": "NORMAL",
-      "badgeCode": "b22014s17013s85024s17015e337bc4b2dff128a0e86fda6ad4a487c",
-      "roomId": "r-hhus-9978ec749fbcb9b5ff7700905c682564",
-      "primaryColour": "ec7600",
-      "secondaryColour": "575757",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-59ad480a8d7e557c4a80a11ec4cf0582",
-      "name": "Official Habbo Helpers",
-      "description": "Become a Helper and help other Habbos.",
-      "type": "NORMAL",
-      "badgeCode": "b27124s05125s02113s85094ef615ea9e645c9b9ed1e8238fd4c6623",
-      "roomId": "r-hhus-fcd7db220093b38a9b638dc97d86c916",
-      "primaryColour": "ebebeb",
-      "secondaryColour": "bf2222",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-3df14d1f984304384939c637181dcdde",
-      "name": "Read and share open beta",
-      "description": "Read and share open beta",
-      "type": "NORMAL",
-      "badgeCode": "b21034t2711407a3cde5853d88f0d86f77bab140b8c1",
-      "roomId": "r-hhus-7527c58ce58c36913432f4fa9e86d9f8",
-      "primaryColour": "ffffff",
-      "secondaryColour": "84de00",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-70fae41ecd66086ffe32c6ffbcf229d7",
-      "name": "Sneak Peekers",
-      "description": "Join this group if you want a preview of some features we're working on. Read the blue info terminal at the stairs for further details!",
-      "type": "NORMAL",
-      "badgeCode": "b24134s20023s20025s59171s06117b02e0890039dce36e999573e0544e40e",
-      "roomId": "r-hhus-d4da0e9515461142be51b58471ee31db",
-      "primaryColour": "ffd601",
-      "secondaryColour": "242424",
-      "isAdmin": false
-    },
-    {
-      "id": "g-hhus-fd92759bc932225f663f1521be8ce255",
-      "name": "UK",
-      "description": "",
-      "type": "NORMAL",
-      "badgeCode": "b22114s19107t50064e4bcf7c532fdcecc1467d2185d975783",
-      "roomId": "r-hhus-dcf2e2a74a39f64dc627c5ef32a1aa83",
-      "primaryColour": "ffd601",
-      "secondaryColour": "ffffff",
-      "isAdmin": false
-    }
-  ],
-  "rooms": [
-    {
-      "id": "r-hhus-a091e0f1d891108b49ca7af953386f0f",
-      "name": "Venice Beach Rollercoaster",
-      "description": "Ahh well..",
-      "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png",
-      "tags": ["one", "tag", "too", "far"],
-      "categories": ["Habbo Life"]
-    },
-    {
-      "id": "r-hhus-abb87256459a4f9069a8fe86f5a188ed",
-      "name": "Venice Beach Seaworld",
-      "description": "Come and relax.. or die face to face with the great whites..",
-      "tags": []
-    },
-    {
-      "id": "r-hhus-e6f2266fe691e2aa7490351680585af8",
-      "name": "Hell yeah",
-      "description": null,
-      "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/46093264.png",
-      "tags": []
-    },
-    {
-      "id": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
-      "name": "HabboHelpers.com",
-      "description": "",
-      "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/62423647.png",
-      "tags": []
-    },
-    {
-      "id": "r-hhus-0f7319d1291373ddd1d609ac129fd82f",
-      "name": "Bouwers Club",
-      "description": null,
-      "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
-      "thumbnailUrl": "http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/65285667.png",
-      "tags": []
-    }
-  ],
-  "badges": [
-    {
-      "code": "ACH_RoomDecoFurniTypeCount9",
-      "name": "RoomDecoFurniTypeCount9",
-      "description": "RoomDecoFurniTypeCount9"
-    },
-    {
-      "code": "UK081",
-      "name": "Flag it",
-      "description": "Click Clever Click Safe Flag"
-    },
-    {
-      "code": "USP_HHUK",
-      "name": "Gold Rush - Medieval",
-      "description": "Frederic Santini Quest - World 4 Winner"
-    },
-    {
-      "code": "YODUK",
-      "name": "YODUK",
-      "description": "special fun badge"
-    },
-    {
-      "code": "ACH_RoomEntry6",
-      "name": "RoomEntry6",
-      "description": "RoomEntry level 6"
-    },
-    {
-      "code": "XM10A",
-      "name": "Season's Greetings",
-      "description": "Xmas Greeting card competition, 2010"
-    },
-    {
-      "code": "AU015",
-      "name": "OZ Artist 2010",
-      "description": "Channel [V] Group Member"
-    },
-    {
-      "code": "AU019",
-      "name": "Generator Rex Badge",
-      "description": "Generator Rex Group Member"
-    },
-    {
-      "code": "ACH_Citizenship1",
-      "name": "Citizenship1",
-      "description": "Citizenship1"
-    },
-    {
-      "code": "UK090",
-      "name": "HTTYD - Quest",
-      "description": "Nigth fury badge"
-    },
-    {
-      "code": "Z63_HHUK",
-      "name": "NEW BETA colour",
-      "description": "coloured beta"
-    },
-    {
-      "code": "UK095",
-      "name": "Alvin dvd",
-      "description": "Alvin dvd treaure hunt"
-    },
-    {
-      "code": "ACH_BaseJumpDaysPlayed1",
-      "name": "BaseJumpDaysPlayed1",
-      "description": "BaseJumpDaysPlayed1"
-    },
-    {
-      "code": "PAT2",
-      "name": "Patrol General",
-      "description": "Patrol General"
-    },
-    {
-      "code": "ACH_SnowWarTotalScore1",
-      "name": "SnowWarTotalScore1",
-      "description": "SnowWarTotalScore1"
-    },
-    {
-      "code": "STO01",
-      "name": "Stories Beta",
-      "description": "Badge for Habbo Stories beta group members"
-    },
-    {
-      "code": "ACH_RoomDecoHosting10",
-      "name": "RoomDecoHosting10",
-      "description": "RoomDecoHosting10"
-    },
-    {
-      "code": "VAL14",
-      "name": "Valentines 2013",
-      "description": "I was here, darling"
-    },
-    {
-      "code": "ACH_FireworksCharger1",
-      "name": "FireworksCharger1",
-      "description": "FireworksCharger level 1"
-    },
-    {
-      "code": "UK031_HHUK",
-      "name": "Alvin and the Chipmunks",
-      "description": "Alvin"
-    },
-    {
-      "code": "ACH_RespectGiven8",
-      "name": "RespectGiven8",
-      "description": "Respect given level8"
-    },
-    {
-      "code": "UK183",
-      "name": "The Sims - Katy Perry Sweet Treats",
-      "description": "I beat the The Sims Katy Perry Sweet Treats Quiz! "
-    },
-    {
-      "code": "GLC_HHUK",
-      "name": "Guide3",
-      "description": "Guide level3"
-    },
-    {
-      "code": "UK187",
-      "name": "Habbox Maze Winner",
-      "description": "Habbox Hall of Famer"
-    },
-    {
-      "code": "ACH_GuideFeedbackGiver2",
-      "name": "GuideFeedbackGiver2",
-      "description": "GuideFeedbackGiver2"
-    },
-    {
-      "code": "ACH_Xm10QuestCompleted7",
-      "name": "Xm10QuestCompleted7",
-      "description": "Xm10QuestCompleted level 7"
-    },
-    {
-      "code": "Z40",
-      "name": "Habbo UK 8th Birthday",
-      "description": "Habbo UK 8th Birthday"
-    },
-    {
-      "code": "XM9_HHUK",
-      "name": "Snowball 08",
-      "description": "Arctic xmas08"
-    },
-    {
-      "code": "ACH_SelfModIgnoreSeen1",
-      "name": "SelfModIgnoreSeen1",
-      "description": "SelfModIgnoreSeen1"
-    },
-    {
-      "code": "NYR04",
-      "name": "Brain Explosion Badge",
-      "description": "VIP Quiz Winner 2011"
-    },
-    {
-      "code": "UK074",
-      "name": "Youth in Revolt 1",
-      "description": "Nick"
-    },
-    {
-      "code": "UK076",
-      "name": "Aliens in the Attic",
-      "description": "Alien badge quest"
-    },
-    {
-      "code": "ACH_MonsterPlantQuestCompleted6",
-      "name": "MonsterPlantQuestCompleted6",
-      "description": "MonsterPlantQuestCompleted6"
-    },
-    {
-      "code": "UK077",
-      "name": "TeenLifeCheck",
-      "description": "took the tlc"
-    },
-    {
-      "code": "ACH_HabboWayGraduate1",
-      "name": "HabboWayGraduate1",
-      "description": "HabboWayGraduate1"
-    },
-    {
-      "code": "UK078",
-      "name": "Fang (of Max and Fang books)",
-      "description": "awarded to people who follow Fang"
-    },
-    {
-      "code": "ACH_GuideAdvertisementReader1",
-      "name": "GuideAdvertisementReader1",
-      "description": "GuideAdvertisementReader1"
-    },
-    {
-      "code": "XMS08",
-      "name": "Christmas Maze 5",
-      "description": "Christmas Maze 5"
-    },
-    {
-      "code": "XMS09",
-      "name": "Xmas Maze Finale",
-      "description": "Xmas Maze Finale"
-    },
-    {
-      "code": "Z59",
-      "name": "NATM History Quest",
-      "description": "history quest"
-    },
-    {
-      "code": "CAG_HHUK",
-      "name": "Gold Rush - Atlantis",
-      "description": "Frederic Santini Quest - World 1 Winner"
-    },
-    {
-      "code": "thx",
-      "name": "<3",
-      "description": "<3"
-    },
-    {
-      "code": "ACH_HabbosVsWildQuestCompleted6",
-      "name": "HabbosVsWildQuestCompleted6",
-      "description": "HabbosVsWildQuestCompleted6"
-    },
-    {
-      "code": "UK161",
-      "name": "Kitty Softpaws",
-      "description": "\"She is a bad kitty\""
-    },
-    {
-      "code": "DK2",
-      "name": "Pub(lic) Crawl Cider",
-      "description": "St Patrick's Day 2011!"
-    },
-    {
-      "code": "ancients_start",
-      "name": "ancients_start",
-      "description": "Part of map in ancients campaign"
-    },
-    {
-      "code": "FBC12",
-      "name": "Creepy Church Myth (3/4)",
-      "description": "Creepy Church Myth"
-    },
-    {
-      "code": "GLE_HHUK",
-      "name": "Guide5",
-      "description": "Guide level5"
-    },
-    {
-      "code": "FBC14",
-      "name": "MONSTER!",
-      "description": "I found the Monster Plant!"
-    },
-    {
-      "code": "COM10",
-      "name": "The Chronicles of Narnia: Dawn Treader Badge",
-      "description": "Quest winners"
-    },
-    {
-      "code": "COM13",
-      "name": "Bot Love Badge",
-      "description": "Found the Bot I married - Vegas 2011"
-    },
-    {
-      "code": "COM12",
-      "name": "100,000 Fans Badge",
-      "description": "One of 100,000 awesome fans!"
-    },
-    {
-      "code": "FBC18",
-      "name": "Plant Puzzler",
-      "description": ""
-    },
-    {
-      "code": "ACH_SafetyQuizGraduate1",
-      "name": "SafetyQuizGraduate1",
-      "description": "SafetyQuizGraduate1"
-    },
-    {
-      "code": "ACH_HorseConsecutiveJumpsCount3",
-      "name": "HorseConsecutiveJumpsCount3",
-      "description": "HorseConsecutiveJumpsCount3"
-    },
-    {
-      "code": "CNS03",
-      "name": "Fierce Badge of the Dragon",
-      "description": "Habbo Chinese New Year 2013"
-    },
-    {
-      "code": "JAD01",
-      "name": "King of Jade",
-      "description": "Keeper of Zodiac wisdom and a decent cuppa"
-    },
-    {
-      "code": "WD006",
-      "name": "Royal Wedding Badge 2011",
-      "description": "Here comes the bride..."
-    },
-    {
-      "code": "MRG00",
-      "name": "Friendship Bracelet",
-      "description": "Come and talk to me!"
-    },
-    {
-      "code": "UK094_HHUK",
-      "name": "St Patrick's Day Quest",
-      "description": "Quest winners. March 2010."
-    },
-    {
-      "code": "MRG03",
-      "name": "UK Badge",
-      "description": "Proud to be from the United Kingdom!"
-    },
-    {
-      "code": "ACH_BaseJumpBigParachute1",
-      "name": "BaseJumpBigParachute1",
-      "description": "BaseJumpBigParachute1"
-    },
-    {
-      "code": "UK052",
-      "name": "0800 REVERSE",
-      "description": "Justin Case quest 2009"
-    },
-    {
-      "code": "UK175",
-      "name": "ChildLine Self-harm Awareness ",
-      "description": "I correctly answered the ChildLine Self-harm Awareness Quiz!"
-    },
-    {
-      "code": "FBC09",
-      "name": "Habbo 2k",
-      "description": "Did you know Habbo was invented in the year 2000?"
-    },
-    {
-      "code": "UK176",
-      "name": "ChildLine Goup",
-      "description": "I am a member of the ChildLine group"
-    },
-    {
-      "code": "COM22",
-      "name": "The Sims Medieval",
-      "description": "King Hero badge - I completed The Sims Medieval Quiz"
-    },
-    {
-      "code": "FBC06",
-      "name": "Gold Bar Spotter",
-      "description": "I spotted the Facebook Gold Bar! "
-    },
-    {
-      "code": "BBBH1_HHUK",
-      "name": "I saw the end of Old Habbo",
-      "description": "Awarded to all who paid tribute to the Big Hand. November 2009. "
-    },
-    {
-      "code": "UK050_HHUK",
-      "name": "Xmas 09 - Save Santa Quest",
-      "description": "Silver Badge awarded to 1000 entrants. December 2009."
-    },
-    {
-      "code": "ACH_BaseJumpMissile3",
-      "name": "BaseJumpMissile3",
-      "description": "BaseJumpMissile3"
-    },
-    {
-      "code": "ACH_RegistrationDuration20",
-      "name": "RegistrationDuration20",
-      "description": "Registration duration level20"
-    },
-    {
-      "code": "Z78",
-      "name": "Ice Age 3 Quest",
-      "description": "Completed quest correctly"
-    },
-    {
-      "code": "ACH_RoomDecoWallpaper1",
-      "name": "RoomDecoWallpaper1",
-      "description": "RoomDecoWallpaper1"
-    },
-    {
-      "code": "ACH_RbTagC2",
-      "name": "RbTagC2",
-      "description": "RbTagC level 2"
-    },
-    {
-      "code": "UK140",
-      "name": "The Sims 3 Generations",
-      "description": "Group Member"
-    },
-    {
-      "code": "ACH_TagC3",
-      "name": "TagC3",
-      "description": "TagC level 3"
-    },
-    {
-      "code": "peg01",
-      "name": "Pegasus Rider",
-      "description": "Participated in the Community Challenge"
-    },
-    {
-      "code": "UK027",
-      "name": "Burning Barrel",
-      "description": "Issued to winners of the Bonfire Quest, 2009."
-    },
-    {
-      "code": "EUR02",
-      "name": "Eurovision Semi Final 2",
-      "description": "Your pick made it all the way to the finals!"
-    },
-    {
-      "code": "UK019",
-      "name": "Habboween 09 - FRANKENSTEIN QUEST",
-      "description": "Awarded to Frankenstein Quest winners."
-    },
-    {
-      "code": "NEC_HHUK",
-      "name": "Golden Glitter Ball",
-      "description": "HMF Group winners"
-    },
-    {
-      "code": "THE01",
-      "name": "Theatre Opening Reward",
-      "description": "Reward for finding Theaterdome on opening day "
-    },
-    {
-      "code": "ancients_ssahara",
-      "name": "ancients_ssahara",
-      "description": "Part of map in ancients campaign"
-    },
-    {
-      "code": "Z85",
-      "name": "MTV Dance Crew",
-      "description": "MTV UK New User Push, Oct 2010"
-    },
-    {
-      "code": "ACH_EmailVerification1",
-      "name": "EmailVerification1",
-      "description": "EmailVerification level1"
-    },
-    {
-      "code": "ACH_MysteryBox3",
-      "name": "MysteryBox3",
-      "description": "MysteryBox3"
-    },
-    {
-      "code": "ACH_BattleBallTilesLocked2",
-      "name": "BattleBallTilesLocked2",
-      "description": "BattleBallTilesLocked level 2"
-    },
-    {
-      "code": "GLD_HHUK",
-      "name": "Guide4",
-      "description": "Guide level4"
-    },
-    {
-      "code": "UK030",
-      "name": "bullyproof grey",
-      "description": "Awarded to everyone - Celebrated the bullyproof moment in Habbo"
-    },
-    {
-      "code": "UK034",
-      "name": "HMA (I Love Music Badge)",
-      "description": "Awarded to anyone who voted in the 'Best Habbo Singer 2009' contest. December 2009."
-    },
-    {
-      "code": "UK035",
-      "name": "Habbo Music Academy",
-      "description": "Member of the Habbo Music Academy Group. November 2009."
-    },
-    {
-      "code": "ACH_FriendListSize5",
-      "name": "FriendListSize5",
-      "description": "FriendListSize5"
-    },
-    {
-      "code": "UK038",
-      "name": "St Trinians 2",
-      "description": "ST school badge 2009"
-    },
-    {
-      "code": "MTV01_HHUK",
-      "name": "MTV EMA 2009",
-      "description": "Member of the MTV EMA 2009 Group."
-    },
-    {
-      "code": "COM03",
-      "name": "Taylor Swift MTV",
-      "description": "MTV Live Event Push, Oct 2010"
-    },
-    {
-      "code": "COM05",
-      "name": "The Sims 3 - Bad Karma",
-      "description": "Bad Karma from Karma Quiz (Nov 2010)"
-    },
-    {
-      "code": "UK051_HHUK",
-      "name": "Xmas 09 - Save Santa Quest",
-      "description": "Bronze Badge awarded to all entrants. December 2009."
-    },
-    {
-      "code": "THI99",
-      "name": "Baloons",
-      "description": "Air in plastic"
-    },
-    {
-      "code": "FRE",
-      "name": "Gold Rush - Prehistoric",
-      "description": "Frederic Santini Quest - World 3 Winner"
-    },
-    {
-      "code": "COM08",
-      "name": "It Gets Better",
-      "description": "In support of the 'It Gets Better Project' 2010"
-    },
-    {
-      "code": "ACH_RespectEarned5",
-      "name": "RespectEarned5",
-      "description": "Respect gained level5"
-    },
-    {
-      "code": "UKBD1",
-      "name": "9th Birthday Badge",
-      "description": "Awarded to Habbos who sent in a Birthday Wish! January 2010."
-    },
-    {
-      "code": "ACH_SummerQuestCompleted1",
-      "name": "SummerQuestCompleted1",
-      "description": "SummerQuestCompleted1"
-    },
-    {
-      "code": "UK121",
-      "name": "Rango UK ",
-      "description": "Joining th eGroup"
-    },
-    {
-      "code": "UK122",
-      "name": "Rango Quest UK ",
-      "description": "Completion of quest"
-    },
-    {
-      "code": "UK123",
-      "name": "Rango Quiz",
-      "description": "Correct Quiz Entries"
-    },
-    {
-      "code": "UK244",
-      "name": "Puhekupla Badge 2014",
-      "description": "Puhekupla Badge 2014"
-    },
-    {
-      "code": "UK003",
-      "name": "HPV new badge",
-      "description": "badge replacement"
-    },
-    {
-      "code": "UK124",
-      "name": "de Blob 2 Badge (Uk - Feb 11)",
-      "description": "Given out to quest winners"
-    },
-    {
-      "code": "UK004",
-      "name": "HPV badge",
-      "description": "2 stars"
-    },
-    {
-      "code": "Z64_HHUK",
-      "name": "NEW BETA bw",
-      "description": "black and white"
-    },
-    {
-      "code": "UK005",
-      "name": "HPV badge",
-      "description": "HPV 3 stars"
-    },
-    {
-      "code": "UK126",
-      "name": "Pokémon Black Version",
-      "description": "Pokémon Black Version"
-    },
-    {
-      "code": "UK117",
-      "name": "0800 Reverse UK - Dec 10",
-      "description": "group membership"
-    },
-    {
-      "code": "UK119",
-      "name": "Master Shifu's Badge of Honour",
-      "description": "Ad Sales, Kung Fu Panda, Dec 2010"
-    },
-    {
-      "code": "ACH_AvatarTags1",
-      "name": "AvatarTags1",
-      "description": "AvatarTags level 1"
-    },
-    {
-      "code": "FR005_HHUK",
-      "name": "Hotel Happenings Badge",
-      "description": "I read the Hotel Happenings newsletter every Tuesday!"
-    },
-    {
-      "code": "VIK07",
-      "name": "Carve your Runestone 5",
-      "description": "Vikings 2014"
-    },
-    {
-      "code": "UK131",
-      "name": "Rango: Beans Badge",
-      "description": "Beans was the winner of the Rango poll!"
-    },
-    {
-      "code": "UK136",
-      "name": "0800 Reverse: Mobile to Mobile",
-      "description": "Group Member"
-    },
-    {
-      "code": "UK007",
-      "name": "Skulduggery Pleasant",
-      "description": "Skulduggery Pleasant Harper Collins"
-    },
-    {
-      "code": "SG018",
-      "name": "Honour IP",
-      "description": ""
-    },
-    {
-      "code": "UK008",
-      "name": "Flying Meatball",
-      "description": "Cloudy with a chance of meatballs"
-    },
-    {
-      "code": "TWIV1_HHUK",
-      "name": "Twilight: Volturi (LVL 1)",
-      "description": "Awarded to winners of the Volturi Trivia Quest. November 2009."
-    },
-    {
-      "code": "HQ006_HHUK",
-      "name": "Bronze Detective",
-      "description": "Awarded to all remaining CSI Detectives. Urban Campaign 09"
-    },
-    {
-      "code": "ACH_EsA2",
-      "name": "EsA2",
-      "description": "EsA level 2"
-    },
-    {
-      "code": "EGG08",
-      "name": "The Golden Egg",
-      "description": "Given to Epic Egg hunt winners. Easter 2011."
-    },
-    {
-      "code": "ACH_GuideEnrollmentLifetime15",
-      "name": "GuideEnrollmentLifetime15",
-      "description": "GuideEnrollmentLifetime15"
-    },
-    {
-      "code": "THI40",
-      "name": "My heart...",
-      "description": "Winner of broken hearts 1/2"
-    },
-    {
-      "code": "ACH_Login1",
-      "name": "Login1",
-      "description": "Consecutive login days level1"
-    },
-    {
-      "code": "GLB_HHUK",
-      "name": "Guide2",
-      "description": "Guide level2"
-    },
-    {
-      "code": "AC6_HHUK",
-      "name": "Ape May Collectable",
-      "description": "angry ape"
-    },
-    {
-      "code": "AF1_HHUK",
-      "name": "April Fools' Day",
-      "description": "April Fools Day 2009"
-    },
-    {
-      "code": "DRA04",
-      "name": "A fond farewell to the Dragon",
-      "description": "Comemorating its return in 2024"
-    },
-    {
-      "code": "THI41",
-      "name": "...will go on!!!",
-      "description": "Winner of broken hearts 2/2"
-    },
-    {
-      "code": "RADZZ",
-      "name": "RADZZ",
-      "description": "Room ad product badge"
-    },
-    {
-      "code": "ACH_PetLevelUp3",
-      "name": "PetLevelUp3",
-      "description": "PetLevelUp level 3"
-    },
-    {
-      "code": "ACH_GuideTourTaker3",
-      "name": "GuideTourTaker3",
-      "description": "GuideTourTaker3"
-    },
-    {
-      "code": "ACH_RoomDecoFurniCount11",
-      "name": "RoomDecoFurniCount11",
-      "description": "RoomDecoFurniCount11"
-    },
-    {
-      "code": "ACH_GamePlayed2",
-      "name": "GamePlayed2",
-      "description": "GamePlayed level2"
-    },
-    {
-      "code": "ACH_GuideGroupMember1",
-      "name": "GuideGroupMember1",
-      "description": "GuideGroupMember1"
-    },
-    {
-      "code": "US0S",
-      "name": "Habbo.com Relaunch Badge",
-      "description": "We Heart Habbo.com!"
-    },
-    {
-      "code": "US0R",
-      "name": "Zombie Badge",
-      "description": "Zombie Chasers Poll Badge"
-    },
-    {
-      "code": "CLB02",
-      "name": "Clearasil Ultra 2",
-      "description": "Shine, shine"
-    },
-    {
-      "code": "ACH_PetRespectReceiver7",
-      "name": "PetRespectReceiver7",
-      "description": "PetRespectReceiver level 7"
-    },
-    {
-      "code": "UK111",
-      "name": "ChildLine Anti-Bullying Badge - Nov 10",
-      "description": "ChildLine Anti-Bullying Badge"
-    },
-    {
-      "code": "UK112",
-      "name": "Capri-Sun Limited Edition Badge - Nov 10",
-      "description": ""
-    },
-    {
-      "code": "UK114",
-      "name": "Gulliver’s Travels \"Happy Face\" badge - UK (Dec 10)",
-      "description": "quest"
-    },
-    {
-      "code": "HJ5",
-      "name": "Harajuku Quest Music",
-      "description": "Music girl badge"
-    },
-    {
-      "code": "BR071",
-      "name": "1Goal",
-      "description": "I support 1Goal. Education for all."
-    },
-    {
-      "code": "UK107",
-      "name": "Street Dance 3D",
-      "description": "Winners of trailer competition"
-    },
-    {
-      "code": "MPS01",
-      "name": "MonsterPlantTreater",
-      "description": "MonsterPlantTreater"
-    },
-    {
-      "code": "THI55",
-      "name": "Valentines 2013 Quizz",
-      "description": "I know everything about love"
-    },
-    {
-      "code": "HWN09",
-      "name": "Star Tarot Badge",
-      "description": "For Habboween 2010 Group Members"
-    },
-    {
-      "code": "ACH_AllTimeHotelPresence10",
-      "name": "AllTimeHotelPresence10",
-      "description": "All time hotel presence level10"
-    },
-    {
-      "code": "HWN07",
-      "name": "Luck Badge",
-      "description": "Habboween 2010"
-    },
-    {
-      "code": "PATRL",
-      "name": "The Habbo Patrol",
-      "description": "Protecting chat for innocent Habbos! "
-    },
-    {
-      "code": "HWN04",
-      "name": "The Moon Quest",
-      "description": "Habboween 2010"
-    },
-    {
-      "code": "NT038",
-      "name": "Helpers Quiz badge",
-      "description": "I passed the HabboHelpers.com Helpers Quiz"
-    },
-    {
-      "code": "ACH_NinjasNotSpotted3",
-      "name": "NinjasNotSpotted3",
-      "description": "NinjasNotSpotted3"
-    },
-    {
-      "code": "CNY01_HHUK",
-      "name": "CNY Quest Winners",
-      "description": "Winners of the Observation Quest. CNY 2010"
-    },
-    {
-      "code": "GLO01",
-      "name": "Habboween 2012",
-      "description": "Habboween 2012"
-    },
-    {
-      "code": "ACH_HappyHour1",
-      "name": "HappyHour1",
-      "description": "Happy hour login level1"
-    },
-    {
-      "code": "ACH_GamePlayerExperience3",
-      "name": "GamePlayerExperience3",
-      "description": "GamePlayerExperience level 3"
-    },
-    {
-      "code": "ACH_BaseJumpWins5",
-      "name": "BaseJumpWins5",
-      "description": "BaseJumpWins5"
-    },
-    {
-      "code": "ACH_GuideOnDutyPresence3",
-      "name": "GuideOnDutyPresence3",
-      "description": "GuideOnDutyPresence3"
-    },
-    {
-      "code": "ACH_GiftReceiver1",
-      "name": "GiftReceiver1",
-      "description": "GiftReceiver level 1"
-    },
-    {
-      "code": "ACH_PetFeeding2",
-      "name": "PetFeeding2",
-      "description": "PetFeeding level 2"
-    },
-    {
-      "code": "Z39_HHUK",
-      "name": "Hotel For Dogs 1",
-      "description": "HFD Quest Winners"
-    },
-    {
-      "code": "ACH_AvatarLooks1",
-      "name": "AvatarLooks1",
-      "description": "Avatar looks changed level1"
-    },
-    {
-      "code": "ACH_GuideRequester2",
-      "name": "GuideRequester2",
-      "description": "GuideRequester2"
-    },
-    {
-      "code": "ACH_BattleBallWinner2",
-      "name": "BattleBallWinner2",
-      "description": "BattleBallWinner2"
-    },
-    {
-      "code": "HOP03_HHUK",
-      "name": "Habbolympics 2010 - Bronze Badge",
-      "description": "Awarded to all third place team members. February 2010."
-    },
-    {
-      "code": "ACH_RoomCompetitionVoter1",
-      "name": "RoomCompetitionVoter1",
-      "description": "RoomCompetitionVoter1"
-    },
-    {
-      "code": "ACH_TraderPass1",
-      "name": "TraderPass1",
-      "description": "TraderPass level1"
-    },
-    {
-      "code": "HWD06",
-      "name": "Best Animated Film Prediction",
-      "description": "Predicted the best animated film of the 2011 awards!"
-    },
-    {
-      "code": "HWD03",
-      "name": "Best Actress Prediction",
-      "description": "Predicted the best actress from the 2011 awards!"
-    },
-    {
-      "code": "TWIC1_HHUK",
-      "name": "Twilight: Cullen (LVL 1)",
-      "description": "Awarded to winners of the Cullens Trivia Quest. November 2009."
-    },
-    {
-      "code": "ACH_MonsterPlantTreater2",
-      "name": "MonsterPlantTreater2",
-      "description": "MonsterPlantTreater2"
-    },
-    {
-      "code": "ACH_PetLover1",
-      "name": "PetLover1",
-      "description": "PetLover level 1"
-    },
-    {
-      "code": "NL008",
-      "name": "50,000 Fans Badge",
-      "description": "FB Badge Giveaway"
-    },
-    {
-      "code": "ACH_Motto1",
-      "name": "Motto1",
-      "description": "Motto changed level1"
-    },
-    {
-      "code": "NI5",
-      "name": "Gold Rush - Mythology",
-      "description": "Frederic Santini Quest - World 2 Winner"
-    },
-    {
-      "code": "BGW4",
-      "name": "SPF 5",
-      "description": ""
-    },
-    {
-      "code": "RA6",
-      "name": "Iron Maiden Badge",
-      "description": "Maze of Death Quest 2010"
-    },
-    {
-      "code": "ACH_PetRespectGiver9",
-      "name": "PetRespectGiver9",
-      "description": "PetRespectGiver level 9"
-    },
-    {
-      "code": "ACH_BattleBallPlayer5",
-      "name": "BattleBallPlayer5",
-      "description": "BattleBallPlayer5"
-    },
-    {
-      "code": "DE016",
-      "name": "Nokia Maze Challenge Gold Badge - Nov 10",
-      "description": "Completion of maze"
-    },
-    {
-      "code": "TWIQ1_HHUK",
-      "name": "Twilight: Bella & Jacob (LVL 1)",
-      "description": "Awarded to winners of the Bella & Jacob Quest. November 2009."
-    },
-    {
-      "code": "GLA_HHUK",
-      "name": "Guide1",
-      "description": "Guide level1"
-    },
-    {
-      "code": "ST4",
-      "name": "STEM Cosmetics",
-      "description": "STEM Cosmetics"
-    },
-    {
-      "code": "ACH_NotesReceived1",
-      "name": "NotesReceived1",
-      "description": "NotesReceived level 1"
-    },
-    {
-      "code": "ROO10",
-      "name": "Habbo Palooza 2013 Quiz",
-      "description": "For replying correctly to the Quiz"
-    }
-  ]
+  "friends": [{
+    "name": "!!!toon!!!",
+    "motto": "Puhekupla.com",
+    "uniqueId": "hhus-eafa7f30310f817172231ac9ba3a3baa",
+    "figureString": "hr-155-48.hd-180-1.ch-215-1408.lg-3023-64.sh-3068-1408-85.wa-2001.cp-3286"
+  }, {
+    "name": "!zenda!",
+    "motto": "Believe & Live for today",
+    "uniqueId": "hhus-27d71e540e314d49ffe9eabb45e747db",
+    "figureString": "hd-180-14.ch-210-1408.lg-275-1408.sh-905-1408"
+  }, {
+    "name": "-!!",
+    "motto": "boom yo !!|!!1°",
+    "uniqueId": "hhus-bc8ee1d4d095c7fa4dab7a13f2422fe3",
+    "figureString": "hr-837-31.hd-600-30.ch-665-88.lg-715-88.sh-906-1408"
+  }, {
+    "name": "-doornroosje.",
+    "motto": "Neuk gezond, neuk een appel",
+    "uniqueId": "hhus-80ff60f828511ca0090031f039b4cc84",
+    "figureString": "hr-890-37.hd-600-7.ch-691-77.lg-720-62.sh-725-78.he-1610.fa-1212"
+  }, {
+    "name": "-Larsboy-",
+    "motto": "Go Holland! Go Holland!",
+    "uniqueId": "hhus-b7e894971d6e62e5e72abef3c1267e31",
+    "figureString": "hr-155-37.hd-180-2.ch-3110-69-62.lg-3116-62-69.sh-305-62.he-1609-73.ea-1406.ca-1815-69"
+  }, {
+    "name": ".:Gijs:.",
+    "motto": "Scania R730 16 Liter V8 3500Nm.",
+    "uniqueId": "hhus-5f2f6c9ab3c57b1d9c406b2b5c218c1c",
+    "figureString": "hr-155-31.hd-185-14.ch-210-1408.lg-285-1408.sh-290-1408"
+  }, {
+    "name": ".barbiee",
+    "motto": "Ha.",
+    "uniqueId": "hhus-79b27430273906d65f1945853c3088de",
+    "figureString": "hr-515-34.hd-600-2.ch-665-77.lg-710-63.ha-1006"
+  }, {
+    "name": "123debby",
+    "motto": "That's me!",
+    "uniqueId": "hhus-63952c36a4eea4f220e0e4a92b81a288",
+    "figureString": "hr-545-45.hd-600-8.ch-660-73.lg-720-1408.sh-730-1408.he-1609-73"
+  }, {
+    "name": "=Atlantis=",
+    "motto": "Update your own motto...",
+    "uniqueId": "hhus-226106ab4c9559eca78b42a245dd54c9",
+    "figureString": "hr-891-45.hd-185-4.ch-3030-82.lg-285-89.sh-290-62"
+  }, {
+    "name": "Administratie",
+    "motto": "Ftw..",
+    "uniqueId": "hhus-4e644be4a2bdab314e969c0285dee676",
+    "figureString": "hr-831-32.hd-180-3.ch-3050-107-62.lg-3201-110-62.sh-3206-104.ca-3219-1323"
+  }, {
+    "name": "aleah1362",
+    "motto": "Pretty Hurts|",
+    "uniqueId": "hhus-92c6580345114a426008a365031ddcbb",
+    "figureString": "hr-836-32.hd-605-7.ch-3014-96.lg-3202-1339-1408.sh-3154-92-96.fa-1202-92.ca-3292-100.cc-3289-78"
+  }, {
+    "name": "Angelcostarica",
+    "motto": "Habbo.es -> WELCH",
+    "uniqueId": "hhus-34d9d3acc31cfbb7bcbfbf7496ab2ed7",
+    "figureString": "hr-155-35.hd-208-1.ch-877-88-64.lg-270-91.sh-305-90.ca-1805-64.wa-2001"
+  }, {
+    "name": "antonio119",
+    "motto": "[NLC] Owner",
+    "uniqueId": "hhus-f170d4a99836911bfcfd9a78c7c5bb04",
+    "figureString": "hd-209-14.ch-210-1408.lg-270-1408"
+  }, {
+    "name": "arcboosteur",
+    "motto": "Das Ruhenheim º",
+    "uniqueId": "hhus-bdccdb543d489eddac7c628234e89fed",
+    "figureString": "hr-802-42.hd-180-1.ch-805-1408.lg-285-68.sh-295-1408.ha-1014.he-1610.fa-1201"
+  }, {
+    "name": "ArmedSingapore",
+    "motto": "(USMC) SSgt/FLO/DI [B10] {&Y^HQAOJ}",
+    "uniqueId": "hhus-97e2b47b0d6b5663f94ceb5962d3f1dd",
+    "figureString": "hd-180-1.ch-220-89.lg-285-88.fa-1201.wa-2009-89"
+  }, {
+    "name": "Bart..",
+    "motto": "Shoot some heroin & fuck with the star",
+    "uniqueId": "hhus-fc2e0849ff9aa394a1187fbb7d5fb4af",
+    "figureString": "hr-115-1136.hd-190-1026.ch-215-1286.lg-275-1184.sh-305-1286"
+  }, {
+    "name": "BauenII",
+    "motto": "Habfan.nl - Owner",
+    "uniqueId": "hhus-070ead683f395ce57d80b29531f43b8d",
+    "figureString": "hr-125-45.hd-180-2.ch-3030-73.lg-285-82.sh-290-62"
+  }, {
+    "name": "BellaBoo374",
+    "motto": "",
+    "uniqueId": "hhus-1229d7a8a39fa5ca810279e138b37da1",
+    "figureString": "hr-891-45.hd-605-1.ch-685-76.lg-700-62.sh-730-77.ha-1005-62.wa-2001"
+  }, {
+    "name": "Bflorens",
+    "motto": "the way i like it.",
+    "uniqueId": "hhus-1a3b858859b9a11931c10f90e5e97a8c",
+    "figureString": "ha-1017-.lg-270-64.sh-290-62.hr-170-45.hd-180-3.ch-215-83.ea-1401-62"
+  }, {
+    "name": "Biermonster",
+    "motto": "Wtf.",
+    "uniqueId": "hhus-21236c92ec4bb4f4ce967a2274eb6115",
+    "figureString": "hr-170-42.hd-200-2.ch-875-62-62.lg-270-62.ea-1401-80.fa-1208-73"
+  }, {
+    "name": "BIGxMAC",
+    "motto": "",
+    "uniqueId": "hhus-6c74a4d60c5ecdbf64f1e4108fc22a8f",
+    "figureString": "hr-155-33.hd-195-2.ch-235-82.lg-285-63.sh-290-62.ca-1801-65"
+  }, {
+    "name": "brendan1357",
+    "motto": "Been there done that..",
+    "uniqueId": "hhus-be83b59c866a0fefe4b04aeddebc97cd",
+    "figureString": "hd-180-14.ch-210-1408.lg-3078-1408.sh-295-1408.fa-1201"
+  }, {
+    "name": "Bubblejuice.nl",
+    "motto": "Owner bubblejuice.nl :D",
+    "uniqueId": "hhus-52fb7c35897e9755f8b10fdcfd73c490",
+    "figureString": "hr-155-42.hd-185-14.ch-255-1408.lg-275-1408.sh-295-1408"
+  }, {
+    "name": "Bunny_Purple",
+    "motto": "",
+    "uniqueId": "hhus-87d06ddef31c26db2556cd227b9925b9",
+    "figureString": "hr-893-31.hd-185-28.ch-215-62.lg-280-75.ha-1008"
+  }, {
+    "name": "Cachiporros",
+    "motto": "",
+    "uniqueId": "hhus-d7876f0fa6295c7464ae2503ba9c4b36",
+    "figureString": "hr-155-37.hd-180-3.ch-3030-80.lg-275-64"
+  }, {
+    "name": "Cavke",
+    "motto": "",
+    "uniqueId": "hhus-17935fb20f32923a84c962b5ad168965",
+    "figureString": "hd-600-1.ch-630-89.lg-715-77.sh-730-91.hr-890-45.ca-1803-87.ea-1401-69"
+  }, {
+    "name": "Chaz",
+    "motto": "l33t",
+    "uniqueId": "hhus-40c1da323117b8c5b5f90953b0ea22fc",
+    "figureString": "hr-828-34.hd-180-22.ch-3167.lg-275-63.sh-290-84.he-1603-72.cc-3007-81-81"
+  }, {
+    "name": "choi",
+    "motto": "absolutely fine",
+    "uniqueId": "hhus-d445b031c32abe98c9856b72533d4d46",
+    "figureString": "hr-3278-49-40.hd-3091-13.ch-3077-100-1408.lg-270-92.sh-3027-1335-110.cc-3186-1336"
+  }, {
+    "name": "Clemster.",
+    "motto": "Pinguin?",
+    "uniqueId": "hhus-619f390e32b3e6b53d3bc31f59c0f34d",
+    "figureString": "hr-165-45.hd-180-1.ch-3030-83.lg-285-64.sh-290-1408.fa-3147-1408"
+  }, {
+    "name": "Codified",
+    "motto": "Teves",
+    "uniqueId": "hhus-22b7cef12be09ea22f1a095057b4b1e0",
+    "figureString": "hd-180-30.ch-3030-1408.lg-270-64.sh-305-64.ea-1406"
+  }, {
+    "name": "Cooldied",
+    "motto": "Don't touch the red button...",
+    "uniqueId": "hhus-4a1e16c89a4b5491c9233d74d43ad640",
+    "figureString": "hr-125-38.hd-190-8.ch-267-1408.lg-3116-72-1408.sh-295-76.fa-1201.ca-1802.wa-2001"
+  }, {
+    "name": "CoolShankar1",
+    "motto": "<F.B.I> Cadet",
+    "uniqueId": "hhus-d9806928ec711fc10b82cc61ba452a12",
+    "figureString": "hd-180-1.ch-220-62.lg-285-64.sh-300-64.ca-1804-64.wa-2001"
+  }, {
+    "name": "D0SIER",
+    "motto": "",
+    "uniqueId": "hhus-ed7606b49e51acd037b382ee05faec56",
+    "figureString": "hr-893-46.ha-1023-67.hd-180-16.lg-280-73.wa-2004-87.ea-1406-.sh-908-79.ca-1803-65.ch-240-83"
+  }, {
+    "name": "Dancingfish",
+    "motto": "-,_\"",
+    "uniqueId": "hhus-a004ddd8b21a9065e832669db5a22c72",
+    "figureString": "hr-125-40.hd-209-30.ch-245-1408.lg-275-64.sh-305-76.fa-1202-91.ca-1813"
+  }, {
+    "name": "djcesar",
+    "motto": "Be yourself.",
+    "uniqueId": "hhus-5b95ba4568cef7e67fb6b01907d16807",
+    "figureString": "hr-893-36.hd-180-1.ch-877-1408-1408.lg-285-1408.sh-906-1408.ea-1401-1408"
+  }, {
+    "name": "DjMaxi",
+    "motto": "Be careful with bad people!",
+    "uniqueId": "hhus-9e3fae940bd058f06d88575d747c2bf7",
+    "figureString": "hr-155-42.hd-180-1.ch-255-64.lg-275-82.ha-3404-64-82.ea-1406"
+  }, {
+    "name": "Djridk",
+    "motto": "From The Netherlands",
+    "uniqueId": "hhus-cc6df5f8fdbfbe0bbfe431fcb1d7c2e7",
+    "figureString": "hr-165-45.hd-209-2.ch-235-73.lg-275-62.sh-295-62"
+  }, {
+    "name": "DoYouLiftBro",
+    "motto": "",
+    "uniqueId": "hhus-ba0da0b6c7ce4a2ccd749fc8c0342d80",
+    "figureString": "hr-828-1407.hd-190-7.ch-3208-1432-1408.lg-3057-110.fa-1201"
+  }, {
+    "name": "Dragon-nccb",
+    "motto": "advent? already?!!!",
+    "uniqueId": "hhus-d655846432ccf14dd1efd8ddea92b48a",
+    "figureString": "hr-3012-34.hd-600-2.ch-3321-1416.lg-3434-110-1321.sh-3435-110-1321.ha-3272-1417-95.he-3149-99.ca-3151-1417-1416.wa-2003.cc-3246-95"
+  }, {
+    "name": "DumbGenius1999",
+    "motto": "RICH AF",
+    "uniqueId": "hhus-43ea4c54070dcf2582f13bec5bda30b8",
+    "figureString": "hr-155-39.hd-208-8.ch-255-80.lg-275-64.ha-3117-81.he-1609-66"
+  }, {
+    "name": "E-B-2",
+    "motto": "from the netherlands",
+    "uniqueId": "hhus-819d9baee06217024ae3805e7f6f9a71",
+    "figureString": "hr-170-39.hd-180-8.ch-878-64-70.lg-3116-67-67.sh-295-67"
+  }, {
+    "name": "ED.DY",
+    "motto": "   -=- Made in Russia -=-",
+    "uniqueId": "hhus-3d1bb2951a77594af0d9da8942337929",
+    "figureString": "hr-165-61.hd-3091-8.ch-3215-110.lg-285-64.sh-3115-63-62"
+  }, {
+    "name": "elliewalker1",
+    "motto": "",
+    "uniqueId": "hhus-2a339135f201a46dc86d0521abae92fd",
+    "figureString": "hr-545-32.hd-600-1.ch-645-68.lg-695-68.he-3274-74"
+  }, {
+    "name": "Emmerrrrrrr",
+    "motto": "habborator.org",
+    "uniqueId": "hhus-391d98cd253aea3843c3d485c98c48ab",
+    "figureString": "hr-500-31.hd-600-1.ch-685-87.lg-715-62.sh-730-62.ha-1005-87"
+  }, {
+    "name": "EmoCaptain09",
+    "motto": "[PNP] Police Officer III [gav] [1k]",
+    "uniqueId": "hhus-6a7611d888c8cd54ca53fee354cc919d",
+    "figureString": "hr-3090-39.hd-209-8.ch-3030-1408.lg-3078-73.sh-300-1408.ha-3117-1408.ca-1807"
+  }, {
+    "name": "Esuoh.it",
+    "motto": "Auguri Italia! 150 anni portati bene!",
+    "uniqueId": "hhus-5382bcf41bb454592f79205386daf6af",
+    "figureString": "hr-545-45.hd-600-3.ch-665-81.lg-700-81.sh-725-62"
+  }, {
+    "name": "FamousSeaShell",
+    "motto": "Music Inspires Me.",
+    "uniqueId": "hhus-0a074813ffa93da2ee9cccbefd60232f",
+    "figureString": "hd-180-7.ch-210-62.lg-270-62"
+  }, {
+    "name": "Farnedy",
+    "motto": "Helper! farned - ESHABBO",
+    "uniqueId": "hhus-e6c110ece60f39d42ff8408abe881468",
+    "figureString": "hr-110-42.hd-207-1370.ch-220-1408.lg-275-1408.sh-305-64.fa-1201.ca-1810"
+  }, {
+    "name": "FernandoLOOL",
+    "motto": "Eltemplodelamusica.com - Argentina",
+    "uniqueId": "hhus-a351a371839acc6cdc37c5f1741bed99",
+    "figureString": "hr-830-40.hd-190-10.ch-3030-82.lg-3023-72.fa-3147-72.cp-3286"
+  }, {
+    "name": "Fibonacci",
+    "motto": "Touch too much.",
+    "uniqueId": "hhus-a2c2fb5232d8d27a1fc3ae09273be40e",
+    "figureString": "hr-125-60.hd-3103-2.ch-255-1322.lg-280-110.sh-3016-110.ha-1012-1322.he-3071-92.ea-3170-1323.fa-1205-110.ca-1816"
+  }, {
+    "name": "fred655",
+    "motto": "Updating motto ...",
+    "uniqueId": "hhus-d57c13e210de309f72c6dba1406f8202",
+    "figureString": "hr-165-39.hd-180-8.ch-878-76-84.lg-3078-81.sh-300-64.ea-1403-75"
+  }, {
+    "name": "FredBeav",
+    "motto": "[Alliumphobia] silly sufferers",
+    "uniqueId": "hhus-1c451fde0e4e4fe107be25fc52e42f77",
+    "figureString": "hr-530-31.hd-605-24.ch-884-71.lg-715-71.sh-907-71.fa-1206-84.ca-1806-68"
+  }, {
+    "name": "GamerdmoneyV2",
+    "motto": "[EPF] TM [S]",
+    "uniqueId": "hhus-71fe48bb300301b427fcc388b93d83f2",
+    "figureString": "hr-828-31.hd-190-2.ch-255-96.lg-3058-64.sh-3089-63"
+  }, {
+    "name": "GerardYoBling",
+    "motto": "Gerard-Yo-Bling from Habbo.nl",
+    "uniqueId": "hhus-e47331a6339360f2c7e574e5f63ed658",
+    "figureString": "hr-115-42.hd-180-1.ch-808-1408.lg-270-64.sh-290-1408.cc-3280-1320-1408"
+  }, {
+    "name": "Gerben",
+    "motto": "Habbies.nl",
+    "uniqueId": "hhus-158f03f719d36c698d853712a4910d60",
+    "figureString": "hr-155-42.hd-195-1.ch-255-79.lg-285-90.sh-290-62"
+  }, {
+    "name": "getsumdude",
+    "motto": "Add getsum200",
+    "uniqueId": "hhus-66c9633bd3861bd724a8c766b5efada4",
+    "figureString": "hr-155-42.hd-180-1.ch-255-64.lg-280-79.sh-3115-62-62.fa-1201"
+  }, {
+    "name": "Ginnegapper",
+    "motto": "Hoi",
+    "uniqueId": "hhus-66a122dd036139a5882fa692acdbfa4b",
+    "figureString": "hd-180-3.ch-215-79.lg-285-77.sh-290-62.ha-1002-62.hr-893-45"
+  }, {
+    "name": "Grassprietje",
+    "motto": "",
+    "uniqueId": "hhus-656ecd6285b0486873c582d2f10e03cc",
+    "figureString": "hd-629-1.ch-675-72.lg-720-74.sh-725-1408.ha-1015.wa-2001"
+  }, {
+    "name": "Guarante",
+    "motto": "Journalist - Puhekupla",
+    "uniqueId": "hhus-71196d74bd192c206499cae1a097ed25",
+    "figureString": "hr-515-34.hd-628-10.ch-660-71.lg-700-1408.he-1609-73.fa-1202-88"
+  }, {
+    "name": "H24",
+    "motto": "      Josh.    16 Agein.",
+    "uniqueId": "hhus-b93a8c28ec7bcce552bc8491fa7c139a",
+    "figureString": "hr-115-45.hd-190-10.ch-210-63.lg-281-82.sh-290-91"
+  }, {
+    "name": "hassan625",
+    "motto": "Thinking",
+    "uniqueId": "hhus-3bdfb2538b52aaa977f3994ca85ce17c",
+    "figureString": "hr-831-61.hd-209-1.ch-3234-108.lg-3023-1336.sh-3016-107.ha-3209-62.ea-3107-62-62.fa-1201.ca-3085-1321.cc-3158-1336"
+  }, {
+    "name": "heet",
+    "motto": "",
+    "uniqueId": "hhus-0fc68249e88350536000f85ff2b16f8e",
+    "figureString": "hr-155-31.hd-209-1.ch-210-1408.lg-275-1408.sh-290-1408.ha-1006.fa-3276-72.wa-3211-1408-1408"
+  }, {
+    "name": "Hotgerrit-jan12",
+    "motto": "",
+    "uniqueId": "hhus-f8e731503ebaae7394af6ba5277f461e",
+    "figureString": "hr-115-33.hd-180-7.ch-235-62.lg-270-64.sh-3115-63-62.ea-1404-62.wa-2009-62.cc-260-62"
+  }, {
+    "name": "Htech",
+    "motto": "",
+    "uniqueId": "hhus-bebf1708a6b7092b6c0cbb2c060c2d6c",
+    "figureString": "hr-893-45.hd-180-2.ch-3030-62.lg-285-82.ea-1404-62"
+  }, {
+    "name": "Ibex..",
+    "motto": "",
+    "uniqueId": "hhus-14aae131e4fe4292066c768c877d4efc",
+    "figureString": "hr-893-42.hd-180-4.ch-210-62.lg-285-82"
+  }, {
+    "name": "Jack_the-Black",
+    "motto": "[Sony] Receptionist II [TED]",
+    "uniqueId": "hhus-228405fca0afce83206abf3eafc6992a",
+    "figureString": "hr-165-42.hd-180-2.ch-220-83.lg-280-83.sh-300-62.fa-1201.ca-1819"
+  }, {
+    "name": "jatt.side",
+    "motto": "Unacceptable to hotel management",
+    "uniqueId": "hhus-72aef545b69add9071b0ddf392e83ad5",
+    "figureString": "hr-115-45.hd-180-3.ch-3111-73-73.lg-3116-73-73.sh-3115-73-73.ha-1003-62.fa-1201"
+  }, {
+    "name": "Jeaster",
+    "motto": "[NOPD] F.A.A [MtrH]",
+    "uniqueId": "hhus-6a82bc6c4910cf639abc9e7798e1980e",
+    "figureString": "hr-3163-33.hd-3091-2.ch-3077-96-64.lg-3058-110.sh-3089-110.ca-3085-1321.wa-2009-110.cc-3009-110-110"
+  }, {
+    "name": "jeffhardyv3",
+    "motto": "Do what ever the BOBBA you wanna do!",
+    "uniqueId": "hhus-bbaa52b2b8ee32ad9d5bf6fb1b02bfbb",
+    "figureString": "hr-155-45.hd-180-8.ch-3321-85.lg-280-73.sh-290-1320.ha-1006.fa-3344-90"
+  }, {
+    "name": "JESDINERO",
+    "motto": "I'm from CATALONIA.™",
+    "uniqueId": "hhus-25013404d4c38e39051e948dfb32e11c",
+    "figureString": "hr-110-45.hd-180-1.ch-235-76.lg-3116-71-64.sh-905-1408.he-1606-1408.fa-1204.ca-1806-85.wa-3211-1408-1408"
+  }, {
+    "name": "JockTraper",
+    "motto": "<MI5> Field Agent ll <MMB>",
+    "uniqueId": "hhus-9fdf8e8590c50d061d5de01c94694376",
+    "figureString": "hr-155-39.hd-195-1.ch-210-62.lg-280-64.ea-1403-62.cc-260-62"
+  }, {
+    "name": "joe.666666",
+    "motto": "yolo",
+    "uniqueId": "hhus-0b9f3f22a70897c4dc821c901c756ddd",
+    "figureString": "hr-155-42.hd-209-1.ch-878-64-1408.lg-285-64.sh-300-64.ea-1404-64.cc-260-73"
+  }, {
+    "name": "jorentje1997",
+    "motto": "",
+    "uniqueId": "hhus-01f3094eeca786f4b7acea1e5a8fd47a",
+    "figureString": "hr-893-31.hd-209-3.ch-877-70-79.lg-270-82"
+  }, {
+    "name": "Jorg3.",
+    "motto": "Owner HabboSecurity.es - Jorge. [.ES]",
+    "uniqueId": "hhus-dcffcf12dbfb8622d94cc79dd940c925",
+    "figureString": "hr-676-31.hd-180-1.ch-804-82.lg-3088-1408-1408.sh-3068-82-82.ha-1013-82.fa-1201"
+  }, {
+    "name": "justin39634",
+    "motto": "",
+    "uniqueId": "hhus-7f86a374057c471527c48de4b813c06b",
+    "figureString": "hr-802-45.hd-185-1.ch-809-1408.lg-3088-73-1408.sh-3068-64-64"
+  }, {
+    "name": "kartrider",
+    "motto": "iel",
+    "uniqueId": "hhus-7981741f86ea62cecc95d1f69cb82673",
+    "figureString": "hr-155-39.hd-180-1.ch-804-82.lg-3023-64.sh-3068-91-1408.wa-2007"
+  }, {
+    "name": "kielokukka$",
+    "motto": ":)",
+    "uniqueId": "hhus-7fe9aa627eab9a29ca07f094a1963ac7",
+    "figureString": "hr-9534-37.hd-3096-2.ch-3060-77.lg-3019-64.sh-3035-66.ca-1804-64.cp-3124-62"
+  }, {
+    "name": "killcancer",
+    "motto": "",
+    "uniqueId": "hhus-5a6c92233b274837e94e5d24203d4164",
+    "figureString": "hr-837-61.hd-3097-29.ch-3014-110.lg-3019-110.ea-1402.fa-1212.ca-3217-78-64.cc-3008-63-64"
+  }, {
+    "name": "kingfarishaniff",
+    "motto": "Noobs, Noobs everywhere..",
+    "uniqueId": "hhus-0d69c95253312876df9cc9016a3d5d7a",
+    "figureString": "hr-3260-43.hd-180-2.ch-3001-96-85.lg-3202-110-62.sh-3016-93.ha-3117-110.cc-3007-79-78"
+  }, {
+    "name": "Kingtrust",
+    "motto": "",
+    "uniqueId": "hhus-8afb3dab06fed3752b8d7d5d5d381e6e",
+    "figureString": "hr-3163-52.hd-185-10.ch-3077-1329-85.lg-3017-85-73.sh-295-64.ea-3107-110-92.ca-1817.cc-3186-85"
+  }, {
+    "name": "laurensh1#",
+    "motto": "Habborator.org :-)",
+    "uniqueId": "hhus-64d135cb9ff923e145308670d7de5692",
+    "figureString": "hr-125-40.hd-180-14.ch-3030-64.lg-285-64.sh-295-64.ea-1404-1408.fa-1201.ca-1815-1408.cc-260-1408"
+  }, {
+    "name": "LeenBakker",
+    "motto": "I FART BUBBLES |",
+    "uniqueId": "hhus-3432adde5e6047ccfd513dbbe2dea816",
+    "figureString": "hr-125-42.hd-185-10.ch-215-1315.lg-3116-64-81.sh-295-62.ea-1406.fa-1204"
+  }, {
+    "name": "Lix",
+    "motto": "Dead!",
+    "uniqueId": "hhus-19e90938f225978783079ec81c22d4eb",
+    "figureString": "hr-515-47.hd-626-1.ch-823-82.lg-3216-64.sh-725-66.he-3274-82.wa-2002"
+  }, {
+    "name": "lloyd789",
+    "motto": "",
+    "uniqueId": "hhus-7b4ee0aaf6d16a7709fecaece0e01cfc",
+    "figureString": "hr-155-31.hd-190-1.ch-240-73.lg-285-82.sh-290-1408"
+  }, {
+    "name": "loltje",
+    "motto": "Puma234 from the Netherlands",
+    "uniqueId": "hhus-5bd8e7b8f67cc02c91cc0397770a5427",
+    "figureString": "hr-115-42.hd-180-7.ch-255-76.lg-285-83.sh-290-62"
+  }, {
+    "name": "Lovliest",
+    "motto": "~ The one who dreams hard ~",
+    "uniqueId": "hhus-c56f8e234497f1f249c4457f102fa2c6",
+    "figureString": "hr-515-45.hd-600-1.ch-660-64.lg-710-72.sh-725-64.he-3358-72-72.ca-3414-72"
+  }, {
+    "name": "Luxuryas",
+    "motto": "(\\(\\ \r(=*.^) Habbo.com.br |\r(_\")\")",
+    "uniqueId": "hhus-62d81b2741d31dd5c6403b393ce4a866",
+    "figureString": "hr-170-34.hd-190-19.ch-255-66.lg-3290-68.sh-908-1408.ha-3298-1408-73.he-3297-1408.ea-1404-64.fa-3276-72.ca-1819.cc-3280-1320-1408"
+  }, {
+    "name": "manderijntje",
+    "motto": "Guaranteed to stay fresh",
+    "uniqueId": "hhus-1d5bc19e2af575990910ef205f3468c3",
+    "figureString": "hr-830-42.hd-180-1370.ch-805-66.lg-285-1408.sh-305-1408"
+  }, {
+    "name": "Marco.11",
+    "motto": "Habbospot dot nl",
+    "uniqueId": "hhus-a2934971e58eefc5bfa7716e0f3ef02f",
+    "figureString": "hr-681-31.hd-195-28.ch-220-62.lg-270-83.sh-908-62.fa-1212.ca-1819"
+  }, {
+    "name": "Mesox",
+    "motto": "HabboFun.nl",
+    "uniqueId": "hhus-adc0590348e370ae90b0a4920e165970",
+    "figureString": "hr-165-34.hd-180-14.ch-215-1408.lg-275-73.sh-295-1408.ca-1804-73"
+  }, {
+    "name": "miriam34",
+    "motto": "to have fun",
+    "uniqueId": "hhus-10a920d33fb7efe87152a5732ec15409",
+    "figureString": "hr-545-31.hd-600-1.ch-635-1408.lg-700-1408.sh-730-1408"
+  }, {
+    "name": "Mironal",
+    "motto": "",
+    "uniqueId": "hhus-fd850a7c7bbd4b966685548502148fee",
+    "figureString": "hr-125-32.hd-190-1.ch-250-82.lg-280-64.sh-305-82.ca-1801-64"
+  }, {
+    "name": "Moeris",
+    "motto": "old skool... keep'n it real! •",
+    "uniqueId": "hhus-ad8d9721748a910321d2e884f3677f3e",
+    "figureString": "hd-180-1369.ch-3110-83-80.lg-3116-83-75.sh-295-81.ha-1009-81.he-1610.fa-1212.wa-2001"
+  }, {
+    "name": "monkred",
+    "motto": "USMC: Col, DIRINT, USCC.",
+    "uniqueId": "hhus-00e01b0a738c6fe9e082f5fc9e9cf9f3",
+    "figureString": "hd-3092-1.ch-875-1425-1321.lg-285-82.sh-300-110.ea-1403-110.fa-1201.ca-3413-93.wa-2009-1426"
+  }, {
+    "name": "Mumiiiefied",
+    "motto": "9",
+    "uniqueId": "hhus-e7b433fac67776dfec18ea951891f5c3",
+    "figureString": "hr-145-45.hd-190-24.ch-210-63.lg-275-64.sh-300-62.ea-1406"
+  }, {
+    "name": "mynameisgabriel",
+    "motto": "Winter is Coming",
+    "uniqueId": "hhus-5a24341300c9c9e69935a83a80e08d1f",
+    "figureString": "hr-155-31.hd-190-10.ch-215-84.lg-281-1408.sh-295-1408"
+  }, {
+    "name": "Nederland.x.",
+    "motto": "#notinmyname",
+    "uniqueId": "hhus-ac1bbd359a9e85c0230f1cc69adff77c",
+    "figureString": "hr-165-45.hd-205-1370.ch-220-90.lg-280-90.ha-1010-1408.fa-1205-64"
+  }, {
+    "name": "NeverSkem",
+    "motto": "Waiting for TI5",
+    "uniqueId": "hhus-813aed11132ab9943f093ed96b5bc5b8",
+    "figureString": "hd-180-10.ch-230-1408.lg-270-1408.sh-290-1408.ha-1014.ea-1406.fa-1210"
+  }, {
+    "name": "NLHinki46",
+    "motto": "Habbo Hotel Nederland: Hinki46",
+    "uniqueId": "hhus-374c5c9f833fa0f20b1f5a1a07a0b99f",
+    "figureString": "hr-893-45.hd-180-2.ea-1404-64.lg-281-1315.sh-295-1315.ch-250-1315"
+  }, {
+    "name": "Optimar",
+    "motto": "[EPF] Recruit",
+    "uniqueId": "hhus-3535209ee3fabea7ec758d1fabc36114",
+    "figureString": "hr-115-42.hd-180-3.ch-225-82.lg-285-64.sh-3115-64-64.wa-2009-64"
+  }, {
+    "name": "Origif",
+    "motto": "Habbo.dk & ShockNews.dk",
+    "uniqueId": "hhus-9038c066ab0d4b3a3b12648998cb0d93",
+    "figureString": "hr-125-32.hd-180-1370.ch-235-73.lg-285-91"
+  }, {
+    "name": "Ounz",
+    "motto": "Habbies.nl",
+    "uniqueId": "hhus-16c081e4c635559e8e9eb6eb2197d33a",
+    "figureString": "hr-155-42.hd-180-1.ch-3030-90.lg-285-80.sh-290-1408.fa-1204"
+  }, {
+    "name": "paul748",
+    "motto": "",
+    "uniqueId": "hhus-3c5ddbe725acce9645b87284119ca919",
+    "figureString": "hd-180-1.ch-210-1408.lg-3116-1408-1408"
+  }, {
+    "name": "Paulwalla",
+    "motto": "ju",
+    "uniqueId": "hhus-bc4beeb2ad81ccbd1216c86fafa7ef2d",
+    "figureString": "hr-3090-33.hd-200-2.ch-210-62.lg-285-64.cc-260-89.cp-3126-62"
+  }, {
+    "name": "POKeEMIEL",
+    "motto": "pokemon",
+    "uniqueId": "hhus-aa6a3c6cdc13d8a1bf7497bc4e5f151d",
+    "figureString": "hr-890-45.hd-625-10.ch-660-82.lg-3216-64.sh-907-64.he-3274-64"
+  }, {
+    "name": "pquadro20",
+    "motto": "<< Italia. >>",
+    "uniqueId": "hhus-33c956f078bb0cf6416de5d4d6f8e1a6",
+    "figureString": "hd-195-10.ch-255-1408.lg-3023-1408.sh-3068-1408-1408.ha-1004-1408"
+  }, {
+    "name": "Qaito",
+    "motto": "aka EJS12 @ NL",
+    "uniqueId": "hhus-3892c2dee964173335b46fd5cf85fd4d",
+    "figureString": "hr-115-39.hd-180-3.ch-3030-91.lg-3116-81-81.sh-290-62"
+  }, {
+    "name": "Queenzachy",
+    "motto": "<FBI> Security II <ULD>",
+    "uniqueId": "hhus-ceaa842968caffc45f470d6f3aec0564",
+    "figureString": "hr-155-45.hd-205-1.ch-255-85.lg-285-85.sh-290-85.ha-1002-85"
+  }, {
+    "name": "R0l3IN",
+    "motto": "",
+    "uniqueId": "hhus-3b228546513779c352b4a0c1778e9e12",
+    "figureString": "hr-893-45.hd-180-2.ch-210-73.lg-285-78.sh-290-62"
+  }, {
+    "name": "radicalhabbo",
+    "motto": "love more worry less",
+    "uniqueId": "hhus-750752a65489f5bbed7e0b09933a396d",
+    "figureString": "hr-3090-34.hd-190-1.ch-266.lg-285-82.ha-1004-1408"
+  }, {
+    "name": "raiderflow*",
+    "motto": "Hi , from Belgium !",
+    "uniqueId": "hhus-a49c01a6137d4a33ca0afbd161e61003",
+    "figureString": "hr-155-45.hd-180-14.ch-3030-1408.lg-285-81.sh-290-1408"
+  }, {
+    "name": "raydevinlr",
+    "motto": "Mmm..",
+    "uniqueId": "hhus-d97ec1afe160f080a5e176c8335bc588",
+    "figureString": "hr-155-45.hd-180-1.ch-3030-1408.lg-3320-82-82.sh-290-1408.cc-3294-64-1408"
+  }, {
+    "name": "riagentheco",
+    "motto": "ƒHabbo Helperƒ",
+    "uniqueId": "hhus-c2738e28ffcdff0d0fbd66b7241f0b63",
+    "figureString": "hr-890-39.hd-600-10.ch-685-72.lg-715-72.sh-907-72.ca-1810.wa-2008"
+  }, {
+    "name": "roan100",
+    "motto": "Dutch",
+    "uniqueId": "hhus-88cd74b74d286a57d2c9414f9f97723c",
+    "figureString": "hr-893-31.hd-180-1.ch-878-83-1408.lg-280-1408.sh-295-64.ca-1805-1408.wa-2007"
+  }, {
+    "name": "Rored",
+    "motto": "fku o/",
+    "uniqueId": "hhus-ced3013ca3362e75f2d34432cb49ebe1",
+    "figureString": "hr-802-31.hd-209-8.ch-210-64.lg-3078-64.sh-300-64.ha-1021-64.he-1601.wa-3074-64-1408"
+  }, {
+    "name": "RubSt",
+    "motto": "El nombre es Ruben.",
+    "uniqueId": "hhus-f9ebce3bd17d9310479cda316cead590",
+    "figureString": "hr-893-45.hd-180-2.ch-215-73.lg-275-64.sh-290-62.ea-1401-62"
+  }, {
+    "name": "Russell360&",
+    "motto": "",
+    "uniqueId": "hhus-ea7a9e203b4f2987933a031233b08d9e",
+    "figureString": "hd-200-28.ch-210-62.lg-280-64.sh-908-63.ha-1002-62.wa-2004-68.cc-260-62"
+  }, {
+    "name": "ryan1806",
+    "motto": "Holds: soup",
+    "uniqueId": "hhus-681aa4f24ba85f8d5f6500225e89ab46",
+    "figureString": "hr-155-42.hd-180-1.ch-245-83.lg-285-91.sh-300-77"
+  }, {
+    "name": "samus...",
+    "motto": "Habbo Helper 2oo3! Habbo.es !",
+    "uniqueId": "hhus-d4929ac35d3c2ebc5fc60ff247c1162d",
+    "figureString": "hr-893-42.hd-190-14.ch-262-1408.lg-285-90.sh-290-1408.fa-1201"
+  }, {
+    "name": "Sarenta",
+    "motto": "",
+    "uniqueId": "hhus-cf89c941e3b96d64931ea3ed6ad3e6b0",
+    "figureString": "hd-600-1.sh-730-62.hr-545-45.lg-715-62.ch-660-64"
+  }, {
+    "name": "Shadowguus",
+    "motto": "",
+    "uniqueId": "hhus-d3ecfec5b577a6c281bbde7934bef30e",
+    "figureString": "hr-893-39.hd-180-2.ch-215-66.lg-275-82"
+  }, {
+    "name": "Simon,.",
+    "motto": "{CSI} Bailiff <HDL> <Sim> l H-H",
+    "uniqueId": "hhus-845016f59b2bb4e43bcf2c82f005484d",
+    "figureString": "hr-110-31.hd-185-7.ch-225-71.lg-270-64.sh-300-64.cc-260-71"
+  }, {
+    "name": "sirerichar90",
+    "motto": ".:.tefi/ Habbo.es",
+    "uniqueId": "hhus-cf2f9b789a762be8fd87fb323608d576",
+    "figureString": "hr-170-40.hd-180-1.ch-210-73.lg-275-64.sh-295-64.ha-1009-73.fa-1205-62.ca-1817"
+  }, {
+    "name": "sirjonasxx",
+    "motto": "  ººº HABBO - BUGS ººº",
+    "uniqueId": "hhus-67c261599ce29b25e9945afd5acb3273",
+    "figureString": "hr-893-42.hd-180-2.ch-3030-63.lg-275-64.sh-295-64.ca-1813"
+  }, {
+    "name": "Skittles",
+    "motto": "Al mijn vrienden strijden als mandela.",
+    "uniqueId": "hhus-4f4d6771ad51cc1c48f3480a5fbd9fca",
+    "figureString": "hr-830-48.hd-180-1.ch-210-1408.lg-3216-1320.sh-3068-91-85.ha-3173-64.cc-3294-85-66.cp-3126-64"
+  }, {
+    "name": "skunkboyjr",
+    "motto": "And He lived happily ever after...",
+    "uniqueId": "hhus-33084f8a08577a6ac4a66153d0ea0853",
+    "figureString": "hd-205-1.ch-255-1408.lg-280-1408.sh-906-1408"
+  }, {
+    "name": "slimmeke1",
+    "motto": "Ambassador on habbo.nl",
+    "uniqueId": "hhus-b19c53799ec612548dabaa96f6729698",
+    "figureString": "hd-180-14.ch-210-1408.lg-280-1408"
+  }, {
+    "name": "SoylentBob",
+    "motto": "been a while :)",
+    "uniqueId": "hhus-f22918c9881525f974b548c63b8847a8",
+    "figureString": "hr-3090-49.hd-209-1.ch-210-100.lg-270-62.sh-906-91.ea-1404-62"
+  }, {
+    "name": "spectorTheHabbo",
+    "motto": "I |  My SIS.",
+    "uniqueId": "hhus-c58785c576a33e5d4480e36d217a3f3e",
+    "figureString": "hr-891-1316.hd-209-13.ch-255-82.lg-275-62.ha-1003-82.ea-1404-62"
+  }, {
+    "name": "speedy-100",
+    "motto": "Raawwrrrr, om nom nom nom.",
+    "uniqueId": "hhus-6bd051a02d646ca0761f45360c65c8e0",
+    "figureString": "hr-155-47.hd-180-1.ch-255-91.lg-280-64.sh-290-1408"
+  }, {
+    "name": "Steenpad",
+    "motto": "",
+    "uniqueId": "hhus-a3409f335b6a2a1209901ddedc2f7b54",
+    "figureString": "hr-540-32.hd-629-2.ch-660-65.lg-720-83.sh-730-75.he-1610"
+  }, {
+    "name": "Stitch-",
+    "motto": "Im Just Being Random (:   ~ Andy ~",
+    "uniqueId": "hhus-0787b3fc769c03a92ba38bc0a301770e",
+    "figureString": "hr-125-31.hd-180-1.ch-3030-62.lg-280-70.ha-1008.ea-1406.ca-1806-70"
+  }, {
+    "name": "Teletext-",
+    "motto": "From the Netherlands.",
+    "uniqueId": "hhus-a9b1fd882ab488a4923a8f0da7a315fd",
+    "figureString": "hr-155-45.hd-180-3.ch-245-62.lg-285-91.sh-295-62.ca-1815-91"
+  }, {
+    "name": "Tenenkaas",
+    "motto": "New account: SuperArnejan",
+    "uniqueId": "hhus-b6dfda84d6565175c82e4285aa85c4a2",
+    "figureString": "hd-185-2.ch-235-1315.lg-285-64.sh-290-62.hr-115-45"
+  }, {
+    "name": "ThaSprout",
+    "motto": "Did you smash though?",
+    "uniqueId": "hhus-751d5bb9fd0b4d0fa5ea72830fa4d7b9",
+    "figureString": "hd-205-1.ch-220-85.lg-270-89.sh-906-91.ea-1403-62.fa-1208-64"
+  }, {
+    "name": "TheDogGoesMoo",
+    "motto": "Where Do 5 Gays Walk, One Direction",
+    "uniqueId": "hhus-5cc75f3de94ca2316430cc2bbce6f059",
+    "figureString": "hr-3012-61.hd-605-2.ch-660-96.lg-3057-62.he-1606-96.fa-3230-110"
+  }, {
+    "name": "tibouleboss",
+    "motto": "Born. - french habbo",
+    "uniqueId": "hhus-7c30a6797872ba6574ee6db6fea01edd",
+    "figureString": "hd-180-28.ch-876-72-62.lg-270-80.ha-1007"
+  }, {
+    "name": "UglyChild",
+    "motto": "ugly",
+    "uniqueId": "hhus-f778899c88a9b71b1ceaed36e37e795c",
+    "figureString": "hd-180-1.ch-210-1408.lg-275-82.sh-290-1408.ha-1003-1408"
+  }, {
+    "name": "Ushgarak",
+    "motto": "",
+    "uniqueId": "hhus-04b00a733f655188810ab012a126a70b",
+    "figureString": "hr-155-32.hd-195-1.ch-878-64-1408.lg-285-81.sh-305-1408.fa-3276-73"
+  }, {
+    "name": "Vineen08",
+    "motto": "#habbonoise",
+    "uniqueId": "hhus-26146642b7f284492a97338c34830e44",
+    "figureString": "hr-892-37.hd-209-1.ch-875-64-64.lg-280-64.sh-300-64.ha-1014.fa-1204"
+  }, {
+    "name": "Vorez",
+    "motto": "ik kanker jij kankert wij kankeren",
+    "uniqueId": "hhus-967ac9d2854745de8582276e5857a65f",
+    "figureString": "hr-155-39.hd-180-2.ch-255-89.lg-275-87"
+  }, {
+    "name": "Wallix",
+    "motto": "Wall-e 'nd ix",
+    "uniqueId": "hhus-edda0587bc0c4862f9dae0f2a0e19d1e",
+    "figureString": "hr-115-42.hd-180-1.ch-3030-64.lg-285-82.sh-305-62"
+  }, {
+    "name": "Woise",
+    "motto": "o\\_/l'\"o\"\\_==__ \\»(‡)___(‡)_»",
+    "uniqueId": "hhus-d0481b51e2f31fc5d8c59e3b660f9ad4",
+    "figureString": "hr-170-45.hd-180-8.ch-804-81.lg-280-64.ha-1004-64.fa-1201"
+  }, {
+    "name": "zawwathelost",
+    "motto": "",
+    "uniqueId": "hhus-901216d6b6d035dac7187030315dde98",
+    "figureString": "hr-165-45.hd-190-2.ch-3030-73.lg-280-64.sh-290-62"
+  }, {
+    "name": "ZhishenKhoo",
+    "motto": "[3SS] Head Lt; Khoo EQ: Glock/Blade",
+    "uniqueId": "hhus-db30f5089732de90a6ab5d95e70b41b3",
+    "figureString": "hr-3163-61.hd-209-1.ch-3030-110.lg-3078-110.sh-3016-76.ca-3175-92.wa-3263-1325-92.cc-3007-76-76"
+  }, {
+    "name": "zout",
+    "motto": "sprakeloos",
+    "uniqueId": "hhus-bed6452d2960078b9d9c3eb3628f0e6f",
+    "figureString": "hr-892-31.hd-625-14.ch-660-72.lg-710-72.sh-725-80.ha-1020"
+  }, {
+    "name": "zukur",
+    "motto": "Idiots surrounded by me!",
+    "uniqueId": "hhus-7c43173b35503f7f99a3a33fb3df43b8",
+    "figureString": "hd-600-1.ch-880-82.lg-705-82.sh-730-90.he-1610.fa-1206-64"
+  }],
+  "groups": [{
+    "id": "g-hhus-1332dcd15645042afc396f726351721d",
+    "name": "Ditch the Label",
+    "description": "The official Ditch the Label anti-bullying public group. Join now and support our cause! Find out more at www.DitchtheLabel.org",
+    "type": "NORMAL",
+    "roomId": "r-hhus-a08de337a9dc601102b0139194164f78",
+    "badgeCode": "b13114s19134a55aa7427bc0a3f0c083e94232fb3475",
+    "primaryColour": "242424",
+    "secondaryColour": "ffffff",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-c86db765b12d3146dde2495d19510cf4",
+    "name": "HabboHelpers.com",
+    "description": "HabbboHelpers.com is a community for all Habbos worldwide who'd like to expand their Habbo Helper experience and chat with other Habbo Helpers from all over the world.",
+    "type": "NORMAL",
+    "roomId": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
+    "badgeCode": "b27114s02024s85114344b8b79da75befaac992a26ceb1ceb1",
+    "primaryColour": "d96d00",
+    "secondaryColour": "e5e5e5",
+    "isAdmin": true
+  }, {
+    "id": "g-hhus-91626d8b14dc7d1d74587c5ae7fc4305",
+    "name": "HabboHelpers.com",
+    "description": "HabboHelpers.com, an official fansite for Habbo.com bringing in the new community of Habbo Helpers! Could you be the next helper? Join us now!",
+    "type": "NORMAL",
+    "roomId": "r-hhus-5d4b5af38748480c9200bc96683b6d18",
+    "badgeCode": "b19134s28091s85113s85114s801159ebea67b07ce5e25a12e79cc5a337608",
+    "primaryColour": "bd2121",
+    "secondaryColour": "c0c0c0",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-48abd5701c898ffebc98d476bf38c018",
+    "name": "HabbolifeForum",
+    "description": "HabboLifeForum.com is one of most famous fansites in Habbo Italy",
+    "type": "NORMAL",
+    "roomId": "r-hhus-8472834d25a5a96ce67b255f3203a440",
+    "badgeCode": "b22054s12067t16057s54111230b63226bfdc4a0d4173e87ddf0f2e5",
+    "primaryColour": "43a0d1",
+    "secondaryColour": "00539b",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-aaaf0afa1d5f5f7ddd5fcddb071fe092",
+    "name": "Habbox.com",
+    "description": "Habbox is an official fansite of Habbo which has been around since 2003! Which makes us the oldest running Fansite. We provide you with the latest Habbo news, guides and rare values. We also have a forum, radio and Wiki! We host events and competitions!",
+    "type": "NORMAL",
+    "roomId": "r-hhus-9978ec749fbcb9b5ff7700905c682564",
+    "badgeCode": "b22014s17013s85024s17015e337bc4b2dff128a0e86fda6ad4a487c",
+    "primaryColour": "ec7600",
+    "secondaryColour": "575757",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-59ad480a8d7e557c4a80a11ec4cf0582",
+    "name": "Official Habbo Helpers",
+    "description": "Become a Helper and help other Habbos.",
+    "type": "NORMAL",
+    "roomId": "r-hhus-fcd7db220093b38a9b638dc97d86c916",
+    "badgeCode": "b27124s05125s02113s85094ef615ea9e645c9b9ed1e8238fd4c6623",
+    "primaryColour": "ebebeb",
+    "secondaryColour": "bf2222",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-3df14d1f984304384939c637181dcdde",
+    "name": "Read and share open beta",
+    "description": "Read and share open beta",
+    "type": "NORMAL",
+    "roomId": "r-hhus-7527c58ce58c36913432f4fa9e86d9f8",
+    "badgeCode": "b21034t2711407a3cde5853d88f0d86f77bab140b8c1",
+    "primaryColour": "ffffff",
+    "secondaryColour": "84de00",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-70fae41ecd66086ffe32c6ffbcf229d7",
+    "name": "Sneak Peekers",
+    "description": "Join this group if you want a preview of some features we're working on. Read the blue info terminal at the stairs for further details!",
+    "type": "NORMAL",
+    "roomId": "r-hhus-d4da0e9515461142be51b58471ee31db",
+    "badgeCode": "b24134s20023s20025s59171s06117b02e0890039dce36e999573e0544e40e",
+    "primaryColour": "ffd601",
+    "secondaryColour": "242424",
+    "isAdmin": false
+  }, {
+    "id": "g-hhus-fd92759bc932225f663f1521be8ce255",
+    "name": "UK",
+    "description": "",
+    "type": "NORMAL",
+    "roomId": "r-hhus-dcf2e2a74a39f64dc627c5ef32a1aa83",
+    "badgeCode": "b22114s19107t50064e4bcf7c532fdcecc1467d2185d975783",
+    "primaryColour": "ffd601",
+    "secondaryColour": "ffffff",
+    "isAdmin": false
+  }],
+  "rooms": [{
+    "id": "r-hhus-a091e0f1d891108b49ca7af953386f0f",
+    "name": "Venice Beach Rollercoaster",
+    "description": "Ahh well..",
+    "creationTime": "2010-06-10T09:02:16.000+0000",
+    "maximumVisitors": 25,
+    "tags": ["habbies"],
+    "officialRoom": true,
+    "ownerName": "koeientemmer",
+    "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
+    "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png",
+    "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/31159787.png",
+    "rating": 116,
+    "categories": ["navigator.flatcategory.global.CHAT"]
+  }, {
+    "id": "r-hhus-abb87256459a4f9069a8fe86f5a188ed",
+    "name": "Venice Beach Seaworld",
+    "description": "Come and relax.. or die face to face with the great whites..",
+    "creationTime": "2010-06-10T09:02:21.000+0000",
+    "maximumVisitors": 25,
+    "tags": [],
+    "officialRoom": true,
+    "ownerName": "koeientemmer",
+    "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
+    "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159823.png",
+    "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/31159823.png",
+    "rating": 11,
+    "categories": []
+  }, {
+    "id": "r-hhus-e6f2266fe691e2aa7490351680585af8",
+    "name": "Hell yeah",
+    "description": null,
+    "creationTime": "2011-05-19T18:53:33.000+0000",
+    "maximumVisitors": 25,
+    "tags": [],
+    "officialRoom": true,
+    "ownerName": "koeientemmer",
+    "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
+    "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/46093264.png",
+    "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/46093264.png",
+    "rating": 6,
+    "categories": ["navigator.flatcategory.global.CHAT"]
+  }, {
+    "id": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
+    "name": "HabboHelpers.com",
+    "description": "",
+    "creationTime": "2013-04-20T16:05:18.000+0000",
+    "habboGroupId": "g-hhus-c86db765b12d3146dde2495d19510cf4",
+    "maximumVisitors": 10,
+    "tags": ["habbohelpers"],
+    "officialRoom": true,
+    "ownerName": "koeientemmer",
+    "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
+    "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/62423647.png",
+    "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/62423647.png",
+    "rating": 447,
+    "categories": []
+  }, {
+    "id": "r-hhus-0f7319d1291373ddd1d609ac129fd82f",
+    "name": "Bouwers Club",
+    "description": null,
+    "creationTime": "2013-12-04T15:13:43.000+0000",
+    "maximumVisitors": 25,
+    "tags": [],
+    "officialRoom": true,
+    "ownerName": "koeientemmer",
+    "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
+    "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/65285667.png",
+    "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/65285667.png",
+    "rating": 0,
+    "categories": ["navigator.flatcategory.global.CHAT"]
+  }],
+  "badges": [{
+    "code": "THI41",
+    "name": "...will go on!!!",
+    "description": "Winner of broken hearts 2/2"
+  }, {
+    "code": "UK052",
+    "name": "0800 Reverse",
+    "description": "Got home safely in the Justin Case quest"
+  }, {
+    "code": "UK117",
+    "name": "0800 Reverse",
+    "description": "No Credit. No Problem. Stay connected with 0800 Reverse"
+  }, {
+    "code": "UK136",
+    "name": "0800 Reverse: Mobile to Mobile",
+    "description": "Group Member"
+  }, {
+    "code": "ACH_RegistrationDuration20",
+    "name": "100 % True Habbo XX",
+    "description": "Be a member of the community for 1825 days."
+  }, {
+    "code": "COM12",
+    "name": "100,000 Fans Badge",
+    "description": "One of 100,000 awesome Fans!"
+  }, {
+    "code": "BR071",
+    "name": "1Goal",
+    "description": "I support 1Goal. Education for all."
+  }, {
+    "code": "ACH_AvatarTags1",
+    "name": "5 words of wisdom I",
+    "description": "For tagging yourself with 5 tags."
+  }, {
+    "code": "ACH_RespectEarned5",
+    "name": "50% Respected Habbo V",
+    "description": "For earning respect 166 times."
+  }, {
+    "code": "NL008",
+    "name": "50,000 Fans Badge",
+    "description": "A big thanks for getting us 50,000 Fans!"
+  }, {
+    "code": "thx",
+    "name": "<3",
+    "description": "<3"
+  }, {
+    "code": "DRA04",
+    "name": "A fond farewell to the Dragon",
+    "description": "Comemorating its return in 2024"
+  }, {
+    "code": "UK076",
+    "name": "Aliens in the Attic",
+    "description": "Saved Habbo from those Aliens in the Attic"
+  }, {
+    "code": "UK031_HHUK",
+    "name": "Alvin and the Chipmunks",
+    "description": "Supported Alvin and the Chipmunks in the Squeakquel bands battle"
+  }, {
+    "code": "UK095",
+    "name": "Alvin dvd",
+    "description": "Winner of the Squeakqual treasure hunt."
+  }, {
+    "code": "ancients_start",
+    "name": "Ancient Map Part I",
+    "description": "Following in the footsteps of the Ancients..."
+  }, {
+    "code": "ancients_ssahara",
+    "name": "Ancient Map Part II",
+    "description": "Following in the footsteps of the Ancients..."
+  }, {
+    "code": "AF1_HHUK",
+    "name": "April Fools Day 2009",
+    "description": "You got pranked on April Fools Day 2009"
+  }, {
+    "code": "XM9_HHUK",
+    "name": "Arctic Snowballers!",
+    "description": "For Arctic Maze survivors!"
+  }, {
+    "code": "CAG_HHUK",
+    "name": "Atlantis World",
+    "description": "Winner in the Frederic Santini Comp - Atlantis. Sep 09."
+  }, {
+    "code": "GLD_HHUK",
+    "name": "Badger",
+    "description": "Level 4 - The digger one - has information you cannot find. Sorry. This Achievement is not available at the moment."
+  }, {
+    "code": "THI99",
+    "name": "Balloons",
+    "description": "Air in plastic"
+  }, {
+    "code": "GLB_HHUK",
+    "name": "Bambi",
+    "description": "Level 2 - The loving one - Sorry. This Achievement is not available at the moment."
+  }, {
+    "code": "ACH_BattleBallPlayer5",
+    "name": "Battle Ball Player V",
+    "description": "For playing Battle Banzai."
+  }, {
+    "code": "ACH_BattleBallWinner2",
+    "name": "Battle Banzai Star II",
+    "description": "For gaining 125 winner points at Battle Banzai"
+  }, {
+    "code": "ACH_GamePlayed2",
+    "name": "Battle Royal II",
+    "description": "For playing and winning  Snow Storm or for the game of Battle Ball 5 times."
+  }, {
+    "code": "HWD03",
+    "name": "Best Actress Prediction",
+    "description": "Predicted the best actress from the 2011 awards!"
+  }, {
+    "code": "HWD06",
+    "name": "Best Animated Film Prediction",
+    "description": "Predicted the best animated film of the 2011 awards!"
+  }, {
+    "code": "COM13",
+    "name": "Bot Love Badge",
+    "description": "Found the Bot I married - Vegas 2011"
+  }, {
+    "code": "NYR04",
+    "name": "Brain Explosion",
+    "description": "I answered all ten HC Velocity quiz questions correctly! New Year 2010/2011."
+  }, {
+    "code": "UK051_HHUK",
+    "name": "Bronze Santa Hat",
+    "description": "I helped revive Santa's broken heart and miserable mood in time for Christmas. December 2009."
+  }, {
+    "code": "ACH_RoomDecoBC4",
+    "name": "Builders Club Designer IV",
+    "description": "Build a room with 16 Builders Club furnis."
+  }, {
+    "code": "GLA_HHUK",
+    "name": "Bunny",
+    "description": "Level 1 - The speedy one - Sorry. This Achievement is not available at the moment."
+  }, {
+    "code": "CNY01_HHUK",
+    "name": "CNY 2010",
+    "description": "Chinese New Year observation quest winner."
+  }, {
+    "code": "ACH_PetLover1",
+    "name": "Can I Keep Him? I",
+    "description": "Own 1 pet to earn this badge."
+  }, {
+    "code": "UK112",
+    "name": "Capri-Sun Limited Edition Badge",
+    "description": "A big thanks from Ed and Omar for catching all the Capri-Sun pouches!"
+  }, {
+    "code": "ACH_SelfModChatScrollSpeedSeen1",
+    "name": "Chat Scroll Speed",
+    "description": "For being aware of chat scroll speed options"
+  }, {
+    "code": "UK111",
+    "name": "ChildLine Anti-Bullying Badge",
+    "description": "Take action together against bullying!"
+  }, {
+    "code": "UK176",
+    "name": "ChildLine Goup",
+    "description": "I am a member of the ChildLine group"
+  }, {
+    "code": "UK175",
+    "name": "ChildLine Self-harm Awarness",
+    "description": "I correctly answered the ChildLine Self-harm Awareness Quiz!"
+  }, {
+    "code": "XMS08",
+    "name": "Christmas Maze 5",
+    "description": "Christmas Maze 5"
+  }, {
+    "code": "CLB02",
+    "name": "Clearasil Ultra 2",
+    "description": "Shine shine"
+  }, {
+    "code": "FBC12",
+    "name": "Creepy Church Myth (3/4)",
+    "description": "Creepy Church Myth"
+  }, {
+    "code": "Z85",
+    "name": "Crew Member",
+    "description": "I joined the Dance Crew!"
+  }, {
+    "code": "STO01",
+    "name": "Curious Creatures",
+    "description": "\"Read and Share, Super Rare\", quoth the Raven"
+  }, {
+    "code": "ACH_SelfModDoorModeSeen1",
+    "name": "Door Mode",
+    "description": "For being aware of room door modes"
+  }, {
+    "code": "ACH_NinjasNotSpotted3",
+    "name": "Dragon Ninja Spotter III",
+    "description": "Almost spotted 111 Dragon Ninjas. Good work!"
+  }, {
+    "code": "EUR02",
+    "name": "Eurovision Semi Final 2",
+    "description": "Your pick made it all the way to the finals!"
+  }, {
+    "code": "RADZZ",
+    "name": "Event Promoter",
+    "description": "Event Promoter"
+  }, {
+    "code": "ACH_EsA2",
+    "name": "FREEZE Fighter II",
+    "description": "Freeze 5 Habbos to earn this badge!"
+  }, {
+    "code": "BBBH1_HHUK",
+    "name": "Farewell Big Hand",
+    "description": "Awarded to all who paid tribute to the Big Hand. November 2009."
+  }, {
+    "code": "ACH_BaseJumpDaysPlayed1",
+    "name": "Fast Food Regular I",
+    "description": "For playing Fast Food on 2 different days"
+  }, {
+    "code": "ACH_BaseJumpMissile3",
+    "name": "Fast Food Rocketeer III",
+    "description": "For launching 10 missiles in Fast Food"
+  }, {
+    "code": "ACH_BaseJumpWins5",
+    "name": "Fast Food Winner V",
+    "description": "For winning 35 times in Fast Food"
+  }, {
+    "code": "CNS03",
+    "name": "Fierce Badge of the Dragon",
+    "description": "Habbo Chinese New Year 2013"
+  }, {
+    "code": "ACH_FireworksCharger1",
+    "name": "Firestarter I",
+    "description": "For charging 20 Pixels into Firework Furni."
+  }, {
+    "code": "UK081",
+    "name": "Flag it",
+    "description": "1/3 of the Click Clever, Click Safe Code"
+  }, {
+    "code": "UK008",
+    "name": "Flint's Meatballs",
+    "description": "Saved Habbo from a freak weather machine"
+  }, {
+    "code": "GLE_HHUK",
+    "name": "Fox",
+    "description": "Level 5 - The clever one - is swift of thought and foot. Sorry. This Achievement is not available at the moment."
+  }, {
+    "code": "MRG00",
+    "name": "Friendship Bracelet",
+    "description": "A stranger is a friend you have yet to meet!"
+  }, {
+    "code": "ACH_RoomDecoFurniTypeCount9",
+    "name": "Furni Collector IX",
+    "description": "For building a room with 59 different Furnis."
+  }, {
+    "code": "AU019",
+    "name": "Generator Rex Badge",
+    "description": "Generator Rex Group Member"
+  }, {
+    "code": "ACH_GuideRequester2",
+    "name": "Get Help II",
+    "description": "You requested 5 help requests."
+  }, {
+    "code": "ACH_GuideTourTaker3",
+    "name": "Get a Tour III",
+    "description": "You spent 10 minutes on tour with one of the Helpers."
+  }, {
+    "code": "ACH_GuideFeedbackGiver2",
+    "name": "Give Feedback II",
+    "description": "For Giving feedback 5 times to Helpers."
+  }, {
+    "code": "FBC06",
+    "name": "Gold Bar Spotter",
+    "description": "I spotted the Facebook Gold Bar!"
+  }, {
+    "code": "NI5",
+    "name": "Gold Rush - Mythology",
+    "description": "Gold Rush - Mythology"
+  }, {
+    "code": "ACH_GuideAdvertisementReader1",
+    "name": "Gran Tourismo",
+    "description": "Check out the guided Tours"
+  }, {
+    "code": "ACH_GiftReceiver1",
+    "name": "Greet me I",
+    "description": "For receiving a gift."
+  }, {
+    "code": "UK114",
+    "name": "Gulliver's Travels \"Happy Face\" badge",
+    "description": "I found the wheat, so Gulliver didn't go hungry!"
+  }, {
+    "code": "UK027",
+    "name": "Guy Fawkes Quest",
+    "description": "I stopped Guy Fawkes blowing up Habbo Parliament. November 2009."
+  }, {
+    "code": "NEC_HHUK",
+    "name": "HMF Golden Glitterball",
+    "description": "Official HMF:Neon Best New Artist Supporter"
+  }, {
+    "code": "UK090",
+    "name": "HTTYD - Quest",
+    "description": "Official friend of the dragons"
+  }, {
+    "code": "FBC09",
+    "name": "Habbo 2k",
+    "description": "Did you know Habbo was invented in the year 2000?"
+  }, {
+    "code": "ACH_Citizenship1",
+    "name": "Habbo Citizen",
+    "description": "For passing the Habbo Citizen talent track"
+  }, {
+    "code": "UK035",
+    "name": "Habbo Music Academy",
+    "description": "I support the Habbo Music Academy. November 2009."
+  }, {
+    "code": "ROO10",
+    "name": "Habbo Palooza 2013 Quiz",
+    "description": "For replying correctly to the Quiz"
+  }, {
+    "code": "MRG03",
+    "name": "Habbo UK",
+    "description": "Remembering My Habbo Roots"
+  }, {
+    "code": "Z40",
+    "name": "Habbo UK 8th Birthday",
+    "description": "Habbo UK 8th Birthday"
+  }, {
+    "code": "UKBD1",
+    "name": "Habbo UK is 9!",
+    "description": "9th Birthday Badge"
+  }, {
+    "code": "US0S",
+    "name": "Habbo.com Relaunch Badge",
+    "description": "We Heart Habbo.com!"
+  }, {
+    "code": "HOP03_HHUK",
+    "name": "Habbolympics 2010 - Bronze Badge",
+    "description": "Habbolympics 2010 - Bronze Badge"
+  }, {
+    "code": "UK019",
+    "name": "Habboween 09 - FRANKENSTEIN QUEST",
+    "description": "Habboween 09 - FRANKENSTEIN QUEST"
+  }, {
+    "code": "GLO01",
+    "name": "Habboween 2012",
+    "description": "Habboween 2012"
+  }, {
+    "code": "UK187",
+    "name": "Habbox Maze Winner",
+    "description": "Habbox Maze Hall of Famer"
+  }, {
+    "code": "ACH_HappyHour1",
+    "name": "Happy Hour I",
+    "description": "For spending a Happy moment in Habbo! Log in during Happy Hour to receive this achievement."
+  }, {
+    "code": "HJ5",
+    "name": "Harajuku Quest Music",
+    "description": "Winner of the Harajuku Lovers quest"
+  }, {
+    "code": "NT038",
+    "name": "Helpers Quiz badge",
+    "description": "I passed the HabboHelpers.com Helpers Quiz"
+  }, {
+    "code": "SG018",
+    "name": "Honour IP",
+    "description": "Honour Intellectual Property (IP) by supporting originality and making a stand against piracy today!"
+  }, {
+    "code": "Z39_HHUK",
+    "name": "Hotel For Dogs Maze Winner",
+    "description": "Tracked the scent and made it to the Hotel"
+  }, {
+    "code": "FR005_HHUK",
+    "name": "Hotel Happenings Fan",
+    "description": "I read the Hotel Happenings Newsletter, every Tuesday! Do you?"
+  }, {
+    "code": "ACH_RoomEntry6",
+    "name": "House Guest VI",
+    "description": "For hanging out in 240 guest rooms that you do not own. Out of towner."
+  }, {
+    "code": "UK034",
+    "name": "I Love Music",
+    "description": "I took part in the HMA Sing-Song vote. December 2009."
+  }, {
+    "code": "ACH_PetLevelUp3",
+    "name": "I play with pets III",
+    "description": "Train your pets up at least 10 levels to earn this badge."
+  }, {
+    "code": "Z78",
+    "name": "Ice Age Quest Winner",
+    "description": "Ice Age 3 Quest"
+  }, {
+    "code": "ACH_TagC3",
+    "name": "Ice Ice Baby III",
+    "description": "Show time on ice 16 minutes on this level."
+  }, {
+    "code": "ACH_SelfModIgnoreSeen1",
+    "name": "Ignore",
+    "description": "For being aware of ignore option"
+  }, {
+    "code": "ACH_HabbosVsWildQuestCompleted6",
+    "name": "In The Footsteps Of The Ancients Quester VI",
+    "description": "For completing 13 In The Footsteps Of The Ancients quests"
+  }, {
+    "code": "RA6",
+    "name": "Iron Maiden Badge",
+    "description": "Maze of Death Quest 2010"
+  }, {
+    "code": "COM08",
+    "name": "It Gets Better",
+    "description": "Everyone deserves to be respected for who they are. Speak up for tolerance and love!"
+  }, {
+    "code": "JAD01",
+    "name": "King of Jade",
+    "description": "Keeper of Zodiac wisdom and a decent cuppa"
+  }, {
+    "code": "UK161",
+    "name": "Kitty Softpaws",
+    "description": "\"She is a bad kitty\""
+  }, {
+    "code": "ACH_BaseJumpBigParachute1",
+    "name": "Last Minute Life Saver I",
+    "description": "For using a large parachute perfectly 2 times in Fast Food"
+  }, {
+    "code": "ACH_HabboWayGraduate1",
+    "name": "Level I Habbo Way",
+    "description": "For passing the Habbo Way quiz!"
+  }, {
+    "code": "ACH_SafetyQuizGraduate1",
+    "name": "Level I Safety tips",
+    "description": "For passing the Safety quiz!"
+  }, {
+    "code": "ACH_HorseConsecutiveJumpsCount3",
+    "name": "Level III equestrian",
+    "description": "For jumping over 8 obstacles successfully"
+  }, {
+    "code": "ACH_AvatarLooks1",
+    "name": "Looks that Kill I",
+    "description": "For changing your look for the first time."
+  }, {
+    "code": "ACH_BattleBallTilesLocked2",
+    "name": "Lord of the tiles II",
+    "description": "Lock 65 tiles."
+  }, {
+    "code": "HWN07",
+    "name": "Luck Quiz Badge",
+    "description": "Habboween 2010"
+  }, {
+    "code": "FBC14",
+    "name": "MONSTER!",
+    "description": "I found the Monster Plant!"
+  }, {
+    "code": "MTV01_HHUK",
+    "name": "MTV EMA 2009",
+    "description": "Member of the MTV EMA 2009 Group."
+  }, {
+    "code": "UK119",
+    "name": "Master Shifu's Badge of Honour",
+    "description": "Kung Fu Panda 2 visited Habbo December 2010"
+  }, {
+    "code": "YODUK",
+    "name": "Master Yoduck",
+    "description": "Use the nondescript motion imparting field!"
+  }, {
+    "code": "ACH_Motto1",
+    "name": "Master of Words I",
+    "description": "For editing your motto for the first time."
+  }, {
+    "code": "USP_HHUK",
+    "name": "Medieval World",
+    "description": "Winner in the Frederic Santini Comp - Medieval. Sep 09."
+  }, {
+    "code": "UK078",
+    "name": "Member of The Flock",
+    "description": "Friend of Fang"
+  }, {
+    "code": "MPS01",
+    "name": "Monster Plant Gardener Competition Consolation Badge",
+    "description": "For participating in the Monster Plant gardening competition. Well done, good job, sport!"
+  }, {
+    "code": "ACH_MonsterPlantQuestCompleted6",
+    "name": "Monster Plant Quester VI",
+    "description": "For completing 18 Monster Plant quests"
+  }, {
+    "code": "ACH_MonsterPlantTreater2",
+    "name": "Monster Plant Tender II",
+    "description": "For tending to 30 Monster Plants"
+  }, {
+    "code": "THI40",
+    "name": "My heart...",
+    "description": "Winner of broken hearts 1/2"
+  }, {
+    "code": "ACH_PetRespectReceiver7",
+    "name": "My pets get all the love VII",
+    "description": "Have someone scratch your pet at least 200 times to earn this badge."
+  }, {
+    "code": "ACH_MysteryBox3",
+    "name": "Mystery Box explorer III",
+    "description": "For completing 3 quests in the 2012 Christmas calendar"
+  }, {
+    "code": "Z59",
+    "name": "NATM History Quest",
+    "description": "NATM History Quest"
+  }, {
+    "code": "TWIC1_HHUK",
+    "name": "New Moon Badge: Cullens",
+    "description": "Level 1 Badge awarded to trivia quest winners in Cullen's world. November 2009."
+  }, {
+    "code": "TWIQ1_HHUK",
+    "name": "New Moon Badge: Jacob",
+    "description": "Level 1 Badge awarded to trivia quest winners in Jacob's world. November 2009."
+  }, {
+    "code": "TWIV1_HHUK",
+    "name": "New Moon Badge: Volturi",
+    "description": "Level 1 Badge awarded to trivia quest winners in Volturi's world. November 2009."
+  }, {
+    "code": "ACH_RespectGiven8",
+    "name": "Nice as pie! VIII",
+    "description": "For giving respect 170 times."
+  }, {
+    "code": "ACH_GiftGiver1",
+    "name": "Nice one I",
+    "description": "For giving a gift."
+  }, {
+    "code": "DE016",
+    "name": "Nokia Maze Challenge Gold Badge",
+    "description": "Congratulations! You made it through the maze."
+  }, {
+    "code": "AU015",
+    "name": "OZ Artist 2010",
+    "description": "Channel [V] Group Member"
+  }, {
+    "code": "VIK07",
+    "name": "Odin Runestone",
+    "description": "Carve your Viking Runestone"
+  }, {
+    "code": "Z64_HHUK",
+    "name": "Official BETA tester",
+    "description": "Helped shape the new Habbo June 2009"
+  }, {
+    "code": "ACH_GuideOnDutyPresence3",
+    "name": "On Duty III",
+    "description": "For being on-duty as Helper for 120 minutes."
+  }, {
+    "code": "ACH_AllTimeHotelPresence10",
+    "name": "Online time X - F5 Tornado",
+    "description": "For spending total of 4320 min. in hotel."
+  }, {
+    "code": "GLC_HHUK",
+    "name": "Otter",
+    "description": "Level 3 - The one who will not let you sink under pressure. Sorry. This Achievement is not available at the moment."
+  }, {
+    "code": "PAT2",
+    "name": "Patrol General",
+    "description": "Patrol General"
+  }, {
+    "code": "peg01",
+    "name": "Pegasus Rider",
+    "description": "Participated in the Community Challenge"
+  }, {
+    "code": "ACH_PetRespectGiver9",
+    "name": "Pet lover IX",
+    "description": "Scratch anyone's pet at least 250 times to earn this badge."
+  }, {
+    "code": "FBC18",
+    "name": "Plant Puzzler",
+    "description": ""
+  }, {
+    "code": "ACH_GamePlayerExperience3",
+    "name": "Player III",
+    "description": "Gather 480 victory points."
+  }, {
+    "code": "UK126",
+    "name": "Pokémon Black Version",
+    "description": "Pokémon Black Version"
+  }, {
+    "code": "FRE",
+    "name": "Prehistoric World",
+    "description": "Winner in the Frederic Santini Comp - Prehistoric. Sep 09."
+  }, {
+    "code": "DK2",
+    "name": "Pub(lic) Crawl Cider",
+    "description": "St Patrick's Day 2011!"
+  }, {
+    "code": "UK244",
+    "name": "Puhekupla Badge 2014",
+    "description": "Puhekupla Badge 2014"
+  }, {
+    "code": "UK121",
+    "name": "Rango Group Member",
+    "description": "Strangers don't last long here!"
+  }, {
+    "code": "UK123",
+    "name": "Rango's toy fish",
+    "description": "Wind it up and watch it fly"
+  }, {
+    "code": "UK131",
+    "name": "Rango: Beans Badge",
+    "description": "Beans was the winner of the Rango poll!"
+  }, {
+    "code": "UK122",
+    "name": "Rangos Safe!",
+    "description": "I got Rango out of the desert"
+  }, {
+    "code": "ACH_RbTagC2",
+    "name": "Roller Derby Raider  II",
+    "description": "For rollerblading for 8 minutes."
+  }, {
+    "code": "ACH_RoomDecoFurniCount11",
+    "name": "Room Builder XI",
+    "description": "For building a room with 110 Furnis."
+  }, {
+    "code": "ACH_RoomDecoHosting10",
+    "name": "Room Host X",
+    "description": "Other Habbos have spent 3790 minutes in your rooms!"
+  }, {
+    "code": "ACH_RoomCompetitionVoter1",
+    "name": "Room competition voter I",
+    "description": "For voting 3 times in room competitions"
+  }, {
+    "code": "WD006",
+    "name": "Royal Wedding Badge 2011",
+    "description": "Here comes the bride..."
+  }, {
+    "code": "ST4",
+    "name": "STEM Cosmetics",
+    "description": "You need Science and Maths skills for this job!"
+  }, {
+    "code": "XM10A",
+    "name": "Season's Greetings",
+    "description": "Happy Holidays from me to you! Xmas 2010"
+  }, {
+    "code": "ACH_GuideGroupMember1",
+    "name": "Shed The Light",
+    "description": "Joined a Habbo guide group."
+  }, {
+    "code": "ACH_SummerQuestCompleted1",
+    "name": "Shell Collector I",
+    "description": "For completing 1 daily quests."
+  }, {
+    "code": "UK050_HHUK",
+    "name": "Silver Santa Hat",
+    "description": "I helped revive Santa's broken heart and miserable mood in time for Christmas. December 2009."
+  }, {
+    "code": "UK007",
+    "name": "Skulduggery Pleasant's Asst.",
+    "description": "Skulduggery Pleasant"
+  }, {
+    "code": "ACH_SnowWarTotalScore1",
+    "name": "SnowStorm level I",
+    "description": "For getting a total score of 10 in SnowStorm Shuffle"
+  }, {
+    "code": "ACH_Xm10QuestCompleted7",
+    "name": "Snowflake collector VII",
+    "description": "For 3 Snowflake quests completed on this level."
+  }, {
+    "code": "ACH_FriendListSize5",
+    "name": "Socializer V",
+    "description": "For having 150 friends in your friendlist"
+  }, {
+    "code": "UK094_HHUK",
+    "name": "St Patrick's Day Quest",
+    "description": "St Patrick's Day Quest"
+  }, {
+    "code": "UK038",
+    "name": "St Trinians Alumni",
+    "description": "Member of the St Trinians School and gold finder"
+  }, {
+    "code": "UK003",
+    "name": "Star 1",
+    "description": "HPV new badge"
+  }, {
+    "code": "UK004",
+    "name": "Star 2",
+    "description": "HPV badge"
+  }, {
+    "code": "UK005",
+    "name": "Star 3",
+    "description": "HPV badge"
+  }, {
+    "code": "HWN09",
+    "name": "Star Tarot Badge",
+    "description": "For Habboween 2010 Group Members"
+  }, {
+    "code": "UK107",
+    "name": "Street Dance 3D",
+    "description": "You can really move on the dance floor!"
+  }, {
+    "code": "BGW4",
+    "name": "Sunscreen Level 3",
+    "description": "A gift from the Big Wave!"
+  }, {
+    "code": "ACH_NotesReceived1",
+    "name": "Swamped By Stickies Level I",
+    "description": "I've received 2 notes in my rooms!"
+  }, {
+    "code": "COM03",
+    "name": "Taylor Swift Fan",
+    "description": "I was there for Taylor Swift's 'Speak Now' Live release show!"
+  }, {
+    "code": "UK077",
+    "name": "TeenLifeCheck",
+    "description": "Took the TeenLifeCheck 2010"
+  }, {
+    "code": "AC6_HHUK",
+    "name": "The Angry Spirit Ape",
+    "description": "Used the inner Angry Spirit Ape to find the Lost Tribe of Bensalem"
+  }, {
+    "code": "COM10",
+    "name": "The Chronicles of Narnia: Dawn Treader Badge",
+    "description": "I found the 7 lost lords of Narnia!"
+  }, {
+    "code": "EGG08",
+    "name": "The Golden Egg",
+    "description": "I'm such an epic egg."
+  }, {
+    "code": "PATRL",
+    "name": "The Habbo Patrol",
+    "description": "Protecting chat for innocent Habbos!"
+  }, {
+    "code": "HWN04",
+    "name": "The Moon Quest",
+    "description": "Habboween 2010"
+  }, {
+    "code": "UK183",
+    "name": "The Sims - Katy Perry Sweet Treats",
+    "description": "I beat the The Sims Katy Perry Sweet Treats Quiz!"
+  }, {
+    "code": "COM05",
+    "name": "The Sims 3 - Bad Karma badge",
+    "description": "You have bad karma!"
+  }, {
+    "code": "UK140",
+    "name": "The Sims 3 Generations",
+    "description": "Group Member"
+  }, {
+    "code": "COM22",
+    "name": "The Sims Medieval",
+    "description": "King Hero badge - I completed The Sims Medieval Quiz"
+  }, {
+    "code": "THE01",
+    "name": "Theatre Opening Reward",
+    "description": "Reward for finding Theaterdome on opening day"
+  }, {
+    "code": "ACH_PetFeeding2",
+    "name": "They're eating all my credits! II",
+    "description": "Give your pets at least 600 points of food to earn this badge."
+  }, {
+    "code": "ACH_TraderPass1",
+    "name": "Trading pass I",
+    "description": "Without a trading pass you can't trade: you have to have an account that is 1 day old and you have to verify your email."
+  }, {
+    "code": "ACH_Login1",
+    "name": "Traveller I",
+    "description": "For logging in 5 days in a row. Rad!"
+  }, {
+    "code": "ACH_GuideEnrollmentLifetime16",
+    "name": "True Helper XVI",
+    "description": "For being a Helper for 1095 days."
+  }, {
+    "code": "ACH_EmailVerification1",
+    "name": "True You I",
+    "description": "For activating your email address. Thanks!"
+  }, {
+    "code": "HQ006_HHUK",
+    "name": "Urban CSI Bronze",
+    "description": "Awarded to the remaining CSI Detectives. October 2009."
+  }, {
+    "code": "VAL14",
+    "name": "Valentines 2013",
+    "description": "I was here, darling"
+  }, {
+    "code": "Z63_HHUK",
+    "name": "Valued BETA tester",
+    "description": "Helped shape the new Habbo June 2009"
+  }, {
+    "code": "THI55",
+    "name": "Venice 2013",
+    "description": "I know everything about love"
+  }, {
+    "code": "ACH_ViciousViking1",
+    "name": "Vicious Viking I",
+    "description": "For burning 1 Viking Coties"
+  }, {
+    "code": "ACH_RoomDecoWallpaper1",
+    "name": "Wall Designer I",
+    "description": "For adding 3 wallpapers to my rooms."
+  }, {
+    "code": "XMS09",
+    "name": "Xmas Maze Finale",
+    "description": "Xmas Maze Finale"
+  }, {
+    "code": "APC09",
+    "name": "You know everything you need to know to defeat the Four Horsemen",
+    "description": "Habbocalypse 2015"
+  }, {
+    "code": "UK074",
+    "name": "Youth in Revolt 1",
+    "description": "You are an aspiring novelist, love classic prose, overly nice and polite to your elders."
+  }, {
+    "code": "US0R",
+    "name": "Zombie Badge",
+    "description": "Solved the Zombie Chasers Quiz!"
+  }, {
+    "code": "UK030",
+    "name": "bullyproof",
+    "description": "Celebrated the bullyproof moment in Habbo, November 2009."
+  }, {
+    "code": "UK124",
+    "name": "de Blob 2 Badge",
+    "description": "I helped Blob find colour!"
+  }]
 }
