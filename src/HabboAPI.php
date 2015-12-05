@@ -4,6 +4,9 @@
  */
 namespace HabboAPI;
 
+use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Profile;
+
 /** Class HabboAPI
  *
  * Contains all the nice methods for the HabboAPI
@@ -30,7 +33,7 @@ class HabboAPI
     /** Based on a username, get a simplified Habbo object
      *
      * @param string $identifier
-     * @return Entities\Habbo
+     * @return Habbo
      */
     public function getHabbo($identifier, $hhid = false)
     {
@@ -44,7 +47,7 @@ class HabboAPI
     /** Based on a unique ID, get a full Habbo profile object
      *
      * @param string $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
-     * @return array
+     * @return Profile
      */
     public function getProfile($id)
     {

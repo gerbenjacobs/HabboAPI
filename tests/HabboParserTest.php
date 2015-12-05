@@ -1,6 +1,7 @@
 <?php
 
 use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Profile;
 use HabboAPI\HabboParser;
 
 class HabboParserTest extends PHPUnit_Framework_TestCase
@@ -60,13 +61,15 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         // Replace parseProfile with static data
         $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(self::$profile));
 
+        /** @var Profile $profile */
         $profile = $this->habboParserMock->parseProfile('hhus-9cd61b156972c2eb33a145d69918f965');
 
-        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile['habbo']);
-        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile['friends'][0]);
-        $this->assertInstanceOf('HabboAPI\Entities\Group', $profile['groups'][0]);
-        $this->assertInstanceOf('HabboAPI\Entities\Room', $profile['rooms'][0]);
-        $this->assertInstanceOf('HabboAPI\Entities\Badge', $profile['badges'][0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Profile', $profile);
+        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile->getHabbo());
+        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile->getFriends()[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Group', $profile->getGroups()[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Room', $profile->getRooms()[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Badge', $profile->getBadges()[0]);
     }
 
     /**

@@ -8,6 +8,7 @@ use Exception;
 use HabboAPI\Entities\Badge;
 use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Profile;
 use HabboAPI\Entities\Room;
 use InvalidArgumentException;
 
@@ -30,11 +31,11 @@ class HabboParser implements HabboParserInterface
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
      *
-     * @param string $api_base
+     * @param string $hotel
      */
-    public function __construct($api_base = 'https://www.habbo.com/api/public/')
+    public function __construct($hotel = 'com')
     {
-        $this->api_base = $api_base;
+        $this->api_base = 'https://www.habbo.' . $hotel . '/api/';
     }
 
 
@@ -50,10 +51,10 @@ class HabboParser implements HabboParserInterface
     {
         switch ($type) {
             case "name":
-                $url = 'users?name=' . $identifier;
+                $url = 'public/users?name=' . $identifier;
                 break;
             case "hhid":
-                $url = 'users/' . $identifier;
+                $url = 'public/users/' . $identifier;
                 break;
             default:
                 throw new InvalidArgumentException("Invalid type defined for parseHabbo");
@@ -67,6 +68,59 @@ class HabboParser implements HabboParserInterface
     }
 
     /**
+     * Parses the Habbo Profile endpoints
+     *
+     * Return an associative array including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
+     *
+     * @param string $id
+     * @return array
+     */
+    public function parseProfile($id)
+    {
+        // Collect JSON
+        $data = $this->_callUrl($this->api_base . "public/users/" . $id . "/profile");
+
+        // Create Profile entity
+        $profile = new Profile();
+
+        // Habbo
+        $habbo = new Habbo();
+        $habbo->parse($data['user']);
+        $profile->setHabbo($habbo);
+
+        // Friends
+        foreach ($data['friends'] as $friend) {
+            $temp_friend = new Habbo();
+            $temp_friend->parse($friend);
+            $profile->addFriend($temp_friend);
+        }
+
+        // Groups
+        foreach ($data['groups'] as $group) {
+            $temp_group = new Group();
+            $temp_group->parse($group);
+            $profile->addGroup($temp_group);
+        }
+
+        // Rooms
+        foreach ($data['rooms'] as $room) {
+            $temp_room = new Room();
+            $temp_room->parse($room);
+            $profile->addRoom($temp_room);
+        }
+
+        // Badges
+        foreach ($data['badges'] as $badge) {
+            $temp_badge = new Badge();
+            $temp_badge->parse($badge);
+            $profile->addBadge($temp_badge);
+        }
+
+        // Return the Profile
+        return $profile;
+    }
+
+    /**
      * Curl call based on $url
      *
      * @param string $url
@@ -77,7 +131,7 @@ class HabboParser implements HabboParserInterface
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api 1.0.6');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v2.0.0');
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -101,69 +155,6 @@ class HabboParser implements HabboParserInterface
         } else {
             return 'Unknown';
         }
-    }
-
-    /**
-     * Parses the Habbo Profile endpoints
-     *
-     * Return an associative array including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
-     *
-     * @param string $id
-     * @return array
-     */
-    public function parseProfile($id)
-    {
-        // Collect JSON
-        $data = $this->_callUrl($this->api_base . "users/" . $id . "/profile");
-
-        // Habbo
-        $habbo = new Habbo();
-        $habbo->parse($data['user']);
-
-        // Friends
-        $friends = array();
-        foreach ($data['friends'] as $friend) {
-            $temp_friend = new Habbo();
-            $temp_friend->parse($friend);
-            $friends[] = $temp_friend;
-            unset($temp_friend);
-        }
-
-        // Groups
-        $groups = array();
-        foreach ($data['groups'] as $group) {
-            $temp_group = new Group();
-            $temp_group->parse($group);
-            $groups[] = $temp_group;
-            unset($temp_group);
-        }
-
-        // Rooms
-        $rooms = array();
-        foreach ($data['rooms'] as $room) {
-            $temp_room = new Room();
-            $temp_room->parse($room);
-            $rooms[] = $temp_room;
-            unset($temp_room);
-        }
-
-        // Badges
-        $badges = array();
-        foreach ($data['badges'] as $badge) {
-            $temp_badge = new Badge();
-            $temp_badge->parse($badge);
-            $badges[] = $temp_badge;
-            unset($temp_badge);
-        }
-
-        // Return it all..
-        return array(
-            "habbo" => $habbo,
-            "friends" => $friends,
-            "groups" => $groups,
-            "rooms" => $rooms,
-            "badges" => $badges,
-        );
     }
 
 } 
