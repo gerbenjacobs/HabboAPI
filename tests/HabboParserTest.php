@@ -64,12 +64,17 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         /** @var Profile $profile */
         $profile = $this->habboParserMock->parseProfile('hhus-9cd61b156972c2eb33a145d69918f965');
 
+        $friends = $profile->getFriends();
+        $groups = $profile->getGroups();
+        $rooms = $profile->getRooms();
+        $badges = $profile->getBadges()
+        ;
         $this->assertInstanceOf('HabboAPI\Entities\Profile', $profile);
         $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile->getHabbo());
-        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile->getFriends()[0]);
-        $this->assertInstanceOf('HabboAPI\Entities\Group', $profile->getGroups()[0]);
-        $this->assertInstanceOf('HabboAPI\Entities\Room', $profile->getRooms()[0]);
-        $this->assertInstanceOf('HabboAPI\Entities\Badge', $profile->getBadges()[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Habbo', $friends[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Group', $groups[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Room', $rooms[0]);
+        $this->assertInstanceOf('HabboAPI\Entities\Badge', $badges[0]);
     }
 
     /**
