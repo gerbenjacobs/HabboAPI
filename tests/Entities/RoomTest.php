@@ -46,27 +46,59 @@ class RoomTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('hhus-9cd61b156972c2eb33a145d69918f965', $this->entity->getOwnerUniqueId());
     }
 
-    public function testThumbnailUrl()
-    {
-        $this->assertEquals('http://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png', $this->entity->getThumbnailUrl());
-    }
-
     public function testGetTags()
     {
-        $this->assertEquals(array("one", "tag", "too", "far"), $this->entity->getTags());
+        $this->assertEquals(array("habbies"), $this->entity->getTags());
     }
 
     public function testGetCategories()
     {
-        $this->assertEquals(array("Habbo Life"), $this->entity->getCategories());
+        $this->assertEquals(array("navigator.flatcategory.global.CHAT"), $this->entity->getCategories());
     }
 
-    public function testBareEntity()
+    public function testGetCreationTime()
     {
-        $room = new Room();
-        $room->parse(self::$data['rooms'][1]);
+        $this->assertEquals('2010-06-10T09:02:16.000+0000', $this->entity->getCreationTime());
+    }
 
-        // Make sure it doesn't throw errors
-        $this->assertInstanceOf('HabboAPI\Entities\Room', $room);
+    public function testGetMaximumVisitors()
+    {
+        $this->assertEquals(25, $this->entity->getMaximumVisitors());
+    }
+
+    public function testGetOfficialRoom()
+    {
+        $this->assertEquals(true, $this->entity->getOfficialRoom());
+    }
+
+    public function testGetOwnerName()
+    {
+        $this->assertEquals('koeientemmer', $this->entity->getOwnerName());
+    }
+
+    public function testGetThumbnailUrl()
+    {
+        $this->assertEquals('https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png', $this->entity->getThumbnailUrl());
+    }
+
+    public function testGetImageUrl()
+    {
+        $this->assertEquals('https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/31159787.png', $this->entity->getImageUrl());
+    }
+
+    public function testGetRating()
+    {
+        $this->assertEquals(116, $this->entity->getRating());
+    }
+
+    public function testAllForExceptions()
+    {
+        foreach (self::$data['rooms'] as $data) {
+            $entity = new Room();
+            $entity->parse($data);
+
+            // Make sure it doesn't throw errors
+            $this->assertInstanceOf('HabboAPI\Entities\Room', $entity);
+        }
     }
 }
