@@ -10,7 +10,6 @@ use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
 use HabboAPI\Entities\Profile;
 use HabboAPI\Entities\Room;
-use InvalidArgumentException;
 
 /**
  * Class HabboParser
@@ -28,6 +27,8 @@ class HabboParser implements HabboParserInterface
      */
     private $api_base;
 
+    private $hotel;
+
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
      *
@@ -35,7 +36,8 @@ class HabboParser implements HabboParserInterface
      */
     public function __construct($hotel = 'com')
     {
-        $this->api_base = 'https://www.habbo.' . $hotel . '/api/';
+        $this->hotel = $hotel;
+        $this->api_base = 'https://www.habbo.' . $hotel;
     }
 
 
@@ -43,24 +45,19 @@ class HabboParser implements HabboParserInterface
      * Parses the Habbo user endpoint
      *
      * @param $identifier
-     * @param string $type
+     * @param bool $useUniqueId
      * @return Habbo
      * @throws Exception
      */
-    public function parseHabbo($identifier, $type = "name")
+    public function parseHabbo($identifier, $useUniqueId = false)
     {
-        switch ($type) {
-            case "name":
-                $url = 'public/users?name=' . $identifier;
-                break;
-            case "hhid":
-                $url = 'public/users/' . $identifier;
-                break;
-            default:
-                throw new InvalidArgumentException("Invalid type defined for parseHabbo");
+        if ($useUniqueId) {
+            $url = '/api/public/users/' . $identifier;
+        } else {
+            $url = '/api/public/users?name=' . $identifier;
         }
 
-        $data = $this->_callUrl($this->api_base . $url);
+        list($data) = $this->_callUrl($this->api_base . $url);
 
         $habbo = new Habbo();
         $habbo->parse($data);
@@ -78,7 +75,7 @@ class HabboParser implements HabboParserInterface
     public function parseProfile($id)
     {
         // Collect JSON
-        $data = $this->_callUrl($this->api_base . "public/users/" . $id . "/profile");
+        list($data) = $this->_callUrl($this->api_base . "/api/public/users/" . $id . "/profile");
 
         // Create Profile entity
         $profile = new Profile();
@@ -137,13 +134,13 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $json = curl_exec($ch);
         $response = json_decode($json, true);
-        $response['info'] = curl_getinfo($ch);
+        $info = curl_getinfo($ch);
 
-        if ($response['info']['http_code'] != 200) {
-            throw new Exception($this->_extractError($response), $response['info']['http_code']);
+        if ($info['http_code'] != 200) {
+            throw new Exception($this->_extractError($response), $info['http_code']);
         }
         curl_close($ch);
-        return $response;
+        return array($response, $info);
     }
 
     private function _extractError($response)

@@ -30,7 +30,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
     public function testParseHabbo()
     {
         // Replace parseHabbo with static data
-        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(self::$habbo));
+        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(array(self::$habbo)));
 
         /** @var Habbo $habboObject */
         $habboObject = $this->habboParserMock->parseHabbo('koeientemmer');
@@ -48,18 +48,10 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->habboParserMock->parseHabbo('hhus-9cd61b156972c2eb33a145d69918f965', 'hhid');
     }
 
-    /**
-     * @expectedException InvalidArgumentException
-     */
-    public function testParseHabboWithInvalidType()
-    {
-        $this->habboParserMock->parseHabbo('hhus-9cd61b156972c2eb33a145d69918f965', 'invalid');
-    }
-
     public function testParseProfile()
     {
         // Replace parseProfile with static data
-        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(self::$profile));
+        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(array(self::$profile)));
 
         /** @var Profile $profile */
         $profile = $this->habboParserMock->parseProfile('hhus-9cd61b156972c2eb33a145d69918f965');
@@ -67,8 +59,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $friends = $profile->getFriends();
         $groups = $profile->getGroups();
         $rooms = $profile->getRooms();
-        $badges = $profile->getBadges()
-        ;
+        $badges = $profile->getBadges();
         $this->assertInstanceOf('HabboAPI\Entities\Profile', $profile);
         $this->assertInstanceOf('HabboAPI\Entities\Habbo', $profile->getHabbo());
         $this->assertInstanceOf('HabboAPI\Entities\Habbo', $friends[0]);

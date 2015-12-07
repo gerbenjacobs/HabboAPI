@@ -33,15 +33,12 @@ class HabboAPI
     /** Based on a username, get a simplified Habbo object
      *
      * @param string $identifier
+     * @param bool $useUniqueId
      * @return Habbo
      */
-    public function getHabbo($identifier, $hhid = false)
+    public function getHabbo($identifier, $useUniqueId = false)
     {
-        if ($hhid) {
-            return $this->parser->parseHabbo($identifier, 'hhid');
-        } else {
-            return $this->parser->parseHabbo($identifier);
-        }
+        return $this->parser->parseHabbo($identifier, $useUniqueId);
     }
 
     /** Based on a unique ID, get a full Habbo profile object
