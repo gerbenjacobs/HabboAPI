@@ -22,10 +22,10 @@ class HabboAPI
     private $parser;
 
     /**
-     * Constructor, requires a HabboParser object
-     * @param HabboParser $parser
+     * Constructor, requires an implementation of a HabboParserInterface
+     * @param HabboParserInterface $parser
      */
-    public function __construct(HabboParser $parser)
+    public function __construct(HabboParserInterface $parser)
     {
         $this->parser = $parser;
     }
