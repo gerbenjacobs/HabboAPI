@@ -8,6 +8,7 @@ use Exception;
 use HabboAPI\Entities\Badge;
 use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
 use HabboAPI\Entities\Room;
 
@@ -117,6 +118,24 @@ class HabboParser implements HabboParserInterface
         return $profile;
     }
 
+    public function parsePhotos($id = null)
+    {
+        $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
+
+        list($data) = $this->_callUrl($this->api_base . $url);
+
+        $photos = array();
+
+        foreach ($data as $photo_data) {
+            $temp_photo = new Photo();
+            $temp_photo->parse($photo_data);
+            $photos[] = $temp_photo;
+            unset($temp_photo);
+        }
+
+        return $photos;
+    }
+
     /**
      * Curl call based on $url
      *
@@ -153,5 +172,4 @@ class HabboParser implements HabboParserInterface
             return 'Unknown';
         }
     }
-
-} 
+}
