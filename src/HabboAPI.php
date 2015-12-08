@@ -51,4 +51,14 @@ class HabboAPI
         return $this->parser->parseProfile($id);
     }
 
+    /** getPhotos returns all 200 public photos or all the users photos if an id is given
+     *
+     * @param string|null $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
+     * @return array Array of Photo objects
+     */
+    public function getPhotos($id = null)
+    {
+        return $this->parser->parsePhotos($id);
+    }
+
 }
