@@ -118,9 +118,10 @@ class HabboParser implements HabboParserInterface
         return $profile;
     }
 
-    public function parseHabboPhotos($id)
+    public function parsePhotos($id = null)
     {
-        $url = '/extradata/public/users/' . $id . '/photos';
+        $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
+
         list($data) = $this->_callUrl($this->api_base . $url);
 
         $photos = array();
@@ -133,11 +134,6 @@ class HabboParser implements HabboParserInterface
         }
 
         return $photos;
-    }
-
-    public function parsePhotos()
-    {
-        // TODO: Implement parsePhotos() method.
     }
 
     /**

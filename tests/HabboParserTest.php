@@ -9,6 +9,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
     private static $habbo;
     private static $profile;
     private static $photos;
+    private static $public_photos;
     /** @var HabboParser|PHPUnit_Framework_MockObject_MockObject $habboParserMock */
     private $habboParserMock;
 
@@ -17,6 +18,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         self::$habbo = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_gethabbo.json'), true);
         self::$profile = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getprofile.json'), true);
         self::$photos = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getphotos.json'), true);
+        self::$public_photos = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_public_photos.json'), true);
     }
 
     public function setUp()
@@ -81,15 +83,28 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->habboParserMock->parseHabbo('someHabboNameThatDoesNotExist');
     }
 
-    public function testParsePhotos()
+    public function testParseHabboPhotos()
     {
         // Replace Habbo Parser mock with static data
         $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(array(self::$photos)));
 
-        $photos = $this->habboParserMock->parseHabboPhotos('hhus-9cd61b156972c2eb33a145d69918f965');
+        $photos = $this->habboParserMock->parsePhotos('hhus-9cd61b156972c2eb33a145d69918f965');
 
         $this->assertEquals(2, count($photos), "Should contain 2 photos");
         $this->assertInstanceOf('HabboAPI\Entities\Photo', $photos[0]);
         $this->assertInstanceOf('HabboAPI\Entities\Photo', $photos[1]);
+    }
+
+    public function testParsePublicPhotos()
+    {
+        // Replace Habbo Parser mock with static data
+        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(array(self::$public_photos)));
+
+        $photos = $this->habboParserMock->parsePhotos();
+
+        $this->assertEquals(200, count($photos), "Should contain 200 photos");
+        foreach ($photos as $photo) {
+            $this->assertInstanceOf('HabboAPI\Entities\Photo', $photo);
+        }
     }
 }
