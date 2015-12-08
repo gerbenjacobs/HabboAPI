@@ -3,6 +3,7 @@
  * The entitymodel for a Room object
  */
 namespace HabboAPI\Entities;
+use Carbon\Carbon;
 
 /**
  * Class Room
@@ -169,7 +170,7 @@ class Room implements Entity
     }
 
     /**
-     * @return string
+     * @return Carbon
      */
     public function getCreationTime()
     {
@@ -177,11 +178,11 @@ class Room implements Entity
     }
 
     /**
-     * @param string $creationTime
+     * @param Carbon $creationTime
      */
     public function setCreationTime($creationTime)
     {
-        $this->creationTime = $creationTime;
+        $this->creationTime = Carbon::parse($creationTime);
     }
 
     /**

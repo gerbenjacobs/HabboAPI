@@ -3,6 +3,8 @@
 namespace HabboAPI\Entities;
 
 
+use Carbon\Carbon;
+
 class Photo implements Entity
 {
 
@@ -164,7 +166,7 @@ class Photo implements Entity
     }
 
     /**
-     * @return int
+     * @return Carbon
      */
     public function getTakenOn()
     {
@@ -172,11 +174,13 @@ class Photo implements Entity
     }
 
     /**
-     * @param int $takenOn
+     * @param Carbon $takenOn
      */
     public function setTakenOn($takenOn)
     {
-        $this->takenOn = $takenOn;
+        // takenOn is a microtime() format
+        $timestamp = floor($takenOn / 1e3);
+        $this->takenOn = Carbon::createFromTimestamp($timestamp);
     }
 
     /**

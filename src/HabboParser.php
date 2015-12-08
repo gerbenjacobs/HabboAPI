@@ -151,6 +151,8 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        // urls at /extradata/ require javascript/cookie validation, trick them.
+        curl_setopt($ch, CURLOPT_COOKIE, "DOADFgsjnrSFgsg329gaFGa3ggs9434sgSGS43tsgSHSG35=#d6e7d09c41133ce41f6b466b0dbf500980f0f395#BRMM#1450468364#1115280811#");
         $json = curl_exec($ch);
         $response = json_decode($json, true);
         $info = curl_getinfo($ch);
