@@ -52,7 +52,8 @@ class HabboTest extends PHPUnit_Framework_TestCase
 
     public function testGetMemberSince()
     {
-        $this->assertEquals('2001-10-06T12:21:53.000+0000', $this->habbo->getMemberSince());
+        $this->assertInstanceOf('\Carbon\Carbon', $this->habbo->getMemberSince());
+        $this->assertEquals('Oct 6, 2001', $this->habbo->getMemberSince()->toFormattedDateString());
     }
 
     public function testFiveSelectedBadges()

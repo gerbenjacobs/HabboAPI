@@ -8,6 +8,7 @@ include 'vendor/autoload.php';
 // Shortcut for the FQN
 use HabboAPI\Entities\Badge;
 use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
 use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
@@ -40,6 +41,8 @@ if ($myHabbo->hasProfile()) {
     $myProfile = $profile->setHabbo($myHabbo);
 }
 
+$myPhotos = $habboApi->getPhotos($myHabbo->getId());
+
 // Export as HTML
 $html = [
     'habbo' => '',
@@ -47,7 +50,8 @@ $html = [
     'friends' => '',
     'groups' => '',
     'rooms' => '',
-    'badges' => ''
+    'badges' => '',
+    'photos' => ''
 ];
 
 
@@ -58,27 +62,26 @@ $habbo = $myProfile->getHabbo();
 $html['habbo'] .= '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figure=' . $habbo->getFigureString() . '&size=l&gesture=sml&head_direction=3"
             alt="' . $habbo->getHabboName() . '" title="' . $habbo->getHabboName() . '" style="float: left; margin-right: 10px;" />';
 $html['habbo'] .= '<h3>' . $habbo->getHabboName() . '</h3>';
-$html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . date('d-M-Y', strtotime($habbo->getMemberSince())) . '</em></p>';
+$html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . $habbo->getMemberSince()->toFormattedDateString() . '</em></p>';
 if ($habbo->getProfileVisible()) {
     $html['habbo'] .= '<p><a href="https://www.habbo.com/profile/' . $habbo->getHabboName() . '">View home &raquo;</a></p>';
 }
 if ($badges = $habbo->getSelectedBadges()) {
     foreach ($badges as $badge) {
         /** @var Badge $badge */
-        $html['worn_badges'] .=
-            '
-                    <div class="media">
-                        <div class="media-left media-middle">
-                            <a href="#">
-                                <img class="media-object" src="http://images.habbo.com/c_images/album1584/' . $badge->getCode() . '.gif" alt="' . $badge->getName() . '">
-                            </a>
-                        </div>
-                        <div class="media-body">
-                            <h4 class="media-heading">' . $badge->getName() . '</h4>
-                            <em>' . $badge->getDescription() . '</em>
-                        </div>
-                    </div>
-                    ';
+        $html['worn_badges'] .= '
+            <div class="media">
+                <div class="media-left media-middle">
+                    <a href="#">
+                        <img class="media-object" src="http://images.habbo.com/c_images/album1584/' . $badge->getCode() . '.gif" alt="' . $badge->getName() . '">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">' . $badge->getName() . '</h4>
+                    <em>' . $badge->getDescription() . '</em>
+                </div>
+            </div>
+        ';
     }
 }
 
@@ -90,6 +93,21 @@ foreach (array("friends", "groups", "rooms", "badges") as $section) {
         $html[$section] .= '<li>' . $object . '</li>'; // uses the __toString() method
     }
     $html[$section] .= '</ul>';
+}
+
+// Generate the photos
+if ($myPhotos) {
+    /** @var Photo $myPhoto */
+    foreach ($myPhotos as $myPhoto) {
+        $html['photos'] .= '
+            <div class="col-md-3">
+                <a href="https://www.habbo.com/profile/' . $myPhoto->getCreatorName() . '/photo/' . $myPhoto->getId() . '" class="thumbnail">
+                  <img src="' . $myPhoto->getPreviewUrl() . '" alt="' . $myPhoto->getId() . '">
+                </a>
+                <div class="caption">Taken on ' . $myPhoto->getTakenOn()->toFormattedDateString() . ' by ' . $myPhoto->getCreatorName() . '</div>
+            </div>
+        ';
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -140,21 +158,28 @@ foreach (array("friends", "groups", "rooms", "badges") as $section) {
         </div>
     </div>
 
-    <?php if ($myHabbo->hasProfile()): ?>
+    <hr>
+
     <div class="row">
-        <div class="col-md-3">
-            <?php echo $html['badges']; ?>
-        </div>
-        <div class="col-md-3">
-            <?php echo $html['friends']; ?>
-        </div>
-        <div class="col-md-3">
-            <?php echo $html['groups']; ?>
-        </div>
-        <div class="col-md-3">
-            <?php echo $html['rooms']; ?>
-        </div>
+        <?php echo $html['photos']; ?>
     </div>
+
+    <?php if ($myHabbo->hasProfile()): ?>
+        <hr>
+        <div class="row">
+            <div class="col-md-3">
+                <?php echo $html['badges']; ?>
+            </div>
+            <div class="col-md-3">
+                <?php echo $html['friends']; ?>
+            </div>
+            <div class="col-md-3">
+                <?php echo $html['groups']; ?>
+            </div>
+            <div class="col-md-3">
+                <?php echo $html['rooms']; ?>
+            </div>
+        </div>
     <?php endif; ?>
 </div>
 

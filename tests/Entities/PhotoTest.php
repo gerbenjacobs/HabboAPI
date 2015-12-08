@@ -40,7 +40,8 @@ class PhotoTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(31212674, $this->photo->getCreatorId());
         $this->assertEquals('PHOTO', $this->photo->getType());
         $this->assertEquals('//habbo-stories-content.s3.amazonaws.com/servercamera/purchased/hhus/p-31212674-1448057454995.png', $this->photo->getUrl());
-        $this->assertEquals(1448057455732, $this->photo->getTakenOn());
+        $this->assertInstanceOf('\Carbon\Carbon', $this->photo->getTakenOn());
+        $this->assertEquals('Nov 20, 2015', $this->photo->getTakenOn()->toFormattedDateString());
         $this->assertEquals(65285667, $this->photo->getRoomId());
         $this->assertEquals(array('aapo'), $this->photo->getLikes());
     }
