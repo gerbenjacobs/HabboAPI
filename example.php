@@ -8,11 +8,12 @@ include 'vendor/autoload.php';
 // Shortcut for the FQN
 use HabboAPI\Entities\Badge;
 use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Profile;
 use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
 
 // Create new Parser and API instance
-$habboParser = new HabboParser('https://www.habbo.com/api/public/');
+$habboParser = new HabboParser('com');
 $habboApi = new HabboAPI($habboParser);
 
 // Find the user 'koeientemmer' and get their ID
@@ -31,10 +32,12 @@ try {
 
 if ($myHabbo->hasProfile()) {
     // Collect all the profile info
+    /** @var Profile $myProfile */
     $myProfile = $habboApi->getProfile($myHabbo->getId());
 } else {
     // This Habbo has a closed home, only show their Habbo object
-    $myProfile = array('habbo' => $myHabbo);
+    $profile = new Profile();
+    $myProfile = $profile->setHabbo($myHabbo);
 }
 
 // Export as HTML
@@ -47,32 +50,23 @@ $html = [
     'badges' => ''
 ];
 
-// Print all the $profile data in a pretty format, except for 'habbo'
-$lastSection = 'habbo';
-foreach ($myProfile as $section => $data) {
 
-    // Print section name
-    if ($section != $lastSection) {
-        $lastSection = $section;
-        $html[$section] .= '<h2>' . ucfirst($section) . ' (' . count($data) . ')</h2>';
-    }
+// Some markup for the Habbo part
 
-    // Some markup for the Habbo part
-    if ($section == 'habbo') {
-        /* @var Habbo $habbo */
-        $habbo = $data;
-        $html['habbo'] .= '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figure=' . $habbo->getFigureString() . '&size=l&gesture=sml&head_direction=3"
+/* @var Habbo $habbo */
+$habbo = $myProfile->getHabbo();
+$html['habbo'] .= '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figure=' . $habbo->getFigureString() . '&size=l&gesture=sml&head_direction=3"
             alt="' . $habbo->getHabboName() . '" title="' . $habbo->getHabboName() . '" style="float: left; margin-right: 10px;" />';
-        $html['habbo'] .= '<h3>' . $habbo->getHabboName() . '</h3>';
-        $html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . date('d-M-Y', strtotime($habbo->getMemberSince())) . '</em></p>';
-        if ($habbo->getProfileVisible()) {
-            $html['habbo'] .= '<p><a href="https://www.habbo.com/profile/' . $habbo->getHabboName() . '">View home &raquo;</a></p>';
-        }
-        if ($badges = $habbo->getSelectedBadges()) {
-            foreach ($badges as $badge) {
-                /** @var Badge $badge */
-                $html['worn_badges'] .=
-                    '
+$html['habbo'] .= '<h3>' . $habbo->getHabboName() . '</h3>';
+$html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . date('d-M-Y', strtotime($habbo->getMemberSince())) . '</em></p>';
+if ($habbo->getProfileVisible()) {
+    $html['habbo'] .= '<p><a href="https://www.habbo.com/profile/' . $habbo->getHabboName() . '">View home &raquo;</a></p>';
+}
+if ($badges = $habbo->getSelectedBadges()) {
+    foreach ($badges as $badge) {
+        /** @var Badge $badge */
+        $html['worn_badges'] .=
+            '
                     <div class="media">
                         <div class="media-left media-middle">
                             <a href="#">
@@ -85,18 +79,17 @@ foreach ($myProfile as $section => $data) {
                         </div>
                     </div>
                     ';
-            }
-        }
-    } else {
-        // Show all the other sections as an unordered list
-        if (in_array($section, array("friends", "groups", "rooms", "badges"))) {
-            $html[$section] .= '<ul>';
-            foreach ($data as $object) {
-                $html[$section] .= '<li>' . $object . '</li>'; // uses the __toString() method
-            }
-            $html[$section] .= '</ul>';
-        }
     }
+}
+
+// Show all the other sections as an unordered list
+foreach (array("friends", "groups", "rooms", "badges") as $section) {
+    $html[$section] .= '<ul>';
+    $method_name = sprintf('get%s', ucfirst($section));
+    foreach (call_user_func(array($myProfile, $method_name)) as $object) {
+        $html[$section] .= '<li>' . $object . '</li>'; // uses the __toString() method
+    }
+    $html[$section] .= '</ul>';
 }
 ?>
 <!DOCTYPE html>
@@ -148,20 +141,20 @@ foreach ($myProfile as $section => $data) {
     </div>
 
     <?php if ($myHabbo->hasProfile()): ?>
-        <div class="row">
-            <div class="col-md-3">
-                <?php echo $html['badges']; ?>
-            </div>
-            <div class="col-md-3">
-                <?php echo $html['friends']; ?>
-            </div>
-            <div class="col-md-3">
-                <?php echo $html['groups']; ?>
-            </div>
-            <div class="col-md-3">
-                <?php echo $html['rooms']; ?>
-            </div>
+    <div class="row">
+        <div class="col-md-3">
+            <?php echo $html['badges']; ?>
         </div>
+        <div class="col-md-3">
+            <?php echo $html['friends']; ?>
+        </div>
+        <div class="col-md-3">
+            <?php echo $html['groups']; ?>
+        </div>
+        <div class="col-md-3">
+            <?php echo $html['rooms']; ?>
+        </div>
+    </div>
     <?php endif; ?>
 </div>
 
