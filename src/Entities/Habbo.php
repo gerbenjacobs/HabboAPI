@@ -3,6 +3,7 @@
  * The entitymodel for a Habbo object
  */
 namespace HabboAPI\Entities;
+use Carbon\Carbon;
 
 /**
  * Class Habbo
@@ -27,11 +28,13 @@ class Habbo implements Entity
      */
     public function parse($data)
     {
+        // These attributes are shared between Habbo and Friends
         $this->setId($data['uniqueId']);
         $this->setHabboName($data['name']);
         $this->setMotto($data['motto']);
         $this->setFigureString($data['figureString']);
 
+        // These could be missing..
         if (isset($data['memberSince'])) {
             $this->setMemberSince($data['memberSince']);
         }
@@ -111,7 +114,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return mixed
+     * @return Carbon
      */
     public function getMemberSince()
     {
@@ -119,11 +122,11 @@ class Habbo implements Entity
     }
 
     /**
-     * @param mixed $memberSince
+     * @param Carbon $memberSince
      */
     protected function setMemberSince($memberSince)
     {
-        $this->memberSince = $memberSince;
+        $this->memberSince = Carbon::parse($memberSince);
     }
 
     /**

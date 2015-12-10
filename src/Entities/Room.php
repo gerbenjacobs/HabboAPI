@@ -3,6 +3,7 @@
  * The entitymodel for a Room object
  */
 namespace HabboAPI\Entities;
+use Carbon\Carbon;
 
 /**
  * Class Room
@@ -19,7 +20,7 @@ class Room implements Entity
     private $creationTime;
     private $maximumVisitors;
     private $tags;
-    private $officialRoom;
+    private $showOwnerName;
     private $ownerName;
     private $ownerUniqueId;
     private $categories;
@@ -38,7 +39,7 @@ class Room implements Entity
         $this->setDescription($room['description']);
         $this->setMaximumVisitors($room['maximumVisitors']);
         $this->setTags($room['tags']);
-        $this->setOfficialRoom($room['officialRoom']);
+        $this->setShowOwnerName($room['showOwnerName']);
         $this->setOwnerName($room['ownerName']);
         $this->setOwnerUniqueId($room['ownerUniqueId']);
         $this->setCategories($room['categories']);
@@ -169,7 +170,7 @@ class Room implements Entity
     }
 
     /**
-     * @return string
+     * @return Carbon
      */
     public function getCreationTime()
     {
@@ -177,11 +178,11 @@ class Room implements Entity
     }
 
     /**
-     * @param string $creationTime
+     * @param Carbon $creationTime
      */
     public function setCreationTime($creationTime)
     {
-        $this->creationTime = $creationTime;
+        $this->creationTime = Carbon::parse($creationTime);
     }
 
     /**
@@ -203,17 +204,17 @@ class Room implements Entity
     /**
      * @return boolean
      */
-    public function getOfficialRoom()
+    public function getShowOwnerName()
     {
-        return $this->officialRoom;
+        return $this->showOwnerName;
     }
 
     /**
-     * @param boolean $officialRoom
+     * @param boolean $showOwnerName
      */
-    public function setOfficialRoom($officialRoom)
+    public function setShowOwnerName($showOwnerName)
     {
-        $this->officialRoom = $officialRoom;
+        $this->showOwnerName = $showOwnerName;
     }
 
     /**

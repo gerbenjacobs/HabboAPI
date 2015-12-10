@@ -58,7 +58,8 @@ class RoomTest extends \PHPUnit_Framework_TestCase
 
     public function testGetCreationTime()
     {
-        $this->assertEquals('2010-06-10T09:02:16.000+0000', $this->entity->getCreationTime());
+        $this->assertInstanceOf('\Carbon\Carbon', $this->entity->getCreationTime());
+        $this->assertEquals('Jun 10, 2010', $this->entity->getCreationTime()->toFormattedDateString());
     }
 
     public function testGetMaximumVisitors()
@@ -66,9 +67,9 @@ class RoomTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(25, $this->entity->getMaximumVisitors());
     }
 
-    public function testGetOfficialRoom()
+    public function testGetShowOwnerName()
     {
-        $this->assertEquals(true, $this->entity->getOfficialRoom());
+        $this->assertEquals(true, $this->entity->getShowOwnerName());
     }
 
     public function testGetOwnerName()

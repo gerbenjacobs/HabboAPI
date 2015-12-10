@@ -1,5 +1,6 @@
 [![Build status] (https://api.travis-ci.org/gerbenjacobs/HabboAPI.svg)](https://travis-ci.org/gerbenjacobs/HabboAPI)
 [![Latest Stable Version](https://poser.pugx.org/gerbenjacobs/habbo-api/v/stable.svg)](https://packagist.org/packages/gerbenjacobs/habbo-api)
+[![Join the chat at https://gitter.im/gerbenjacobs/HabboAPI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gerbenjacobs/HabboAPI) 
 # HabboAPI
 This PHP wrapper library is used to collect data from the _undcoumented_ Habbo API.  
 The project requires PHP 5.3 and uses the Composer autoloader and PSR-4 standard.
@@ -7,7 +8,7 @@ The project requires PHP 5.3 and uses the Composer autoloader and PSR-4 standard
 See the `example.php` file on how you could use this library.
 
 ## How to use it
-1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your package.json file: `"gerbenjacobs/habbo-api": "v1.*"`
+1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your package.json file: `"gerbenjacobs/habbo-api": "v2.*"`
 2. On the page you want to use it add `include 'vendor/autoload.php'`
 3. Create a HabboParser and construct it with the IP that the server runs on (to prevent JS Cookie issues) and the base URL of the API
 4. Create a HabboAPI instance and inject the HabboParser
@@ -23,7 +24,7 @@ See the `example.php` file on how you could use this library.
     use HabboAPI\HabboParser;
     
     // Create new Parser and API instance
-    $habboParser = new HabboParser('https://www.habbo.com/api/public/');
+    $habboParser = new HabboParser('com');
     $habboApi = new HabboAPI($habboParser);
     
     // Find the user 'koeientemmer' and get their ID
