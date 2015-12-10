@@ -10,8 +10,8 @@ See the `example.php` file on how you could use this library.
 ## How to use it
 1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your package.json file: `"gerbenjacobs/habbo-api": "v2.*"`
 2. On the page you want to use it add `include 'vendor/autoload.php'`
-3. Create a HabboParser and construct it with the IP that the server runs on (to prevent JS Cookie issues) and the base URL of the API
-4. Create a HabboAPI instance and inject the HabboParser
+3. Create a HabboParser and construct it with the Habbo domain extension "com", "com.br", "de" etc.
+4. Create a HabboAPI instance and inject the HabboParser in the constructor
 
 ## Usage
 ```php
