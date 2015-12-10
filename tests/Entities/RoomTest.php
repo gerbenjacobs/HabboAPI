@@ -67,9 +67,9 @@ class RoomTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(25, $this->entity->getMaximumVisitors());
     }
 
-    public function testGetOfficialRoom()
+    public function testGetShowOwnerName()
     {
-        $this->assertEquals(true, $this->entity->getOfficialRoom());
+        $this->assertEquals(true, $this->entity->getShowOwnerName());
     }
 
     public function testGetOwnerName()

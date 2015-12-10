@@ -57,7 +57,7 @@
       "name": "-!!",
       "motto": "boom yo !!|!!1°",
       "uniqueId": "hhus-bc8ee1d4d095c7fa4dab7a13f2422fe3",
-      "figureString": "hr-837-31.hd-600-30.ch-665-88.lg-715-88.sh-906-1408"
+      "figureString": "hr-837-31.hd-600-30.ch-669-88.lg-705-88.sh-730-81.cp-3125-81"
     },
     {
       "name": "-doornroosje.",
@@ -243,7 +243,7 @@
       "name": "Dancingfish",
       "motto": "-,_\"",
       "uniqueId": "hhus-a004ddd8b21a9065e832669db5a22c72",
-      "figureString": "hr-125-40.hd-209-30.ch-215-80.lg-275-64.sh-305-76.fa-1202-91.ca-1813"
+      "figureString": "hr-125-40.hd-209-30.ch-3030-80.lg-275-64.sh-305-76.fa-1202-91.ca-1813"
     },
     {
       "name": "djcesar",
@@ -267,13 +267,13 @@
       "name": "DoYouLiftBro",
       "motto": "",
       "uniqueId": "hhus-ba0da0b6c7ce4a2ccd749fc8c0342d80",
-      "figureString": "hr-828-1407.hd-190-7.ch-3208-1432-1408.lg-3057-110.fa-1201"
+      "figureString": "hr-828-1407.hd-190-7.ch-3208-110-1408.lg-3057-100.fa-1201"
     },
     {
       "name": "Dragon-nccb",
       "motto": "advent? already?!!!",
       "uniqueId": "hhus-d655846432ccf14dd1efd8ddea92b48a",
-      "figureString": "hr-3012-34.hd-600-2.ch-3321-1416.lg-3434-110-1321.sh-3435-110-1321.ha-3272-1417-95.he-3149-99.ca-3151-1417-1416.wa-2003.cc-3246-95"
+      "figureString": "hr-3012-34.hd-600-2.ch-3245-96.lg-3202-96-1408.sh-3252-110-92.ha-1006.he-3149-92.cc-3246-96"
     },
     {
       "name": "DumbGenius1999",
@@ -369,7 +369,7 @@
       "name": "Gerben",
       "motto": "Habbies.nl",
       "uniqueId": "hhus-158f03f719d36c698d853712a4910d60",
-      "figureString": "hr-155-42.hd-195-1.ch-255-79.lg-285-90.sh-290-62"
+      "figureString": "hr-155-42.hd-195-1.ch-255-76.lg-285-90.sh-290-1408"
     },
     {
       "name": "getsumdude",
@@ -553,9 +553,9 @@
     },
     {
       "name": "Lovliest",
-      "motto": "µ",
+      "motto": "Do You Want to Build a Snowman?",
       "uniqueId": "hhus-c56f8e234497f1f249c4457f102fa2c6",
-      "figureString": "hr-515-45.hd-600-1.ch-660-64.lg-710-72.sh-725-64.he-3358-72-72.ca-3414-72"
+      "figureString": "hr-515-45.hd-600-1.ch-660-81.lg-700-80.sh-725-81.he-3465-81-80.ca-3414-80"
     },
     {
       "name": "Luxuryas",
@@ -621,7 +621,7 @@
       "name": "Nederland.x.",
       "motto": "#notinmyname",
       "uniqueId": "hhus-ac1bbd359a9e85c0230f1cc69adff77c",
-      "figureString": "hr-165-45.hd-205-1370.ch-220-90.lg-280-90.ha-1010-1408.fa-1205-64"
+      "figureString": "hd-615-1370.ch-660-1408.lg-705-1408.ha-1010-1408.fa-1205-64"
     },
     {
       "name": "NeverSkem",
@@ -651,7 +651,7 @@
       "name": "Ounz",
       "motto": "Habbies.nl",
       "uniqueId": "hhus-16c081e4c635559e8e9eb6eb2197d33a",
-      "figureString": "hr-155-42.hd-180-1.ch-3030-90.lg-285-80.sh-290-1408.fa-1204"
+      "figureString": "hr-155-42.hd-180-1.ch-3030-90.lg-285-80.sh-290-1408.he-3329-72-1408.fa-1204"
     },
     {
       "name": "paul748",
@@ -801,7 +801,7 @@
       "name": "slimmeke1",
       "motto": "Ambassador on habbo.nl",
       "uniqueId": "hhus-b19c53799ec612548dabaa96f6729698",
-      "figureString": "hd-180-14.ch-210-1408.lg-280-1408"
+      "figureString": "hd-180-2.ch-3015-96.lg-280-110.sh-3016-1325.ha-1012-96"
     },
     {
       "name": "SoylentBob",
@@ -937,17 +937,6 @@
       "isAdmin": false
     },
     {
-      "id": "g-hhus-c86db765b12d3146dde2495d19510cf4",
-      "name": "HabboHelpers.com",
-      "description": "HabbboHelpers.com is a community for all Habbos worldwide who'd like to expand their Habbo Helper experience and chat with other Habbo Helpers from all over the world.",
-      "type": "NORMAL",
-      "roomId": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
-      "badgeCode": "b27114s02024s85114344b8b79da75befaac992a26ceb1ceb1",
-      "primaryColour": "d96d00",
-      "secondaryColour": "e5e5e5",
-      "isAdmin": true
-    },
-    {
       "id": "g-hhus-91626d8b14dc7d1d74587c5ae7fc4305",
       "name": "HabboHelpers.com",
       "description": "HabboHelpers.com, an official fansite for Habbo.com bringing in the new community of Habbo Helpers! Could you be the next helper? Join us now!",
@@ -968,6 +957,17 @@
       "primaryColour": "43a0d1",
       "secondaryColour": "00539b",
       "isAdmin": false
+    },
+    {
+      "id": "g-hhus-c86db765b12d3146dde2495d19510cf4",
+      "name": "Habbowidgets.com",
+      "description": "If you like Habbowidgets, join the group :D",
+      "type": "NORMAL",
+      "roomId": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
+      "badgeCode": "b25144t10015t00064s85063bfb91685c240600dca32f96f035ef53d",
+      "primaryColour": "0066bf",
+      "secondaryColour": "ffd601",
+      "isAdmin": true
     },
     {
       "id": "g-hhus-aaaf0afa1d5f5f7ddd5fcddb071fe092",
@@ -1035,7 +1035,7 @@
       "tags": [
         "habbies"
       ],
-      "officialRoom": true,
+      "showOwnerName": true,
       "ownerName": "koeientemmer",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
       "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159787.png",
@@ -1052,13 +1052,15 @@
       "creationTime": "2010-06-10T09:02:21.000+0000",
       "maximumVisitors": 25,
       "tags": [],
-      "officialRoom": true,
+      "showOwnerName": true,
       "ownerName": "koeientemmer",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
       "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/31159823.png",
       "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/31159823.png",
       "rating": 11,
-      "categories": []
+      "categories": [
+        "navigator.flatcategory.global.CHAT"
+      ]
     },
     {
       "id": "r-hhus-e6f2266fe691e2aa7490351680585af8",
@@ -1067,7 +1069,7 @@
       "creationTime": "2011-05-19T18:53:33.000+0000",
       "maximumVisitors": 25,
       "tags": [],
-      "officialRoom": true,
+      "showOwnerName": true,
       "ownerName": "koeientemmer",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
       "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/46093264.png",
@@ -1079,21 +1081,23 @@
     },
     {
       "id": "r-hhus-49cb84ec587476b574febefffd7a0cd4",
-      "name": "HabboHelpers.com",
-      "description": "",
+      "name": "Habbowidgets.com",
+      "description": "Group room for Habbowidgets!",
       "creationTime": "2013-04-20T16:05:18.000+0000",
       "habboGroupId": "g-hhus-c86db765b12d3146dde2495d19510cf4",
-      "maximumVisitors": 10,
+      "maximumVisitors": 50,
       "tags": [
-        "habbohelpers"
+        "habbowidgets"
       ],
-      "officialRoom": true,
+      "showOwnerName": true,
       "ownerName": "koeientemmer",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
       "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/62423647.png",
       "imageUrl": "https://habbo-stories-content.s3.amazonaws.com/fullroom-photo/hhus/62423647.png",
       "rating": 447,
-      "categories": []
+      "categories": [
+        "navigator.flatcategory.global.CHAT"
+      ]
     },
     {
       "id": "r-hhus-0f7319d1291373ddd1d609ac129fd82f",
@@ -1102,7 +1106,7 @@
       "creationTime": "2013-12-04T15:13:43.000+0000",
       "maximumVisitors": 25,
       "tags": [],
-      "officialRoom": true,
+      "showOwnerName": true,
       "ownerName": "koeientemmer",
       "ownerUniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
       "thumbnailUrl": "https://habbo-stories-content.s3.amazonaws.com/navigator-thumbnail/hhus/65285667.png",
@@ -1270,9 +1274,14 @@
       "description": "I helped revive Santa's broken heart and miserable mood in time for Christmas. December 2009."
     },
     {
-      "code": "ACH_RoomDecoBC4",
-      "name": "Builders Club Designer IV",
-      "description": "Build a room with 16 Builders Club furnis."
+      "code": "ACH_RoomDecoBC5",
+      "name": "Builders Club Designer V",
+      "description": "Build a room with 32 Builders Club furnis."
+    },
+    {
+      "code": "ACH_BuildersClub1",
+      "name": "Builders Club Member I",
+      "description": "For being Builders Club member for 1 days"
     },
     {
       "code": "GLA_HHUK",
@@ -1405,6 +1414,11 @@
       "description": "Saved Habbo from a freak weather machine"
     },
     {
+      "code": "ACH_RoomDecoFloor1",
+      "name": "Floor Designer I",
+      "description": "For setting 3 floors to my rooms."
+    },
+    {
       "code": "GLE_HHUK",
       "name": "Fox",
       "description": "Level 5 - The clever one - is swift of thought and foot. Sorry. This Achievement is not available at the moment."
@@ -1453,11 +1467,6 @@
       "code": "ACH_GuideAdvertisementReader1",
       "name": "Gran Tourismo",
       "description": "Check out the guided Tours"
-    },
-    {
-      "code": "ACH_GiftReceiver1",
-      "name": "Greet me I",
-      "description": "For receiving a gift."
     },
     {
       "code": "UK114",
@@ -1645,6 +1654,11 @@
       "description": "For jumping over 8 obstacles successfully"
     },
     {
+      "code": "ACH_GiftReceiver2",
+      "name": "Like me a bit more II",
+      "description": "For receiving 6 gifts."
+    },
+    {
       "code": "ACH_AvatarLooks1",
       "name": "Looks that Kill I",
       "description": "For changing your look for the first time."
@@ -1715,9 +1729,9 @@
       "description": "Winner of broken hearts 1/2"
     },
     {
-      "code": "ACH_PetRespectReceiver7",
-      "name": "My pets get all the love VII",
-      "description": "Have someone scratch your pet at least 200 times to earn this badge."
+      "code": "ACH_PetRespectReceiver8",
+      "name": "My pets get all the love VIII",
+      "description": "Have someone scratch your pet at least 300 times to earn this badge."
     },
     {
       "code": "ACH_MysteryBox3",
@@ -1883,6 +1897,11 @@
       "code": "ST4",
       "name": "STEM Cosmetics",
       "description": "You need Science and Maths skills for this job!"
+    },
+    {
+      "code": "FI190",
+      "name": "Safety Self Help badge",
+      "description": "I learned a thing or two about self help in Habbo"
     },
     {
       "code": "XM10A",
