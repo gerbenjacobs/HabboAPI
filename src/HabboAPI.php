@@ -4,6 +4,9 @@
  */
 namespace HabboAPI;
 
+use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Profile;
+
 /** Class HabboAPI
  *
  * Contains all the nice methods for the HabboAPI
@@ -19,10 +22,10 @@ class HabboAPI
     private $parser;
 
     /**
-     * Constructor, requires a HabboParser object
-     * @param HabboParser $parser
+     * Constructor, requires an implementation of a HabboParserInterface
+     * @param HabboParserInterface $parser
      */
-    public function __construct(HabboParser $parser)
+    public function __construct(HabboParserInterface $parser)
     {
         $this->parser = $parser;
     }
@@ -30,25 +33,32 @@ class HabboAPI
     /** Based on a username, get a simplified Habbo object
      *
      * @param string $identifier
-     * @return Entities\Habbo
+     * @param bool $useUniqueId
+     * @return Habbo
      */
-    public function getHabbo($identifier, $hhid = false)
+    public function getHabbo($identifier, $useUniqueId = false)
     {
-        if ($hhid) {
-            return $this->parser->parseHabbo($identifier, 'hhid');
-        } else {
-            return $this->parser->parseHabbo($identifier);
-        }
+        return $this->parser->parseHabbo($identifier, $useUniqueId);
     }
 
     /** Based on a unique ID, get a full Habbo profile object
      *
      * @param string $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
-     * @return array
+     * @return Profile
      */
     public function getProfile($id)
     {
         return $this->parser->parseProfile($id);
+    }
+
+    /** getPhotos returns all 200 public photos or all the users photos if an id is given
+     *
+     * @param string|null $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
+     * @return array Array of Photo objects
+     */
+    public function getPhotos($id = null)
+    {
+        return $this->parser->parsePhotos($id);
     }
 
 }
