@@ -50,28 +50,47 @@ class Furni implements Entity
 
 	public function parse($furni)
 	{
-		$this->setType($furni[ 'type' ]);
-		$this->setId($furni[ 'id' ]);
-		$this->setSwfFile($furni[ 'swfFile' ]);
-		$this->setRevision($furni[ 'revision' ]);
-		$this->setVar1($furni[ 'var1' ]);
-		$this->setVar2($furni[ 'var2' ]);
-		$this->setVar3($furni[ 'var3' ]);
-		$this->setColors($furni[ 'colors' ]);
-		$this->setName($furni[ 'name' ]);
-		$this->setDescription($furni[ 'description' ]);
-		$this->setVar4($furni[ 'var4' ]);
-		$this->setVar5($furni[ 'var5' ]);
-		$this->setVar6($furni[ 'var6' ]);
-		$this->setVar7($furni[ 'var7' ]);
-		$this->setVar8($furni[ 'var8' ]);
-		$this->setVar9($furni[ 'var9' ]);
-		$this->setVar10($furni[ 'var10' ]);
-		$this->setVar11($furni[ 'var11' ]);
-		$this->setVar12($furni[ 'var12' ]);
-		$this->setVar13($furni[ 'var13' ]);
-		$this->setVar14($furni[ 'var14' ]);
-		$this->setVar15($furni[ 'var15' ]);
+		$this->setType($furni[ 0 ]);
+		$this->setId($furni[ 1 ]);
+		$this->setSwfFile($furni[ 2 ]);
+		$this->setRevision($furni[ 3 ]);
+		$this->setVar1($furni[ 4 ]);
+		$this->setVar2($furni[ 5 ]);
+		$this->setVar3($furni[ 6 ]);
+		$this->setColors($furni[ 7 ]);
+		$this->setName($furni[ 8 ]);
+		$this->setDescription($furni[ 9 ]);
+		$this->setVar4($furni[ 10 ]);
+		$this->setVar5($furni[ 11 ]);
+		$this->setVar6($furni[ 12 ]);
+		$this->setVar7($furni[ 13 ]);
+		$this->setVar8($furni[ 14 ]);
+		$this->setVar9($furni[ 15 ]);
+		$this->setVar10($furni[ 16 ]);
+		$this->setVar11($furni[ 17 ]);
+		
+		//something strange with wall items, is missing the 18,19,20 index in array.
+		if(count($furni) != 22)
+		{
+			
+			$this->setVar15($furni[ 18 ]);
+		}else{
+			$this->setVar12($furni[ 18 ]);
+		}
+		//empty by wall items.
+		if(isset($furni[ 19 ]))
+		{
+			$this->setVar13($furni[ 19 ]);
+		}
+		if(isset($furni[ 20 ]))
+		{
+			$this->setVar14($furni[ 20 ]);
+		}
+		if(isset($furni[ 21 ]))
+		{
+			$this->setVar15($furni[ 21 ]);
+		}
+		
 		$this->setIconUrl(); //bonus by @DavydeVries
 	}
 
