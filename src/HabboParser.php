@@ -162,11 +162,10 @@ class HabboParser implements HabboParserInterface
 	 */
 	public function parseFurnis()
 	{
-		$redirect[ 'url' ]	 = '/gamedata/furnidata_xml/1';
-		$redirect[ 'data' ]	 = $this->_callUrl($this->api_base.$redirect[ 'url' ]);
-		$url				 = $redirect[ 'data' ][ 1 ][ 'redirect_url' ];
-		$urlResponse		 = $this->_callUrl($url, true);
-		list($data)			 = new \SimpleXMLElement($urlResponse[ 0 ]);
+		$url			 = '/gamedata/furnidata_xml/1';
+		$responseData	 = $this->_callUrl($this->api_base.$url, true);
+
+		list($data) = new \SimpleXMLElement($responseData[ 0 ]);
 
 		$furnis = array();
 
@@ -174,16 +173,16 @@ class HabboParser implements HabboParserInterface
 		{
 			foreach($furni_type as $furni_data)
 			{
-				
-				$furni_dataArray = (array) $furni_data;
-				$furni_dataArray[ '@attributes' ][ 'type' ] = $key;
-				$temp_furni	 = new Furni();
+
+				$furni_dataArray							 = (array) $furni_data;
+				$furni_dataArray[ '@attributes' ][ 'type' ]	 = $key;
+				$temp_furni									 = new Furni();
 				$temp_furni->parse($furni_dataArray);
-				$furnis[]	 = $temp_furni;
+				$furnis[]									 = $temp_furni;
 				unset($temp_furni);
 			}
 		}
-		
+
 		return $furnis;
 	}
 
@@ -202,6 +201,7 @@ class HabboParser implements HabboParserInterface
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 		// urls at /extradata/ require javascript/cookie validation, trick them.
 		curl_setopt($ch, CURLOPT_COOKIE, "DOADFgsjnrSFgsg329gaFGa3ggs9434sgSGS43tsgSHSG35=#d6e7d09c41133ce41f6b466b0dbf500980f0f395#BRMM#1450468364#1115280811#");
 		$data	 = curl_exec($ch);
@@ -213,19 +213,12 @@ class HabboParser implements HabboParserInterface
 		{
 			$response = json_decode($data, true);
 		}
-		if($info[ 'http_code' ] != 200 && $info[ 'http_code' ] != 307)
+		if($info[ 'http_code' ] != 200)
 		{
 			throw new Exception($this->_extractError($response), $info[ 'http_code' ]);
 		}
 		curl_close($ch);
 		return array($response, $info);
-	}
-
-	private function furniResponse($data)
-	{
-		$data = preg_replace("/\r|\n/", "", $data);
-
-		return json_decode(str_replace("]][[", "],[", $data));
 	}
 
 	private function _extractError($response)
