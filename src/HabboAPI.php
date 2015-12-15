@@ -66,8 +66,8 @@ class HabboAPI
      *
      * @return array Array of Furni objects
      */
-	public function getFurni()
-	{
-		return $this->parser->parseFurni();
-	}
+    public function getFurni()
+    {
+        return $this->parser->parseFurni();
+    }
 }
