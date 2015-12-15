@@ -61,4 +61,9 @@ class HabboAPI
         return $this->parser->parsePhotos($id);
     }
 
+	
+	public function getFurnis()
+	{
+		return $this->parser->parseFurnis();
+	}
 }
