@@ -61,9 +61,13 @@ class HabboAPI
         return $this->parser->parsePhotos($id);
     }
 
-	
-	public function getFurnis()
+
+    /** getFurni collects the furni file from Habbo and parses each entry as a Furni object
+     *
+     * @return array Array of Furni objects
+     */
+	public function getFurni()
 	{
-		return $this->parser->parseFurnis();
+		return $this->parser->parseFurni();
 	}
 }

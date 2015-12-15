@@ -6,7 +6,6 @@
 
 namespace HabboAPI\Entities;
 
-use Carbon\Carbon;
 
 /**
  * Class Furni
@@ -23,29 +22,25 @@ class Furni implements Entity
 	private $className;
 	private $revision;
 	private $defaultDir;
-	private $xDim;
-	private $yDim;
+	private $width;
+	private $length;
 	private $colors;
 	private $name;
 	private $description;
-	private $adUrl;
 	private $offerId;
 	private $buyOut;
 	private $rentOfferId;
 	private $rentBuyOut;
 	private $bc;
-	private $excludedDynamic;
-	private $customParams;
 	private $specialType;
 	private $canStandOn;
 	private $canSitOn;
 	private $canLayOn;
 
-	/** Parses furni info array to \Entities\Furni object
-	 *
-	 * @param array $furni
-	 * @param string $type
-	 */
+    /** Parses furni info array to \Entities\Furni object
+     *
+     * @param array $furni
+     */
 	public function parse($furni)
 	{
 		$this->setType($furni[ '@attributes' ][ 'type' ]);
@@ -58,11 +53,11 @@ class Furni implements Entity
 		}
 		if(isset($furni[ 'xdim' ]))
 		{
-			$this->setXDim($furni[ 'xdim' ]);
+			$this->setWidth($furni[ 'xdim' ]);
 		}
 		if(isset($furni[ 'ydim' ]))
 		{
-			$this->setYDim($furni[ 'ydim' ]);
+			$this->setLength($furni[ 'ydim' ]);
 		}
 		if(isset($furni[ 'partcolors' ]))
 		{
@@ -70,14 +65,11 @@ class Furni implements Entity
 		}
 		$this->setName($furni[ 'name' ]);
 		$this->setDescription($furni[ 'description' ]);
-		//$this->setAdUrl((array) $furni[ 'adurl' ]);
 		$this->setOfferId($furni[ 'offerid' ]);
 		$this->setBuyOut($furni[ 'buyout' ]);
 		$this->setRentOfferId($furni[ 'rentofferid' ]);
 		$this->setRentBuyOut($furni[ 'rentbuyout' ]);
 		$this->setBC($furni[ 'bc' ]);
-		//$this->setExcludedDynamic($furni[ 'excludeddynamic' ]);
-		//$this->setCustomParams((array) $furni[ 'customparams' ]);
 		$this->setSpecialType($furni[ 'specialtype' ]);
 		if($this->type == 'roomitemtypes')
 		{
@@ -175,33 +167,33 @@ class Furni implements Entity
 	/**
 	 * @return string
 	 */
-	public function getXDim()
+	public function getWidth()
 	{
-		return $this->xDim;
+		return $this->width;
 	}
 
 	/**
 	 * @param string $xDim
 	 */
-	protected function setXDim($xDim)
+	protected function setWidth($xDim)
 	{
-		$this->xDim = $xDim;
+		$this->width = $xDim;
 	}
 
 	/**
 	 * @return string
 	 */
-	public function getYDim()
+	public function getLength()
 	{
-		return $this->yDim;
+		return $this->length;
 	}
 
 	/**
-	 * @param string $yDim
+	 * @param string $length
 	 */
-	protected function setYDim($yDim)
+	protected function setLength($length)
 	{
-		$this->yDim = $yDim;
+		$this->length = $length;
 	}
 
 	/**
@@ -396,12 +388,15 @@ class Furni implements Entity
 		$this->canLayOn = $canLayOn;
 	}
 
-	/** Bonus by DavydeVries
+	/**
+     * Generates a URL for the furni icon
+     * Bonus by @DavydeVries
 	 * @return string
 	 */
 	public function getIconUrl()
 	{
-		return "http://habboo-a.akamaihd.net/dcr/hof_furni/".$this->revision."/".str_replace("*", "_", $this->className)."_icon.png";
+        $icon_name = str_replace("*", "_", $this->className);
+		return "http://habboo-a.akamaihd.net/dcr/hof_furni/".$this->revision."/".$icon_name."_icon.png";
 	}
 
 }

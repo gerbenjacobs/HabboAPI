@@ -14,6 +14,7 @@ use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
 use HabboAPI\Entities\Room;
 use HabboAPI\Entities\Furni;
+use SimpleXMLElement;
 
 /**
  * Class HabboParser
@@ -160,12 +161,12 @@ class HabboParser implements HabboParserInterface
 	 *
 	 * @return array
 	 */
-	public function parseFurnis()
+	public function parseFurni()
 	{
 		$url			 = '/gamedata/furnidata_xml/1';
 		$responseData	 = $this->_callUrl($this->api_base.$url, true);
 
-		list($data) = new \SimpleXMLElement($responseData[ 0 ]);
+		list($data) = new SimpleXMLElement($responseData[ 0 ]);
 
 		$furnis = array();
 

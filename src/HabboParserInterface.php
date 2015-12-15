@@ -11,5 +11,5 @@ interface HabboParserInterface
 
     public function parsePhotos($id = null);
 	
-	public function parseFurnis();
+	public function parseFurni();
 }
