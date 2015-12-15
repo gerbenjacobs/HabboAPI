@@ -157,7 +157,7 @@ class HabboParser implements HabboParserInterface
     public function parseFurni()
     {
         $url = '/gamedata/furnidata_xml/1';
-        $responseData = $this->_callUrl($this->api_base . $url, true);
+        $responseData = $this->_callUrl($this->api_base . $url, false);
 
         list($data) = new SimpleXMLElement($responseData[0]);
 
