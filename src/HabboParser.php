@@ -30,6 +30,8 @@ class HabboParser implements HabboParserInterface
 
     private $hotel;
 
+    public $cookie;
+
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
      *
@@ -58,7 +60,7 @@ class HabboParser implements HabboParserInterface
             $url = '/api/public/users?name=' . $identifier;
         }
 
-        list($data) = $this->_callUrl($this->api_base . $url);
+        list($data) = $this->_callUrl($this->api_base . $url, true);
 
         $habbo = new Habbo();
         $habbo->parse($data);
@@ -76,7 +78,7 @@ class HabboParser implements HabboParserInterface
     public function parseProfile($id)
     {
         // Collect JSON
-        list($data) = $this->_callUrl($this->api_base . "/api/public/users/" . $id . "/profile");
+        list($data) = $this->_callUrl($this->api_base . '/api/public/users/' . $id . '/profile', true);
 
         // Create Profile entity
         $profile = new Profile();
@@ -120,47 +122,70 @@ class HabboParser implements HabboParserInterface
 
     public function parsePhotos($id = null)
     {
-        $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
+        // Get cookie first
+        $this->_getCookie();
 
-        list($data) = $this->_callUrl($this->api_base . $url);
+        $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
+        list($data) = $this->_callUrl($this->api_base . $url, true);
 
         $photos = array();
 
-        foreach ($data as $photo_data) {
-            $temp_photo = new Photo();
-            $temp_photo->parse($photo_data);
-            $photos[] = $temp_photo;
-            unset($temp_photo);
+        if ($data) {
+            foreach ($data as $photo_data) {
+                $temp_photo = new Photo();
+                $temp_photo->parse($photo_data);
+                $photos[] = $temp_photo;
+                unset($temp_photo);
+            }
         }
 
         return $photos;
     }
 
     /**
+     * Helper function to extract the correct cookie data from Habbo
+     * Uses the public photos page as initial example
+     */
+    private function _getCookie()
+    {
+        if (!isset($this->cookie)) {
+            // Collect cookie
+            list($data) = $this->_callUrl($this->api_base . '/extradata/public/photos', false);
+            preg_match("#setCookie\\('DOAD(.*)', '(.*)', '(.*)'\\)#", $data, $matches);
+            $this->cookie = $matches[2];
+        }
+    }
+
+    /**
      * Curl call based on $url
      *
-     * @param string $url
+     * @param string $url The URL to call
+     * @param bool $as_json Return raw or as json; default is json
      * @return array
      * @throws Exception
      */
-    protected function _callUrl($url)
+    protected function _callUrl($url, $as_json = true)
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v2.0.0');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v2.1.0');
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         // urls at /extradata/ require javascript/cookie validation, trick them.
-        curl_setopt($ch, CURLOPT_COOKIE, "DOADFgsjnrSFgsg329gaFGa3ggs9434sgSGS43tsgSHSG35=#d6e7d09c41133ce41f6b466b0dbf500980f0f395#BRMM#1450468364#1115280811#");
-        $json = curl_exec($ch);
-        $response = json_decode($json, true);
+        curl_setopt($ch, CURLOPT_COOKIE, "DOADFgsjnrSFgsg329gaFGa3ggs9434sgSGS43tsgSHSG35=" . $this->cookie);
+        $data = curl_exec($ch);
         $info = curl_getinfo($ch);
+        curl_close($ch);
 
+        // Fetch response
+        $response = ($as_json) ? json_decode($data, true) : $data;
+
+        // If something went wrong..
         if ($info['http_code'] != 200) {
             throw new Exception($this->_extractError($response), $info['http_code']);
         }
-        curl_close($ch);
         return array($response, $info);
     }
 
