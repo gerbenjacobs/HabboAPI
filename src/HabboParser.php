@@ -151,8 +151,9 @@ class HabboParser implements HabboParserInterface
         if (!isset($this->cookie)) {
             // Collect cookie
             list($data) = $this->_callUrl($this->api_base . '/extradata/public/photos', false);
-            preg_match("#setCookie\\('DOAD(.*)', '(.*)', '(.*)'\\)#", $data, $matches);
-            $this->cookie = $matches[2];
+            preg_match("#setCookie\\('(.*)', '(.*)', (.*)\\)#", $data, $matches);
+            $this->cookie['key'] = $matches[1];
+            $this->cookie['value'] = $matches[2];
         }
     }
 
@@ -174,7 +175,7 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
         // urls at /extradata/ require javascript/cookie validation, trick them.
-        curl_setopt($ch, CURLOPT_COOKIE, "DOADFgsjnrSFgsg329gaFGa3ggs9434sgSGS43tsgSHSG35=" . $this->cookie);
+        curl_setopt($ch, CURLOPT_COOKIE, $this->cookie['key'] . '=' . $this->cookie['value']);
         $data = curl_exec($ch);
         $info = curl_getinfo($ch);
         curl_close($ch);
