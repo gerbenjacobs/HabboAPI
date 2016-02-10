@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Current status
+- February 10th, 2016 - v2.0.2 - Changed cookie for JS detection
 - December 26th, 2015 - v2.0.1 - Fix for the cookie needed for Photos
 - December 10th, 2015 - v2.0.0 - Added Photos to API and implemented a Profile entity [(Release notes)](https://github.com/gerbenjacobs/HabboAPI/releases/tag/v2.0.0)
 - December 4th, 2015 - v1.0.7 - Adds new attributes to Room entity
