@@ -4,7 +4,9 @@
  */
 namespace HabboAPI;
 
+use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
 
 /** Class HabboAPI
@@ -54,11 +56,21 @@ class HabboAPI
     /** getPhotos returns all 200 public photos or all the users photos if an id is given
      *
      * @param string|null $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
-     * @return array Array of Photo objects
+     * @return Photo[] Array of Photo objects
      */
     public function getPhotos($id = null)
     {
         return $this->parser->parsePhotos($id);
+    }
+
+    /** getGroup will collect the group info and, if available, the members of said group
+     *
+     * @param $group_id
+     * @return Group
+     */
+    public function getGroup($group_id)
+    {
+        return $this->parser->parseGroup($group_id);
     }
 
 }

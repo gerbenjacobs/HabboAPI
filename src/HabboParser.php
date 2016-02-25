@@ -142,6 +142,34 @@ class HabboParser implements HabboParserInterface
         return $photos;
     }
 
+    public function parseGroup($group_id)
+    {
+        list($data) = $this->_callUrl($this->api_base . '/api/public/groups/' . $group_id, true);
+
+        $group = new Group();
+        $group->parse($data);
+
+        try {
+            list($member_data) = $this->_callUrl($this->api_base . '/api/public/groups/' . $group_id . '/members', true);
+        } catch (Exception $e) {
+            // Can't collect member data
+            $member_data = false;
+        }
+
+        if ($member_data) {
+            /** @var Habbo[] $members */
+            $members = [];
+            foreach ($member_data as $member) {
+                $temp_habbo = new Habbo();
+                $temp_habbo->parse($member);
+                $members[] = $temp_habbo;
+            }
+            $group->setMembers($members);
+        }
+
+        return $group;
+    }
+
     /**
      * Helper function to extract the correct cookie data from Habbo
      * Uses the public photos page as initial example

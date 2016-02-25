@@ -32,7 +32,11 @@ class Habbo implements Entity
         $this->setId($data['uniqueId']);
         $this->setHabboName($data['name']);
         $this->setMotto($data['motto']);
-        $this->setFigureString($data['figureString']);
+        if (isset($data['figureString'])) {
+            $this->setFigureString($data['figureString']);
+        } elseif (isset($data['habboFigure'])) {
+            $this->setFigureString($data['habboFigure']);
+        }
 
         // These could be missing..
         if (isset($data['memberSince'])) {

@@ -6,10 +6,7 @@ use HabboAPI\HabboParser;
 
 class HabboParserTest extends PHPUnit_Framework_TestCase
 {
-    private static $habbo;
-    private static $profile;
-    private static $photos;
-    private static $public_photos;
+    private static $habbo, $profile, $photos, $public_photos, $group, $group_members;
     /** @var HabboParser|PHPUnit_Framework_MockObject_MockObject $habboParserMock */
     private $habboParserMock;
 
@@ -19,6 +16,8 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         self::$profile = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getprofile.json'), true);
         self::$photos = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getphotos.json'), true);
         self::$public_photos = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_public_photos.json'), true);
+        self::$group = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_group.json'), true);
+        self::$group_members = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_group_members.json'), true);
     }
 
     public function setUp()
@@ -106,6 +105,20 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(200, count($photos), "Should contain 200 photos");
         foreach ($photos as $photo) {
             $this->assertInstanceOf('HabboAPI\Entities\Photo', $photo);
+        }
+    }
+
+    public function testParseGroup()
+    {
+        // Replace Habbo Parser mock with static data
+        $this->habboParserMock->expects($this->at(0))->method('_callUrl')->will($this->returnValue(array(self::$group)));
+        $this->habboParserMock->expects($this->at(1))->method('_callUrl')->will($this->returnValue(array(self::$group_members)));
+
+        $group = $this->habboParserMock->parseGroup("g-hhus-fd92759bc932225f663f1521be8ce255");
+
+        $this->assertInstanceOf('HabboAPI\Entities\Group', $group);
+        foreach ($group->getMembers() as $member) {
+            $this->assertInstanceOf('HabboAPI\Entities\Habbo', $member);
         }
     }
 }

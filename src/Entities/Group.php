@@ -12,15 +12,7 @@ namespace HabboAPI\Entities;
 class Group implements Entity
 {
 
-    private $id;
-    private $name;
-    private $description;
-    private $type;
-    private $primaryColour;
-    private $secondaryColour;
-    private $badgeCode;
-    private $roomId;
-    private $isAdmin;
+    private $id, $name, $description, $type, $primaryColour, $secondaryColour, $badgeCode, $roomId, $isAdmin, $members;
 
     /** Parses group info array to \Entities\Group object
      *
@@ -190,6 +182,30 @@ class Group implements Entity
         return $this->type;
     }
 
+    /**
+     * @param mixed $type
+     */
+    protected function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return Habbo[]
+     */
+    public function getMembers()
+    {
+        return $this->members;
+    }
+
+    /**
+     * @param Habbo[] $members
+     */
+    public function setMembers($members)
+    {
+        $this->members = $members;
+    }
+
     /* Cleaner methods */
     public function isAdmin()
     {
@@ -206,11 +222,4 @@ class Group implements Entity
         return $this->getSecondaryColour();
     }
 
-    /**
-     * @param mixed $type
-     */
-    protected function setType($type)
-    {
-        $this->type = $type;
-    }
 }

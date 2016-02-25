@@ -41,7 +41,12 @@ if ($myHabbo->hasProfile()) {
     $myProfile = $profile->setHabbo($myHabbo);
 }
 
+// Get all their photos
 $myPhotos = $habboApi->getPhotos($myHabbo->getId());
+
+// Get extra information about one of their groups
+// Note: This is actually a hardcoded group ID to showcase the parseGroup() endpoint
+$group = $habboApi->getGroup("g-hhus-b0751bd6408cc83a8e046de6949fd747");
 
 // Export as HTML
 $html = [
@@ -167,17 +172,56 @@ if ($myPhotos) {
     <?php if ($myHabbo->hasProfile()): ?>
         <hr>
         <div class="row">
-            <div class="col-md-3">
-                <?php echo $html['badges']; ?>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <?php echo $html['badges']; ?>
+                    </div>
+                    <div class="col-md-6">
+                        <?php echo $html['friends']; ?>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <?php echo $html['friends']; ?>
-            </div>
-            <div class="col-md-3">
-                <?php echo $html['groups']; ?>
-            </div>
-            <div class="col-md-3">
-                <?php echo $html['rooms']; ?>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+                        <?php echo $html['groups']; ?>
+                    </div>
+                    <div class="col-md-6">
+                        <?php echo $html['rooms']; ?>
+                    </div>
+                </div>
+                <?php if ($group): ?>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <img src="https://www.habbo.com/habbo-imaging/badge/<?php echo $group->getBadgeCode(); ?>.gif">
+
+                            <h3>
+                                <span
+                                    style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getPrimaryColor(); ?>;">&nbsp;</span>
+                                <span
+                                    style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getSecondaryColor(); ?>;">&nbsp;</span>
+                                <?php echo $group->getName(); ?>
+                            </h3>
+
+                            <p>[<?php echo $group->getType(); ?>] - <?php echo $group->getDescription(); ?></p>
+                            <p>
+                                <a class="btn btn-default"
+                                   href="https://www.habbo.com/hotel?room=<?php echo $group->getRoomId(); ?>"
+                                   target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                            </p>
+
+                            <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 of them:</p>
+
+                            <ul>
+                                <?php for ($i = 0; $i < 10; $i++): ?>
+                                    <li><?php echo $group->getMembers()[$i]->getHabboName(); ?></li>
+                                <?php endfor; ?>
+                            </ul>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
         </div>
     <?php endif; ?>
