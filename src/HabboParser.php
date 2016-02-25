@@ -158,7 +158,7 @@ class HabboParser implements HabboParserInterface
 
         if ($member_data) {
             /** @var Habbo[] $members */
-            $members = [];
+            $members = array();
             foreach ($member_data as $member) {
                 $temp_habbo = new Habbo();
                 $temp_habbo->parse($member);
