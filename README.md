@@ -34,7 +34,8 @@ See the `example.php` file on how you could use this library.
     $profile = $habboApi->getProfile($koeientemmer);
 ```
 
-## Current status
+## Changelog
+- February 25th, 2016 - v2.1.0 - Added getGroup and group member functionality
 - February 10th, 2016 - v2.0.2 - Changed cookie for JS detection
 - December 26th, 2015 - v2.0.1 - Fix for the cookie needed for Photos
 - December 10th, 2015 - v2.0.0 - Added Photos to API and implemented a Profile entity [(Release notes)](https://github.com/gerbenjacobs/HabboAPI/releases/tag/v2.0.0)
