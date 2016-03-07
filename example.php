@@ -37,8 +37,8 @@ if ($myHabbo->hasProfile()) {
     $myProfile = $habboApi->getProfile($myHabbo->getId());
 } else {
     // This Habbo has a closed home, only show their Habbo object
-    $profile = new Profile();
-    $myProfile = $profile->setHabbo($myHabbo);
+    $myProfile = new Profile();
+    $myProfile->setHabbo($myHabbo);
 }
 
 // Get all their photos
@@ -68,9 +68,11 @@ $html['habbo'] .= '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figu
             alt="' . $habbo->getHabboName() . '" title="' . $habbo->getHabboName() . '" style="float: left; margin-right: 10px;" />';
 $html['habbo'] .= '<h3>' . $habbo->getHabboName() . '</h3>';
 $html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . $habbo->getMemberSince()->toFormattedDateString() . '</em></p>';
+
 if ($habbo->getProfileVisible()) {
     $html['habbo'] .= '<p><a href="https://www.habbo.com/profile/' . $habbo->getHabboName() . '">View home &raquo;</a></p>';
 }
+
 if ($badges = $habbo->getSelectedBadges()) {
     foreach ($badges as $badge) {
         /** @var Badge $badge */
@@ -90,14 +92,16 @@ if ($badges = $habbo->getSelectedBadges()) {
     }
 }
 
-// Show all the other sections as an unordered list
-foreach (array("friends", "groups", "rooms", "badges") as $section) {
-    $html[$section] .= '<ul>';
-    $method_name = sprintf('get%s', ucfirst($section));
-    foreach (call_user_func(array($myProfile, $method_name)) as $object) {
-        $html[$section] .= '<li>' . $object . '</li>'; // uses the __toString() method
+if ($myHabbo->hasProfile()) {
+    // Show all the other sections as an unordered list
+    foreach (array("friends", "groups", "rooms", "badges") as $section) {
+        $html[$section] .= '<ul>';
+        $method_name = sprintf('get%s', ucfirst($section));
+        foreach (call_user_func(array($myProfile, $method_name)) as $object) {
+            $html[$section] .= '<li>' . $object . '</li>'; // uses the __toString() method
+        }
+        $html[$section] .= '</ul>';
     }
-    $html[$section] .= '</ul>';
 }
 
 // Generate the photos
