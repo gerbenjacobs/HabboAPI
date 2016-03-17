@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- March 17th, 2016 - v2.1.1 - Add/fix support for `id` and `uniqueId` in Room objects
 - February 25th, 2016 - v2.1.0 - Added getGroup and group member functionality
 - February 10th, 2016 - v2.0.2 - Changed cookie for JS detection
 - December 26th, 2015 - v2.0.1 - Fix for the cookie needed for Photos
