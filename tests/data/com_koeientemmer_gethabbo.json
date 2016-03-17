@@ -1,7 +1,10 @@
 {
   "uniqueId": "hhus-9cd61b156972c2eb33a145d69918f965",
   "name": "koeientemmer",
-  "figureString": "hr-155-42.hd-195-1.ch-255-76.lg-285-81.sh-290-1408.ha-3430",
+  "figureString": "hd-195-1.ch-215-75.lg-3290-91.sh-905-1408.ha-1015.wa-2001",
+  "motto": "Oldskooler than Dionysus!",
+  "memberSince": "2001-10-06T12:21:53.000+0000",
+  "profileVisible": true,
   "selectedBadges": [
     {
       "badgeIndex": 1,
@@ -33,9 +36,5 @@
       "name": "Master Shifu's Badge of Honour",
       "description": "Kung Fu Panda 2 visited Habbo December 2010"
     }
-  ],
-  "motto": "Oldskooler than Dionysus!",
-  "memberSince": "2001-10-06T12:21:53.000+0000",
-  "profileVisible": true,
-  "lastWebAccess": null
+  ]
 }

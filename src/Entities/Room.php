@@ -15,6 +15,7 @@ use Carbon\Carbon;
 class Room implements Entity
 {
     private $id;
+    private $uniqueId;
     private $name;
     private $description;
     private $creationTime;
@@ -35,6 +36,7 @@ class Room implements Entity
     public function parse($room)
     {
         $this->setId($room['id']);
+        $this->setUniqueId($room['uniqueId']);
         $this->setName($room['name']);
         $this->setDescription($room['description']);
         $this->setMaximumVisitors($room['maximumVisitors']);
@@ -94,11 +96,19 @@ class Room implements Entity
      */
     public function getId()
     {
+        return $this->uniqueId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getOldId()
+    {
         return $this->id;
     }
 
     /**
-     * @param string $id
+     * @param int $id
      */
     protected function setId($id)
     {
@@ -263,5 +273,21 @@ class Room implements Entity
     public function setRating($rating)
     {
         $this->rating = $rating;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUniqueId()
+    {
+        return $this->uniqueId;
+    }
+
+    /**
+     * @param string $uniqueId
+     */
+    public function setUniqueId($uniqueId)
+    {
+        $this->uniqueId = $uniqueId;
     }
 }

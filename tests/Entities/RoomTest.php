@@ -31,6 +31,11 @@ class RoomTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('r-hhus-a091e0f1d891108b49ca7af953386f0f', $this->entity->getId());
     }
 
+    public function testGetOldId()
+    {
+        $this->assertEquals(31159787, $this->entity->getOldId());
+    }
+
     public function testGetName()
     {
         $this->assertEquals('Venice Beach Rollercoaster', $this->entity->getName());

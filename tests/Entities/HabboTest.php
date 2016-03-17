@@ -42,7 +42,7 @@ class HabboTest extends PHPUnit_Framework_TestCase
 
     public function testGetFigureString()
     {
-        $this->assertEquals('hr-155-42.hd-195-1.ch-255-76.lg-285-81.sh-290-1408.ha-3430', $this->habbo->getFigureString());
+        $this->assertEquals('hd-195-1.ch-215-75.lg-3290-91.sh-905-1408.ha-1015.wa-2001', $this->habbo->getFigureString());
     }
 
     public function testGetMotto()

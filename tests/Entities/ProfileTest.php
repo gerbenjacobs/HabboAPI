@@ -68,9 +68,9 @@ class ProfileTest extends \PHPUnit_Framework_TestCase
         $counts = $this->profile->getCounts();
 
         $this->assertEquals(1, $counts['habbo'], "Habbo count should be 1");
-        $this->assertEquals(203, $counts['badges'], "Badges count should be 203");
-        $this->assertEquals(9, $counts['groups'], "Groups count should be 9");
-        $this->assertEquals(147, $counts['friends'], "Friends count should be 147");
+        $this->assertEquals(204, $counts['badges'], "Badges count should be 204");
+        $this->assertEquals(10, $counts['groups'], "Groups count should be 10");
+        $this->assertEquals(146, $counts['friends'], "Friends count should be 146");
         $this->assertEquals(5, $counts['rooms'], "Rooms count should be 5");
     }
 
