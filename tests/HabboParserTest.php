@@ -6,7 +6,7 @@ use HabboAPI\HabboParser;
 
 class HabboParserTest extends PHPUnit_Framework_TestCase
 {
-    private static $habbo, $profile, $photos, $public_photos, $group, $group_members;
+    private static $habbo, $profile, $photos, $public_photos, $group, $group_members, $hotel_maintenance;
     /** @var HabboParser|PHPUnit_Framework_MockObject_MockObject $habboParserMock */
     private $habboParserMock;
 
@@ -18,6 +18,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         self::$public_photos = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_public_photos.json'), true);
         self::$group = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_group.json'), true);
         self::$group_members = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_group_members.json'), true);
+        self::$hotel_maintenance = file_get_contents(dirname(__FILE__) . '/data/hotel_maintenance.html');
     }
 
     public function setUp()
@@ -72,17 +73,6 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('HabboAPI\Entities\Badge', $badges[0]);
     }
 
-    /**
-     * @expectedException Exception
-     */
-    public function testErrorHabbo()
-    {
-        // Replace parseHabbo with static data
-        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->throwException(new Exception('Some kind of exception')));
-
-        $this->habboParserMock->parseHabbo('someHabboNameThatDoesNotExist');
-    }
-
     public function testParseHabboPhotos()
     {
         // Replace Habbo Parser mock with static data
@@ -120,5 +110,45 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         foreach ($group->getMembers() as $member) {
             $this->assertInstanceOf('HabboAPI\Entities\Habbo', $member);
         }
+    }
+    
+    /** @expectedException \HabboAPI\Exceptions\MaintenanceException */
+    public function testMaintenanceException()
+    {
+        HabboParser::throwHabboApiException(self::$hotel_maintenance);
+    }
+    
+    /** @expectedException \HabboAPI\Exceptions\HabboNotFoundException */
+    public function testHabboNotFoundException()
+    {
+        $not_found = '{"error":"not-found"}';
+        HabboParser::throwHabboApiException($not_found);
+    }
+
+    /** @expectedException \HabboAPI\Exceptions\UserInvalidException */
+    public function testUserInvalidException()
+    {
+        $invalid = '{"errors":[{"param":"name","msg":"user.invalid_name","value":"a"}]}';
+        HabboParser::throwHabboApiException($invalid);
+    }
+
+    /** 
+     * @expectedException Exception
+     * @expectedExceptionMessage Unknown HabboAPI exception occurred: An unknown HTML page was returned
+     */
+    public function testSomeHTMLException()
+    {
+        $some_html = '<!DOCTYPE><html><head><title>Fake HTML from Habbo</title></head><body>Sorry, we have failing machines</body></html>';
+        HabboParser::throwHabboApiException($some_html);
+    }
+
+    /**
+     * @expectedException Exception
+     * @expectedExceptionMessage Unknown HabboAPI exception occurred: something we dont recognize
+     */
+    public function testSomeJSONException()
+    {
+        $some_json = '{"error":"something we dont recognize"}';
+        HabboParser::throwHabboApiException($some_json);
     }
 }

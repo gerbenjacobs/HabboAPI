@@ -11,6 +11,9 @@ use HabboAPI\Entities\Habbo;
 use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
 use HabboAPI\Entities\Room;
+use HabboAPI\Exceptions\HabboNotFoundException;
+use HabboAPI\Exceptions\MaintenanceException;
+use HabboAPI\Exceptions\UserInvalidException;
 
 /**
  * Class HabboParser
@@ -213,19 +216,38 @@ class HabboParser implements HabboParserInterface
 
         // If something went wrong..
         if ($info['http_code'] != 200) {
-            throw new Exception($this->_extractError($response), $info['http_code']);
+            self::throwHabboApiException($data);
         }
         return array($response, $info);
     }
 
-    private function _extractError($response)
+    public static function throwHabboApiException($data) 
     {
-        if (isset($response['errors'])) {
-            return $response['errors'][0]['msg'];
-        } else if (isset($response['error'])) {
-            return $response['error'];
+        // Check if data is JSON
+        if ($data[0] == "{") { // Quick 'hack' to see if this could be JSON
+            $json = json_decode($data, true);
+            if (isset($json['errors'])) {
+                if ($json['errors'][0]['msg'] == "user.invalid_name") {
+                    throw new UserInvalidException("The name you supplied appears to be invalid");
+                }
+                $defaultMessage = $json['errors'][0]['msg'];
+            } else if (isset($json['error'])) {
+                if (preg_match('#not-found#', $json['error'])) {
+                    throw new HabboNotFoundException("We can not find the Habbo you're looking for");
+                }
+                $defaultMessage = $json['error'];
+            } else {
+                $defaultMessage = $json;
+            }
         } else {
-            return 'Unknown';
+            // This is probably HTML
+            if (strstr($data, 'maintenance')) {
+                throw new MaintenanceException("Hotel is down for maintenance");
+            }
+
+            $defaultMessage = "An unknown HTML page was returned";
         }
+
+        throw new Exception("Unknown HabboAPI exception occurred: " . $defaultMessage);
     }
 }
