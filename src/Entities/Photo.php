@@ -40,6 +40,9 @@ class Photo implements Entity
         return $this->getUrl();
     }
 
+    /**
+     * @return string
+     */
     public function getId()
     {
         return $this->id;
@@ -70,7 +73,7 @@ class Photo implements Entity
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getTags()
     {
@@ -78,7 +81,7 @@ class Photo implements Entity
     }
 
     /**
-     * @param array $tags
+     * @param string[] $tags
      */
     public function setTags($tags)
     {
@@ -174,7 +177,7 @@ class Photo implements Entity
     }
 
     /**
-     * @param Carbon $takenOn
+     * @param int $takenOn Takes in a timestamp with milliseconds
      */
     public function setTakenOn($takenOn)
     {
@@ -200,7 +203,7 @@ class Photo implements Entity
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getLikes()
     {
@@ -208,7 +211,7 @@ class Photo implements Entity
     }
 
     /**
-     * @param array $likes
+     * @param string[] $likes
      */
     public function setLikes($likes)
     {

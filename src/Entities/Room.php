@@ -132,7 +132,7 @@ class Room implements Entity
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getTags()
     {
@@ -140,7 +140,7 @@ class Room implements Entity
     }
 
     /**
-     * @param array $tags
+     * @param string[] $tags
      */
     public function setTags($tags)
     {
@@ -148,7 +148,7 @@ class Room implements Entity
     }
 
     /**
-     * @return array
+     * @return string[]
      */
     public function getCategories()
     {
@@ -156,7 +156,7 @@ class Room implements Entity
     }
 
     /**
-     * @param array $categories
+     * @param string[] $categories
      */
     public function setCategories($categories)
     {
@@ -188,7 +188,7 @@ class Room implements Entity
     }
 
     /**
-     * @param Carbon $creationTime
+     * @param string $creationTime
      */
     public function setCreationTime($creationTime)
     {

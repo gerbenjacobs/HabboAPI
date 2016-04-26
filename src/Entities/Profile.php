@@ -33,6 +33,9 @@ class Profile implements Entity
         return 'Profile of ' . $this->getHabbo()->getHabboName();
     }
 
+    /**
+     * @return string
+     */
     public function getId()
     {
         return $this->getHabbo()->getId();
@@ -55,7 +58,7 @@ class Profile implements Entity
     }
 
     /**
-     * @return array
+     * @return Habbo[]
      */
     public function getFriends()
     {
@@ -71,7 +74,7 @@ class Profile implements Entity
     }
 
     /**
-     * @return array
+     * @return Group[]
      */
     public function getGroups()
     {
@@ -87,7 +90,7 @@ class Profile implements Entity
     }
 
     /**
-     * @return array
+     * @return Room[]
      */
     public function getRooms()
     {
@@ -103,7 +106,7 @@ class Profile implements Entity
     }
 
     /**
-     * @return array
+     * @return Badge[]
      */
     public function getBadges()
     {
@@ -118,6 +121,11 @@ class Profile implements Entity
         $this->badges[] = $badge;
     }
 
+    /**
+     * getCounts is a small helper function to give you
+     * an array of each entity in the profile and its count
+     * @return array
+     */
     public function getCounts()
     {
         return array(

@@ -17,7 +17,7 @@ class Badge implements Entity
     private $description;
 
     /**
-     * Parses badge info array to \Entities\Badge object
+     * Parses badge info array to Badge object
      * @param array $badge
      */
     public function parse($badge)
@@ -36,7 +36,7 @@ class Badge implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getCode()
     {
@@ -44,7 +44,7 @@ class Badge implements Entity
     }
 
     /**
-     * @param mixed $code
+     * @param string $code
      */
     protected function setCode($code)
     {
@@ -52,7 +52,7 @@ class Badge implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {
@@ -60,7 +60,7 @@ class Badge implements Entity
     }
 
     /**
-     * @param mixed $name
+     * @param string $name
      */
     protected function setName($name)
     {
@@ -68,7 +68,7 @@ class Badge implements Entity
     }
 
     /**
-     * @return mixed
+     * @return int
      */
     public function getBadgeIndex()
     {
@@ -76,7 +76,7 @@ class Badge implements Entity
     }
 
     /**
-     * @param mixed $badgeIndex
+     * @param int $badgeIndex
      */
     protected function setBadgeIndex($badgeIndex)
     {
@@ -84,7 +84,7 @@ class Badge implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDescription()
     {
@@ -92,13 +92,16 @@ class Badge implements Entity
     }
 
     /**
-     * @param mixed $description
+     * @param string $description
      */
     protected function setDescription($description)
     {
         $this->description = $description;
     }
 
+    /**
+     * @return string
+     */
     public function getId()
     {
         return $this->getCode();

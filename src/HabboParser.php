@@ -223,6 +223,11 @@ class HabboParser implements HabboParserInterface
 
     public static function throwHabboApiException($data) 
     {
+        // Do we find 'maintenance' anywhere?
+        if (strstr($data, 'maintenance')) {
+            throw new MaintenanceException("Hotel is down for maintenance");
+        }
+        
         // Check if data is JSON
         if ($data[0] == "{") { // Quick 'hack' to see if this could be JSON
             $json = json_decode($data, true);
@@ -240,11 +245,6 @@ class HabboParser implements HabboParserInterface
                 $defaultMessage = $json;
             }
         } else {
-            // This is probably HTML
-            if (strstr($data, 'maintenance')) {
-                throw new MaintenanceException("Hotel is down for maintenance");
-            }
-
             $defaultMessage = "An unknown HTML page was returned";
         }
 

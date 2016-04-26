@@ -111,7 +111,7 @@ class Group implements Entity
     }
 
     /**
-     * @return mixed
+     * @return boolean
      */
     public function getIsAdmin()
     {
@@ -119,7 +119,7 @@ class Group implements Entity
     }
 
     /**
-     * @param mixed $isAdmin
+     * @param boolean $isAdmin
      */
     protected function setIsAdmin($isAdmin)
     {
@@ -127,7 +127,7 @@ class Group implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getPrimaryColour()
     {
@@ -135,7 +135,7 @@ class Group implements Entity
     }
 
     /**
-     * @param mixed $primaryColour
+     * @param string $primaryColour
      */
     protected function setPrimaryColour($primaryColour)
     {
@@ -143,7 +143,7 @@ class Group implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getRoomId()
     {
@@ -151,7 +151,7 @@ class Group implements Entity
     }
 
     /**
-     * @param mixed $roomId
+     * @param string $roomId
      */
     protected function setRoomId($roomId)
     {
@@ -159,7 +159,7 @@ class Group implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getSecondaryColour()
     {
@@ -167,7 +167,7 @@ class Group implements Entity
     }
 
     /**
-     * @param mixed $secondaryColour
+     * @param string $secondaryColour
      */
     protected function setSecondaryColour($secondaryColour)
     {
@@ -175,7 +175,7 @@ class Group implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getType()
     {
@@ -183,7 +183,7 @@ class Group implements Entity
     }
 
     /**
-     * @param mixed $type
+     * @param string $type
      */
     protected function setType($type)
     {

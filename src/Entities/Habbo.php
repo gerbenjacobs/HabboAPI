@@ -70,7 +70,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getHabboName()
     {
@@ -78,7 +78,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param mixed $habboName
+     * @param string $habboName
      */
     protected function setHabboName($habboName)
     {
@@ -86,7 +86,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getFigureString()
     {
@@ -94,7 +94,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param mixed $figureString
+     * @param string $figureString
      */
     protected function setFigureString($figureString)
     {
@@ -102,7 +102,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getId()
     {
@@ -110,7 +110,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param mixed $id
+     * @param string $id
      */
     protected function setId($id)
     {
@@ -126,7 +126,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param Carbon $memberSince
+     * @param string $memberSince 
      */
     protected function setMemberSince($memberSince)
     {
@@ -134,7 +134,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getMotto()
     {
@@ -142,7 +142,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param mixed $motto
+     * @param string $motto
      */
     protected function setMotto($motto)
     {
@@ -150,7 +150,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return mixed
+     * @return boolean
      */
     public function getProfileVisible()
     {
@@ -158,7 +158,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param mixed $profileVisible
+     * @param boolean $profileVisible
      */
     protected function setProfileVisible($profileVisible)
     {
@@ -166,7 +166,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return array of HabboAPI\Entities\Badge objects
+     * @return Badge[] 
      */
     public function getSelectedBadges()
     {
