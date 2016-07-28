@@ -91,10 +91,11 @@ class SystemTest extends PHPUnit_Framework_TestCase
         $rooms = $profile->getRooms();
         /** @var \HabboAPI\Entities\Room $room */
         $room = $rooms[0];
+        $categories = $room->getCategories(); // tmp var for php 5.3
         $this->assertEquals('r-hhus-7c58e2a91120887a52f3916b13085f19', $room->getId());
         $this->assertEquals('Reading', $room->getName());
         $this->assertEquals('A ghust of wind, whispering voices.', $room->getDescription());
-        $this->assertEquals('navigator.flatcategory.global.HELP', $room->getCategories()[0]);
+        $this->assertEquals('navigator.flatcategory.global.HELP', $categories[0]);
         $this->assertEquals('25', $room->getMaximumVisitors());
         $this->assertEquals('hhus-e6d805c82fcd7f4717f4bff5f9f437ae', $room->getOwnerUniqueId());
         $this->assertEquals(Carbon::parse("2013-10-15 16:58:03"), $room->getCreationTime());
