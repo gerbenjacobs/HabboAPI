@@ -231,11 +231,11 @@ class HabboParser implements HabboParserInterface
         // Check if data is JSON
         if ($data[0] == "{") { // Quick 'hack' to see if this could be JSON
             $json = json_decode($data, true);
+            $defaultMessage = $json['errors'][0]['msg'];
             if (isset($json['errors'])) {
-                if ($json['errors'][0]['msg'] == "user.invalid_name") {
+                if ($defaultMessage == "user.invalid_name" || $defaultMessage == "not-found") {
                     throw new UserInvalidException("The name you supplied appears to be invalid");
                 }
-                $defaultMessage = $json['errors'][0]['msg'];
             } else if (isset($json['error'])) {
                 if (preg_match('#not-found#', $json['error'])) {
                     throw new HabboNotFoundException("We can not find the Habbo you're looking for");
