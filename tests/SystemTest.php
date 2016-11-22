@@ -24,7 +24,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
     public function testTheSystem()
     {
         // Don't run system tests on Travis
-        if (getenv('TRAVIS') === true) {
+        if (getenv('TRAVIS') == "true") {
             $this->markTestSkipped('This test should not run if on Travis.');
         }
 
@@ -103,7 +103,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
         // Test the counts
         $counts = $profile->getCounts();
         $this->assertEquals(1, $counts['habbo']);
-        $this->assertEquals(14, $counts['badges']);
+        $this->assertEquals(15, $counts['badges']);
         $this->assertEquals(1, $counts['friends']);
         $this->assertEquals(1, $counts['groups']);
         $this->assertEquals(2, $counts['rooms']);
