@@ -34,7 +34,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
         $this->assertEquals("hr-893-42.hd-180-14.ch-215-73.lg-270-66.sh-300-66.ha-1014", $habbo->getFigureString());
         $this->assertEquals("VladimirSartini", $habbo->getHabboName());
         $this->assertEquals("hhus-e6d805c82fcd7f4717f4bff5f9f437ae", $habbo->getId());
-        $this->assertEquals(Carbon::parse("2013-10-15T16:58:03"), $habbo->getMemberSince());
+        $this->assertEquals("2013-10-15 16:58:03", $habbo->getMemberSince()->toDateTimeString());
         $this->assertEquals("Hocus pocus!", $habbo->getMotto());
         $this->assertEquals(true, $habbo->getProfileVisible());
 
@@ -98,7 +98,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('navigator.flatcategory.global.HELP', $categories[0]);
         $this->assertEquals('25', $room->getMaximumVisitors());
         $this->assertEquals('hhus-e6d805c82fcd7f4717f4bff5f9f437ae', $room->getOwnerUniqueId());
-        $this->assertEquals(Carbon::parse("2013-10-15 16:58:03"), $room->getCreationTime());
+        $this->assertEquals("2013-10-15 16:58:03", $room->getCreationTime()->toDateTimeString());
 
         // Test the counts
         $counts = $profile->getCounts();

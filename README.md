@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/gerbenjacobs/HabboAPI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gerbenjacobs/HabboAPI) 
 # HabboAPI
 This PHP wrapper library is used to collect data from the _undcoumented_ Habbo API.  
-The project requires PHP 5.3 and uses the Composer autoloader and PSR-4 standard.
+The project requires PHP 5.3 or higher and uses the Composer autoloader and PSR-4 standard.
 
 See the `example.php` file on how you could use this library.
 
