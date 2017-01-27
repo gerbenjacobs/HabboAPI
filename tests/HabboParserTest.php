@@ -26,7 +26,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->habboParserMock = $this->getMockBuilder('\HabboAPI\HabboParser')
             ->setMethods(array('_callUrl'))
             ->getMock();
-        $this->habboParserMock->cookie = "some-fake-cookie";
+        $this->habboParserMock->setCookie("some-fake-cookie");
     }
 
     /**
@@ -115,21 +115,21 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
     /** @expectedException \HabboAPI\Exceptions\MaintenanceException */
     public function testMaintenanceException()
     {
-        HabboParser::throwHabboApiException(self::$hotel_maintenance);
+        HabboParser::throwHabboAPIException(self::$hotel_maintenance);
     }
     
     /** @expectedException \HabboAPI\Exceptions\HabboNotFoundException */
     public function testHabboNotFoundException()
     {
         $not_found = '{"error":"not-found"}';
-        HabboParser::throwHabboApiException($not_found);
+        HabboParser::throwHabboAPIException($not_found);
     }
 
     /** @expectedException \HabboAPI\Exceptions\UserInvalidException */
     public function testUserInvalidException()
     {
         $invalid = '{"errors":[{"param":"name","msg":"user.invalid_name","value":"a"}]}';
-        HabboParser::throwHabboApiException($invalid);
+        HabboParser::throwHabboAPIException($invalid);
     }
 
     /** 
@@ -139,7 +139,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
     public function testSomeHTMLException()
     {
         $some_html = '<!DOCTYPE><html><head><title>Fake HTML from Habbo</title></head><body>Sorry, we have failing machines</body></html>';
-        HabboParser::throwHabboApiException($some_html);
+        HabboParser::throwHabboAPIException($some_html);
     }
 
     /**
@@ -149,6 +149,6 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
     public function testSomeJSONException()
     {
         $some_json = '{"error":"something we dont recognize"}';
-        HabboParser::throwHabboApiException($some_json);
+        HabboParser::throwHabboAPIException($some_json);
     }
 }

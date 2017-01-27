@@ -24,6 +24,8 @@ use HabboAPI\Exceptions\UserInvalidException;
  */
 class HabboParser implements HabboParserInterface
 {
+    const VERSION = "2.2.1";
+
     /**
      * Base URL for the Habbo API
      *
@@ -33,7 +35,7 @@ class HabboParser implements HabboParserInterface
 
     private $hotel;
 
-    public $cookie;
+    private $cookie;
 
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
@@ -73,10 +75,10 @@ class HabboParser implements HabboParserInterface
     /**
      * Parses the Habbo Profile endpoints
      *
-     * Return an associative array including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
+     * Return a Profile object including a Habbo entity and 4 arrays with Group, Friend, Room, Badge entities
      *
      * @param string $id
-     * @return array
+     * @return Profile
      */
     public function parseProfile($id)
     {
@@ -123,6 +125,13 @@ class HabboParser implements HabboParserInterface
         return $profile;
     }
 
+    /**
+     * parsePhotos will collect the public photos for an HHID
+     * If no $id is given, it will grab the latest photos of the entire hotel
+     *
+     * @param int|null $id
+     * @return Photo[]
+     */
     public function parsePhotos($id = null)
     {
         // Get cookie first
@@ -145,6 +154,13 @@ class HabboParser implements HabboParserInterface
         return $photos;
     }
 
+    /**
+     * parseGroup will return a Group object based on a group ID.
+     * It will also contain the members, as an array of Habbo objects.
+     *
+     * @param $group_id
+     * @return Group
+     */
     public function parseGroup($group_id)
     {
         list($data) = $this->_callUrl($this->api_base . '/api/public/groups/' . $group_id, true);
@@ -200,7 +216,7 @@ class HabboParser implements HabboParserInterface
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v2.2.0');
+        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v' . self::VERSION);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -216,12 +232,12 @@ class HabboParser implements HabboParserInterface
 
         // If something went wrong..
         if ($info['http_code'] != 200) {
-            self::throwHabboApiException($data);
+            self::throwHabboAPIException($data);
         }
         return array($response, $info);
     }
 
-    public static function throwHabboApiException($data) 
+    public static function throwHabboAPIException($data)
     {
         // Do we find 'maintenance' anywhere?
         if (strstr($data, 'maintenance')) {
@@ -249,5 +265,15 @@ class HabboParser implements HabboParserInterface
         }
 
         throw new Exception("Unknown HabboAPI exception occurred: " . $defaultMessage);
+    }
+
+    /**
+     * setCookie allows you to set the cookie from outside the class
+     * Mostly a helper class for the tests
+     *
+     * @param string $cookie
+     */
+    public function setCookie($cookie) {
+        $this->cookie = $cookie;
     }
 }
