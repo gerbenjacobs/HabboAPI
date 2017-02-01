@@ -6,7 +6,7 @@ use HabboAPI\HabboParser;
 
 class HabboParserTest extends PHPUnit_Framework_TestCase
 {
-    private static $habbo, $profile, $photos, $public_photos, $group, $group_members, $hotel_maintenance;
+    private static $habbo, $profile, $photos, $public_photos, $group, $group_members, $hotel_maintenance, $achievements;
     /** @var HabboParser|PHPUnit_Framework_MockObject_MockObject $habboParserMock */
     private $habboParserMock;
 
@@ -19,6 +19,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         self::$group = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_group.json'), true);
         self::$group_members = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_group_members.json'), true);
         self::$hotel_maintenance = file_get_contents(dirname(__FILE__) . '/data/hotel_maintenance.html');
+        self::$achievements = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getachievements.json'), true);
     }
 
     public function setUp()
@@ -109,6 +110,18 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->assertInstanceOf('HabboAPI\Entities\Group', $group);
         foreach ($group->getMembers() as $member) {
             $this->assertInstanceOf('HabboAPI\Entities\Habbo', $member);
+        }
+    }
+
+    public function testParseAchievements()
+    {
+        $this->habboParserMock->expects($this->once())->method('_callUrl')->will($this->returnValue(array(self::$achievements)));
+
+        $achievements = $this->habboParserMock->parseAchievements("hhus-9cd61b156972c2eb33a145d69918f965");
+
+        $this->assertEquals(44, count($achievements), "Should contain 44 achievements");
+        foreach ($achievements as $achievement) {
+            $this->assertInstanceOf('HabboAPI\Entities\Achievement', $achievement);
         }
     }
     

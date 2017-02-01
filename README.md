@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- February 1st, 2017 - v2.3.0 - Added `getAchievements()` to API, returns a list of a Habbos achievements including current level and score
 - April 4th, 2016 - v2.2.0 - Added better exception handling, you can now catch `MaintenanceException`, `HabboNotFoundException` and `UserInvalidException`
 - March 17th, 2016 - v2.1.1 - Add/fix support for `id` and `uniqueId` in Room objects
 - February 25th, 2016 - v2.1.0 - Added getGroup and group member functionality

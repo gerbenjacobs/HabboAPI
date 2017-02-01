@@ -5,6 +5,7 @@
 namespace HabboAPI;
 
 use Exception;
+use HabboAPI\Entities\Achievement;
 use HabboAPI\Entities\Badge;
 use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
@@ -24,7 +25,7 @@ use HabboAPI\Exceptions\UserInvalidException;
  */
 class HabboParser implements HabboParserInterface
 {
-    const VERSION = "2.2.1";
+    const VERSION = "2.3.0";
 
     /**
      * Base URL for the Habbo API
@@ -189,6 +190,28 @@ class HabboParser implements HabboParserInterface
         return $group;
     }
 
+    /** parseAchievements will return a list of achievements belonging to a Habbo
+     * @param $id
+     * @return Achievement[]
+     */
+    public function parseAchievements($id)
+    {
+        $achievements = array();
+
+        list($data) = $this->_callUrl($this->api_base . '/api/public/achievements/' . $id, true);
+
+        if ($data) {
+            foreach ($data as $ach) {
+                $tmp_ach = new Achievement();
+                $tmp_ach->parse($ach);
+                $achievements[] = $tmp_ach;
+                unset($tmp_ach);
+            }
+        }
+
+        return $achievements;
+    }
+
     /**
      * Helper function to extract the correct cookie data from Habbo
      * Uses the public photos page as initial example
@@ -243,7 +266,7 @@ class HabboParser implements HabboParserInterface
         if (strstr($data, 'maintenance')) {
             throw new MaintenanceException("Hotel is down for maintenance");
         }
-        
+
         // Check if data is JSON
         if ($data[0] == "{") { // Quick 'hack' to see if this could be JSON
             $json = json_decode($data, true);
@@ -273,7 +296,8 @@ class HabboParser implements HabboParserInterface
      *
      * @param string $cookie
      */
-    public function setCookie($cookie) {
+    public function setCookie($cookie)
+    {
         $this->cookie = $cookie;
     }
 }

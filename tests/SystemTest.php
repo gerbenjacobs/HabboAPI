@@ -107,6 +107,25 @@ class SystemTest extends PHPUnit_Framework_TestCase
         $this->assertEquals(1, $counts['friends']);
         $this->assertEquals(1, $counts['groups']);
         $this->assertEquals(2, $counts['rooms']);
+
+        // Test Achievements
+        $achievements = self::$api->getAchievements($habbo->getId());
+
+        $found = false;
+        foreach ($achievements as $ach) {
+            if ($ach->getId() == 51) {
+                $found = true;
+                $this->assertEquals("RoomDecoFurniTypeCount", $ach->getName());
+                $this->assertEquals("room_builder", $ach->getCategory());
+
+                $this->assertEquals(9, $ach->getScore());
+                $this->assertEquals(0, $ach->getLevel());
+
+                break;
+            }
+        }
+
+        $this->assertTrue($found);
     }
 
 }

@@ -10,4 +10,6 @@ interface HabboParserInterface
     public function parseProfile($id);
 
     public function parsePhotos($id = null);
+
+    public function parseAchievements($id);
 }

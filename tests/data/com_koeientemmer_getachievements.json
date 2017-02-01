@@ -1,0 +1,398 @@
+[
+  {
+    "achievement": {
+      "id": 3,
+      "name": "EmailVerification",
+      "category": "identity"
+    },
+    "level": 1,
+    "score": 0
+  },
+  {
+    "achievement": {
+      "id": 4,
+      "name": "Login",
+      "category": "identity"
+    },
+    "level": 1,
+    "score": 2
+  },
+  {
+    "achievement": {
+      "id": 6,
+      "name": "AvatarLooks",
+      "category": "identity"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 8,
+      "name": "RoomEntry",
+      "category": "explore"
+    },
+    "level": 6,
+    "score": 343
+  },
+  {
+    "achievement": {
+      "id": 10,
+      "name": "HappyHour",
+      "category": "social"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 11,
+      "name": "RegistrationDuration",
+      "category": "identity"
+    },
+    "level": 20,
+    "score": 3895
+  },
+  {
+    "achievement": {
+      "id": 14,
+      "name": "DailyHotelPresence",
+      "category": "identity"
+    },
+    "level": 0,
+    "score": 6
+  },
+  {
+    "achievement": {
+      "id": 17,
+      "name": "RespectEarned",
+      "category": "social"
+    },
+    "level": 5,
+    "score": 271
+  },
+  {
+    "achievement": {
+      "id": 18,
+      "name": "RespectGiven",
+      "category": "social"
+    },
+    "level": 8,
+    "score": 247
+  },
+  {
+    "achievement": {
+      "id": 19,
+      "name": "AllTimeHotelPresence",
+      "category": "identity"
+    },
+    "level": 10,
+    "score": 7127
+  },
+  {
+    "achievement": {
+      "id": 23,
+      "name": "PetLover",
+      "category": "pets"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 24,
+      "name": "PetLevelUp",
+      "category": "pets"
+    },
+    "level": 3,
+    "score": 14
+  },
+  {
+    "achievement": {
+      "id": 25,
+      "name": "PetFeeding",
+      "category": "pets"
+    },
+    "level": 2,
+    "score": 1084
+  },
+  {
+    "achievement": {
+      "id": 26,
+      "name": "PetRespectGiver",
+      "category": "pets"
+    },
+    "level": 9,
+    "score": 316
+  },
+  {
+    "achievement": {
+      "id": 27,
+      "name": "PetRespectReceiver",
+      "category": "pets"
+    },
+    "level": 8,
+    "score": 342
+  },
+  {
+    "achievement": {
+      "id": 29,
+      "name": "GiftGiver",
+      "category": "social"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 30,
+      "name": "GiftReceiver",
+      "category": "social"
+    },
+    "level": 2,
+    "score": 6
+  },
+  {
+    "achievement": {
+      "id": 33,
+      "name": "BattleBallTilesLocked",
+      "category": "games"
+    },
+    "level": 2,
+    "score": 68
+  },
+  {
+    "achievement": {
+      "id": 35,
+      "name": "GamePlayerExperience",
+      "category": "games"
+    },
+    "level": 3,
+    "score": 495
+  },
+  {
+    "achievement": {
+      "id": 36,
+      "name": "EsA",
+      "category": "games"
+    },
+    "level": 2,
+    "score": 8
+  },
+  {
+    "achievement": {
+      "id": 39,
+      "name": "TagC",
+      "category": "explore"
+    },
+    "level": 3,
+    "score": 23
+  },
+  {
+    "achievement": {
+      "id": 47,
+      "name": "RbTagC",
+      "category": "explore"
+    },
+    "level": 2,
+    "score": 12
+  },
+  {
+    "achievement": {
+      "id": 50,
+      "name": "RoomDecoFurniCount",
+      "category": "room_builder"
+    },
+    "level": 11,
+    "score": 18
+  },
+  {
+    "achievement": {
+      "id": 51,
+      "name": "RoomDecoFurniTypeCount",
+      "category": "room_builder"
+    },
+    "level": 9,
+    "score": 13
+  },
+  {
+    "achievement": {
+      "id": 52,
+      "name": "RoomDecoHosting",
+      "category": "room_builder"
+    },
+    "level": 10,
+    "score": 6621
+  },
+  {
+    "achievement": {
+      "id": 53,
+      "name": "RoomDecoFloor",
+      "category": "room_builder"
+    },
+    "level": 1,
+    "score": 3
+  },
+  {
+    "achievement": {
+      "id": 54,
+      "name": "RoomDecoLandscape",
+      "category": "room_builder"
+    },
+    "level": 0,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 55,
+      "name": "RoomDecoWallpaper",
+      "category": "room_builder"
+    },
+    "level": 1,
+    "score": 3
+  },
+  {
+    "achievement": {
+      "id": 58,
+      "name": "NotesReceived",
+      "category": "social"
+    },
+    "level": 1,
+    "score": 4
+  },
+  {
+    "achievement": {
+      "id": 67,
+      "name": "BattleBallWinner",
+      "category": "games"
+    },
+    "level": 2,
+    "score": 182
+  },
+  {
+    "achievement": {
+      "id": 68,
+      "name": "BattleBallPlayer",
+      "category": "games"
+    },
+    "level": 5,
+    "score": 1021
+  },
+  {
+    "achievement": {
+      "id": 80,
+      "name": "HorseJumping",
+      "category": "pets"
+    },
+    "level": 0,
+    "score": 44
+  },
+  {
+    "achievement": {
+      "id": 81,
+      "name": "HorseConsecutiveJumpsCount",
+      "category": "pets"
+    },
+    "level": 3,
+    "score": 0
+  },
+  {
+    "achievement": {
+      "id": 101,
+      "name": "MonsterPlantTreater",
+      "category": "explore"
+    },
+    "level": 2,
+    "score": 33
+  },
+  {
+    "achievement": {
+      "id": 125,
+      "name": "SafetyQuizGraduate",
+      "category": "identity"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 129,
+      "name": "RoomCompetitionVoter",
+      "category": "explore"
+    },
+    "level": 1,
+    "score": 3
+  },
+  {
+    "achievement": {
+      "id": 142,
+      "name": "FriendListSize",
+      "category": "social"
+    },
+    "level": 5,
+    "score": 145
+  },
+  {
+    "achievement": {
+      "id": 143,
+      "name": "Citizenship",
+      "category": "identity"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 195,
+      "name": "BuildersClub",
+      "category": "identity"
+    },
+    "level": 1,
+    "score": 10
+  },
+  {
+    "achievement": {
+      "id": 196,
+      "name": "RoomDecoBC",
+      "category": "room_builder"
+    },
+    "level": 5,
+    "score": 40
+  },
+  {
+    "achievement": {
+      "id": 204,
+      "name": "ViciousViking",
+      "category": "explore"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 206,
+      "name": "SelfModDoorModeSeen",
+      "category": "tools"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 208,
+      "name": "SelfModChatScrollSpeedSeen",
+      "category": "tools"
+    },
+    "level": 1,
+    "score": 1
+  },
+  {
+    "achievement": {
+      "id": 211,
+      "name": "SelfModIgnoreSeen",
+      "category": "tools"
+    },
+    "level": 1,
+    "score": 1
+  }
+]

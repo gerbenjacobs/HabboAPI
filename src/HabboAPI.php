@@ -8,6 +8,7 @@ use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
 use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
+use HabboAPI\Entities\Achievement;
 
 /** Class HabboAPI
  *
@@ -73,4 +74,12 @@ class HabboAPI
         return $this->parser->parseGroup($group_id);
     }
 
+    /** getAchievements returns a Habbo's achievements
+     * @param string $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
+     * @return Achievement[]
+     */
+    public function getAchievements($id)
+    {
+        return $this->parser->parseAchievements($id);
+    }
 }
