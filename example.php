@@ -26,7 +26,7 @@ try {
         <p>Try to catch this exception gracefully in your application!</p>
         <p>[' . $e->getCode() . '] ' . $e->getMessage() . '</p>
         <hr>
-        ' . $e->getTraceAsString() . '
+        ' . nl2br($e->getTraceAsString()) . '
     ';
     exit();
 }

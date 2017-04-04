@@ -80,6 +80,7 @@ class HabboParser implements HabboParserInterface
      *
      * @param string $id
      * @return Profile
+     * @throws Exception
      */
     public function parseProfile($id)
     {
@@ -132,6 +133,7 @@ class HabboParser implements HabboParserInterface
      *
      * @param int|null $id
      * @return Photo[]
+     * @throws Exception
      */
     public function parsePhotos($id = null)
     {
@@ -161,6 +163,7 @@ class HabboParser implements HabboParserInterface
      *
      * @param $group_id
      * @return Group
+     * @throws Exception
      */
     public function parseGroup($group_id)
     {
@@ -193,6 +196,7 @@ class HabboParser implements HabboParserInterface
     /** parseAchievements will return a list of achievements belonging to a Habbo
      * @param $id
      * @return Achievement[]
+     * @throws Exception
      */
     public function parseAchievements($id)
     {
@@ -215,6 +219,7 @@ class HabboParser implements HabboParserInterface
     /**
      * Helper function to extract the correct cookie data from Habbo
      * Uses the public photos page as initial example
+     * @throws Exception
      */
     private function _getCookie()
     {
