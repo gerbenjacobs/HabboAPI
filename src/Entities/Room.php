@@ -3,12 +3,13 @@
  * The entitymodel for a Room object
  */
 namespace HabboAPI\Entities;
+
 use Carbon\Carbon;
 
 /**
  * Class Room
  *
- * The model for a Habbo object
+ * The model for a Room object
  *
  * @package HabboAPI\Entities
  */
@@ -19,6 +20,7 @@ class Room implements Entity
     private $name;
     private $description;
     private $creationTime;
+    private $habboGroupId;
     private $maximumVisitors;
     private $tags;
     private $showOwnerName;
@@ -51,6 +53,10 @@ class Room implements Entity
 
         if (isset($room['creationTime'])) {
             $this->setCreationTime($room['creationTime']);
+        }
+
+        if (isset($room['habboGroupId'])) {
+            $this->setGroupId($room['habboGroupId']);
         }
     }
 
@@ -289,5 +295,21 @@ class Room implements Entity
     public function setUniqueId($uniqueId)
     {
         $this->uniqueId = $uniqueId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getGroupId()
+    {
+        return $this->habboGroupId;
+    }
+
+    /**
+     * @param string $habboGroupId
+     */
+    public function setGroupId($habboGroupId)
+    {
+        $this->habboGroupId = $habboGroupId;
     }
 }

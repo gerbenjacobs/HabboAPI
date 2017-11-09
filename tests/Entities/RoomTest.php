@@ -107,4 +107,16 @@ class RoomTest extends \PHPUnit_Framework_TestCase
             $this->assertInstanceOf('HabboAPI\Entities\Room', $entity);
         }
     }
+
+    public function testGroupId()
+    {
+        // expect room index 0 to be empty
+        $this->assertEquals("", $this->entity->getGroupId());
+
+        $otherRoom = new Room();
+        $otherRoom->parse(self::$data['rooms'][3]);
+
+        // room index 3 however, should be filled
+        $this->assertEquals("g-hhus-c86db765b12d3146dde2495d19510cf4", $otherRoom->getGroupId());
+    }
 }
