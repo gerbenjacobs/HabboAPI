@@ -1,7 +1,6 @@
 <?php
 namespace HabboAPI\Entities;
 
-
 interface Entity
 {
     public function parse($data);
@@ -9,4 +8,4 @@ interface Entity
     public function __toString();
 
     public function getId();
-} 
+}

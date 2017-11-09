@@ -4,14 +4,15 @@
   "keywords": [
     "habbo",
     "api",
-    "wrapper"
+    "wrapper",
+    "habbowidgets"
   ],
   "license": "MIT",
   "authors": [
     {
       "name": "Gerben Jacobs",
       "email": "gerben@habbies.nl",
-      "homepage": "http://www.habbies.nl",
+      "homepage": "https://www.habbowidgets.com",
       "role": "Developer"
     }
   ],

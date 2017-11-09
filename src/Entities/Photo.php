@@ -1,7 +1,8 @@
 <?php
-
+/**
+ * The entity model for a Photo object
+ */
 namespace HabboAPI\Entities;
-
 
 use Carbon\Carbon;
 
@@ -217,5 +218,4 @@ class Photo implements Entity
     {
         $this->likes = $likes;
     }
-
 }

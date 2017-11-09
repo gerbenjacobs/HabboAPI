@@ -3,12 +3,12 @@
 [![Join the chat at https://gitter.im/gerbenjacobs/HabboAPI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gerbenjacobs/HabboAPI) 
 # HabboAPI
 This PHP wrapper library is used to collect data from the _undcoumented_ Habbo API.  
-The project requires PHP 5.3 or higher and uses the Composer autoloader and PSR-4 standard.
+The project requires PHP 5.4 or higher and uses the Composer autoloader and PSR-4 standard.
 
 See the `example.php` file on how you could use this library.
 
 ## How to use it
-1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your package.json file: `"gerbenjacobs/habbo-api": "v2.*"`
+1. Add [the Composer package](https://packagist.org/packages/gerbenjacobs/habbo-api) to your project by running `composer require gerbenjacobs/habbo-api`
 2. On the page you want to use it add `include 'vendor/autoload.php'`
 3. Create a HabboParser and construct it with the Habbo domain extension "com", "com.br", "de" etc.
 4. Create a HabboAPI instance and inject the HabboParser in the constructor
@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- November 9th, 2017 - v2.4.0 - Added `getGroupId()` to Room entities, but only if that data exists
 - February 1st, 2017 - v2.3.0 - Added `getAchievements()` to API, returns a list of a Habbos achievements including current level and score
 - April 4th, 2016 - v2.2.0 - Added better exception handling, you can now catch `MaintenanceException`, `HabboNotFoundException` and `UserInvalidException`
 - March 17th, 2016 - v2.1.1 - Add/fix support for `id` and `uniqueId` in Room objects

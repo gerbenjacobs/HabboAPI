@@ -127,7 +127,7 @@ if ($myPhotos) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HabboAPI</title>
 
-    <link href="http://bootswatch.com/lumen/bootstrap.min.css" rel="stylesheet">
+    <link href="https://bootswatch.com/3/lumen/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         html, body {
             margin: 20px;

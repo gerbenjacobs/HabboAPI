@@ -221,5 +221,4 @@ class Group implements Entity
     {
         return $this->getSecondaryColour();
     }
-
 }

@@ -3,6 +3,7 @@
  * The entitymodel for a Habbo object
  */
 namespace HabboAPI\Entities;
+
 use Carbon\Carbon;
 
 /**
@@ -126,7 +127,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @param string $memberSince 
+     * @param string $memberSince
      */
     protected function setMemberSince($memberSince)
     {
@@ -166,7 +167,7 @@ class Habbo implements Entity
     }
 
     /**
-     * @return Badge[] 
+     * @return Badge[]
      */
     public function getSelectedBadges()
     {
@@ -181,6 +182,4 @@ class Habbo implements Entity
     {
         return ($this->getProfileVisible()) ? true : false;
     }
-
 }
-
