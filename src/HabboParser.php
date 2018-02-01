@@ -25,7 +25,7 @@ use HabboAPI\Exceptions\UserInvalidException;
  */
 class HabboParser implements HabboParserInterface
 {
-    const VERSION = "2.3.1";
+    const VERSION = "2.4.1";
 
     /**
      * Base URL for the Habbo API
