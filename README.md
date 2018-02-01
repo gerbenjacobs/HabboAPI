@@ -54,4 +54,4 @@ See the `example.php` file on how you could use this library.
 ## Developer Installation
 1. Clone the project
 2. Run `composer install`
-3. Verify the install by running `phpunit` or opening the `example.php` page on a PHP server
+3. Verify the install by running `./vendor/bin/phpunit` or opening the `example.php` page on a PHP server

@@ -19,13 +19,13 @@ use HabboAPI\Exceptions\UserInvalidException;
 /**
  * Class HabboParser
  *
- * Parses all the unique API endpoints
+ * Parses all the unique API endpoints, uses the curl library
  *
  * @package HabboAPI
  */
 class HabboParser implements HabboParserInterface
 {
-    const VERSION = "2.3.0";
+    const VERSION = "2.3.1";
 
     /**
      * Base URL for the Habbo API
@@ -194,6 +194,7 @@ class HabboParser implements HabboParserInterface
     }
 
     /** parseAchievements will return a list of achievements belonging to a Habbo
+     *
      * @param $id
      * @return Achievement[]
      * @throws Exception
@@ -218,7 +219,8 @@ class HabboParser implements HabboParserInterface
 
     /**
      * Helper function to extract the correct cookie data from Habbo
-     * Uses the public photos page as initial example
+     * Uses the public photos page as initial example i.e. this is quite a hack
+     *
      * @throws Exception
      */
     private function _getCookie()
@@ -265,11 +267,19 @@ class HabboParser implements HabboParserInterface
         return array($response, $info);
     }
 
+    /** deciphers data returned from Habbo and tries to throw the correct exception
+     *
+     * @param $data
+     * @throws Exception
+     * @throws HabboNotFoundException
+     * @throws MaintenanceException
+     * @throws UserInvalidException
+     */
     public static function throwHabboAPIException($data)
     {
         // Do we find 'maintenance' anywhere?
         if (strstr($data, 'maintenance')) {
-            throw new MaintenanceException("Hotel is down for maintenance");
+            throw new MaintenanceException("Hotel API is down for maintenance");
         }
 
         // Check if data is JSON

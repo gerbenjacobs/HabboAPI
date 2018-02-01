@@ -17,9 +17,13 @@ use HabboAPI\HabboParser;
 $habboParser = new HabboParser('com');
 $habboApi = new HabboAPI($habboParser);
 
-// Find the user 'koeientemmer' and get their ID
 try {
+    // Find the user 'koeientemmer' and get their ID
     $myHabbo = $habboApi->getHabbo('koeientemmer');
+
+    // Get extra information about one of their groups
+    // Note: This is actually a hardcoded group ID to showcase the parseGroup() endpoint
+    $group = $habboApi->getGroup("g-hhus-b0751bd6408cc83a8e046de6949fd747");
 } catch (Exception $e) {
     echo '
         <p>Oops. Can not find this Habbo!</p>
@@ -43,10 +47,6 @@ if ($myHabbo->hasProfile()) {
 
 // Get all their photos
 $myPhotos = $habboApi->getPhotos($myHabbo->getId());
-
-// Get extra information about one of their groups
-// Note: This is actually a hardcoded group ID to showcase the parseGroup() endpoint
-$group = $habboApi->getGroup("g-hhus-b0751bd6408cc83a8e046de6949fd747");
 
 // Export as HTML
 $html = [

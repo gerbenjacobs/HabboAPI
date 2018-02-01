@@ -68,6 +68,7 @@ class HabboAPI
      *
      * @param $group_id
      * @return Group
+     * @throws \Exception
      */
     public function getGroup($group_id)
     {
