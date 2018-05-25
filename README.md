@@ -2,8 +2,8 @@
 [![Latest Stable Version](https://poser.pugx.org/gerbenjacobs/habbo-api/v/stable.svg)](https://packagist.org/packages/gerbenjacobs/habbo-api)
 [![Join the chat at https://gitter.im/gerbenjacobs/HabboAPI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gerbenjacobs/HabboAPI) 
 # HabboAPI
-This PHP wrapper library is used to collect data from the _undcoumented_ Habbo API.  
-The project requires PHP 5.4 or higher and uses the Composer autoloader and PSR-4 standard.
+This PHP wrapper library is used to collect data from the _undocumented_ Habbo API.  
+The project requires PHP 5.6 or higher and uses the Composer autoloader and PSR-4 standard.
 
 See the `example.php` file on how you could use this library.
 
@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- May 25th, 2018 - v3.0.0 - Removed official support for PHP 5.4, updated dependencies, fixed warnings for PHP 7.1
 - November 9th, 2017 - v2.4.0 - Added `getGroupId()` to Room entities, but only if that data exists
 - February 1st, 2017 - v2.3.0 - Added `getAchievements()` to API, returns a list of a Habbos achievements including current level and score
 - April 4th, 2016 - v2.2.0 - Added better exception handling, you can now catch `MaintenanceException`, `HabboNotFoundException` and `UserInvalidException`

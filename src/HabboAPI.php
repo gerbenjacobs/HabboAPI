@@ -18,9 +18,11 @@ use HabboAPI\Entities\Achievement;
  */
 class HabboAPI
 {
+    const VERSION = "3.0.0";
+
     /** Class variable for HabboParser
      *
-     * @var \HabboAPI\HabboParser
+     * @var \HabboAPI\HabboParserInterface
      */
     private $parser;
 

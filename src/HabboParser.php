@@ -25,7 +25,6 @@ use HabboAPI\Exceptions\UserInvalidException;
  */
 class HabboParser implements HabboParserInterface
 {
-    const VERSION = "2.4.1";
 
     /**
      * Base URL for the Habbo API
@@ -235,7 +234,9 @@ class HabboParser implements HabboParserInterface
     }
 
     /**
-     * Curl call based on $url
+     * CURL call based on $url
+     *
+     * Please note that we ignore SSL verification, if this is important to you, implement a more secure Parser
      *
      * @param string $url The URL to call
      * @param bool $as_json Return raw or as json; default is json
@@ -246,7 +247,7 @@ class HabboParser implements HabboParserInterface
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v' . self::VERSION);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'github.com/gerbenjacobs/habbo-api v' . HabboAPI::VERSION);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

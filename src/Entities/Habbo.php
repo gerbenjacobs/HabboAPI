@@ -5,6 +5,7 @@
 namespace HabboAPI\Entities;
 
 use Carbon\Carbon;
+use Countable;
 
 /**
  * Class Habbo
@@ -13,7 +14,7 @@ use Carbon\Carbon;
  *
  * @package HabboAPI\Entities
  */
-class Habbo implements Entity
+class Habbo implements Entity, Countable
 {
     private $id;
     private $habboName;
@@ -181,5 +182,19 @@ class Habbo implements Entity
     public function hasProfile()
     {
         return ($this->getProfileVisible()) ? true : false;
+    }
+
+    /**
+     * Count elements of an object
+     * @link http://php.net/manual/en/countable.count.php
+     * @return int The custom count as an integer.
+     * </p>
+     * <p>
+     * The return value is cast to an integer.
+     * @since 5.1.0
+     */
+    public function count()
+    {
+        return 1;
     }
 }

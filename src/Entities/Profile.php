@@ -23,6 +23,10 @@ class Profile implements Entity
     private $rooms;
     private $badges;
 
+    /**
+     * @param $data
+     * @throws Exception
+     */
     public function parse($data)
     {
         throw new Exception("The Profile entity can not parse data on its own");
