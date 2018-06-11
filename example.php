@@ -216,13 +216,15 @@ if ($myPhotos) {
                                    target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                             </p>
 
-                            <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 of them:</p>
+                            <?php if (count($group->getMembers()) > 0): ?>
+                                <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 of them:</p>
 
-                            <ul>
-                                <?php for ($i = 0; $i < 10; $i++): ?>
-                                    <li><?php echo $group->getMembers()[$i]->getHabboName(); ?></li>
-                                <?php endfor; ?>
-                            </ul>
+                                <ul>
+                                    <?php for ($i = 0; $i < 10; $i++): ?>
+                                        <li><?php echo $group->getMembers()[$i]->getHabboName(); ?></li>
+                                    <?php endfor; ?>
+                                </ul>
+                            <?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>

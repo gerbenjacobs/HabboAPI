@@ -136,9 +136,6 @@ class HabboParser implements HabboParserInterface
      */
     public function parsePhotos($id = null)
     {
-        // Get cookie first
-        $this->_getCookie();
-
         $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
         list($data) = $this->_callUrl($this->api_base . $url, true);
 
@@ -217,23 +214,6 @@ class HabboParser implements HabboParserInterface
     }
 
     /**
-     * Helper function to extract the correct cookie data from Habbo
-     * Uses the public photos page as initial example i.e. this is quite a hack
-     *
-     * @throws Exception
-     */
-    private function _getCookie()
-    {
-        if (!isset($this->cookie)) {
-            // Collect cookie
-            list($data) = $this->_callUrl($this->api_base . '/extradata/public/photos', false);
-            preg_match("#setCookie\\('(.*)', '(.*)', (.*)\\)#", $data, $matches);
-            $this->cookie['key'] = $matches[1];
-            $this->cookie['value'] = $matches[2];
-        }
-    }
-
-    /**
      * CURL call based on $url
      *
      * Please note that we ignore SSL verification, if this is important to you, implement a more secure Parser
@@ -252,8 +232,6 @@ class HabboParser implements HabboParserInterface
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        // urls at /extradata/ require javascript/cookie validation, trick them.
-        curl_setopt($ch, CURLOPT_COOKIE, $this->cookie['key'] . '=' . $this->cookie['value']);
         $data = curl_exec($ch);
         $info = curl_getinfo($ch);
         curl_close($ch);

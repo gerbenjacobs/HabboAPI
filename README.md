@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- June 11th, 2018 v3.0.1 - Removed unused cookie logic
 - May 25th, 2018 - v3.0.0 - Removed official support for PHP 5.4, updated dependencies, fixed warnings for PHP 7.1
 - November 9th, 2017 - v2.4.0 - Added `getGroupId()` to Room entities, but only if that data exists
 - February 1st, 2017 - v2.3.0 - Added `getAchievements()` to API, returns a list of a Habbos achievements including current level and score
