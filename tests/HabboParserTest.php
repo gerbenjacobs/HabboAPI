@@ -27,7 +27,6 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         $this->habboParserMock = $this->getMockBuilder('\HabboAPI\HabboParser')
             ->setMethods(array('_callUrl'))
             ->getMock();
-        $this->habboParserMock->setCookie("some-fake-cookie");
     }
 
     /**

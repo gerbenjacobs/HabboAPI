@@ -1,6 +1,5 @@
 <?php
 
-use Carbon\Carbon;
 use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
 

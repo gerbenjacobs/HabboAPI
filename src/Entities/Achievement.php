@@ -28,7 +28,7 @@ class Achievement implements Entity
 
         // add requirements if available
         if (isset($achievement['requirements'])) {
-            // TODO
+            $this->requirements = $achievement['requirements'];
         }
 
         // add user state if available
@@ -83,5 +83,13 @@ class Achievement implements Entity
     public function getScore()
     {
         return $this->score;
+    }
+
+    /**
+     * @return array
+     */
+    public function getRequirements()
+    {
+        return $this->requirements;
     }
 }

@@ -32,10 +32,7 @@ class HabboParser implements HabboParserInterface
      * @var string $api_base
      */
     private $api_base;
-
     private $hotel;
-
-    private $cookie;
 
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
@@ -282,16 +279,5 @@ class HabboParser implements HabboParserInterface
         }
 
         throw new Exception("Unknown HabboAPI exception occurred: " . $defaultMessage);
-    }
-
-    /**
-     * setCookie allows you to set the cookie from outside the class
-     * Mostly a helper class for the tests
-     *
-     * @param string $cookie
-     */
-    public function setCookie($cookie)
-    {
-        $this->cookie = $cookie;
     }
 }

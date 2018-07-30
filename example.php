@@ -1,7 +1,4 @@
 <?php
-// Timezone required since PHP 5.4
-date_default_timezone_set('UTC');
-
 // Include the Composer autoloader
 include 'vendor/autoload.php';
 
@@ -216,7 +213,7 @@ if ($myPhotos) {
                                    target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                             </p>
 
-                            <?php if (count($group->getMembers()) > 0): ?>
+                            <?php if (count((array) $group->getMembers()) > 0): ?>
                                 <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 of them:</p>
 
                                 <ul>
