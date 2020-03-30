@@ -1,8 +1,9 @@
 <?php
 
 use HabboAPI\Entities\Room;
+use PHPUnit\Framework\TestCase;
 
-class RoomTest extends \PHPUnit_Framework_TestCase
+class RoomTest extends TestCase
 {
     private static $data;
     /**

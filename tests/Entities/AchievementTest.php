@@ -2,8 +2,9 @@
 
 
 use HabboAPI\Entities\Achievement;
+use PHPUnit\Framework\TestCase;
 
-class AchievementTest extends \PHPUnit_Framework_TestCase
+class AchievementTest extends TestCase
 {
     private static $data;
     /**

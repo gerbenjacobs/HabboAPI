@@ -1,10 +1,10 @@
 <?php
 
-use HabboAPI\Entities\Habbo;
-use HabboAPI\Entities\Profile;
+use HabboAPI\Entities\{Habbo, Profile};
 use HabboAPI\HabboParser;
+use PHPUnit\Framework\TestCase;
 
-class HabboParserTest extends PHPUnit_Framework_TestCase
+class HabboParserTest extends TestCase
 {
     private static $habbo, $profile, $photos, $public_photos, $group, $group_members, $hotel_maintenance, $achievements;
     /** @var HabboParser|PHPUnit_Framework_MockObject_MockObject $habboParserMock */
@@ -123,13 +123,13 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
             $this->assertInstanceOf('HabboAPI\Entities\Achievement', $achievement);
         }
     }
-    
+
     /** @expectedException \HabboAPI\Exceptions\MaintenanceException */
     public function testMaintenanceException()
     {
         HabboParser::throwHabboAPIException(self::$hotel_maintenance);
     }
-    
+
     /** @expectedException \HabboAPI\Exceptions\HabboNotFoundException */
     public function testHabboNotFoundException()
     {
@@ -144,7 +144,7 @@ class HabboParserTest extends PHPUnit_Framework_TestCase
         HabboParser::throwHabboAPIException($invalid);
     }
 
-    /** 
+    /**
      * @expectedException Exception
      * @expectedExceptionMessage Unknown HabboAPI exception occurred: An unknown HTML page was returned
      */

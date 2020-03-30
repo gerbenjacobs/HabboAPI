@@ -1,13 +1,15 @@
 <?php
 
+use HabboAPI\Entities\{Badge, Group, Habbo, Room};
 use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class SystemTest is used to test the API against the actual Habbo.com server
  * These
  */
-class SystemTest extends PHPUnit_Framework_TestCase
+class SystemTest extends TestCase
 {
     /** @var HabboParser $parser */
     private static $parser;
@@ -44,7 +46,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
             array('code' => 'ACH_RegistrationDuration15', 'name' => '75 % True Habbo XV', 'description' => 'Be a member of the community for 913 days.'),
             array('code' => 'ACH_SafetyQuizGraduate1', 'name' => 'Level I Safety tips', 'description' => 'For passing the Safety quiz!'),
         );
-        /** @var \HabboAPI\Entities\Badge $badge */
+        /** @var Badge $badge */
         foreach ($badges as $i => $badge) {
             $this->assertInstanceOf('HabboAPI\Entities\Badge', $badge);
             $this->assertEquals($exp_badges[$i]['code'], $badge->getId());
@@ -59,7 +61,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
 
         // Test a badge
         $badges = $profile->getBadges();
-        /** @var \HabboAPI\Entities\Badge $badge */
+        /** @var Badge $badge */
         $badge = $badges[0];
         $this->assertEquals("ACH_RespectEarned1", $badge->getCode());
         $this->assertEquals("10% Respected Habbo I", $badge->getName());
@@ -67,7 +69,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
 
         // Test a friend
         $friends = $profile->getFriends();
-        /** @var \HabboAPI\Entities\Habbo $friend */
+        /** @var Habbo $friend */
         $friend = $friends[0];
         $this->assertEquals('hhus-fa1ff34dd0562488af72aef00f958e0e', $friend->getId());
         $this->assertEquals('Snupdapup', $friend->getHabboName());
@@ -75,7 +77,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
 
         // Test a group
         $groups = $profile->getGroups();
-        /** @var \HabboAPI\Entities\Group $group */
+        /** @var Group $group */
         $group = $groups[0];
         $this->assertEquals('g-hhus-7869307be6889988e1c51595981caeb4', $group->getId());
         $this->assertEquals('#HabboPlayNice', $group->getName());
@@ -88,7 +90,7 @@ class SystemTest extends PHPUnit_Framework_TestCase
 
         // Test a room
         $rooms = $profile->getRooms();
-        /** @var \HabboAPI\Entities\Room $room */
+        /** @var Room $room */
         $room = $rooms[0];
         $categories = $room->getCategories(); // tmp var for php 5.3
         $this->assertEquals('r-hhus-7c58e2a91120887a52f3916b13085f19', $room->getId());

@@ -1,12 +1,9 @@
 <?php
 
-use HabboAPI\Entities\Badge;
-use HabboAPI\Entities\Group;
-use HabboAPI\Entities\Habbo;
-use HabboAPI\Entities\Profile;
-use HabboAPI\Entities\Room;
+use HabboAPI\Entities\{Badge, Group, Habbo, Profile, Room};
+use PHPUnit\Framework\TestCase;
 
-class ProfileTest extends \PHPUnit_Framework_TestCase
+class ProfileTest extends TestCase
 {
     private static $data;
     /**

@@ -1,8 +1,9 @@
 <?php
 
 use HabboAPI\Entities\Badge;
+use PHPUnit\Framework\TestCase;
 
-class BadgeTest extends \PHPUnit_Framework_TestCase
+class BadgeTest extends TestCase
 {
     private static $data;
     /**

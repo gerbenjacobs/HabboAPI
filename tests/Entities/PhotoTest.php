@@ -1,11 +1,13 @@
 <?php
+
 use HabboAPI\Entities\Photo;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Class PhotoTest
  *  Tests for the Photo entity object
  */
-class PhotoTest extends PHPUnit_Framework_TestCase
+class PhotoTest extends TestCase
 {
 
     private static $data;
@@ -47,4 +49,3 @@ class PhotoTest extends PHPUnit_Framework_TestCase
     }
 
 }
- 

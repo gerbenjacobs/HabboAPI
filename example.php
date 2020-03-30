@@ -213,13 +213,13 @@ if ($myPhotos) {
                                    target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
                             </p>
 
-                            <?php if (count((array) $group->getMembers()) > 0): ?>
-                                <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 of them:</p>
+                            <?php $members = $group->getMembers(); if (count((array) $members) > 0): ?>
+                                <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 random ones:</p>
 
                                 <ul>
-                                    <?php for ($i = 0; $i < 10; $i++): ?>
-                                        <li><?php echo $group->getMembers()[$i]->getHabboName(); ?></li>
-                                    <?php endfor; ?>
+                                    <?php $list = array_rand($members, 10); foreach ($list as $i): ?>
+                                        <li><?php echo $members[$i]->getHabboName(); ?></li>
+                                    <?php endforeach; ?>
                                 </ul>
                             <?php endif; ?>
                         </div>

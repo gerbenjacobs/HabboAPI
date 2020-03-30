@@ -1,8 +1,9 @@
 <?php
 
 use HabboAPI\Entities\Group;
+use PHPUnit\Framework\TestCase;
 
-class GroupTest extends \PHPUnit_Framework_TestCase
+class GroupTest extends TestCase
 {
     private static $data;
     /**
