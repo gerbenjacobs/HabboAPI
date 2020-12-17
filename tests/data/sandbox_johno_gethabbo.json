@@ -1,0 +1,34 @@
+{
+  "uniqueId": "hhs2-15cdd228b60baf1fcd72283ab29d1527",
+  "name": "Johno",
+  "figureString": "hr-165-31.hd-180-1.ch-215-1408.lg-280-1408.sh-300-1408.fa-1201",
+  "motto": "null",
+  "online": false,
+  "lastAccessTime": "2020-12-07T15:43:37.000+0000",
+  "memberSince": "2004-07-19T10:14:20.000+0000",
+  "profileVisible": true,
+  "currentLevel": 7,
+  "currentLevelCompletePercent": 75,
+  "totalExperience": 110,
+  "starGemCount": 18,
+  "selectedBadges": [
+    {
+      "badgeIndex": 2,
+      "code": "ADM",
+      "name": "",
+      "description": ""
+    },
+    {
+      "badgeIndex": 4,
+      "code": "ACH_HappyHour1",
+      "name": "Happy hour",
+      "description": "For logging in during happy hour."
+    },
+    {
+      "badgeIndex": 5,
+      "code": "ACH_AllTimeHotelPresence7",
+      "name": "Online time VII - Cyclone",
+      "description": "For spending total of 1440  hours in hotel."
+    }
+  ]
+}

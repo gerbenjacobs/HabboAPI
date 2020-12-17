@@ -20,9 +20,15 @@ class Habbo implements Entity, Countable
     private $habboName;
     private $motto;
     private $memberSince;
+    private $lastAccessTime;
+    private $online;
     private $figureString;
     private $profileVisible;
     private $selectedBadges = array();
+    private $currentLevel;
+    private $currentLevelCompleted;
+    private $totalExperience;
+    private $starGemCount;
 
     /** Parses habbo info array to \Entities\Habbo object
      *
@@ -55,6 +61,26 @@ class Habbo implements Entity, Countable
                 $selectedBadge->parse($badge);
                 $this->addSelectedBadge($selectedBadge);
             }
+        }
+
+        // New sandbox 2020 additions
+        if (isset($data['online'])) {
+            $this->setOnline($data['online']);
+        }
+        if (isset($data['lastAccessTime'])) {
+            $this->setLastAccessTime($data['lastAccessTime']);
+        }
+        if (isset($data['currentLevel'])) {
+            $this->setCurrentLevel($data['currentLevel']);
+        }
+        if (isset($data['currentLevelCompletePercent'])) {
+            $this->setCurrentLevelCompleted($data['currentLevelCompletePercent']);
+        }
+        if (isset($data['totalExperience'])) {
+            $this->setTotalExperience($data['totalExperience']);
+        }
+        if (isset($data['starGemCount'])) {
+            $this->setStarGemCount($data['starGemCount']);
         }
     }
 
@@ -181,7 +207,112 @@ class Habbo implements Entity, Countable
      */
     public function hasProfile()
     {
-        return ($this->getProfileVisible()) ? true : false;
+        return $this->getProfileVisible();
+    }
+
+    /**
+     * @return Carbon
+     */
+    public function getLastAccessTime()
+    {
+        return $this->lastAccessTime;
+    }
+
+    /**
+     * @param string $lastAccessTime
+     */
+    public function setLastAccessTime($lastAccessTime): void
+    {
+        $this->lastAccessTime = Carbon::parse($lastAccessTime);
+    }
+
+    /**
+     * @return integer
+     */
+    public function getCurrentLevel()
+    {
+        return $this->currentLevel;
+    }
+
+    /**
+     * @param integer $currentLevel
+     */
+    public function setCurrentLevel($currentLevel): void
+    {
+        $this->currentLevel = $currentLevel;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getCurrentLevelCompleted()
+    {
+        return $this->currentLevelCompleted;
+    }
+
+    /**
+     * @param integer $currentLevelCompleted
+     */
+    public function setCurrentLevelCompleted($currentLevelCompleted): void
+    {
+        $this->currentLevelCompleted = $currentLevelCompleted;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getTotalExperience()
+    {
+        return $this->totalExperience;
+    }
+
+    /**
+     * @param integer $totalExperience
+     */
+    public function setTotalExperience($totalExperience): void
+    {
+        $this->totalExperience = $totalExperience;
+    }
+
+    /**
+     * @return integer
+     */
+    public function getStarGemCount()
+    {
+        return $this->starGemCount;
+    }
+
+    /**
+     * @param integer $starGemCount
+     */
+    public function setStarGemCount($starGemCount): void
+    {
+        $this->starGemCount = $starGemCount;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function getOnline()
+    {
+        return $this->online;
+    }
+
+    /**
+     * Helper function for readability
+     * @return boolean
+     */
+    public function isOnline()
+    {
+        return $this->online;
+    }
+
+    /**
+     * @param boolean $online
+     */
+    public function setOnline($online): void
+    {
+        $this->online = $online;
     }
 
     /**

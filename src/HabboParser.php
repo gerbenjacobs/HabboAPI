@@ -2,6 +2,7 @@
 /**
  * The HabboParser class does all the hard work of delegating data to the correct entities
  */
+
 namespace HabboAPI;
 
 use Exception;
@@ -32,7 +33,6 @@ class HabboParser implements HabboParserInterface
      * @var string $api_base
      */
     private $api_base;
-    private $hotel;
 
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
@@ -41,8 +41,12 @@ class HabboParser implements HabboParserInterface
      */
     public function __construct($hotel = 'com')
     {
-        $this->hotel = $hotel;
-        $this->api_base = 'https://www.habbo.' . $hotel;
+        $subdomain = "www";
+        if ($hotel == "sandbox") {
+            $subdomain = "sandbox";
+            $hotel = "com";
+        }
+        $this->api_base = 'https://' . $subdomain . '.habbo.' . $hotel;
     }
 
 

@@ -61,10 +61,13 @@ $html = [
 
 /* @var Habbo $habbo */
 $habbo = $myProfile->getHabbo();
+$onlineText = $habbo->isOnline() ? "yes" : "no";
+$lastAccess = ($habbo->getLastAccessTime()) ? $habbo->getLastAccessTime()->toFormattedDateString() : "N/A";
 $html['habbo'] .= '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figure=' . $habbo->getFigureString() . '&size=l&gesture=sml&head_direction=3"
             alt="' . $habbo->getHabboName() . '" title="' . $habbo->getHabboName() . '" style="float: left; margin-right: 10px;" />';
 $html['habbo'] .= '<h3>' . $habbo->getHabboName() . '</h3>';
 $html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . $habbo->getMemberSince()->toFormattedDateString() . '</em></p>';
+$html['habbo'] .= '<p>Online: ' . $onlineText . '<br>Last seen: <em>' . $lastAccess . '</em></p>';
 
 if ($habbo->getProfileVisible()) {
     $html['habbo'] .= '<p><a href="https://www.habbo.com/profile/' . $habbo->getHabboName() . '">View home &raquo;</a></p>';
@@ -200,9 +203,9 @@ if ($myPhotos) {
 
                             <h3>
                                 <span
-                                    style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getPrimaryColor(); ?>;">&nbsp;</span>
+                                        style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getPrimaryColor(); ?>;">&nbsp;</span>
                                 <span
-                                    style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getSecondaryColor(); ?>;">&nbsp;</span>
+                                        style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getSecondaryColor(); ?>;">&nbsp;</span>
                                 <?php echo $group->getName(); ?>
                             </h3>
 
@@ -210,14 +213,18 @@ if ($myPhotos) {
                             <p>
                                 <a class="btn btn-default"
                                    href="https://www.habbo.com/hotel?room=<?php echo $group->getRoomId(); ?>"
-                                   target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                                   target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right"
+                                                                    aria-hidden="true"></span></a>
                             </p>
 
-                            <?php $members = $group->getMembers(); if (count((array) $members) > 0): ?>
-                                <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members. Here are 10 random ones:</p>
+                            <?php $members = $group->getMembers();
+                            if (count((array)$members) > 0): ?>
+                                <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members.
+                                    Here are 10 random ones:</p>
 
                                 <ul>
-                                    <?php $list = array_rand($members, 10); foreach ($list as $i): ?>
+                                    <?php $list = array_rand($members, 10);
+                                    foreach ($list as $i): ?>
                                         <li><?php echo $members[$i]->getHabboName(); ?></li>
                                     <?php endforeach; ?>
                                 </ul>

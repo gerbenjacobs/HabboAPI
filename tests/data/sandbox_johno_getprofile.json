@@ -1,0 +1,326 @@
+{
+  "user": {
+    "uniqueId": "hhs2-15cdd228b60baf1fcd72283ab29d1527",
+    "name": "Johno",
+    "figureString": "hr-165-31.hd-180-1.ch-215-1408.lg-280-1408.sh-300-1408.fa-1201",
+    "motto": "null",
+    "online": false,
+    "lastAccessTime": "2020-12-07T15:43:37.000+0000",
+    "memberSince": "2004-07-19T10:14:20.000+0000",
+    "profileVisible": true,
+    "currentLevel": 7,
+    "currentLevelCompletePercent": 75,
+    "totalExperience": 110,
+    "starGemCount": 18,
+    "selectedBadges": [
+      {
+        "badgeIndex": 2,
+        "code": "ADM",
+        "name": "",
+        "description": ""
+      },
+      {
+        "badgeIndex": 4,
+        "code": "ACH_HappyHour1",
+        "name": "Happy hour",
+        "description": "For logging in during happy hour."
+      },
+      {
+        "badgeIndex": 5,
+        "code": "ACH_AllTimeHotelPresence7",
+        "name": "Online time VII - Cyclone",
+        "description": "For spending total of 1440  hours in hotel."
+      }
+    ]
+  },
+  "groups": [],
+  "badges": [
+    {
+      "code": "ACH_RespectEarned2",
+      "name": "20% Respected Habbo II",
+      "description": "For earning respect 6 times."
+    },
+    {
+      "code": "ACH_BuildersClub2",
+      "name": "Builders Club member II",
+      "description": "For having 31 days of Builders Club membership."
+    },
+    {
+      "code": "ACH_PetLover1",
+      "name": "Can I keep him? I",
+      "description": "Own 1 pet to earn this badge."
+    },
+    {
+      "code": "ACH_TradingPass4",
+      "name": "Friendly one",
+      "description": "For giving 2 star gems to other people."
+    },
+    {
+      "code": "ACH_RoomDecoFurniTypeCount5",
+      "name": "Furni collector V",
+      "description": "For building a room with 24 different furni."
+    },
+    {
+      "code": "ACH_Citizenship1",
+      "name": "Habbo Citizen",
+      "description": "For passing the Habbo Citizen talent track"
+    },
+    {
+      "code": "ACH_HappyHour1",
+      "name": "Happy hour",
+      "description": "For logging in during happy hour."
+    },
+    {
+      "code": "ACH_Tutorial3",
+      "name": "Hello room",
+      "description": "For typing and sending a chat line."
+    },
+    {
+      "code": "ACH_Tutorial4",
+      "name": "Home sweet home",
+      "description": "For viewing room settings."
+    },
+    {
+      "code": "ACH_PetRespectGiver1",
+      "name": "I like your pet! I",
+      "description": "Scratch anyone's pet at least 2 times to earn this badge."
+    },
+    {
+      "code": "ACH_Tutorial1",
+      "name": "I'm walking here!",
+      "description": "For making your avatar walk around."
+    },
+    {
+      "code": "ACH_HabboWayGraduate1",
+      "name": "Level I Habbo Way",
+      "description": "For passing the Habbo Way quiz!"
+    },
+    {
+      "code": "ACH_TradingPass6",
+      "name": "Level jumping",
+      "description": "For reaching avatar level 6."
+    },
+    {
+      "code": "ACH_AvatarLooks1",
+      "name": "Looks that kill",
+      "description": "For changing your looks for the first time."
+    },
+    {
+      "code": "ACH_Tutorial2",
+      "name": "Me, myself and I",
+      "description": "For visiting your own profile."
+    },
+    {
+      "code": "ACH_Tutorial5",
+      "name": "Move that furni",
+      "description": "For moving, rotating or picking up furni or putting furni to room."
+    },
+    {
+      "code": "ACH_RespectGiven1",
+      "name": "Nice as pie! I",
+      "description": "For giving respect 2 times."
+    },
+    {
+      "code": "ACH_TradingPass7",
+      "name": "Nice to meet",
+      "description": "For having 2 friends in your friend list."
+    },
+    {
+      "code": "ACH_TradingPass2",
+      "name": "Noob curiosity",
+      "description": "For spending 120 minutes in the Hotel."
+    },
+    {
+      "code": "ACH_AllTimeHotelPresence7",
+      "name": "Online time VII - Cyclone",
+      "description": "For spending total of 1440  hours in hotel."
+    },
+    {
+      "code": "ACH_TradingPass3",
+      "name": "Revisit",
+      "description": "For being a member for 3 days."
+    },
+    {
+      "code": "ACH_RoomDecoFurniCount6",
+      "name": "Room builder VI",
+      "description": "For building a room with 30 furni."
+    },
+    {
+      "code": "ACH_RoomDecoHosting6",
+      "name": "Room host VI",
+      "description": "For having visitors spend 180 minutes in your rooms."
+    },
+    {
+      "code": "ACH_RoomEntry2",
+      "name": "Room raider II",
+      "description": "For 20 room visits. Peeker."
+    },
+    {
+      "code": "ACH_TradingPass5",
+      "name": "Room raider junior",
+      "description": "For hanging out in 20 rooms that you do not own."
+    },
+    {
+      "code": "ACH_SafetyQuizGraduate1",
+      "name": "Safety Quiz",
+      "description": "For passing the Safety quiz!"
+    },
+    {
+      "code": "ACH_FriendListSize2",
+      "name": "Socializer II",
+      "description": "For having 10 friends in your friend list."
+    },
+    {
+      "code": "ACH_PetRespectReceiver1",
+      "name": "Someone likes my pet I",
+      "description": "Have someone scratch your pet at least 3 times to earn this badge."
+    },
+    {
+      "code": "ACH_PetFeeding1",
+      "name": "They're eating all my credits! I",
+      "description": "Give your pets at least 200 points of food to earn this badge."
+    },
+    {
+      "code": "ACH_TraderPass1",
+      "name": "Trading pass I",
+      "description": "Without a trading pass you can't trade: you have to have an account that is 3 days old and you have to verify your email."
+    },
+    {
+      "code": "ACH_RegistrationDuration20",
+      "name": "True Habbo XX",
+      "description": "For being a member of the community for 1825 days."
+    },
+    {
+      "code": "ACH_EmailVerification1",
+      "name": "True you",
+      "description": "For verifying your email address. Thanks!"
+    },
+    {
+      "code": "ACH_TradingPass1",
+      "name": "Tutorial",
+      "description": "For completing tutorial."
+    }
+  ],
+  "friends": [
+    {
+      "name": "anjuna",
+      "motto": "totally",
+      "uniqueId": "hhs2-b8e50244304a804ffb990a95679dbddd",
+      "figureString": "hr-165-45.hd-208-2.ch-250-64.lg-285-82.sh-290-64"
+    },
+    {
+      "name": "cookiezz",
+      "motto": "Rareboy for Comic Relief :) [SH] NMHT-",
+      "uniqueId": "hhs2-16b1972b6c4a04d96ac60498031a8e55",
+      "figureString": "hd-200-1.ch-876-62.lg-281-62.sh-908-62"
+    },
+    {
+      "name": "entmaiden",
+      "motto": "Virtual Jogging Rox!! :D",
+      "uniqueId": "hhs2-0597a231e66b1e7a579f210972ded028",
+      "figureString": "hd-600-1.ch-879-62.lg-696-62.sh-740-62"
+    },
+    {
+      "name": "Hjelp",
+      "motto": "Here to assist <3",
+      "uniqueId": "hhs2-0b2769aabf44bce1327e7dd3e38f9596",
+      "figureString": "hr-545-34.hd-600-1.ch-630-62.lg-715-63.sh-735-63.he-1605-73.ca-1813-"
+    },
+    {
+      "name": "Jay",
+      "motto": "Where is the love |",
+      "uniqueId": "hhs2-5a2ba73daea251593bbb0ec0d7a18d33",
+      "figureString": "hd-600-1.ch-879-62.lg-696-62.sh-740-62"
+    },
+    {
+      "name": "jrh2002",
+      "motto": "Failure Is Not An Option",
+      "uniqueId": "hhs2-7f7c51b695a2b4711dc3a7023da55547",
+      "figureString": "hd-200-1.ch-876-62.lg-281-62.sh-908-62"
+    },
+    {
+      "name": "Luckyclone",
+      "motto": "Rainbow.",
+      "uniqueId": "hhs2-1ec81046414956b9797ba7c238da2b70",
+      "figureString": "hd-600-1.ch-879-62.lg-696-62.sh-740-62"
+    },
+    {
+      "name": "MOD-Bu",
+      "motto": "Banana! | Scorbutic |",
+      "uniqueId": "hhs2-beb97dcb10c1d5564f25f2efb97a897a",
+      "figureString": "hr-545-34.hd-600-1.ch-630-62.lg-715-63.sh-735-63.he-1605-73.ca-1813-"
+    },
+    {
+      "name": "MOD-Elux",
+      "motto": "Keep your details personal!",
+      "uniqueId": "hhs2-4b1fe32b57e32595f02d9ad51d567625",
+      "figureString": "hr-165-45.hd-208-2.ch-250-64.lg-285-82.sh-290-64"
+    },
+    {
+      "name": "MOD-Flaxy",
+      "motto": "\"Im Mizki for comic relief,20p per day",
+      "uniqueId": "hhs2-16c6b14f88e96a17150644f23791afa2",
+      "figureString": "hr-545-34.hd-600-1.ch-630-62.lg-715-63.sh-735-63.he-1605-73.ca-1813-"
+    },
+    {
+      "name": "MOD-pants",
+      "motto": "Shoot the whole day down :)",
+      "uniqueId": "hhs2-f5443bfdf2bfdb3159fecf52ac8ff1d9",
+      "figureString": "hr-545-34.hd-600-1.ch-630-62.lg-715-63.sh-735-63.he-1605-73.ca-1813-"
+    },
+    {
+      "name": "MOD-Shade",
+      "motto": "I am totally NORMAL! ;)",
+      "uniqueId": "hhs2-1aadcc3595e1cf8d00031ae51061ef00",
+      "figureString": "hr-165-45.hd-208-2.ch-250-64.lg-285-82.sh-290-64"
+    },
+    {
+      "name": "MysticalQueen",
+      "motto": "Floyd for Comic Relief :-)",
+      "uniqueId": "hhs2-0ffa31e4491c7f810add0faebc345a30",
+      "figureString": "hr-165-45.hd-208-2.ch-250-64.lg-285-82.sh-290-64"
+    },
+    {
+      "name": "Pixxel",
+      "motto": "Habbo2020 Dev Team Member",
+      "uniqueId": "hhs2-ab815e234dc3c0c03ae59f08777873c4",
+      "figureString": "hr-3043-41.hd-3103-27.ch-3185-1428.lg-3257-1334.sh-3089-1427.ha-3117-1334.he-3376-1408-1408.fa-1205-1428.cc-3299-1334-1429.cp-3312"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 10279199,
+      "name": "testsdfasdf",
+      "description": "fdsdf",
+      "creationTime": "2013-06-25T23:13:57.000+0000",
+      "tags": [],
+      "maximumVisitors": 10,
+      "showOwnerName": true,
+      "ownerName": "Johno",
+      "ownerUniqueId": "hhs2-15cdd228b60baf1fcd72283ab29d1527",
+      "categories": [],
+      "imageUrl": "https://habbo-stories-content-staging.s3.amazonaws.com/fullroom-photo/hhs2/10279199.png",
+      "thumbnailUrl": "https://habbo-stories-content-staging.s3.amazonaws.com/navigator-thumbnail/hhs2/10279199.png",
+      "rating": 13,
+      "uniqueId": "r-hhs2-b550e4d5c9567b835ff36a0a95645bc9"
+    },
+    {
+      "id": 10280476,
+      "name": "free placement test",
+      "description": "",
+      "creationTime": "2014-05-28T13:19:19.000+0000",
+      "tags": [],
+      "maximumVisitors": 10,
+      "showOwnerName": true,
+      "ownerName": "Johno",
+      "ownerUniqueId": "hhs2-15cdd228b60baf1fcd72283ab29d1527",
+      "categories": [
+        "navigator.flatcategory.global.GAMES"
+      ],
+      "imageUrl": "https://habbo-stories-content-staging.s3.amazonaws.com/fullroom-photo/hhs2/10280476.png",
+      "thumbnailUrl": "https://habbo-stories-content-staging.s3.amazonaws.com/navigator-thumbnail/hhs2/10280476.png",
+      "rating": 19,
+      "uniqueId": "r-hhs2-b002c70bd11f9759d30b1a1028f2325c"
+    }
+  ]
+}

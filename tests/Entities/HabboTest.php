@@ -61,12 +61,24 @@ class HabboTest extends TestCase
     public function testFiveSelectedBadges()
     {
         $selectedBadges = $this->habbo->getSelectedBadges();
-        $this->assertEquals(5, count($selectedBadges));
+        $this->assertCount(5, $selectedBadges);
         $this->assertInstanceOf('HabboAPI\Entities\Badge', $selectedBadges[0]);
     }
 
     public function testHasProfile()
     {
         $this->assertTrue($this->habbo->hasProfile());
+    }
+
+    public function testCurrentLevel()
+    {
+        // this test should fail, as this data is from pre-2020 Habbo API
+        $this->assertEquals(0, $this->habbo->getCurrentLevel());
+    }
+
+    public function testLastAccessTime()
+    {
+        // this test should fail, as this data is from pre-2020 Habbo API
+        $this->assertNull($this->habbo->getLastAccessTime());
     }
 }

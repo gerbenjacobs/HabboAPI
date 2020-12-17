@@ -1,6 +1,9 @@
 <?php
 
 use HabboAPI\Entities\{Habbo, Profile};
+use HabboAPI\Exceptions\HabboNotFoundException;
+use HabboAPI\Exceptions\MaintenanceException;
+use HabboAPI\Exceptions\UserInvalidException;
 use HabboAPI\HabboParser;
 use PHPUnit\Framework\TestCase;
 
@@ -48,9 +51,12 @@ class HabboParserTest extends TestCase
     public function testParseHabboWithId()
     {
         // Should use HHID based url
-        $this->habboParserMock->expects($this->once())->method('_callUrl')->with('https://www.habbo.com/api/public/users/hhus-9cd61b156972c2eb33a145d69918f965');
+        $this->habboParserMock->expects($this->once())
+            ->method('_callUrl')
+            ->with('https://www.habbo.com/api/public/users/hhus-9cd61b156972c2eb33a145d69918f965')
+            ->will($this->returnValue(array(self::$habbo)));
 
-        $this->habboParserMock->parseHabbo('hhus-9cd61b156972c2eb33a145d69918f965', 'hhid');
+        $this->habboParserMock->parseHabbo('hhus-9cd61b156972c2eb33a145d69918f965', true);
     }
 
     public function testParseProfile()
@@ -124,32 +130,33 @@ class HabboParserTest extends TestCase
         }
     }
 
-    /** @expectedException \HabboAPI\Exceptions\MaintenanceException */
     public function testMaintenanceException()
     {
+        $this->expectException(MaintenanceException::class);
         HabboParser::throwHabboAPIException(self::$hotel_maintenance);
     }
 
-    /** @expectedException \HabboAPI\Exceptions\HabboNotFoundException */
     public function testHabboNotFoundException()
     {
+        $this->expectException(HabboNotFoundException::class);
         $not_found = '{"error":"not-found"}';
         HabboParser::throwHabboAPIException($not_found);
     }
 
-    /** @expectedException \HabboAPI\Exceptions\UserInvalidException */
     public function testUserInvalidException()
     {
+        $this->expectException(UserInvalidException::class);
         $invalid = '{"errors":[{"param":"name","msg":"user.invalid_name","value":"a"}]}';
         HabboParser::throwHabboAPIException($invalid);
     }
 
     /**
-     * @expectedException Exception
+     *
      * @expectedExceptionMessage Unknown HabboAPI exception occurred: An unknown HTML page was returned
      */
     public function testSomeHTMLException()
     {
+        $this->expectException(Exception::class);
         $some_html = '<!DOCTYPE><html><head><title>Fake HTML from Habbo</title></head><body>Sorry, we have failing machines</body></html>';
         HabboParser::throwHabboAPIException($some_html);
     }
