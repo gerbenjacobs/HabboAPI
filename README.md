@@ -3,7 +3,7 @@
 [![Join the chat at https://gitter.im/gerbenjacobs/HabboAPI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gerbenjacobs/HabboAPI) 
 # HabboAPI
 This PHP wrapper library is used to collect data from the _undocumented_ Habbo API.  
-The project requires PHP 7.1.8 or higher and uses the Composer autoloader and PSR-4 standard.
+The project requires PHP 7.2 or higher and uses the Composer autoloader and PSR-4 standard.
 
 See the `example.php` file on how you could use this library.
 
@@ -35,6 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- December 29th, 2020 v5.0.0 - Add support for PHP 8 and drop support below PHP 7.2
 - December 18th, 2020 v4.1.0 - Adds "sandbox" as hotel, includes new values for `Habbo` entity; online, lastAccessTime, currentLevel, currentLevelCompleted, totalExperience, starGemCount
 - March 30th, 2020 v4.0.0 - Use Carbon 2.0 and drop support for PHP below 7.1.8
 - June 11th, 2018 v3.0.1 - Removed unused cookie logic
