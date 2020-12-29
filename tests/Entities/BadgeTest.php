@@ -11,12 +11,12 @@ class BadgeTest extends TestCase
      */
     private $badge;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$data = json_decode(file_get_contents(dirname(__FILE__) . '/../data/com_koeientemmer_getprofile.json'), true);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->badge = new Badge();
         $this->badge->parse(self::$data['badges'][0]);

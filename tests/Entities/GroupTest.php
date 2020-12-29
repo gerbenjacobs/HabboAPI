@@ -11,12 +11,12 @@ class GroupTest extends TestCase
      */
     private $entity;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$data = json_decode(file_get_contents(dirname(__FILE__) . '/../data/com_koeientemmer_getprofile.json'), true);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->entity = new Group();
         $this->entity->parse(self::$data['groups'][0]);

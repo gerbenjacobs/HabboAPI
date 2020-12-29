@@ -1,6 +1,7 @@
 <?php
 
-use HabboAPI\Entities\{Habbo, Profile};
+use HabboAPI\Entities\Habbo;
+use HabboAPI\Entities\Profile;
 use HabboAPI\Exceptions\HabboNotFoundException;
 use HabboAPI\Exceptions\MaintenanceException;
 use HabboAPI\Exceptions\UserInvalidException;
@@ -10,10 +11,9 @@ use PHPUnit\Framework\TestCase;
 class HabboParserTest extends TestCase
 {
     private static $habbo, $profile, $photos, $public_photos, $group, $group_members, $hotel_maintenance, $achievements;
-    /** @var HabboParser|PHPUnit_Framework_MockObject_MockObject $habboParserMock */
     private $habboParserMock;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$habbo = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_gethabbo.json'), true);
         self::$profile = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getprofile.json'), true);
@@ -25,11 +25,12 @@ class HabboParserTest extends TestCase
         self::$achievements = json_decode(file_get_contents(dirname(__FILE__) . '/data/com_koeientemmer_getachievements.json'), true);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->habboParserMock = $this->getMockBuilder('\HabboAPI\HabboParser')
-            ->setMethods(array('_callUrl'))
+            ->onlyMethods(['_callUrl'])
             ->getMock();
+
     }
 
     /**
@@ -107,13 +108,15 @@ class HabboParserTest extends TestCase
     public function testParseGroup()
     {
         // Replace Habbo Parser mock with static data
-        $this->habboParserMock->expects($this->at(0))->method('_callUrl')->will($this->returnValue(array(self::$group)));
-        $this->habboParserMock->expects($this->at(1))->method('_callUrl')->will($this->returnValue(array(self::$group_members)));
+        $this->habboParserMock->expects($this->any())
+            ->method('_callUrl')
+            ->willReturnOnConsecutiveCalls([self::$group], [self::$group_members]);
 
         $group = $this->habboParserMock->parseGroup("g-hhus-fd92759bc932225f663f1521be8ce255");
+        $members = $group->getMembers();
 
         $this->assertInstanceOf('HabboAPI\Entities\Group', $group);
-        foreach ($group->getMembers() as $member) {
+        foreach ($members as $member) {
             $this->assertInstanceOf('HabboAPI\Entities\Habbo', $member);
         }
     }
@@ -150,10 +153,6 @@ class HabboParserTest extends TestCase
         HabboParser::throwHabboAPIException($invalid);
     }
 
-    /**
-     *
-     * @expectedExceptionMessage Unknown HabboAPI exception occurred: An unknown HTML page was returned
-     */
     public function testSomeHTMLException()
     {
         $this->expectException(Exception::class);
@@ -161,12 +160,9 @@ class HabboParserTest extends TestCase
         HabboParser::throwHabboAPIException($some_html);
     }
 
-    /**
-     * @expectedException Exception
-     * @expectedExceptionMessage Unknown HabboAPI exception occurred: something we dont recognize
-     */
     public function testSomeJSONException()
     {
+        $this->expectException(Exception::class);
         $some_json = '{"error":"something we dont recognize"}';
         HabboParser::throwHabboAPIException($some_json);
     }

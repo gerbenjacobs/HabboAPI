@@ -11,12 +11,12 @@ class ProfileTest extends TestCase
      */
     private $profile;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$data = json_decode(file_get_contents(dirname(__FILE__) . '/../data/com_koeientemmer_getprofile.json'), true);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         // Create profile
         $this->profile = new Profile();

@@ -35,7 +35,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
-- December 29th, 2020 v5.0.0 - Add support for PHP 8 and drop support below PHP 7.2
+- December 29th, 2020 v5.0.1 - Add support for PHP 8 and drop support below PHP 7.2
 - December 18th, 2020 v4.1.0 - Adds "sandbox" as hotel, includes new values for `Habbo` entity; online, lastAccessTime, currentLevel, currentLevelCompleted, totalExperience, starGemCount
 - March 30th, 2020 v4.0.0 - Use Carbon 2.0 and drop support for PHP below 7.1.8
 - June 11th, 2018 v3.0.1 - Removed unused cookie logic

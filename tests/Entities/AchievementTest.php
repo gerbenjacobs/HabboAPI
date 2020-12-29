@@ -12,12 +12,12 @@ class AchievementTest extends TestCase
      */
     private $achievement, $achievement2;
 
-    public static function setUpBeforeClass()
+    public static function setUpBeforeClass(): void
     {
         self::$data = json_decode(file_get_contents(dirname(__FILE__) . '/../data/com_koeientemmer_getachievements.json'), true);
     }
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->achievement = new Achievement();
         $this->achievement->parse(self::$data[0]);
