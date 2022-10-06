@@ -22,7 +22,7 @@ class SystemTest extends TestCase
         self::$api = new HabboAPI(self::$parser);
     }
 
-    public function testTheSystem()
+    public function testTheSystem(): void
     {
         // Don't run system tests on Travis
         if (getenv('TRAVIS') == "true") {
@@ -59,18 +59,16 @@ class SystemTest extends TestCase
         $profile = self::$api->getProfile('hhus-e6d805c82fcd7f4717f4bff5f9f437ae');
 
         // Test a badge
+        $badge = null;
         $badges = $profile->getBadges();
-        $badge = $badges[0];
+        foreach ($badges as $b) {
+            if ($b->getCode() == "ACH_RespectEarned1") {
+                $badge = $b;
+            }
+        }
         $this->assertEquals("ACH_RespectEarned1", $badge->getCode());
-        $this->assertEquals("10% Respected Habbo I", $badge->getName());
+        $this->assertEquals("Respected Habbo I", $badge->getName());
         $this->assertEquals("For earning respect 1 time.", $badge->getDescription());
-
-        // Test a friend
-        $friends = $profile->getFriends();
-        $friend = $friends[0];
-        $this->assertEquals('hhus-fa1ff34dd0562488af72aef00f958e0e', $friend->getId());
-        $this->assertEquals('Snupdapup', $friend->getHabboName());
-        $this->assertEquals('hr-540-34.hd-600-8.ch-884-76.lg-3216-1408.sh-730-1408.he-3274-1408.ca-1802', $friend->getFigureString());
 
         // Test a group
         $groups = $profile->getGroups();
@@ -100,7 +98,7 @@ class SystemTest extends TestCase
         $counts = $profile->getCounts();
         $this->assertEquals(1, $counts['habbo']);
         $this->assertEquals(15, $counts['badges']);
-        $this->assertEquals(1, $counts['friends']);
+        $this->assertEquals(0, $counts['friends']); // Habbo deleted my only friend! :(
         $this->assertEquals(1, $counts['groups']);
         $this->assertEquals(2, $counts['rooms']);
 

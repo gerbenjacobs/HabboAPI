@@ -133,12 +133,17 @@ class Profile implements Entity
     public function getCounts()
     {
         return array(
-            'habbo' => count($this->habbo),
-            'badges' => count($this->badges),
-            'friends' => count($this->friends),
-            'groups' => count($this->groups),
-            'rooms' => count($this->rooms),
+            'habbo' => self::safeCount($this->habbo),
+            'badges' => self::safeCount($this->badges),
+            'friends' => self::safeCount($this->friends),
+            'groups' => self::safeCount($this->groups),
+            'rooms' => self::safeCount($this->rooms),
         );
+    }
+
+    private function safeCount($value)
+    {
+        return is_countable($value) ? count($value) : 0;
     }
 }
 
