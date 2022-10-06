@@ -67,6 +67,7 @@ $html['habbo'] .= '<img src="http://www.habbo.com/habbo-imaging/avatarimage?figu
             alt="' . $habbo->getHabboName() . '" title="' . $habbo->getHabboName() . '" style="float: left; margin-right: 10px;" />';
 $html['habbo'] .= '<h3>' . $habbo->getHabboName() . '</h3>';
 $html['habbo'] .= '<p>' . $habbo->getMotto() . '<br><em>' . $habbo->getMemberSince()->toFormattedDateString() . '</em></p>';
+$html['habbo'] .= '<p>StarGem count: ' . $habbo->getStarGemCount() . '<br>Total Experience: ' . $habbo->getTotalExperience() . ' <br> Current Level: ' . $habbo->getCurrentLevel() . '</p>';
 $html['habbo'] .= '<p>Online: ' . $onlineText . '<br>Last seen: <em>' . $lastAccess . '</em></p>';
 
 if ($habbo->getProfileVisible()) {
@@ -121,6 +122,7 @@ if ($myPhotos) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -129,7 +131,8 @@ if ($myPhotos) {
 
     <link href="https://bootswatch.com/3/lumen/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
-        html, body {
+        html,
+        body {
             margin: 20px;
         }
 
@@ -145,99 +148,95 @@ if ($myPhotos) {
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <div class="jumbotron">
-        <h1>HabboAPI</h1>
+        <div class="jumbotron">
+            <h1>HabboAPI</h1>
 
-        <p>A PHP wrapper library for the undocumented API of Habbo</p>
+            <p>A PHP wrapper library for the undocumented API of Habbo</p>
 
-        <p><a class="btn btn-primary btn-lg" href="https://github.com/gerbenjacobs/HabboAPI" role="button"
-              target="_blank">Learn more</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <?php echo $html['habbo']; ?>
+            <p><a class="btn btn-primary btn-lg" href="https://github.com/gerbenjacobs/HabboAPI" role="button" target="_blank">Learn more</a></p>
         </div>
-        <div class="col-md-6">
-            <?php echo $html['worn_badges']; ?>
-        </div>
-    </div>
 
-    <hr>
-
-    <div class="row">
-        <?php echo $html['photos']; ?>
-    </div>
-
-    <?php if ($myHabbo->hasProfile()): ?>
-        <hr>
         <div class="row">
             <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6">
-                        <?php echo $html['badges']; ?>
-                    </div>
-                    <div class="col-md-6">
-                        <?php echo $html['friends']; ?>
-                    </div>
-                </div>
+                <?php echo $html['habbo']; ?>
             </div>
             <div class="col-md-6">
-                <div class="row">
-                    <div class="col-md-6">
-                        <?php echo $html['groups']; ?>
-                    </div>
-                    <div class="col-md-6">
-                        <?php echo $html['rooms']; ?>
-                    </div>
-                </div>
-                <?php if ($group): ?>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src="https://www.habbo.com/habbo-imaging/badge/<?php echo $group->getBadgeCode(); ?>.gif">
-
-                            <h3>
-                                <span
-                                        style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getPrimaryColor(); ?>;">&nbsp;</span>
-                                <span
-                                        style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getSecondaryColor(); ?>;">&nbsp;</span>
-                                <?php echo $group->getName(); ?>
-                            </h3>
-
-                            <p>[<?php echo $group->getType(); ?>] - <?php echo $group->getDescription(); ?></p>
-                            <p>
-                                <a class="btn btn-default"
-                                   href="https://www.habbo.com/hotel?room=<?php echo $group->getRoomId(); ?>"
-                                   target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right"
-                                                                    aria-hidden="true"></span></a>
-                            </p>
-
-                            <?php $members = $group->getMembers();
-                            if (count((array)$members) > 0): ?>
-                                <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members.
-                                    Here are 10 random ones:</p>
-
-                                <ul>
-                                    <?php $list = array_rand($members, 10);
-                                    foreach ($list as $i): ?>
-                                        <li><?php echo $members[$i]->getHabboName(); ?></li>
-                                    <?php endforeach; ?>
-                                </ul>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                <?php endif; ?>
+                <?php echo $html['worn_badges']; ?>
             </div>
         </div>
-    <?php endif; ?>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <hr>
+
+        <div class="row">
+            <?php echo $html['photos']; ?>
+        </div>
+
+        <?php if ($myHabbo->hasProfile()) : ?>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <?php echo $html['badges']; ?>
+                        </div>
+                        <div class="col-md-6">
+                            <?php echo $html['friends']; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <?php echo $html['groups']; ?>
+                        </div>
+                        <div class="col-md-6">
+                            <?php echo $html['rooms']; ?>
+                        </div>
+                    </div>
+                    <?php if ($group) : ?>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="https://www.habbo.com/habbo-imaging/badge/<?php echo $group->getBadgeCode(); ?>.gif">
+
+                                <h3>
+                                    <span style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getPrimaryColor(); ?>;">&nbsp;</span>
+                                    <span style="display: inline-block; border: 1px solid #000; width: 20px; background-color: #<?php echo $group->getSecondaryColor(); ?>;">&nbsp;</span>
+                                    <?php echo $group->getName(); ?>
+                                </h3>
+
+                                <p>[<?php echo $group->getType(); ?>] - <?php echo $group->getDescription(); ?></p>
+                                <p>
+                                    <a class="btn btn-default" href="https://www.habbo.com/hotel?room=<?php echo $group->getRoomId(); ?>" target="_blank">Go to room <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                                </p>
+
+                                <?php $members = $group->getMembers();
+                                if (count((array)$members) > 0) : ?>
+                                    <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members.
+                                        Here are 10 random ones:</p>
+
+                                    <ul>
+                                        <?php $list = array_rand($members, 10);
+                                        foreach ($list as $i) : ?>
+                                            <li><?php echo $members[$i]->getHabboName(); ?></li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
+
 </html>
