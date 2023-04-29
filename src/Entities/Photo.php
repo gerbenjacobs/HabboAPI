@@ -2,6 +2,7 @@
 /**
  * The entity model for a Photo object
  */
+
 namespace HabboAPI\Entities;
 
 use Carbon\Carbon;
@@ -9,19 +10,13 @@ use Carbon\Carbon;
 class Photo implements Entity
 {
 
-    private $id;
-    private $previewUrl;
-    private $tags;
-    private $creatorUniqueId;
-    private $creatorName;
-    private $creatorId;
-    private $type;
-    private $url;
-    private $takenOn;
-    private $roomId;
-    private $likes;
+    private string $id, $previewUrl, $type, $creatorName, $creatorUniqueId, $url;
+    private array $tags, $likes;
+    private int $creatorId, $roomId;
+    private \DateTimeInterface $takenOn;
 
-    public function parse($data)
+
+    public function parse($data): void
     {
         $this->setId($data['id']);
         $this->setPreviewUrl($data['previewUrl']);
@@ -36,143 +31,102 @@ class Photo implements Entity
         $this->setLikes($data['likes']);
     }
 
+    public function setPreviewUrl(string $previewUrl): void
+    {
+        $this->previewUrl = $previewUrl;
+    }
+
+    public function setType(string $type): void
+    {
+        $this->type = $type;
+    }
+
+    public function setUrl(string $url): void
+    {
+        $this->url = $url;
+    }
+
+    public function setCreatorUniqueId(string $creatorUniqueId): void
+    {
+        $this->creatorUniqueId = $creatorUniqueId;
+    }
+
+    public function setCreatorName(string $creatorName): void
+    {
+        $this->creatorName = $creatorName;
+    }
+
+    public function setRoomId(int $roomId): void
+    {
+        $this->roomId = $roomId;
+    }
+
+    public function setLikes($likes): void
+    {
+        $this->likes = $likes;
+    }
+
     public function __toString()
     {
         return $this->getUrl();
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * @param string $id
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPreviewUrl()
-    {
-        return $this->previewUrl;
-    }
-
-    /**
-     * @param string $previewUrl
-     */
-    public function setPreviewUrl($previewUrl)
-    {
-        $this->previewUrl = $previewUrl;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getTags()
-    {
-        return $this->tags;
-    }
-
-    /**
-     * @param string[] $tags
-     */
-    public function setTags($tags)
-    {
-        $this->tags = $tags;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCreatorUniqueId()
-    {
-        return $this->creatorUniqueId;
-    }
-
-    /**
-     * @param string $creatorUniqueId
-     */
-    public function setCreatorUniqueId($creatorUniqueId)
-    {
-        $this->creatorUniqueId = $creatorUniqueId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCreatorName()
-    {
-        return $this->creatorName;
-    }
-
-    /**
-     * @param string $creatorName
-     */
-    public function setCreatorName($creatorName)
-    {
-        $this->creatorName = $creatorName;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCreatorId()
-    {
-        return $this->creatorId;
-    }
-
-    /**
-     * @param int $creatorId
-     */
-    public function setCreatorId($creatorId)
-    {
-        $this->creatorId = $creatorId;
-    }
-
-    /**
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param string $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUrl()
+    public function getUrl(): string
     {
         return $this->url;
     }
 
-    /**
-     * @param string $url
-     */
-    public function setUrl($url)
+    public function getId(): string
     {
-        $this->url = $url;
+        return $this->id;
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getTakenOn()
+    public function setId(string $id): void
+    {
+        $this->id = $id;
+    }
+
+    public function getPreviewUrl(): string
+    {
+        return $this->previewUrl;
+    }
+
+    public function getTags(): array
+    {
+        return $this->tags;
+    }
+
+    public function setTags(array $tags): void
+    {
+        $this->tags = $tags;
+    }
+
+    public function getCreatorUniqueId(): string
+    {
+        return $this->creatorUniqueId;
+    }
+
+    public function getCreatorName(): string
+    {
+        return $this->creatorName;
+    }
+
+    public function getCreatorId(): int
+    {
+        return $this->creatorId;
+    }
+
+    public function setCreatorId(int $creatorId): void
+    {
+        $this->creatorId = $creatorId;
+    }
+
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    public function getTakenOn(): \DateTimeInterface
     {
         return $this->takenOn;
     }
@@ -180,42 +134,20 @@ class Photo implements Entity
     /**
      * @param int $takenOn Takes in a timestamp with milliseconds
      */
-    public function setTakenOn($takenOn)
+    public function setTakenOn(int $takenOn): void
     {
         // takenOn is a microtime() format
         $timestamp = floor($takenOn / 1e3);
         $this->takenOn = Carbon::createFromTimestamp($timestamp);
     }
 
-    /**
-     * @return int
-     */
-    public function getRoomId()
+    public function getRoomId(): int
     {
         return $this->roomId;
     }
 
-    /**
-     * @param int $roomId
-     */
-    public function setRoomId($roomId)
-    {
-        $this->roomId = $roomId;
-    }
-
-    /**
-     * @return string[]
-     */
-    public function getLikes()
+    public function getLikes(): array
     {
         return $this->likes;
-    }
-
-    /**
-     * @param string[] $likes
-     */
-    public function setLikes($likes)
-    {
-        $this->likes = $likes;
     }
 }

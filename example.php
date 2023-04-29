@@ -4,8 +4,6 @@ include 'vendor/autoload.php';
 
 // Shortcut for the FQN
 use HabboAPI\Entities\Badge;
-use HabboAPI\Entities\Habbo;
-use HabboAPI\Entities\Photo;
 use HabboAPI\Entities\Profile;
 use HabboAPI\HabboAPI;
 use HabboAPI\HabboParser;
@@ -15,12 +13,12 @@ $habboParser = new HabboParser('com');
 $habboApi = new HabboAPI($habboParser);
 
 try {
-    // Find the user 'koeientemmer' and get their ID
-    $myHabbo = $habboApi->getHabbo('koeientemmer');
+    // Find the user 'Macklebee' and get their ID
+    $myHabbo = $habboApi->getHabbo('Macklebee');
 
     // Get extra information about one of their groups
     // Note: This is actually a hardcoded group ID to showcase the parseGroup() endpoint
-    $group = $habboApi->getGroup("g-hhus-b0751bd6408cc83a8e046de6949fd747");
+    $group = $habboApi->getGroup("g-hhus-0419705237d0e8c004195c365810e7a7");
 } catch (Exception $e) {
     echo '
         <p>Oops. Can not find this Habbo!</p>
@@ -34,7 +32,6 @@ try {
 
 if ($myHabbo->hasProfile()) {
     // Collect all the profile info
-    /** @var Profile $myProfile */
     $myProfile = $habboApi->getProfile($myHabbo->getId());
 } else {
     // This Habbo has a closed home, only show their Habbo object
@@ -59,7 +56,6 @@ $html = [
 
 // Some markup for the Habbo part
 
-/* @var Habbo $habbo */
 $habbo = $myProfile->getHabbo();
 $onlineText = $habbo->isOnline() ? "yes" : "no";
 $lastAccess = ($habbo->getLastAccessTime()) ? $habbo->getLastAccessTime()->toFormattedDateString() : "N/A";
@@ -107,7 +103,6 @@ if ($myHabbo->hasProfile()) {
 
 // Generate the photos
 if ($myPhotos) {
-    /** @var Photo $myPhoto */
     foreach ($myPhotos as $myPhoto) {
         $html['photos'] .= '
             <div class="col-md-3">
@@ -216,7 +211,7 @@ if ($myPhotos) {
                                 </p>
 
                                 <?php $members = $group->getMembers();
-                                if (count((array)$members) > 0) : ?>
+                                if (count($members) > 0) : ?>
                                     <p>This group has <strong><?php echo count($group->getMembers()); ?></strong> members.
                                         Here are 10 random ones:</p>
 

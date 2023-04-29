@@ -5,11 +5,11 @@ namespace HabboAPI;
 
 interface HabboParserInterface
 {
-    public function parseHabbo($identifier, $useUniqueId = false);
+    public function parseHabbo(string $identifier, bool $useUniqueId = false);
 
-    public function parseProfile($id);
+    public function parseProfile(string $id);
 
-    public function parsePhotos($id = null);
+    public function parsePhotos(string $id = null);
 
-    public function parseAchievements($id);
+    public function parseAchievements(string $id);
 }

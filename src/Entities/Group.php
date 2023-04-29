@@ -1,7 +1,8 @@
 <?php
 /**
- * The entitymodel for a Group object
+ * The entity model for a Group object
  */
+
 namespace HabboAPI\Entities;
 
 /**
@@ -12,32 +13,35 @@ namespace HabboAPI\Entities;
 class Group implements Entity
 {
 
-    private $id, $name, $description, $type, $primaryColour, $secondaryColour, $badgeCode, $roomId, $isAdmin, $members;
+    private string $id, $name, $description, $type;
+    private ?string $badgeCode = null, $roomId = null, $primaryColour = null, $secondaryColour = null;
+    private array $members;
+    private ?bool $isAdmin = null;
 
     /** Parses group info array to \Entities\Group object
      *
-     * @param array $group
+     * @param array $data
      */
-    public function parse($group)
+    public function parse($data): void
     {
-        $this->setId($group['id']);
-        $this->setName($group['name']);
-        $this->setDescription($group['description']);
-        $this->setType($group['type']);
-        if (isset($group['primaryColour'])) {
-            $this->setPrimaryColour($group['primaryColour']);
+        $this->setId($data['id']);
+        $this->setName($data['name']);
+        $this->setDescription($data['description']);
+        $this->setType($data['type']);
+        if (isset($data['primaryColour'])) {
+            $this->setPrimaryColour($data['primaryColour']);
         }
-        if (isset($group['secondaryColour'])) {
-            $this->setSecondaryColour($group['secondaryColour']);
+        if (isset($data['secondaryColour'])) {
+            $this->setSecondaryColour($data['secondaryColour']);
         }
-        if (isset($group['badgeCode'])) {
-            $this->setBadgeCode($group['badgeCode']);
+        if (isset($data['badgeCode'])) {
+            $this->setBadgeCode($data['badgeCode']);
         }
-        if (isset($group['roomId'])) {
-            $this->setRoomId($group['roomId']);
+        if (isset($data['roomId'])) {
+            $this->setRoomId($data['roomId']);
         }
-        if (isset($group['isAdmin'])) {
-            $this->setIsAdmin($group['isAdmin']);
+        if (isset($data['isAdmin'])) {
+            $this->setIsAdmin($data['isAdmin']);
         }
     }
 
@@ -46,178 +50,119 @@ class Group implements Entity
         return $this->getName();
     }
 
-    /**
-     * @return mixed
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param mixed $name
-     */
-    protected function setName($name)
+    protected function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getBadgeCode()
+    public function getBadgeCode(): string
     {
         return $this->badgeCode;
     }
 
-    /**
-     * @param mixed $badgeCode
-     */
-    protected function setBadgeCode($badgeCode)
+    protected function setBadgeCode(string $badgeCode): void
     {
         $this->badgeCode = $badgeCode;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @param mixed $description
-     */
-    protected function setDescription($description)
+
+    protected function setDescription(string $description): void
     {
         $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId(): ?string
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     */
-    protected function setId($id)
+    protected function setId(string $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return boolean
-     */
-    public function getIsAdmin()
+    public function getIsAdmin(): ?bool
     {
         return $this->isAdmin;
     }
 
-    /**
-     * @param boolean $isAdmin
-     */
-    protected function setIsAdmin($isAdmin)
+    protected function setIsAdmin(bool $isAdmin): void
     {
         $this->isAdmin = $isAdmin;
     }
 
-    /**
-     * @return string
-     */
-    public function getPrimaryColour()
+    public function getPrimaryColour(): ?string
     {
         return $this->primaryColour;
     }
 
-    /**
-     * @param string $primaryColour
-     */
-    protected function setPrimaryColour($primaryColour)
+    protected function setPrimaryColour(string $primaryColour): void
     {
         $this->primaryColour = $primaryColour;
     }
 
-    /**
-     * @return string
-     */
-    public function getRoomId()
+    public function getRoomId(): ?string
     {
         return $this->roomId;
     }
 
-    /**
-     * @param string $roomId
-     */
-    protected function setRoomId($roomId)
+    protected function setRoomId(string $roomId): void
     {
         $this->roomId = $roomId;
     }
 
-    /**
-     * @return string
-     */
-    public function getSecondaryColour()
+    public function getSecondaryColour(): ?string
     {
         return $this->secondaryColour;
     }
 
-    /**
-     * @param string $secondaryColour
-     */
-    protected function setSecondaryColour($secondaryColour)
+    protected function setSecondaryColour(string $secondaryColour): void
     {
         $this->secondaryColour = $secondaryColour;
     }
 
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): string
     {
         return $this->type;
     }
 
-    /**
-     * @param string $type
-     */
-    protected function setType($type)
+    protected function setType(string $type): void
     {
         $this->type = $type;
     }
 
-    /**
-     * @return Habbo[]
-     */
-    public function getMembers()
+    public function getMembers(): array|null
     {
         return $this->members;
     }
 
-    /**
-     * @param Habbo[] $members
-     */
-    public function setMembers($members)
+    public function setMembers(array $members): void
     {
         $this->members = $members;
     }
 
     /* Cleaner methods */
-    public function isAdmin()
+    public function isAdmin(): bool
     {
         return $this->getIsAdmin();
     }
 
-    public function getPrimaryColor()
+    public function getPrimaryColor(): ?string
     {
         return $this->getPrimaryColour();
     }
 
-    public function getSecondaryColor()
+    public function getSecondaryColor(): ?string
     {
         return $this->getSecondaryColour();
     }

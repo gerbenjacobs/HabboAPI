@@ -17,11 +17,8 @@ use Exception;
 class Profile implements Entity
 {
 
-    private $habbo;
-    private $friends;
-    private $groups;
-    private $rooms;
-    private $badges;
+    private Habbo $habbo;
+    private array $friends, $groups, $rooms, $badges;
 
     /**
      * @param $data
@@ -38,17 +35,9 @@ class Profile implements Entity
     }
 
     /**
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->getHabbo()->getId();
-    }
-
-    /**
      * @return Habbo
      */
-    public function getHabbo()
+    public function getHabbo(): Habbo
     {
         return $this->habbo;
     }
@@ -56,15 +45,23 @@ class Profile implements Entity
     /**
      * @param Habbo $habbo
      */
-    public function setHabbo(Habbo $habbo)
+    public function setHabbo(Habbo $habbo): void
     {
         $this->habbo = $habbo;
     }
 
     /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->getHabbo()->getId();
+    }
+
+    /**
      * @return Habbo[]
      */
-    public function getFriends()
+    public function getFriends(): array
     {
         return $this->friends;
     }
@@ -72,7 +69,7 @@ class Profile implements Entity
     /**
      * @param Habbo $friend
      */
-    public function addFriend(Habbo $friend)
+    public function addFriend(Habbo $friend): void
     {
         $this->friends[] = $friend;
     }
@@ -80,7 +77,7 @@ class Profile implements Entity
     /**
      * @return Group[]
      */
-    public function getGroups()
+    public function getGroups(): array
     {
         return $this->groups;
     }
@@ -88,7 +85,7 @@ class Profile implements Entity
     /**
      * @param Group $group
      */
-    public function addGroup(Group $group)
+    public function addGroup(Group $group): void
     {
         $this->groups[] = $group;
     }
@@ -96,7 +93,7 @@ class Profile implements Entity
     /**
      * @return Room[]
      */
-    public function getRooms()
+    public function getRooms(): array
     {
         return $this->rooms;
     }
@@ -104,7 +101,7 @@ class Profile implements Entity
     /**
      * @param Room $room
      */
-    public function addRoom(Room $room)
+    public function addRoom(Room $room): void
     {
         $this->rooms[] = $room;
     }
@@ -112,7 +109,7 @@ class Profile implements Entity
     /**
      * @return Badge[]
      */
-    public function getBadges()
+    public function getBadges(): array
     {
         return $this->badges;
     }
@@ -120,7 +117,7 @@ class Profile implements Entity
     /**
      * @param Badge $badge
      */
-    public function addBadge(Badge $badge)
+    public function addBadge(Badge $badge): void
     {
         $this->badges[] = $badge;
     }
@@ -130,7 +127,7 @@ class Profile implements Entity
      * an array of each entity in the profile and its count
      * @return array
      */
-    public function getCounts()
+    public function getCounts(): array
     {
         return array(
             'habbo' => self::safeCount($this->habbo),
@@ -141,7 +138,7 @@ class Profile implements Entity
         );
     }
 
-    private function safeCount($value)
+    private function safeCount($value): int
     {
         return is_countable($value) ? count($value) : 0;
     }

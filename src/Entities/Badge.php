@@ -1,7 +1,8 @@
 <?php
 /**
- * The entitymodel for a Badge object
+ * The entity model for a Badge object
  */
+
 namespace HabboAPI\Entities;
 
 /**
@@ -11,23 +12,23 @@ namespace HabboAPI\Entities;
  */
 class Badge implements Entity
 {
-    private $badgeIndex;
-    private $code;
-    private $name;
-    private $description;
+    private int $badgeIndex;
+    private string $code;
+    private string $name;
+    private string $description;
 
     /**
      * Parses badge info array to Badge object
-     * @param array $badge
+     * @param array $data
      */
-    public function parse($badge)
+    public function parse($data): void
     {
-        if (isset($badge['badgeIndex'])) {
-            $this->setBadgeIndex($badge['badgeIndex']);
+        if (isset($data['badgeIndex'])) {
+            $this->setBadgeIndex($data['badgeIndex']);
         }
-        $this->setCode($badge['code']);
-        $this->setName($badge['name']);
-        $this->setDescription($badge['description']);
+        $this->setCode($data['code']);
+        $this->setName($data['name']);
+        $this->setDescription($data['description']);
     }
 
     public function __toString()
@@ -35,74 +36,47 @@ class Badge implements Entity
         return '[' . $this->getCode() . '] ' . $this->getName();
     }
 
-    /**
-     * @return string
-     */
-    public function getCode()
+    public function getCode(): string
     {
         return $this->code;
     }
 
-    /**
-     * @param string $code
-     */
-    protected function setCode($code)
+    protected function setCode(string $code): void
     {
         $this->code = $code;
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
-    protected function setName($name)
+    protected function setName(string $name): void
     {
         $this->name = $name;
     }
 
-    /**
-     * @return int
-     */
-    public function getBadgeIndex()
+    public function getBadgeIndex(): int
     {
         return $this->badgeIndex;
     }
 
-    /**
-     * @param int $badgeIndex
-     */
-    protected function setBadgeIndex($badgeIndex)
+    protected function setBadgeIndex(int $badgeIndex): void
     {
         $this->badgeIndex = $badgeIndex;
     }
 
-    /**
-     * @return string
-     */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     */
-    protected function setDescription($description)
+    protected function setDescription(string $description): void
     {
         $this->description = $description;
     }
 
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->getCode();
     }
