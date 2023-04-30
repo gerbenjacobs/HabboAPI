@@ -12,7 +12,7 @@ namespace HabboAPI\Entities;
  */
 class Badge implements Entity
 {
-    private int $badgeIndex;
+    private int $badgeIndex = 0;
     private string $code;
     private string $name;
     private string $description;

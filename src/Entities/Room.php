@@ -6,6 +6,7 @@
 namespace HabboAPI\Entities;
 
 use Carbon\Carbon;
+use DateTimeInterface;
 
 /**
  * Class Room
@@ -17,8 +18,8 @@ use Carbon\Carbon;
 class Room implements Entity
 {
     private int $id, $maximumVisitors, $rating;
-    private string $uniqueId, $name, $description, $habboGroupId = "", $ownerName, $ownerUniqueId, $thumbnailUrl, $imageUrl;
-    private \DateTimeInterface $creationTime;
+    private string $uniqueId, $name, $description = "", $habboGroupId = "", $ownerName, $ownerUniqueId, $thumbnailUrl, $imageUrl;
+    private ?DateTimeInterface $creationTime = null;
     private array $tags, $categories;
     private bool $showOwnerName;
 
@@ -164,7 +165,7 @@ class Room implements Entity
     }
 
 
-    public function getCreationTime(): \DateTimeInterface
+    public function getCreationTime(): ?DateTimeInterface
     {
         return $this->creationTime;
     }

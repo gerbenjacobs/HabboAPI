@@ -18,7 +18,7 @@ class Profile implements Entity
 {
 
     private Habbo $habbo;
-    private array $friends, $groups, $rooms, $badges;
+    private array $friends = [], $groups = [], $rooms = [], $badges = [];
 
     /**
      * @param $data
