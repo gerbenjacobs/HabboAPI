@@ -4,6 +4,7 @@
  */
 namespace HabboAPI;
 
+use Exception;
 use HabboAPI\Entities\Group;
 use HabboAPI\Entities\Habbo;
 use HabboAPI\Entities\Photo;
@@ -18,11 +19,11 @@ use HabboAPI\Entities\Achievement;
  */
 class HabboAPI
 {
-    const VERSION = "3.0.0";
+    const VERSION = "6.0.0";
 
     /** Class variable for HabboParser
      *
-     * @var \HabboAPI\HabboParserInterface
+     * @var HabboParserInterface
      */
     private $parser;
 
@@ -41,7 +42,7 @@ class HabboAPI
      * @param bool $useUniqueId
      * @return Habbo
      */
-    public function getHabbo($identifier, $useUniqueId = false)
+    public function getHabbo(string $identifier, bool $useUniqueId = false): Habbo
     {
         return $this->parser->parseHabbo($identifier, $useUniqueId);
     }
@@ -51,7 +52,7 @@ class HabboAPI
      * @param string $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
      * @return Profile
      */
-    public function getProfile($id)
+    public function getProfile(string $id): Profile
     {
         return $this->parser->parseProfile($id);
     }
@@ -61,7 +62,7 @@ class HabboAPI
      * @param string|null $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
      * @return Photo[] Array of Photo objects
      */
-    public function getPhotos($id = null)
+    public function getPhotos(string $id = null): array
     {
         return $this->parser->parsePhotos($id);
     }
@@ -70,9 +71,9 @@ class HabboAPI
      *
      * @param $group_id
      * @return Group
-     * @throws \Exception
+     * @throws Exception
      */
-    public function getGroup($group_id)
+    public function getGroup($group_id): Group
     {
         return $this->parser->parseGroup($group_id);
     }
@@ -81,7 +82,7 @@ class HabboAPI
      * @param string $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
      * @return Achievement[]
      */
-    public function getAchievements($id)
+    public function getAchievements(string $id): array
     {
         return $this->parser->parseAchievements($id);
     }

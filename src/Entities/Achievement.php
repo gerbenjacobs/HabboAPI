@@ -2,7 +2,10 @@
 /**
  * The entity model for an Achievement object
  */
+
 namespace HabboAPI\Entities;
+
+use Carbon\Carbon;
 
 /**
  * Class Achievement
@@ -11,32 +14,34 @@ namespace HabboAPI\Entities;
  */
 class Achievement implements Entity
 {
-    private $id, $name, $category;
-    private $requirements;
-    private $level, $score;
+    private string $id, $name, $category, $state;
+    private \DateTimeInterface $creationTime;
+    private int $level, $score;
 
     /**
      * Parses achievement info array to Achievement object
-     * @param $achievement
+     * @param $data
      */
-    public function parse($achievement)
+    public function parse($data): void
     {
         // add default fields
-        $this->id = $achievement['achievement']['id'];
-        $this->name = $achievement['achievement']['name'];
-        $this->category = $achievement['achievement']['category'];
+        $this->id = $data['achievement']['id'];
+        $this->name = $data['achievement']['name'];
+        $this->category = $data['achievement']['category'];
+        if (isset($data['achievement']['state'])) {
+            $this->state = $data['achievement']['state'];
+        }
 
-        // add requirements if available
-        if (isset($achievement['requirements'])) {
-            $this->requirements = $achievement['requirements'];
+        if (isset($data['achievement']['creationTime'])) {
+            $this->creationTime = Carbon::parse($data['achievement']['creationTime']);
         }
 
         // add user state if available
-        if (isset($achievement['level'])) {
-            $this->level = $achievement['level'];
+        if (isset($data['level'])) {
+            $this->level = $data['level'];
         }
-        if (isset($achievement['score'])) {
-            $this->score = $achievement['score'];
+        if (isset($data['score'])) {
+            $this->score = $data['score'];
         }
     }
 
@@ -45,51 +50,51 @@ class Achievement implements Entity
         return $this->getName();
     }
 
-    /**
-     * @return int
-     */
-    public function getId()
+
+    public function getId(): int|string
     {
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @return string
-     */
-    public function getCategory()
+    public function getCategory(): string
     {
         return $this->category;
     }
 
-    /**
-     * @return string
-     */
-    public function getLevel()
+    public function getLevel(): int
     {
         return $this->level;
     }
 
-    /**
-     * @return string
-     */
-    public function getScore()
+
+    public function getScore(): int
     {
         return $this->score;
     }
 
-    /**
-     * @return array
-     */
-    public function getRequirements()
+
+    public function getState(): string
     {
-        return $this->requirements;
+        return $this->state;
+    }
+
+    public function setState(string $state): void
+    {
+        $this->state = $state;
+    }
+
+    public function getCreationTime(): \DateTimeInterface
+    {
+        return $this->creationTime;
+    }
+
+    public function setCreationTime(\DateTimeInterface $creationTime): void
+    {
+        $this->creationTime = $creationTime;
     }
 }

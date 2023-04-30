@@ -2,6 +2,7 @@
 /**
  * The entitymodel for a Room object
  */
+
 namespace HabboAPI\Entities;
 
 use Carbon\Carbon;
@@ -15,49 +16,93 @@ use Carbon\Carbon;
  */
 class Room implements Entity
 {
-    private $id;
-    private $uniqueId;
-    private $name;
-    private $description;
-    private $creationTime;
-    private $habboGroupId;
-    private $maximumVisitors;
-    private $tags;
-    private $showOwnerName;
-    private $ownerName;
-    private $ownerUniqueId;
-    private $categories;
-    private $thumbnailUrl;
-    private $imageUrl;
-    private $rating;
+    private int $id, $maximumVisitors, $rating;
+    private string $uniqueId, $name, $description, $habboGroupId = "", $ownerName, $ownerUniqueId, $thumbnailUrl, $imageUrl;
+    private \DateTimeInterface $creationTime;
+    private array $tags, $categories;
+    private bool $showOwnerName;
+
 
     /** Parses room info array to \Entities\Room object
      *
-     * @param array $room
+     * @param array $data
      */
-    public function parse($room)
+    public function parse($data): void
     {
-        $this->setId($room['id']);
-        $this->setUniqueId($room['uniqueId']);
-        $this->setName($room['name']);
-        $this->setDescription($room['description']);
-        $this->setMaximumVisitors($room['maximumVisitors']);
-        $this->setTags($room['tags']);
-        $this->setShowOwnerName($room['showOwnerName']);
-        $this->setOwnerName($room['ownerName']);
-        $this->setOwnerUniqueId($room['ownerUniqueId']);
-        $this->setCategories($room['categories']);
-        $this->setThumbnailUrl($room['thumbnailUrl']);
-        $this->setImageUrl($room['imageUrl']);
-        $this->setRating($room['rating']);
+        $this->setId($data['id']);
+        $this->setUniqueId($data['uniqueId']);
+        $this->setName($data['name']);
+        if (isset($data['description'])) {
+            $this->setDescription($data['description']);
+        }
+        $this->setMaximumVisitors($data['maximumVisitors']);
+        $this->setTags($data['tags']);
+        $this->setShowOwnerName($data['showOwnerName']);
+        $this->setOwnerName($data['ownerName']);
+        $this->setOwnerUniqueId($data['ownerUniqueId']);
+        $this->setCategories($data['categories']);
+        $this->setThumbnailUrl($data['thumbnailUrl']);
+        $this->setImageUrl($data['imageUrl']);
+        $this->setRating($data['rating']);
 
-        if (isset($room['creationTime'])) {
-            $this->setCreationTime($room['creationTime']);
+        if (isset($data['creationTime'])) {
+            $this->setCreationTime($data['creationTime']);
         }
 
-        if (isset($room['habboGroupId'])) {
-            $this->setGroupId($room['habboGroupId']);
+        if (isset($data['habboGroupId'])) {
+            $this->setGroupId($data['habboGroupId']);
         }
+    }
+
+    protected function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    protected function setDescription(string $description): void
+    {
+        $this->description = $description;
+    }
+
+    public function setMaximumVisitors(int $maximumVisitors): void
+    {
+        $this->maximumVisitors = $maximumVisitors;
+    }
+
+    public function setOwnerName(string $ownerName): void
+    {
+        $this->ownerName = $ownerName;
+    }
+
+    protected function setOwnerUniqueId(string $ownerUniqueId): void
+    {
+        $this->ownerUniqueId = $ownerUniqueId;
+    }
+
+
+    public function setCategories(array $categories): void
+    {
+        $this->categories = $categories;
+    }
+
+    public function setThumbnailUrl(string $thumbnailUrl): void
+    {
+        $this->thumbnailUrl = $thumbnailUrl;
+    }
+
+    public function setImageUrl(string $imageUrl): void
+    {
+        $this->imageUrl = $imageUrl;
+    }
+
+    public function setRating(int $rating): void
+    {
+        $this->rating = $rating;
+    }
+
+    public function setGroupId(string $habboGroupId): void
+    {
+        $this->habboGroupId = $habboGroupId;
     }
 
     public function __toString()
@@ -65,251 +110,112 @@ class Room implements Entity
         return $this->getName();
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
-    protected function setName($name)
-    {
-        $this->name = $name;
-    }
-
-    /**
-     * @return string
-     */
-    public function getDescription()
+    public function getDescription(): string
     {
         return $this->description;
     }
 
-    /**
-     * @param string $description
-     */
-    protected function setDescription($description)
-    {
-        $this->description = $description;
-    }
-
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @return int
-     */
-    public function getOldId()
-    {
-        return $this->id;
-    }
 
-    /**
-     * @param int $id
-     */
-    protected function setId($id)
+    protected function setId(int $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return string
-     */
-    public function getOwnerUniqueId()
+    public function getOldId(): int
+    {
+        return $this->id;
+    }
+
+    public function getOwnerUniqueId(): string
     {
         return $this->ownerUniqueId;
     }
 
-    /**
-     * @param string $ownerUniqueId
-     */
-    protected function setOwnerUniqueId($ownerUniqueId)
-    {
-        $this->ownerUniqueId = $ownerUniqueId;
-    }
 
-    /**
-     * @return string[]
-     */
-    public function getTags()
+    public function getTags(): array
     {
         return $this->tags;
     }
 
-    /**
-     * @param string[] $tags
-     */
-    public function setTags($tags)
+
+    public function setTags(array $tags): void
     {
         $this->tags = $tags;
     }
 
-    /**
-     * @return string[]
-     */
-    public function getCategories()
+    public function getCategories(): array
     {
         return $this->categories;
     }
 
-    /**
-     * @param string[] $categories
-     */
-    public function setCategories($categories)
-    {
-        $this->categories = $categories;
-    }
-
-    /**
-     * @return string
-     */
-    public function getThumbnailUrl()
+    public function getThumbnailUrl(): string
     {
         return $this->thumbnailUrl;
     }
 
-    /**
-     * @param string $thumbnailUrl
-     */
-    public function setThumbnailUrl($thumbnailUrl)
-    {
-        $this->thumbnailUrl = $thumbnailUrl;
-    }
 
-    /**
-     * @return Carbon
-     */
-    public function getCreationTime()
+    public function getCreationTime(): \DateTimeInterface
     {
         return $this->creationTime;
     }
 
-    /**
-     * @param string $creationTime
-     */
-    public function setCreationTime($creationTime)
+    public function setCreationTime(string $creationTime): void
     {
         $this->creationTime = Carbon::parse($creationTime);
     }
 
-    /**
-     * @return int
-     */
-    public function getMaximumVisitors()
+    public function getMaximumVisitors(): int
     {
         return $this->maximumVisitors;
     }
 
-    /**
-     * @param int $maximumVisitors
-     */
-    public function setMaximumVisitors($maximumVisitors)
-    {
-        $this->maximumVisitors = $maximumVisitors;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getShowOwnerName()
+    public function getShowOwnerName(): bool
     {
         return $this->showOwnerName;
     }
 
-    /**
-     * @param boolean $showOwnerName
-     */
-    public function setShowOwnerName($showOwnerName)
+    public function setShowOwnerName(bool $showOwnerName): void
     {
         $this->showOwnerName = $showOwnerName;
     }
 
-    /**
-     * @return string
-     */
-    public function getOwnerName()
+    public function getOwnerName(): string
     {
         return $this->ownerName;
     }
 
-    /**
-     * @param string $ownerName
-     */
-    public function setOwnerName($ownerName)
-    {
-        $this->ownerName = $ownerName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getImageUrl()
+    public function getImageUrl(): string
     {
         return $this->imageUrl;
     }
 
-    /**
-     * @param string $imageUrl
-     */
-    public function setImageUrl($imageUrl)
-    {
-        $this->imageUrl = $imageUrl;
-    }
-
-    /**
-     * @return int
-     */
-    public function getRating()
+    public function getRating(): int
     {
         return $this->rating;
     }
 
-    /**
-     * @param int $rating
-     */
-    public function setRating($rating)
-    {
-        $this->rating = $rating;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUniqueId()
+    public function getUniqueId(): string
     {
         return $this->uniqueId;
     }
 
-    /**
-     * @param string $uniqueId
-     */
-    public function setUniqueId($uniqueId)
+    public function setUniqueId(string $uniqueId): void
     {
         $this->uniqueId = $uniqueId;
     }
 
-    /**
-     * @return string
-     */
-    public function getGroupId()
+    public function getGroupId(): string
     {
         return $this->habboGroupId;
-    }
-
-    /**
-     * @param string $habboGroupId
-     */
-    public function setGroupId($habboGroupId)
-    {
-        $this->habboGroupId = $habboGroupId;
     }
 }

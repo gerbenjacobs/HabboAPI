@@ -32,14 +32,14 @@ class HabboParser implements HabboParserInterface
      *
      * @var string $api_base
      */
-    private $api_base;
+    private string $api_base;
 
     /**
      * HabboParser constructor, needs to be injected with $api_base URL
      *
      * @param string $hotel
      */
-    public function __construct($hotel = 'com')
+    public function __construct(string $hotel = 'com')
     {
         $subdomain = "www";
         if ($hotel == "sandbox") {
@@ -58,7 +58,7 @@ class HabboParser implements HabboParserInterface
      * @return Habbo
      * @throws Exception
      */
-    public function parseHabbo($identifier, $useUniqueId = false)
+    public function parseHabbo($identifier, bool $useUniqueId = false): Habbo
     {
         if ($useUniqueId) {
             $url = '/api/public/users/' . $identifier;
@@ -66,7 +66,7 @@ class HabboParser implements HabboParserInterface
             $url = '/api/public/users?name=' . $identifier;
         }
 
-        list($data) = $this->_callUrl($this->api_base . $url, true);
+        list($data) = $this->_callUrl($this->api_base . $url);
 
         $habbo = new Habbo();
         $habbo->parse($data);
@@ -82,7 +82,7 @@ class HabboParser implements HabboParserInterface
      * @return Profile
      * @throws Exception
      */
-    public function parseProfile($id)
+    public function parseProfile($id): Profile
     {
         // Collect JSON
         list($data) = $this->_callUrl($this->api_base . '/api/public/users/' . $id . '/profile', true);
@@ -135,10 +135,10 @@ class HabboParser implements HabboParserInterface
      * @return Photo[]
      * @throws Exception
      */
-    public function parsePhotos($id = null)
+    public function parsePhotos($id = null): array
     {
         $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
-        list($data) = $this->_callUrl($this->api_base . $url, true);
+        list($data) = $this->_callUrl($this->api_base . $url);
 
         $photos = array();
 
@@ -162,7 +162,7 @@ class HabboParser implements HabboParserInterface
      * @return Group
      * @throws Exception
      */
-    public function parseGroup($group_id)
+    public function parseGroup($group_id): Group
     {
         list($data) = $this->_callUrl($this->api_base . '/api/public/groups/' . $group_id, true);
 
@@ -196,7 +196,7 @@ class HabboParser implements HabboParserInterface
      * @return Achievement[]
      * @throws Exception
      */
-    public function parseAchievements($id)
+    public function parseAchievements($id): array
     {
         $achievements = array();
 
@@ -224,7 +224,7 @@ class HabboParser implements HabboParserInterface
      * @return array
      * @throws Exception
      */
-    protected function _callUrl($url, $as_json = true)
+    protected function _callUrl(string $url, bool $as_json = true): array
     {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
@@ -258,7 +258,7 @@ class HabboParser implements HabboParserInterface
     public static function throwHabboAPIException($data)
     {
         // Do we find 'maintenance' anywhere?
-        if (strstr($data, 'maintenance')) {
+        if (str_contains($data, 'maintenance')) {
             throw new MaintenanceException("Hotel API is down for maintenance");
         }
 
@@ -271,7 +271,7 @@ class HabboParser implements HabboParserInterface
                 }
                 $defaultMessage = $json['errors'][0]['msg'];
             } else if (isset($json['error'])) {
-                if (preg_match('#not-found#', $json['error'])) {
+                if (str_contains($json['error'], 'not-found')) {
                     throw new HabboNotFoundException("We can not find the Habbo you're looking for");
                 }
                 $defaultMessage = $json['error'];

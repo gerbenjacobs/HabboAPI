@@ -1,11 +1,13 @@
 <?php
 /**
- * The entitymodel for a Habbo object
+ * The entity model for a Habbo object
  */
+
 namespace HabboAPI\Entities;
 
 use Carbon\Carbon;
 use Countable;
+use DateTimeInterface;
 
 /**
  * Class Habbo
@@ -16,25 +18,18 @@ use Countable;
  */
 class Habbo implements Entity, Countable
 {
-    private $id;
-    private $habboName;
-    private $motto;
-    private $memberSince;
-    private $lastAccessTime;
-    private $online;
-    private $figureString;
-    private $profileVisible;
-    private $selectedBadges = array();
-    private $currentLevel;
-    private $currentLevelCompleted;
-    private $totalExperience;
-    private $starGemCount;
+    private string $id, $habboName, $motto, $figureString;
+    private ?DateTimeInterface $memberSince = null, $lastAccessTime = null;
+    private bool $online = false, $profileVisible = true;
+    private array $selectedBadges;
+    private int $currentLevel = 0, $currentLevelCompleted = 0, $totalExperience = 0, $starGemCount = 0;
+
 
     /** Parses habbo info array to \Entities\Habbo object
      *
      * @param array $data
      */
-    public function parse($data)
+    public function parse($data): void
     {
         // These attributes are shared between Habbo and Friends
         $this->setId($data['uniqueId']);
@@ -84,12 +79,49 @@ class Habbo implements Entity, Countable
         }
     }
 
-    /**
-     * @param Badge $selectedBadge
-     */
-    protected function addSelectedBadge(Badge $selectedBadge)
+    protected function setHabboName(string $habboName): void
     {
-        array_push($this->selectedBadges, $selectedBadge);
+        $this->habboName = $habboName;
+    }
+
+    protected function setMotto(string $motto): void
+    {
+        $this->motto = $motto;
+    }
+
+    protected function setFigureString(string $figureString): void
+    {
+        $this->figureString = $figureString;
+    }
+
+    protected function setProfileVisible(bool $profileVisible): void
+    {
+        $this->profileVisible = $profileVisible;
+    }
+
+    protected function addSelectedBadge(Badge $selectedBadge): void
+    {
+        $this->selectedBadges[] = $selectedBadge;
+    }
+
+    public function setLastAccessTime(string $lastAccessTime): void
+    {
+        $this->lastAccessTime = Carbon::parse($lastAccessTime);
+    }
+
+    public function setCurrentLevelCompleted(int $currentLevelCompleted): void
+    {
+        $this->currentLevelCompleted = $currentLevelCompleted;
+    }
+
+    public function setTotalExperience(int $totalExperience): void
+    {
+        $this->totalExperience = $totalExperience;
+    }
+
+    public function setStarGemCount(int $starGemCount): void
+    {
+        $this->starGemCount = $starGemCount;
     }
 
     public function __toString()
@@ -97,220 +129,103 @@ class Habbo implements Entity, Countable
         return $this->getHabboName();
     }
 
-    /**
-     * @return string
-     */
-    public function getHabboName()
+    public function getHabboName(): string
     {
         return $this->habboName;
     }
 
-    /**
-     * @param string $habboName
-     */
-    protected function setHabboName($habboName)
-    {
-        $this->habboName = $habboName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getFigureString()
+    public function getFigureString(): string
     {
         return $this->figureString;
     }
 
-    /**
-     * @param string $figureString
-     */
-    protected function setFigureString($figureString)
-    {
-        $this->figureString = $figureString;
-    }
-
-    /**
-     * @return string
-     */
-    public function getId()
+    public function getId(): string
     {
         return $this->id;
     }
 
-    /**
-     * @param string $id
-     */
-    protected function setId($id)
+    protected function setId(string $id): void
     {
         $this->id = $id;
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getMemberSince()
+    public function getMemberSince(): ?DateTimeInterface
     {
         return $this->memberSince;
     }
 
-    /**
-     * @param string $memberSince
-     */
-    protected function setMemberSince($memberSince)
+    protected function setMemberSince(string $memberSince): void
     {
         $this->memberSince = Carbon::parse($memberSince);
     }
 
-    /**
-     * @return string
-     */
-    public function getMotto()
+    public function getMotto(): string
     {
         return $this->motto;
     }
 
-    /**
-     * @param string $motto
-     */
-    protected function setMotto($motto)
-    {
-        $this->motto = $motto;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getProfileVisible()
-    {
-        return $this->profileVisible;
-    }
-
-    /**
-     * @param boolean $profileVisible
-     */
-    protected function setProfileVisible($profileVisible)
-    {
-        $this->profileVisible = $profileVisible;
-    }
-
-    /**
-     * @return Badge[]
-     */
-    public function getSelectedBadges()
+    public function getSelectedBadges(): array
     {
         return $this->selectedBadges;
     }
 
     /**
      * Cleaner method for returning profile visibility
-     * @return boolean
      */
-    public function hasProfile()
+    public function hasProfile(): bool
     {
         return $this->getProfileVisible();
     }
 
-    /**
-     * @return Carbon
-     */
-    public function getLastAccessTime()
+    public function getProfileVisible(): bool
+    {
+        return $this->profileVisible;
+    }
+
+    public function getLastAccessTime(): ?DateTimeInterface
     {
         return $this->lastAccessTime;
     }
 
-    /**
-     * @param string $lastAccessTime
-     */
-    public function setLastAccessTime($lastAccessTime): void
-    {
-        $this->lastAccessTime = Carbon::parse($lastAccessTime);
-    }
-
-    /**
-     * @return integer
-     */
-    public function getCurrentLevel()
+    public function getCurrentLevel(): int
     {
         return $this->currentLevel;
     }
 
-    /**
-     * @param integer $currentLevel
-     */
-    public function setCurrentLevel($currentLevel): void
+    public function setCurrentLevel(int $currentLevel): void
     {
         $this->currentLevel = $currentLevel;
     }
 
-    /**
-     * @return integer
-     */
-    public function getCurrentLevelCompleted()
+    public function getCurrentLevelCompleted(): int
     {
         return $this->currentLevelCompleted;
     }
 
-    /**
-     * @param integer $currentLevelCompleted
-     */
-    public function setCurrentLevelCompleted($currentLevelCompleted): void
-    {
-        $this->currentLevelCompleted = $currentLevelCompleted;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getTotalExperience()
+    public function getTotalExperience(): int
     {
         return $this->totalExperience;
     }
 
-    /**
-     * @param integer $totalExperience
-     */
-    public function setTotalExperience($totalExperience): void
-    {
-        $this->totalExperience = $totalExperience;
-    }
-
-    /**
-     * @return integer
-     */
-    public function getStarGemCount()
+    public function getStarGemCount(): int
     {
         return $this->starGemCount;
     }
 
-    /**
-     * @param integer $starGemCount
-     */
-    public function setStarGemCount($starGemCount): void
-    {
-        $this->starGemCount = $starGemCount;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function getOnline()
+    public function getOnline(): bool
     {
         return $this->online;
     }
 
     /**
      * Helper function for readability
-     * @return boolean
      */
-    public function isOnline()
+    public function isOnline(): bool
     {
         return $this->online;
     }
 
-    /**
-     * @param boolean $online
-     */
-    public function setOnline($online): void
+    public function setOnline(bool $online): void
     {
         $this->online = $online;
     }
@@ -324,7 +239,7 @@ class Habbo implements Entity, Countable
      * The return value is cast to an integer.
      * @since 5.1.0
      */
-    public function count()
+    public function count(): int
     {
         return 1;
     }
