@@ -17,7 +17,7 @@ jobs:
         include:
           - operating-system: 'ubuntu-latest'
             php-versions: '8.0'
-            phpunit-versions: 9
+            phpunit-versions: 10
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
     steps:
       - name: Checkout
@@ -27,5 +27,4 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: json, curl
-      - name: Run PHPUnit
-        run: phpunit
+          tools: phpunit:${{ matrix.phpunit-versions }}
