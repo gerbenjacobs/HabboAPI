@@ -27,7 +27,5 @@ jobs:
         with:
           php-version: ${{ matrix.php-versions }}
           extensions: json, curl
-      - name: Check PHP Version
-        run: php -v
       - name: Run PHPUnit
-        run: vendor/bin/phpunit
+        run: phpunit
