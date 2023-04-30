@@ -1,9 +1,10 @@
-[![Build status](https://api.travis-ci.org/gerbenjacobs/HabboAPI.svg)](https://travis-ci.org/gerbenjacobs/HabboAPI)
+[![Build status](https://github.com/gerbenjacobs/HabboAPI/actions/workflows/php.yml/badge.svg)](https://github.com/gerbenjacobs/HabboAPI/actions/workflows/php.yml)
 [![Latest Stable Version](https://poser.pugx.org/gerbenjacobs/habbo-api/v/stable.svg)](https://packagist.org/packages/gerbenjacobs/habbo-api)
-[![Join the chat at https://gitter.im/gerbenjacobs/HabboAPI](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gerbenjacobs/HabboAPI) 
 # HabboAPI
 This PHP wrapper library is used to collect data from the _undocumented_ Habbo API.  
-The project requires PHP 7.3 or higher and uses the Composer autoloader and PSR-4 standard.
+The project requires PHP 8.1 or higher and uses the Composer autoloader and PSR-4 standard.
+
+Older versions for PHP 7.4 are available at [Packagist](https://packagist.org/packages/gerbenjacobs/habbo-api).
 
 See the `example.php` file on how you could use this library.
 
@@ -35,6 +36,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- April 30th, 2023 v6.0.0 - Fully support PHP 8.1 and up
 - December 29th, 2020 v5.0.0 - Add support for PHP 8 and drop support below PHP 7.3
 - December 18th, 2020 v4.1.0 - Adds "sandbox" as hotel, includes new values for `Habbo` entity; online, lastAccessTime, currentLevel, currentLevelCompleted, totalExperience, starGemCount
 - March 30th, 2020 v4.0.0 - Use Carbon 2.0 and drop support for PHP below 7.1.8
@@ -59,4 +61,4 @@ See the `example.php` file on how you could use this library.
 ## Developer Installation
 1. Clone the project
 2. Run `composer install`
-3. Verify the install by running `./vendor/bin/phpunit` or opening the `example.php` page on a PHP server
+3. Verify the installation by running `vendor/bin/phpunit` or opening the `example.php` page on a PHP server
