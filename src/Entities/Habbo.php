@@ -21,7 +21,7 @@ class Habbo implements Entity, Countable
     private string $id, $habboName, $motto, $figureString;
     private ?DateTimeInterface $memberSince = null, $lastAccessTime = null;
     private bool $online = false, $profileVisible = true;
-    private array $selectedBadges;
+    private array $selectedBadges = [];
     private int $currentLevel = 0, $currentLevelCompleted = 0, $totalExperience = 0, $starGemCount = 0;
 
 
