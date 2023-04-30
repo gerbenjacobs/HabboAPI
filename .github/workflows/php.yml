@@ -2,17 +2,17 @@ name: PHP Test
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   run:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
-        operating-system: ['ubuntu-latest']
-        php-versions: ['8.0', '8.1', '8.2']
+        operating-system: [ 'ubuntu-latest' ]
+        php-versions: [ '8.0', '8.1', '8.2' ]
         phpunit-versions: [ 'latest' ]
     name: PHP ${{ matrix.php-versions }} Test on ${{ matrix.operating-system }}
     steps:
@@ -24,3 +24,8 @@ jobs:
           php-version: ${{ matrix.php-versions }}
           extensions: json, curl
           tools: phpunit:${{ matrix.phpunit-versions }}
+      - name: Install dependencies
+        run: |
+          composer install --prefer-dist --no-interaction
+      - name: Execute tests
+        run: vendor/bin/phpunit
