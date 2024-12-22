@@ -131,11 +131,11 @@ class HabboParser implements HabboParserInterface
      * parsePhotos will collect the public photos for an HHID
      * If no $id is given, it will grab the latest photos of the entire hotel
      *
-     * @param int|null $id
+     * @param string|null $id
      * @return Photo[]
      * @throws Exception
      */
-    public function parsePhotos($id = null): array
+    public function parsePhotos(?string $id = null): array
     {
         $url = (isset($id)) ? '/extradata/public/users/' . $id . '/photos' : '/extradata/public/photos';
         list($data) = $this->_callUrl($this->api_base . $url);

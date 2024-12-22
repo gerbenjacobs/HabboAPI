@@ -62,7 +62,7 @@ class HabboAPI
      * @param string|null $id The unique ID Habbo uses for their api. Starts with "hh<country code>-" (i.e. "hhus-")
      * @return Photo[] Array of Photo objects
      */
-    public function getPhotos(string $id = null): array
+    public function getPhotos(?string $id = null): array
     {
         return $this->parser->parsePhotos($id);
     }
