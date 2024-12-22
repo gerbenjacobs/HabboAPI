@@ -36,6 +36,7 @@ See the `example.php` file on how you could use this library.
 ```
 
 ## Changelog
+- December 22th, 2024 v6.1.0 - Add support for PHP 8.4, loosened versioning for `nesbot/carbon`
 - April 30th, 2023 v6.0.0 - Fully support PHP 8.1 and up
 - December 29th, 2020 v5.0.0 - Add support for PHP 8 and drop support below PHP 7.3
 - December 18th, 2020 v4.1.0 - Adds "sandbox" as hotel, includes new values for `Habbo` entity; online, lastAccessTime, currentLevel, currentLevelCompleted, totalExperience, starGemCount
