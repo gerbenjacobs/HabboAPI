@@ -9,7 +9,7 @@ interface HabboParserInterface
 
     public function parseProfile(string $id);
 
-    public function parsePhotos(string $id = null);
+    public function parsePhotos(?string $id = null);
 
     public function parseAchievements(string $id);
 }
